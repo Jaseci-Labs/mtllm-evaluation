@@ -1,6 +1,5 @@
 import lmql
 
-
 @lmql.query(beams=2)
 def expert_answer(question):
     '''lmql

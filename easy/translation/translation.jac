@@ -1,27 +1,15 @@
-import:py from jaclang.core.llms, BaseLLM;
+import:py from jaclang.core.llms, Anthropic;
 
-obj model :BaseLLM: {
-    can init(output_str: str) {
-        self.output_str = output_str;
-    }
+glob llm = Anthropic();
 
-    can __infer__(meaning_in: str, **kwargs: dict) {
-        print(meaning_in);
-        return f"[Output] {self.output_str}";
-    }
-}
-
-glob llm = model(output_str="fromage");
-
-glob examples: "Examples of English words translated to french" :dict[str,str] = {
+glob examples: "Example Translations" :dict[str,str] = {
     "sea otter": "loutre de mer",
     "peppermint": "menthe poivrée",
     "plush giraffe": "girafe en peluche"
 };
 
-
-can 'Translate English to French'
-translate(english_word: 'English Word': str)-> 'French Word' :str by llm(incl_info=(examples));
+can 'Translate'
+translate(english_word: 'English Word': str)-> 'Translation' :str by llm(incl_info=(examples));
 
 with entry {
     print(translate("cheese"));

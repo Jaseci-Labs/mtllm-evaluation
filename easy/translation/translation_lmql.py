@@ -1,6 +1,5 @@
 import lmql
 
-
 @lmql.query()
 def translate(english_word):
     '''lmql
