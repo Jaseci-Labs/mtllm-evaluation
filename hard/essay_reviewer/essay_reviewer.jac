@@ -1,17 +1,6 @@
-import:py from jaclang.core.llms, BaseLLM;
+import:py from jaclang.core.llms, Anthropic;
 
-obj model :BaseLLM: {
-    can init(output_str: str) {
-        self.output_str = output_str;
-    }
-
-    can __infer__(meaning_in: str, **kwargs: dict) {
-        print(meaning_in);
-        return f"[Output] {self.output_str}";
-    }
-}
-
-glob llm = model(output_str="Answer");
+glob llm = Anthropic();
 
 obj Essay {
     has essay: 'Essay': str;
