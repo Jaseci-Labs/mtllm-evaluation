@@ -1,5 +1,4 @@
 import dspy
-import time
 
 turbo = dspy.OpenAI(model="gpt-3.5-turbo")
 dspy.settings.configure(lm=turbo)

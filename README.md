@@ -29,16 +29,16 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 
 | Problem Name | Methodology | Time Taken (s) | Readability | Number of Lines |
 | ------------ | ----------- | ---------- | ----------- | --------------- |
-| Joke Generation | DSpy |  |  |  |
-| | LMQL |  |  |  |
-|  | Jaclang |  |  |  |
+| Joke Generation | DSpy | 3.75 |  | 50 |
+| | LMQL | 2.73 |  | 23 |
+|  | Jaclang | **2.60** |  | **15** |
 | Odd Word Out | DSpy |  |  |  |
 |  | LMQL |  |  |  |
 |  | Jaclang |  |  |  |
 | Translation | DSpy |  |  |  |
 |  | LMQL |  |  |  |
 |  | Jaclang |  |  |  |
-| Expert Answer | DSpy | **2.80** |  | 26 |
+| Expert Answer | DSpy | **2.80** |  | 25 |
 |  | LMQL | 6.56 |  | 20 |
 |  | Jaclang | 6.73 |  | **16** |
 

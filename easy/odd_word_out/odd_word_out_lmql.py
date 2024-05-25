@@ -2,7 +2,7 @@ import lmql
 
 
 @lmql.query
-def odd_word_out(OPTIONS):  # FIXME
+def odd_word_out(OPTIONS):
     """lmql
    
     "Pick the odd word out: skirt, dress, pen, jacket.\n"

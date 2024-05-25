@@ -1,75 +1,4 @@
 ## MTLLM (using Anthropic - Claude3 Sonnet)
-### Meaning In (1)
-```yaml
-[System Prompt]
-This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
-Input/Type formatting: Explanation of the Input (variable_name) (type) = value
-
-[Information]
-
-
-[Context]
-
-
-[Inputs Information]
-Question (question) (str) = "What are Large Language Models?"
-
-[Output Information]
-Expert Profession (str)
-
-[Type Explanations]
-
-
-[Action]
-Find the Expert Profession to answer the given question.
-
-
-Reason and return the output result(s) only, adhering to the provided Type in the following format
-
-[Reasoning] <Reason>
-[Output] <Result>
-```
-### Meaning Out (1)
-```yaml
-[Reasoning] To provide an expert answer to the question "What are Large Language Models?", the most relevant expert profession would be an Artificial Intelligence (AI) Researcher or a Natural Language Processing (NLP) Researcher. These professionals are deeply involved in the development and understanding of large language models, which are advanced AI systems trained on massive amounts of text data to generate human-like responses to prompts or queries.
-
-[Output] AI Researcher, Natural Language Processing (NLP) Researcher
-```
-
-### Meaning In (2)
-```yaml
-[System Prompt]
-This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
-Input/Type formatting: Explanation of the Input (variable_name) (type) = value
-
-[Information]
-
-
-[Context]
-
-
-[Inputs Information]
-Question (question) (str) = "What are Large Language Models?"
-Expert (expert) (str) = "AI Researcher, Natural Language Processing (NLP) Researcher"
-
-[Output Information]
-Expert's Answer (str)
-
-[Type Explanations]
-
-
-[Action]
-Get the answer for the question from expert's perspective
-
-Generate and return the output result(s) only, adhering to the provided Type in the following format
-
-[Output] <result>
-```
-### Meaning Out (2)
-```yaml
-[Output] As an AI and NLP researcher, large language models (LLMs) are advanced natural language processing systems trained on vast amounts of text data. They can understand and generate human-like text for various applications like question answering, text summarization, translation, and content generation. LLMs leverage deep learning techniques, particularly transformer architectures, to capture complex language patterns and produce coherent and contextually relevant outputs. However, they can exhibit biases, hallucinations, and lack robust reasoning capabilities, so their outputs should be carefully evaluated. LLMs represent a significant milestone in AI's progress toward more natural language understanding and generation.
-```
-
 ### Overall Output
 ```yaml
 AI/ML Researcher or Natural Language Processing Engineer says: 'Large Language Models (LLMs) are advanced artificial intelligence systems trained on vast amounts of text data to understand and generate human-like language. They leverage deep learning techniques, particularly transformer architectures, to capture complex patterns and relationships in text. LLMs can perform a wide range of natural language tasks, such as question answering, text summarization, translation, and even creative writing. However, their outputs can be biased or inconsistent, and they may generate harmful or untruthful content, so careful monitoring and responsible deployment are essential.'
@@ -100,5 +29,8 @@ Natural Language Processing Expert says: Expert's answer: Large Language Models 
 Time taken: 2.80 seconds
 ```
 
-## Conclusion
-When 
+## Observations
+1. MTLLM Provided the most detailed and accurate answer to the question. and no unwanted words were added.
+2. DSpy also provided accurate answer but additional unwanted word `Expert's answer:` was added.
+3. LMQL provided a short and accurate answer but it was not as detailed and at the sametime introduced some unwanted words `this question by saying:` and additional newline.
+4. MTLLM & LMQL took almost same time to generate the answer but DSpy took less time to generate the answer.
