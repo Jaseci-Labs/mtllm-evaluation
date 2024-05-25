@@ -67,3 +67,6 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 | Wikipedia (ReACT) | DSpy |  |  |  |
 |  | LMQL |  |  |  |
 |  | Jaclang |  |  |  |
+| RPG Level Generation | DSpy |  |  |  |
+|  | LMQL |  |  |  |
+|  | Jaclang | **31.99** |  | **113** |
