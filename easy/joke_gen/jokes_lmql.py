@@ -1,5 +1,6 @@
 import lmql
 
+
 @lmql.query()
 def tell_a_joke():
     '''lmql
@@ -14,4 +15,5 @@ def tell_a_joke():
     return f'{JOKE} : {PUNCHLINE}'
     '''
 
-print(tell_a_joke()) 
+
+print(tell_a_joke())

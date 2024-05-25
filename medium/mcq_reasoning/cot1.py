@@ -1,4 +1,4 @@
-import lmql 
+import lmql
 
 
 @lmql.query()
@@ -17,4 +17,5 @@ def odd_word_out():
     return REASONING,RESULT 
     '''
 
-print('\n'.join(odd_word_out()))
+
+print("\n".join(odd_word_out()))

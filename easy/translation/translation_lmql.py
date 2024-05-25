@@ -1,5 +1,6 @@
 import lmql
 
+
 @lmql.query()
 def translate(english_word):
     '''lmql
@@ -12,4 +13,6 @@ def translate(english_word):
     "A:[ANSWER]"
     return f'{ANSWER}'
     '''
+
+
 print(translate("cheese"))

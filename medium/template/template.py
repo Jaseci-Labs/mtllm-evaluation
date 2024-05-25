@@ -14,6 +14,7 @@
 
 import lmql
 
+
 @lmql.query
 def bruno_mars():  # FIXME
     '''lmql
@@ -26,5 +27,6 @@ def bruno_mars():  # FIXME
         STOPS_BEFORE(STRING_VALUE, '"') and INT(INT_VALUE) and len(TOKENS(INT_VALUE)) < 2
     return STRING_VALUE, INT_VALUE
     '''
+
 
 print(bruno_mars())

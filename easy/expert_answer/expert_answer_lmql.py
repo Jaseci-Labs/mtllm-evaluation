@@ -1,8 +1,9 @@
 import lmql
 
+
 @lmql.query(beams=2)
 def expert_answer(question):
-    '''lmql
+    """lmql
     "Q: {question}\n\n"
 
     # prompt for an 'expert'
@@ -13,6 +14,7 @@ def expert_answer(question):
     # use 'expert' to answer the question
     "For instance,{expert_name} would answer[ANSWER]" where STOPS_AT(ANSWER, ".")
     return f'{expert_name} says: {ANSWER}'
-    '''
+    """
 
-print(expert_answer(' What are Large Language Models?')) 
+
+print(expert_answer("What are Large Language Models?"))

@@ -2,8 +2,8 @@ import lmql
 
 
 @lmql.query
-def odd_word_out(OPTIONS): # FIXME
-    '''lmql
+def odd_word_out(OPTIONS):  # FIXME
+    """lmql
    
     "Pick the odd word out: skirt, dress, pen, jacket.\n"
     "skirt is clothing, dress is clothing, pen is an object, jacket is clothing.\n"
@@ -17,6 +17,7 @@ def odd_word_out(OPTIONS): # FIXME
     # where \
     #     not "\n" in REASONING and not "Pick" in REASONING
     return REASONING,RESULT 
-    '''
+    """
 
-print(odd_word_out('Bentley, Ferrari,Lamborghini, Casio, Toyota'))
+
+print(odd_word_out("Bentley, Ferrari,Lamborghini, Casio, Toyota"))

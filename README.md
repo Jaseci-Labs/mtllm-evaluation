@@ -15,7 +15,7 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 - Overall Accuracy - The overall accuracy of the model on the problem set.
 - Time Taken to Solve the Problem - The time taken to solve the problem.
 - Readability of the Code - The readability of the code. (Human Evaluation)
-- Number of Lines - The number of lines in the written.
+- Number of Lines - The number of lines in the written. (After Formatting)
 - Token Usage - The number of tokens used by the LLMs.
 - How Good it work good with different LLMs - The performance of the model on different LLMs.
     - OpenAI's GPT-3.5, GPT-4, GPT-4-turbo, GPT-4o
@@ -27,42 +27,43 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 
 ### Easy Problems
 
-| Problem Name | Methodology | Time Taken | Readability | Number of Lines | Token Usage | 
-| ------------ | ----------- | ---------- | ----------- | --------------- | ----------- |
-| Joke Generation | DSpy |  |  |  |  |  |
-| | LMQL |  |  |  |  |  |
-|  | Jaclang |  |  |  |  |  |
-| Odd Word Out | DSpy |  |  |  |  |  |
-|  | LMQL |  |  |  |  |  |
-|  | Jaclang |  |  |  |  |  |
-| Translation | DSpy |  |  |  |  |  |
-|  | LMQL |  |  |  |  |  |
-|  | Jaclang |  |  |  |  |  |
-| Expert Answer | DSpy |  |  |  |  |  |
-|  | LMQL |  |  |  |  |  |
-|  | Jaclang |  |  |  |  |  |
+| Problem Name | Methodology | Time Taken (s) | Readability | Number of Lines |
+| ------------ | ----------- | ---------- | ----------- | --------------- |
+| Joke Generation | DSpy |  |  |  |
+| | LMQL |  |  |  |
+|  | Jaclang |  |  |  |
+| Odd Word Out | DSpy |  |  |  |
+|  | LMQL |  |  |  |
+|  | Jaclang |  |  |  |
+| Translation | DSpy |  |  |  |
+|  | LMQL |  |  |  |
+|  | Jaclang |  |  |  |
+| Expert Answer | DSpy | **2.80** |  | 26 |
+|  | LMQL | 6.56 |  | 20 |
+|  | Jaclang | 6.73 |  | **16** |
+
 
 ### Medium Problems
 
-| Problem Name | Methodology | Time Taken | Readability | Number of Lines | Token Usage | 
-| ------------ | ----------- | ---------- | ----------- | --------------- | ----------- |
-| MCQ Reasoning | DSpy |  |  |  |  |  |
-| | LMQL |  |  |  |  |  |
-|  | Jaclang |  |  |  |  |  |
-| Text to Object | DSpy |  |  |  |  |  |
-|  | LMQL |  |  |  |  |  |
-|  | Jaclang |  |  |  |  |  |
-| Object Filling | DSpy |  |  |  |  |  |
-|  | LMQL |  |  |  |  |  |
-|  | Jaclang |  |  |  |  |  |
+| Problem Name | Methodology | Time Taken (s) | Readability | Number of Lines |
+| ------------ | ----------- | ---------- | ----------- | --------------- |
+| MCQ Reasoning | DSpy |  |  |  |
+|  | LMQL |  |  |  |
+|  | Jaclang |  |  |  |
+| Text to Object | DSpy |  |  |  |
+|  | LMQL |  |  |  |
+|  | Jaclang |  |  |  |
+| Object Filling | DSpy |  |  |  |
+|  | LMQL |  |  |  |
+|  | Jaclang |  |  |  |
 
 ### Hard Problems
 
-| Problem Name | Methodology | Time Taken | Readability | Number of Lines | Token Usage | 
-| ------------ | ----------- | ---------- | ----------- | --------------- | ----------- |
-| Essay Reviewer | DSpy |  |  |  |  |  |
-| | LMQL |  |  |  |  |  |
-|  | Jaclang |  |  |  |  |  |
-| Wikipedia (ReACT) | DSpy |  |  |  |  |  |
-|  | LMQL |  |  |  |  |  |
-|  | Jaclang |  |  |  |  |  |
+| Problem Name | Methodology | Time Taken (s) | Readability | Number of Lines |
+| ------------ | ----------- | ---------- | ----------- | --------------- |
+| Essay Reviewer | DSpy |  |  |  |
+|  | LMQL |  |  |  |
+|  | Jaclang |  |  |  |
+| Wikipedia (ReACT) | DSpy |  |  |  |
+|  | LMQL |  |  |  |
+|  | Jaclang |  |  |  |
