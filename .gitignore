@@ -1,3 +1,7 @@
+# Jac Specific
+__jac_gen__/
+.jaseci/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
