@@ -3,7 +3,7 @@ import dspy
 turbo = dspy.OpenAI(model="gpt-3.5-turbo")
 dspy.settings.configure(lm=turbo)
 
-examples: list[tuple[str, str]] = [
+examples: list[tuple[list, str, str]] = [
     (
         ["skirt", "dress", "pen", "jacket"],
         "skirt is clothing, dress is clothing, pen is an object, jacket is clothing.",

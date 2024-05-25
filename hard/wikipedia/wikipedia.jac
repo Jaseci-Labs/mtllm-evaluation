@@ -12,7 +12,12 @@ obj model :BaseLLM: {
     }
 }
 
-glob llm = model(output_str={"Thought": "To find where Apple's headquarters is located, I should search for information on Apple's headquarters location.", "Action": "Search: Apple headquarters location"});
+glob llm = model(
+    output_str={
+        "Thought": "To find where Apple's headquarters is located, I should search for information on Apple's headquarters location.",
+        "Action": "Search: Apple headquarters location"
+    }
+);
 
 obj 'Question Answering'
 QA {
@@ -39,16 +44,15 @@ QA {
     ];
 
     can 'Get next Thought and Action. Action should always startswith "Search:" or "Finish:" followed by the search term or the answer'
-    get_throught_and_actions(question: 'Question': str,
-        prev_info: 'Previous Thoughts, Actions, and Observations': list[dict] = [])
-    -> 'Next Thought and Action': dict by llm(incl_info=(self.qa_example));
-
+    get_throught_and_actions(question: 'Question': str, prev_info: 'Previous Thoughts, Actions, and Observations': list[dict]=[]) -> 'Next Thought and Action': dict by llm(incl_info=(self.qa_example));
     can get_answer(question: str) -> str {
         prev_info = [];
         while len(prev_info) < 100 {
             next_info = self.get_throught_and_actions(question, prev_info);
             if next_info["Action"].startswith("Search:") {
-                obs = wikipedia.summary(next_info["Action"].replace("Search: ", ""));
+                obs = wikipedia.summary(
+                    next_info["Action"].replace("Search: ", "")
+                );
                 next_info["Observation"] = obs;
             } elif next_info["Action"].startswith("Finish:") {
                 return next_info["Action"].replace("Finish: ", "");
@@ -65,12 +69,10 @@ with entry {
     answer = qa.get_answer(question);
     print("Question: ", question);
     print("Answer: ", answer);
-
     question = "Who is Jason Mars?";
     answer = qa.get_answer(question);
     print("Question: ", question);
     print("Answer: ", answer);
-
     question = input("Ask me a Question: ");
     answer = qa.get_answer(question);
     print("Answer: ", answer);

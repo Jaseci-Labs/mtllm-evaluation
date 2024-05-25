@@ -11,25 +11,28 @@ obj model :BaseLLM: {
     }
 }
 
-glob llm = model(output_str="Person(name='Claude', age=2, employer=Employer(employer_name='Anthropic', location='San Francisco'), job='AI assistant')");
-
+glob llm = model(
+    output_str="Person(name='Claude', age=2, employer=Employer(employer_name='Anthropic', location='San Francisco'), job='AI assistant')"
+);
 
 obj 'Employer'
 Employer {
-    has employer_name: 'Employer Name' :str,
-        location: 'Location' :str;
+    has employer_name: 'Employer Name': str,
+        location: 'Location': str;
 }
 
 obj 'Person'
 Person {
     has name: 'Name': str,
-        age: 'Age' :int,
+        age: 'Age': int,
         employer: 'Employer': Employer,
-        job: 'Job' :str;
+        job: 'Job': str;
 }
 
 with entry {
-    info: "Person's Information" :str = "Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, Switzerland.";
+    info: "Person's Information": str = "Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, Switzerland.";
     person = Person(by llm(incl_info=(info)));
-    print(f"Their name is {person.name} and she works in {person.employer.location}.");
+    print(
+        f"Their name is {person.name} and she works in {person.employer.location}."
+    );
 }
