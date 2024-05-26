@@ -1,9 +1,6 @@
-import:py from jaclang.core.llms, Anthropic;
-import:py time;
+import:py from jaclang.core.llms, OpenAI;
 
-glob start_time = time.time();
-
-glob llm = Anthropic();
+glob llm = OpenAI(model_name="gpt-4o");
 
 obj 'Position (0-Indexed)'
 Position {
@@ -109,5 +106,4 @@ with entry:__main__ {
         print(new_level);
         print('\n'.join(get_map(new_level_map)));
     }
-    print('Time Taken:', time.time() - start_time);
 }

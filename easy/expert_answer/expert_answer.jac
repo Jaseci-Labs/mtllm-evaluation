@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, Anthropic;
+import:py from jaclang.core.llms, OpenAI;
 
-glob llm = Anthropic();
+glob llm = OpenAI(model_name="gpt-4o");
 
 can 'Find the Expert Profession to answer the given question.'
 get_expert(question: 'Question': str) -> 'Expert Profession': str by llm(reason=True);

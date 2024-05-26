@@ -1,7 +1,7 @@
 import dspy
 from dspy.teleprompt import BootstrapFewShot
 
-turbo = dspy.OpenAI(model="gpt-3.5-turbo")
+turbo = dspy.OpenAI(model="gpt-4o")
 dspy.settings.configure(lm=turbo)
 
 examples: dict[str, str] = {

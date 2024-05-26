@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, Anthropic;
+import:py from jaclang.core.llms, OpenAI;
 
-glob llm = Anthropic();
+glob llm = OpenAI(model_name="gpt-4o");
 
 
 enum 'Personality of the Person'

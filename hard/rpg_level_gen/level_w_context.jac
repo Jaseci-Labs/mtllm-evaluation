@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, Anthropic;
+import:py from jaclang.core.llms, OpenAI;
 
-glob llm = Anthropic(verbose=True);
+glob llm = OpenAI(verbose=True, model_name="gpt-4o");
 
 obj 'Position (0-Indexed)'
 Position {

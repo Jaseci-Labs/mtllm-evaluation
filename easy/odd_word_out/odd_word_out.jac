@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, Anthropic;
+import:py from jaclang.core.llms, OpenAI;
 
-glob llm = Anthropic();
+glob llm = OpenAI(model_name="gpt-4o");
 
 glob examples: 'Examples for Picking Odd Word out (Options, Reasoing, Result)': list[tuple[list[str], str, str]] = [
     (["skirt", "dress", "pen", "jacket"], "skirt is clothing, dress is clothing, pen is an object, jacket is clothing.", "pen"),
