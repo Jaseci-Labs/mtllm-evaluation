@@ -1,5 +1,5 @@
 import dspy
-import dspy.teleprompt
+from dspy.teleprompt import BootstrapFewShot
 
 turbo = dspy.OpenAI(model="gpt-3.5-turbo")
 dspy.settings.configure(lm=turbo)
@@ -25,15 +25,13 @@ class JokeWithPunchline(dspy.Signature):
 class JokeWithPunchlineModule(dspy.Module):
     def __init__(self):
         super().__init__()
-        self.generate_answer = dspy.predictor(JokeWithPunchline)
+        self.generate_answer = dspy.Predict(JokeWithPunchline)
 
     def forward(self):
         pred = self.generate_answer()
         return dspy.Prediction(joke=pred.joke, punchline=pred.punchline)
 
 
-tell_a_joke = dspy.teleprompt.BootstrapFewShot().compile(
-    JokeWithPunchlineModule(), trainset=dataset
-)
+tell_a_joke = BootstrapFewShot().compile(JokeWithPunchlineModule(), trainset=dataset)
 pred = tell_a_joke()
 print(f"{pred.joke}: {pred.punchline}")

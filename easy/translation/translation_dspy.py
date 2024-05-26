@@ -1,7 +1,6 @@
 import dspy
+from dspy.teleprompt import BootstrapFewShot
 import time
-
-import dspy.teleprompt
 
 start_time = time.time()
 
@@ -21,8 +20,6 @@ dataset = [
     for english_word, translation in examples.items()
 ]
 
-print(dataset)
-
 
 class Translation(dspy.Signature):
     """Translate the given English word"""
@@ -34,16 +31,14 @@ class Translation(dspy.Signature):
 class TranslationModule(dspy.Module):
     def __init__(self):
         super().__init__()
-        self.generate_answer = dspy.predictor(Translation)
+        self.generate_answer = dspy.Predict(Translation)
 
     def forward(self, english_word: str):
         prediction = self.generate_answer(english_word=english_word)
         return dspy.Prediction(translation=prediction.translation)
 
 
-translate = dspy.teleprompt.BootstrapFewShot().compile(
-    TranslationModule(), trainset=dataset
-)
+translate = BootstrapFewShot().compile(TranslationModule(), trainset=dataset)
 pred = translate(english_word="cheese")
 print(pred.translation)
 print("Time taken:", time.time() - start_time, "seconds")

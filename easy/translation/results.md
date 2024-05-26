@@ -20,10 +20,13 @@ Time taken: 2.45 seconds
 ## DSpy (using OpenAI)
 ### Overall Output
 ```yaml
-raise ValueError(
-ValueError: ('Too many retries trying to get the correct output format. Try simplifying the requirements.', {'general': 'Field required: translation (error type: missing)'})
+fromage
+```
+
+```yaml
+Time taken: 5.437563180923462 seconds
 ```
 
 ## Observations
-1. MTLLM & LMQL provided accurate answers.
-2. DSpy failed to provide an answer. Code didnt worked. Same code worked for other examples.
+1. MTLLM, LMQL, DSpy provided accurate answers.
+2. MTLLM was the fastest, followed by LMQL and DSpy.

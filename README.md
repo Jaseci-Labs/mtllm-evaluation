@@ -32,10 +32,10 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 | Odd Word Out | DSpy | 3.75 |  | 50 |
 |  | LMQL | 2.73 |  | 23 |
 |  | Jaclang | **2.60** |  | **15** |
-| Joke Generation | DSpy | Failed |  |  |
+| Joke Generation | DSpy |  |  | 37 |
 |  | LMQL | 5.55 |  | 19 |
 |  | Jaclang | **2.45** |  | **16** |
-| Translation | DSpy | Failed |  |  |
+| Translation | DSpy |  |  | 44 |
 |  | LMQL | 2.45 |  | 18 |
 |  | Jaclang | **1.82** |  | **16** |
 | Expert Answer | DSpy | **2.80** |  | 25 |

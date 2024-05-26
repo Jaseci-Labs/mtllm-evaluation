@@ -1,5 +1,5 @@
 import dspy
-import dspy.teleprompt
+from dspy.teleprompt import BootstrapFewShot
 
 turbo = dspy.OpenAI(model="gpt-3.5-turbo")
 dspy.settings.configure(lm=turbo)
@@ -44,8 +44,6 @@ class OddWordOutModule(dspy.Module):
         )
 
 
-get_odd_word_out = dspy.teleprompt.BootstrapFewShot().compile(
-    OddWordOutModule(), trainset=dataset
-)
+get_odd_word_out = BootstrapFewShot().compile(OddWordOutModule(), trainset=dataset)
 pred = get_odd_word_out("[Bentley, Ferrari, Lamborghini, Casio, Toyota]")
 print((pred.odd_word, pred.rationale))

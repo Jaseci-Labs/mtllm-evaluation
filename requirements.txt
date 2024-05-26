@@ -1,3 +1,5 @@
 lmql
 dspy
-jaclang[llms]
+jaclang
+anthropic
+black
