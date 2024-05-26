@@ -3,3 +3,4 @@ dspy
 jaclang
 anthropic
 black
+wikipedia

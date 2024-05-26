@@ -1,23 +1,7 @@
-import:py from jaclang.core.llms, BaseLLM;
+import:py from jaclang.core.llms, OpenAI;
 import:py wikipedia;
 
-obj model :BaseLLM: {
-    can init(output_str: str) {
-        self.output_str = output_str;
-    }
-
-    can __infer__(meaning_in: str, **kwargs: dict) {
-        print(meaning_in);
-        return f"[Output] {self.output_str}";
-    }
-}
-
-glob llm = model(
-    output_str={
-        "Thought": "To find where Apple's headquarters is located, I should search for information on Apple's headquarters location.",
-        "Action": "Search: Apple headquarters location"
-    }
-);
+glob llm = OpenAI(verbose=True, model_name="gpt-4o");
 
 obj 'Question Answering'
 QA {
