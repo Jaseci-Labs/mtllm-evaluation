@@ -1,8 +1,5 @@
 import dspy
 from dspy.teleprompt import BootstrapFewShot
-import time
-
-start_time = time.time()
 
 turbo = dspy.OpenAI(model="gpt-3.5-turbo")
 dspy.settings.configure(lm=turbo)
@@ -41,4 +38,3 @@ class TranslationModule(dspy.Module):
 translate = BootstrapFewShot().compile(TranslationModule(), trainset=dataset)
 pred = translate(english_word="cheese")
 print(pred.translation)
-print("Time taken:", time.time() - start_time, "seconds")

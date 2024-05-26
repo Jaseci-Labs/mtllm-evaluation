@@ -7,7 +7,7 @@ obj Essay {
 
     can 'Evaluate the given essay based on the given criteria. Provide Detailed Judgement.'
     essay_judge(criteria: 'Criteria': str) -> 'Judgement': str by llm(incl_info=(self.essay));
-    can 'Generate a summary'
+    can 'Generate a summary with the given judgements.'
     generate_summary(judgements: 'Judgements': dict) -> 'Summary': str by llm(incl_info=(self.essay));
     can 'Give essay a letter grade (A-D)'
     give_grade(summary: 'Summary': str) -> 'Grade': str by llm();

@@ -41,6 +41,9 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 | Expert Answer | DSpy | **2.80** |  | 25 |
 |  | LMQL | 6.56 |  | 20 |
 |  | Jaclang | 6.73 |  | **16** |
+| Essay Reviewer | DSpy |  |  | 66 |
+|  | LMQL |  |  |  |
+|  | Jaclang |  |  | 36 |
 
 
 ### Medium Problems
@@ -61,9 +64,6 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 
 | Problem Name | Methodology | Time Taken (s) | Readability | Number of Lines |
 | ------------ | ----------- | ---------- | ----------- | --------------- |
-| Essay Reviewer | DSpy |  |  |  |
-|  | LMQL |  |  |  |
-|  | Jaclang |  |  |  |
 | Wikipedia (ReACT) | DSpy |  |  |  |
 |  | LMQL |  |  |  |
 |  | Jaclang |  |  |  |
