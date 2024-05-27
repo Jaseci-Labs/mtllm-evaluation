@@ -1,8 +1,4 @@
 import lmql
-from time import time
-
-
-start = time()
 
 
 @lmql.query()
@@ -23,5 +19,3 @@ def odd_word_out():
 
 
 print("\n".join(odd_word_out()))
-end = time()
-print(f"Time taken: {end-start} seconds")
