@@ -1,17 +1,6 @@
-import:py from jaclang.core.llms, BaseLLM;
+import:py from jaclang.core.llms, OpenAI;
 
-obj model :BaseLLM: {
-    can init(output_str: str) {
-        self.output_str = output_str;
-    }
-
-    can __infer__(meaning_in: str, **kwargs: dict) {
-        print(meaning_in);
-        return f"[Output] {self.output_str}";
-    }
-}
-
-glob llm = model(output_str="A");
+glob llm = OpenAI(model_name="gpt-4o");
 
 can 'Provide the Answer for the Given Question (A-F)'
 get_answer(question: 'Question': str, choices: 'Answer Choices': dict) -> 'Answer (A-F)': str by llm(reason=True);
