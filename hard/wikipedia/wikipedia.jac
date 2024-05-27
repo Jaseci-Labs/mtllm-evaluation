@@ -1,7 +1,7 @@
 import:py from jaclang.core.llms, OpenAI;
 import:py wikipedia;
 
-glob llm = OpenAI(verbose=True, model_name="gpt-4o");
+glob llm = OpenAI(model_name="gpt-4o");
 
 obj 'Question Answering'
 QA {
@@ -32,7 +32,7 @@ QA {
     can get_answer(question: str) -> str {
         prev_info = [];
         while len(prev_info) < 100 {
-            next_info = self.get_throught_and_actions(question, prev_info);
+            next_info = self.get_throught_and_actions(question, prev_info[-3:]);
             if next_info["Action"].startswith("Search:") {
                 obs = wikipedia.summary(
                     next_info["Action"].replace("Search: ", "")
@@ -56,8 +56,5 @@ with entry {
     question = "Who is Jason Mars?";
     answer = qa.get_answer(question);
     print("Question: ", question);
-    print("Answer: ", answer);
-    question = input("Ask me a Question: ");
-    answer = qa.get_answer(question);
     print("Answer: ", answer);
 }
