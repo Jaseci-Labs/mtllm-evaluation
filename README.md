@@ -70,3 +70,22 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 | RPG Level Generation | DSpy |  |  |  |
 |  | LMQL |  |  |  |
 |  | Jaclang | **31.99** |  | **113** |
+
+
+
+## Issues Encountered
+### DSPy
+1. Handling Examples in DSPy is very difficult as everything need to created using classes. This makes it difficult to handle simple problems. and always the examples need to be structured in a way that it can be used in a class.
+2. Unable to provide additional context as everything need to be in the docstring. and the docstring is not very flexible to handle additional context.
+3. As the Typed Output are handled as a JSON String and the Type Information is provided as a JSON Schema. When it comes to complex types, it is very difficult to handle them. (eg- level_generation)
+![image](medium/text_to_type/log.png)
+4. It doesnt support some LLMs like Anthropic's Claude 3, Google's Gemini Models
+5. Even for small problems need a lot of code to be written and everytime need to create a class for the problem.
+6. Hard to Debug as the error messages are not very clear
+
+### LMQL
+1. Very Hard to write the LMQL code as it is very difficult to understand the syntax.
+2. It feels more of prompting than writing code.
+3. Difficult to handle complex types as there is no mechanism to handle them.
+4. Its uses token-wise approach for text generation, which is expensive and slow. Most of the models doesn't support token-wise approach.
+5. Hard to Debug as the error messages are not very clear
