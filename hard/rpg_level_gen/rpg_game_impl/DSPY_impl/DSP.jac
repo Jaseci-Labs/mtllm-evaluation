@@ -113,7 +113,7 @@ node level{
 '''Run the game'''
 with entry {
     llm = model();
-    gpt4:Any = dspy.OpenAI(model='gpt-4', max_tokens=300);
+    gpt4:Any = dspy.OpenAI(model='gpt-4o', max_tokens=300);
     dspy.configure(lm=gpt4);
     game() spawn root;
 }

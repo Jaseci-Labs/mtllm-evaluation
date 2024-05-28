@@ -8,9 +8,9 @@ import:py sys;
 import:py os;
 import:py random;
 import:py time;
-import:py from jaclang.core.llms, Anthropic;
+import:py from jaclang.core.llms, OpenAI;
 
-glob llm = Anthropic(model_name="claude-3-sonnet-20240229");
+glob llm = OpenAI(model_name="gpt-4o");
 
 # Importing Jac codebase
 include:jac sprites;
