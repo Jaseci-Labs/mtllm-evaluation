@@ -24,8 +24,8 @@ Time taken: 2.7534639835357666 seconds
 ```python
 import dspy
 
-turbo = dspy.OpenAI(model="gpt-4o")
-dspy.settings.configure(lm=turbo)
+llm = dspy.OpenAI(model="gpt-4o")
+dspy.settings.configure(lm=llm)
 
 class OddWordOut(dspy.Signature):
     """Pict the Odd Word Out from the given list of words."""

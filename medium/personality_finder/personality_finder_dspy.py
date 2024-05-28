@@ -2,8 +2,8 @@ import dspy
 from pydantic import BaseModel, Field
 import enum
 
-turbo = dspy.OpenAI(model="gpt-4o")
-dspy.settings.configure(lm=turbo)
+llm = dspy.OpenAI(model="gpt-4o")
+dspy.settings.configure(lm=llm)
 
 
 class Personality(enum.Enum):

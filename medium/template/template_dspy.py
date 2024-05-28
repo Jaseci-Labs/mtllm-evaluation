@@ -1,8 +1,8 @@
 import dspy
 from pydantic import BaseModel, Field
 
-turbo = dspy.OpenAI(model="gpt-4o")
-dspy.settings.configure(lm=turbo)
+llm = dspy.OpenAI(model="gpt-4o")
+dspy.settings.configure(lm=llm)
 
 
 class Singer(BaseModel):

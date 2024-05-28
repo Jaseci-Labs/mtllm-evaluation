@@ -3,8 +3,8 @@ from dspy.teleprompt import BootstrapFewShot
 from pydantic import BaseModel, Field
 import wikipedia
 
-turbo = dspy.OpenAI(model="gpt-4o")
-dspy.settings.configure(lm=turbo)
+llm = dspy.OpenAI(model="gpt-4o")
+dspy.settings.configure(lm=llm)
 
 
 class ThoughtActionObservation(BaseModel):

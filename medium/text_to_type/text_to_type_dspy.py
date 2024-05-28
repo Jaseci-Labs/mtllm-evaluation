@@ -1,8 +1,8 @@
 import dspy
 from pydantic import BaseModel, Field
 
-turbo = dspy.OpenAI(model="gpt-4o")
-dspy.settings.configure(lm=turbo)
+llm = dspy.OpenAI(model="gpt-4o")
+dspy.settings.configure(lm=llm)
 
 
 class Employer(BaseModel):
@@ -28,4 +28,4 @@ info = "Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, 
 alice = dspy.TypedPredictor(GetPerson)(info=info).person
 print(f"Their name is {alice.name} and she works in {alice.employer.location}.")
 
-print(turbo.inspect_history())
+print(llm.inspect_history())

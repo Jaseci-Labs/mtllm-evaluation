@@ -18,7 +18,7 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 - Number of Lines - The number of lines in the written. (After Formatting)
 - Token Usage - The number of tokens used by the LLMs.
 - How Good it work good with different LLMs - The performance of the model on different LLMs.
-    - OpenAI's GPT-3.5, GPT-4, GPT-4-turbo, GPT-4o
+    - OpenAI's GPT-3.5, GPT-4, GPT-4-llm, GPT-4o
     - Anthrpic's Claude 3 (Sonnet, Opus)
     - Google's Gemini Models
     - OpenSource (LLama3 (8b, 70b), Mistral, Mixtral, Phi-3)

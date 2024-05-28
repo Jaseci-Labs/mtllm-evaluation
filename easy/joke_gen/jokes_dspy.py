@@ -1,8 +1,8 @@
 import dspy
 from dspy.teleprompt import BootstrapFewShot
 
-turbo = dspy.OpenAI(model="gpt-4o")
-dspy.settings.configure(lm=turbo)
+llm = dspy.OpenAI(model="gpt-4o")
+dspy.settings.configure(lm=llm)
 
 examples: list[tuple[str, str]] = [
     ("How does a penguin build its house?", "Igloos it together."),

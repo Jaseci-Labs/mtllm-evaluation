@@ -3,8 +3,8 @@ from pydantic import BaseModel, Field
 from typing import List
 
 
-turbo = dspy.OpenAI(model="gpt-4o")
-dspy.settings.configure(lm=turbo)
+llm = dspy.OpenAI(model="gpt-4o")
+dspy.settings.configure(lm=llm)
 
 
 class Position(BaseModel):
