@@ -40,16 +40,6 @@ BBBBBBBBBBBBBBBBBB
 Time Taken: 31.99008297920227 seconds
 ```
 
-## MTLLM (using Anthropic - Claude3 Sonnet) with Rules
-### Overall Output
-```yaml
-
-```
-
-```yaml
-
-```
-
 ## LMQL (using OpenAI)
 ### Overall Output
 ```yaml
@@ -63,9 +53,21 @@ Time Taken: 31.99008297920227 seconds
 ## DSpy (using OpenAI)
 ### Error Encountered
 ```bash
-raise ValueError(
-ValueError: ('Too many retries trying to get the correct output format. Try simplifying the requirements.', {'general': 'Field required: translation (error type: missing)'})
+Traceback (most recent call last):
+  File "/workspaces/mtllm-evaluation/hard/rpg_level_gen/level_dspy.py", line 116, in <module>
+    level_manager.get_next_level()
+  File "/workspaces/mtllm-evaluation/hard/rpg_level_gen/level_dspy.py", line 78, in get_next_level
+    new_level_map = dspy.TypedPredictor(CreateMap)(level=new_level).map
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/mtllm_eval/lib/python3.12/site-packages/dspy/primitives/program.py", line 26, in __call__
+    return self.forward(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/envs/mtllm_eval/lib/python3.12/site-packages/dspy/functional/functional.py", line 235, in forward
+    raise ValueError(
+ValueError: ('Too many retries trying to get the correct output format. Try simplifying the requirements.', {'map': "ValueError('json output should end with ```')"})
+
 ```
 
 ## Observations
 1. MTLLM is able to generate levels with the given constraints and the output is as expected and Ability to create Nested Objects with Precision.
+2. DSpy is not able to generate the output as expected and is not able to follow the expected format. Shows the inability to work with lots of structured data.

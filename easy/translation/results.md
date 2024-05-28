@@ -4,29 +4,30 @@
 fromage
 ```
 ```yaml
-Time taken: 1.8196868896484375  seconds
+Time Taken: 0.9716598987579346 seconds
 ```
 
 ## LMQL (using OpenAI)
 ### Overall Output
 ```yaml
- Fromage
+Fromage
 ```
 
 ```yaml
-Time taken: 2.45 seconds
+Time Taken: 1.3831193447113037 seconds
 ```
 
 ## DSpy (using OpenAI)
 ### Overall Output
 ```yaml
-fromage
+English Word: cheese
+Translation: English Word: cheese Translation: fromage
 ```
 
 ```yaml
-Time taken: 5.437563180923462 seconds
+Time Taken: 3.390303134918213 seconds
 ```
 
 ## Observations
-1. MTLLM, LMQL, DSpy provided accurate answers.
-2. MTLLM was the fastest, followed by LMQL and DSpy.
+1. MTLLM, LMQL provided the correct translation of the word.
+2. DSpy provided the correct translation of the word but also added some unwanted words such as 'English Word:', 'Translation:'.

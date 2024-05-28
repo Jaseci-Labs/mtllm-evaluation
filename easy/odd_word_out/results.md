@@ -1,10 +1,10 @@
 ## MTLLM (using Anthropic - Claude3 Sonnet)
 ### Overall Output
 ```yaml
-('Casio is a watch company, Bentley, Ferrari, Lamborghini, Toyota are car companies.', 'Casio')
+('Bentley, Ferrari, Lamborghini, Toyota are car brands, Casio is an electronics brand.', 'Casio')
 ```
 ```yaml
-Time taken: 2.600358009338379  seconds
+Time Taken: 1.2525591850280762 seconds
 ```
 
 ## LMQL (using OpenAI)
@@ -14,12 +14,12 @@ Time taken: 2.600358009338379  seconds
 ```
 
 ```yaml
-Time taken: 2.7534639835357666 seconds
+Time Taken: 1.86393404006958 seconds
 ```
 
 ## DSpy (using OpenAI)
 
-## Erros Encountered
+## Errors Encountered
 1. When I tried to provide the input to Signature as a list of strings, I got the following error:
 ```python
 import dspy
@@ -41,26 +41,17 @@ assert type(x) == str, f"Need format_handler for {field.input_variable} of type 
            ^^^^^^^^^^^^^^
 AssertionError: Need format_handler for options of type <class 'list'>
 ```
-### Overall Output (Without Examples)
-```yaml
-('produce the odd word. We can see that the first four options are all luxury car brands, while Toyota is a mainstream car brand.', 'Toyota')
-```
-
-```yaml
-Time taken: 1.50 seconds
-```
 
 ### Overall Output (With Examples)
 ```yaml
-('Casio', "produce the odd word. We can see that 'Casio' is the only brand that is not a luxury car brand.")
+("Options: [Bentley, Ferrari, Lamborghini, Casio, Toyota]\nReasoning: Let's think step by step in order to produce the odd word. We need to identify the common category that most of the words belong to. Bentley, Ferrari, Lamborghini, and Toyota are all car manufacturers. Casio, on the other hand, is a brand known for electronics, such as watches and calculators.", 'Casio')
 ```
 
 ```yaml
-Time taken: 3.75 seconds
+Time Taken: 8.889593601226807 seconds
 ```
 
 ## Observations
 1. MTLLM provided the most accurate answer to the question.
-2. LMQL was not able to follow the expected format. But was able to provide the correct reasoning. without the correct answer.
-3. DSpy was unable to provide the correct answer when examples were not provided. But was able to provide the correct answer when examples were provided. While introducing some unwanted words `produce the odd word.`.
-4. DSPy Implementation with Examples (Few Shot Prompting) is hard to implement. Seems like a such an overkill for such a simple problem.
+2. LMQL was not able to follow the expected format. But was able to provide the correct reasoning. without the correct answer separately.
+3. DSPy was able to provide the correct answer but reasoning provided introduced some unwanted words such as 'Options:', 'Reasoning:', 'Let's think step by step in order to produce the odd word.'
