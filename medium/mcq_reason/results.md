@@ -6,7 +6,7 @@
 A
 ```
 ```yaml
-Time taken:   2.058670520782470 seconds
+Time taken: 2.058670520782470 seconds
 ```
 
 ## LMQL (using OpenAI)
@@ -39,5 +39,7 @@ Time taken:  4.557163715362549 seconds
 
 ## Observations
 1. The MTLLM model was able to provide the correct answer in a shorter time compared to the other models.
+2. LMQL was able to provide the correct answer.
+3. DSpy was able to provide the correct answer but added some unwanted words such as 'Reasoning:', 'Let's think step by step in order to produce the answer.'. Though it came to the correct conclusion and answer. Was not able to provide just the Answer Key.
 
 

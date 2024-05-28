@@ -29,47 +29,50 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 
 | Problem Name | Methodology | Time Taken (s) | Readability | Number of Lines |
 | ------------ | ----------- | ---------- | ----------- | --------------- |
-| Odd Word Out | DSpy | 3.75 |  | 50 |
-|  | LMQL | 2.73 |  | 23 |
-|  | Jaclang | **2.60** |  | **15** |
-| Joke Generation | DSpy |  |  | 37 |
-|  | LMQL | 5.55 |  | 19 |
-|  | Jaclang | **2.45** |  | **16** |
-| Translation | DSpy |  |  | 44 |
-|  | LMQL | 2.45 |  | 18 |
-|  | Jaclang | **1.82** |  | **16** |
-| Expert Answer | DSpy | **2.80** |  | 25 |
-|  | LMQL | 6.56 |  | 20 |
-|  | Jaclang | 6.73 |  | **16** |
-| Essay Reviewer | DSpy |  |  | 66 |
+| Odd Word Out | DSpy | 8.89 |  | 49 |
+|  | LMQL | 1.86 |  | 23 |
+|  | Jaclang | **1.25** |  | **19** |
+| Joke Generation | DSpy | 3.21 |  | 37 |
+|  | LMQL | 2.84 |  | 19 |
+|  | Jaclang | `1.62` |  | `16` |
+| Translation | DSpy | 3.39 |  | 40 |
+|  | LMQL | 1.38 |  | 18 |
+|  | Jaclang | `0.97` |  | `16` |
+| Expert Answer | DSpy | `4.15` |  | 25 |
+|  | LMQL | 6.65 |  | 20 |
+|  | Jaclang | 8.04 |  | `15` |
+| Essay Reviewer | DSpy | 17.80 |  | 66 |
 |  | LMQL |  |  |  |
-|  | Jaclang |  |  | 36 |
+|  | Jaclang | `8.72` |  | `36` |
 
 
 ### Medium Problems
 
 | Problem Name | Methodology | Time Taken (s) | Readability | Number of Lines |
 | ------------ | ----------- | ---------- | ----------- | --------------- |
-| MCQ Reasoning | DSpy |  |  |  |
-|  | LMQL |  |  |  |
-|  | Jaclang |  |  |  |
-| Text to Object | DSpy |  |  |  |
-|  | LMQL |  |  |  |
-|  | Jaclang |  |  |  |
-| Object Filling | DSpy |  |  |  |
-|  | LMQL |  |  |  |
-|  | Jaclang |  |  |  |
+| MCQ Reasoning | DSpy | 4.55 |  | 20 |
+|  | LMQL | 3.56 |  | 21 |
+|  | Jaclang | `2.05` |  | `19` |
+| Text to Type | DSpy | 2.70 |  | 31 |
+|  | LMQL | 3.01 |  | 30 |
+|  | Jaclang | `1.73` |  | `23` |
+| Template | DSpy | 1.04 |  | 26 |
+|  | LMQL | - |  | - |
+|  | Jaclang | `1.36` |  | `17` |
+| Personality Finder | DSpy | `1.06` |  | 31 |
+|  | LMQL | - |  | - |
+|  | Jaclang | 1.77 |  | `25` |
 
 ### Hard Problems
 
 | Problem Name | Methodology | Time Taken (s) | Readability | Number of Lines |
 | ------------ | ----------- | ---------- | ----------- | --------------- |
-| Wikipedia (ReACT) | DSpy |  |  |  |
+| Wikipedia (ReACT) | DSpy | 10.76 |  | 118 |
+|  | LMQL | - |  | - |
+|  | Jaclang | `8.73` |  | `67` |
+| RPG Level Generation | DSpy | - |  | 117 |
 |  | LMQL |  |  |  |
-|  | Jaclang |  |  |  |
-| RPG Level Generation | DSpy |  |  |  |
-|  | LMQL |  |  |  |
-|  | Jaclang | **31.99** |  | **113** |
+|  | Jaclang | **31.99** |  | **109** |
 
 
 
