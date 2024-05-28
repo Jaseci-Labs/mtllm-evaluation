@@ -46,4 +46,4 @@ class OddWordOutModule(dspy.Module):
 
 get_odd_word_out = BootstrapFewShot().compile(OddWordOutModule(), trainset=dataset)
 pred = get_odd_word_out("[Bentley, Ferrari, Lamborghini, Casio, Toyota]")
-print((pred.odd_word, pred.rationale))
+print((pred.rationale, pred.odd_word))
