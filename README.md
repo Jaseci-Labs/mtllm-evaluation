@@ -27,7 +27,7 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 
 ### Easy Problems
 
-| Problem Name | Methodology | Time Taken (s) | Readability | Number of Lines |
+| Problem Name | Methodology | Runtime (s) | Readability | Number of Lines |
 | ------------ | ----------- | ---------- | ----------- | --------------- |
 | Odd Word Out | DSpy | 8.89 |  | 49 |
 |  | LMQL | 1.86 |  | 23 |
@@ -48,7 +48,7 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 
 ### Medium Problems
 
-| Problem Name | Methodology | Time Taken (s) | Readability | Number of Lines |
+| Problem Name | Methodology | Runtime (s) | Readability | Number of Lines |
 | ------------ | ----------- | ---------- | ----------- | --------------- |
 | MCQ Reasoning | DSpy | 4.55 |  | 20 |
 |  | LMQL | 3.56 |  | 21 |
@@ -65,7 +65,7 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 
 ### Hard Problems
 
-| Problem Name | Methodology | Time Taken (s) | Readability | Number of Lines |
+| Problem Name | Methodology | Runtime (s) | Readability | Number of Lines |
 | ------------ | ----------- | ---------- | ----------- | --------------- |
 | Wikipedia (ReACT) | DSpy | 10.76 |  | 118 |
 |  | LMQL | - |  | - |
