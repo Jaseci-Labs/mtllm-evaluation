@@ -8,7 +8,7 @@ Grade:  B
 Time Taken: 8.726481914520264 seconds
 ```
 
-## LMQL (using OpenAI)
+## LMQL 
 ### Overall Output
 ```yaml
 Currently Not Available

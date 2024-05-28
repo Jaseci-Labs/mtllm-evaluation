@@ -1,4 +1,4 @@
-## MTLLM (using Anthropic - Claude3 Sonnet)
+## MTLLM 
 ### Overall Output
 ```yaml
 Question:  Where is Apple Headquaters located?
@@ -10,16 +10,31 @@ Answer:  Jason Mars is an American computer scientist, author, and entrepreneur 
 Time Taken: 8.737410545349121 seconds
 ```
 
-## LMQL (using OpenAI)
+## MTLLM (Without using Typed Outputs)
+
+### Overall Output
+```yaml
+Question:  Where is Apple Headquaters located?
+Answer:  Cupertino, California, United States
+Question:  Who is Jason Mars?
+Answer:  Jason Mars is an American computer scientist, author, and entrepreneur known for his work in computer architecture and artificial intelligence. He is an Associate Professor at the University of Michigan and co-director of U-M's Clarity Lab.
+```
+
+```yaml
+Time taken:  11.804817199707031 seconds
+```
+
+## LMQL 
 ### Overall Output
 ```yaml
 Not Available
 ```
 
 ```yaml
+Not Available
 ```
 
-## DSpy (using OpenAI)
+## DSpy 
 ### Overall Output
 ```yaml
 Question:  Where is Apple Headquaters located?

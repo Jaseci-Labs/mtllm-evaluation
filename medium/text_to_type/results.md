@@ -1,4 +1,4 @@
-## MTLLM (using Anthropic - Claude3 Sonnet)
+## MTLLM 
 ### Overall Output
 ```yaml
 Their name is Alice and she works in Zurich, Switzerland.
@@ -7,7 +7,7 @@ Their name is Alice and she works in Zurich, Switzerland.
 Time taken:  1.731600046157837 seconds
 ```
 
-## LMQL (using OpenAI)
+## LMQL 
 ### Overall Output
 ```yaml
 Their name is Alice and she works in Zurich, Switzerland.
@@ -17,7 +17,7 @@ Their name is Alice and she works in Zurich, Switzerland.
 Time taken:  3.019758939743042 seconds
 ```
 
-## DSpy (using OpenAI)
+## DSpy 
 ### Overall Output
 ```yaml
 Their name is Alice and she works in Zurich, Switzerland.

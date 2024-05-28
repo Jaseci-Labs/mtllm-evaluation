@@ -1,4 +1,4 @@
-## MTLLM (using Anthropic - Claude3 Sonnet)
+## MTLLM 
 ### Overall Output
 ```yaml
 AI Researcher says: 'Large Language Models (LLMs) are a type of artificial intelligence that utilize machine learning algorithms, particularly deep learning, to understand, generate, and manipulate human language. These models are trained on vast amounts of text data and can perform various tasks, such as translation, summarization, question answering, and text generation. They are designed to capture the nuances and complexities of human language, enabling them to produce coherent and contextually relevant responses. Examples of LLMs include OpenAI's GPT-3 and Google's BERT.
@@ -7,7 +7,7 @@ AI Researcher says: 'Large Language Models (LLMs) are a type of artificial intel
 Time Taken: 8.040887117385864 seconds
 ```
 
-## LMQL (using OpenAI)
+## LMQL 
 ### Overall Output
 ```yaml
 a computer scientist or linguist who specializes in natural language processing (NLP) and artificial intelligence (AI) says:  this question by saying:
@@ -18,7 +18,7 @@ Large language models are computer programs that use artificial intelligence and
 Time Taken: 6.658355712890625 seconds
 ```
 
-## DSpy (using OpenAI)
+## DSpy 
 ### Overall Output
 ```yaml
 Artificial Intelligence Researcher says: Question: What are Large Language Models?

@@ -1,4 +1,4 @@
-## MTLLM (using OpenAI)
+## MTLLM 
 ### Overall Output
 ```yaml
 [Reasoning] If Sept. 1st, 2021 was a week ago, then today is Sept. 8th, 2021. The date 10 days ago from Sept. 8th, 2021 is Aug. 29th, 2021.
@@ -9,7 +9,7 @@ A
 Time taken: 2.058670520782470 seconds
 ```
 
-## LMQL (using OpenAI)
+## LMQL 
 ### Overall Output
 ```yaml
 1. We know that it was Sept. 1st, 2021 a week ago.
@@ -23,7 +23,7 @@ A
 Time taken:  3.568650245666504 seconds
 ```
 
-## DSpy (using OpenAI)
+## DSpy 
 ### Overall Output
 ```yaml
 Reasoning: Let's think step by step in order to produce the answer. We know that today is September 8th, 2021 because it was September 1st, 2021 a week ago. To find the date 10 days ago from today, we need to subtract 10 days from September 8th, 2021.

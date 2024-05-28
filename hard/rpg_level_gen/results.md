@@ -1,4 +1,4 @@
-## MTLLM (using Anthropic - Claude3 Sonnet) without Rules
+## MTLLM  without Rules
 ### Overall Output
 ```yamlLevel(name='Level 2', difficulty=1, width=12, height=12, num_wall=6, num_enemies=4, time_countdown=150, n_retries_allowed=3)
 BBBBBBBBBBBBBB
@@ -40,7 +40,7 @@ BBBBBBBBBBBBBBBBBB
 Time Taken: 31.99008297920227 seconds
 ```
 
-## LMQL (using OpenAI)
+## LMQL 
 ### Overall Output
 ```yaml
 
@@ -50,7 +50,7 @@ Time Taken: 31.99008297920227 seconds
 
 ```
 
-## DSpy (using OpenAI)
+## DSpy 
 ### Error Encountered
 ```bash
 Traceback (most recent call last):

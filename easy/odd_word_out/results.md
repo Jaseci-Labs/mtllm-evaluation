@@ -1,4 +1,4 @@
-## MTLLM (using Anthropic - Claude3 Sonnet)
+## MTLLM 
 ### Overall Output
 ```yaml
 ('Bentley, Ferrari, Lamborghini, Toyota are car brands, Casio is an electronics brand.', 'Casio')
@@ -7,7 +7,7 @@
 Time Taken: 1.2525591850280762 seconds
 ```
 
-## LMQL (using OpenAI)
+## LMQL 
 ### Overall Output
 ```yaml
 ('Bentley, Ferrari, and Lamborghini are all luxury car brands, while Casio and Toyota are not. So the odd one out is Casio.', '')
@@ -17,7 +17,7 @@ Time Taken: 1.2525591850280762 seconds
 Time Taken: 1.86393404006958 seconds
 ```
 
-## DSpy (using OpenAI)
+## DSpy 
 
 ## Errors Encountered
 1. When I tried to provide the input to Signature as a list of strings, I got the following error:

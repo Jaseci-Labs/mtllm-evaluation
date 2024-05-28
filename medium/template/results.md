@@ -1,4 +1,4 @@
-## MTLLM (using OpenAI)
+## MTLLM 
 ### Overall Output
 ```yaml
 Bruno Mars is 37 years old. His top 2 songs are ['Uptown Funk', 'Just the Way You Are'].
@@ -7,7 +7,7 @@ Bruno Mars is 37 years old. His top 2 songs are ['Uptown Funk', 'Just the Way Yo
 Time taken:  1.3684170246124268 seconds
 ```
 
-## LMQL (using OpenAI)
+## LMQL 
 ### Overall Output
 ```yaml
 Error
@@ -17,7 +17,7 @@ Error
 Time taken: 
 ```
 
-## DSpy (using OpenAI)
+## DSpy 
 ### Overall Output
 ```yaml
 Bruno Mars is 37 years old. His top 2 songs are ['Uptown Funk', 'Just the Way You Are'].

@@ -1,4 +1,4 @@
-## MTLLM (using Anthropic - Claude3 Sonnet)
+## MTLLM 
 ### Overall Output
 ```yaml
 Martin Luther King Jr. was a Extrovert person who died in 1968
@@ -7,7 +7,7 @@ Martin Luther King Jr. was a Extrovert person who died in 1968
 Time taken:  1.7724249362945557 seconds
 ```
 
-## DSpy (using OpenAI)
+## DSpy 
 ### Overall Output
 ```yaml
 Martin Luther King Jr. was an Extrovert person who died in 1968.

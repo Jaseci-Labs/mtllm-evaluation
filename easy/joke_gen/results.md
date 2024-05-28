@@ -1,4 +1,4 @@
-## MTLLM (using Anthropic - Claude3 Sonnet)
+## MTLLM 
 ### Overall Output
 ```yaml
 Why don't skeletons fight each other? : They don't have the guts.
@@ -7,7 +7,7 @@ Why don't skeletons fight each other? : They don't have the guts.
 Time Taken: 1.6249282360076904 seconds
 ```
 
-## LMQL (using OpenAI)
+## LMQL 
 ### Overall Output
 ```yaml
 Why couldn't the bicycle stand up by itself? :  Because it was two-tired.
@@ -17,7 +17,7 @@ Why couldn't the bicycle stand up by itself? :  Because it was two-tired.
 Time Taken: 2.8375391960144043 seconds
 ```
 
-## DSpy (using OpenAI)
+## DSpy 
 ### Overall Output
 ```yaml
 Joke: Why did the scarecrow win an award?: Because he was outstanding in his field!

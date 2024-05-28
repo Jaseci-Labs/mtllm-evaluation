@@ -1,4 +1,4 @@
-## MTLLM (using Anthropic - Claude3 Sonnet)
+## MTLLM 
 ### Overall Output
 ```yaml
 fromage
@@ -7,7 +7,7 @@ fromage
 Time Taken: 0.9716598987579346 seconds
 ```
 
-## LMQL (using OpenAI)
+## LMQL 
 ### Overall Output
 ```yaml
 Fromage
@@ -17,7 +17,7 @@ Fromage
 Time Taken: 1.3831193447113037 seconds
 ```
 
-## DSpy (using OpenAI)
+## DSpy 
 ### Overall Output
 ```yaml
 English Word: cheese
