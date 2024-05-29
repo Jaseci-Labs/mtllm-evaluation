@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field
 from typing import List
 
 
-llm = dspy.OpenAI(model="gpt-4o")
+llm = dspy.OpenAI(model="gpt-4o", max_tokens=1024)
 dspy.settings.configure(lm=llm)
 
 
@@ -37,7 +37,7 @@ class Map(BaseModel):
 
 
 class CreateNextLevel(dspy.Signature):
-    """Create the Next Level"""
+    """Create Next Level"""
 
     last_levels: list[Level] = dspy.InputField(desc="Last Played Levels")
     difficulty: int = dspy.InputField(desc="Difficulty of the New Level")

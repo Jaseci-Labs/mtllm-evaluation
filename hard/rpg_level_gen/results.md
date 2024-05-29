@@ -65,9 +65,51 @@ Traceback (most recent call last):
   File "/opt/conda/envs/mtllm_eval/lib/python3.12/site-packages/dspy/functional/functional.py", line 235, in forward
     raise ValueError(
 ValueError: ('Too many retries trying to get the correct output format. Try simplifying the requirements.', {'map': "ValueError('json output should end with ```')"})
+```
+This error was encountered because of max_tokens limit.
+After increasing the max_tokens limit, the output was generated.
 
+### Overall Output
+```yaml
+name="Novice's Challenge" difficulty=1 width=12 height=12 num_wall=6 num_enemies=3 time_countdown=280 n_retries_allowed=5
+BBBBBBBBBBBBBB
+BP...........B
+B.B....B.....B
+B..B...B...B.B
+B..BB..B...B.B
+B..B.BBBB..B.B
+B..B..B....B.B
+B....E...B...B
+B.......BB...B
+B...BBBE.B...B
+B........BB..B
+B........E...B
+B............B
+BBBBBBBBBBBBBB
+name='Advanced Trial' difficulty=2 width=16 height=16 num_wall=10 num_enemies=5 time_countdown=240 n_retries_allowed=4
+BBBBBBBBBBBBBBBBBB
+B................B
+B.P..B.........B.B
+B..B.B.....B...B.B
+B..BBB.B...B...B.B
+B..B.B.B...B.B.B.B
+B..B..BB.B.B.B.B.B
+B....E.B.B.B.B...B
+B......BBB...B...B
+B......E.B...B...B
+B........BB......B
+B...BBBBBE.......B
+B...........B....B
+B.....BBBBBE.....B
+B................B
+B...........BEBBBB
+B................B
+BBBBBBBBBBBBBBBBBB
+```
+```yaml
+Time Taken: 51.75 seconds
 ```
 
 ## Observations
 1. MTLLM is able to generate levels with the given constraints and the output is as expected and Ability to create Nested Objects with Precision.
-2. DSpy is not able to generate the output as expected and is not able to follow the expected format. Shows the inability to work with lots of structured data.
+2. DSpy is able to generate levels with the given constraints and the output is as expected and Ability to create Nested Objects with Precision.
