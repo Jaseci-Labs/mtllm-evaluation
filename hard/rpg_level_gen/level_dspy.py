@@ -111,7 +111,6 @@ def get_map(map: Map) -> List[str]:
 if __name__ == "__main__":
     level_manager = LevelManager()
     for _ in range(2):
-        level_manager.get_next_level()
         new_level, new_level_map = level_manager.get_next_level()
         print(new_level)
         print("\n".join(get_map(new_level_map)))
