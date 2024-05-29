@@ -31,7 +31,7 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 | ------------ | ----------- | ---------- | ----------- | --------------- |
 | Odd Word Out | DSpy | 8.89 |  | 49 |
 |  | LMQL | 1.86 |  | 23 |
-|  | Jaclang | **1.25** |  | **19** |
+|  | Jaclang | `1.25` |  | `15` |
 | Joke Generation | DSpy | 3.21 |  | 37 |
 |  | LMQL | 2.84 |  | 19 |
 |  | Jaclang | `1.62` |  | `16` |
@@ -83,12 +83,14 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 3. As the Typed Output are handled as a JSON String and the Type Information is provided as a JSON Schema. When it comes to complex types, it is very difficult to handle them. (eg- level_generation)
 ![image](medium/text_to_type/log.png)
 4. It doesnt support some LLMs like Anthropic's Claude 3, Google's Gemini Models
-5. Even for small problems need a lot of code to be written and everytime need to create a class for the problem.
-6. Hard to Debug as the error messages are not very clear
+5. Able to use chat models but the prompt generation is not optimized for that. Works well with completion models. which are currently getting deprecated.
+6. Even for small problems need a lot of code to be written and everytime need to create a class for the problem.
+7. Hard to Debug as the error messages are not very clear
 
 ### LMQL
 1. Very Hard to write the LMQL code as it is very difficult to understand the syntax.
 2. It feels more of prompting than writing code.
 3. Difficult to handle complex types as there is no mechanism to handle them.
-4. Its uses token-wise approach for text generation, which is expensive and slow. Most of the models doesn't support token-wise approach.
+4. Its uses logit based approach for text generation, which is expensive and slow. Most of the models doesn't support logit based approach.
 5. Hard to Debug as the error messages are not very clear
+
