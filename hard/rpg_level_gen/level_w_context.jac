@@ -1,8 +1,8 @@
 import:py from jaclang.core.llms, OpenAI;
 
-glob llm = OpenAI(verbose=True, model_name="gpt-4o");
+glob llm = OpenAI(model_name="gpt-4o");
 
-obj 'Position (0-Indexed)'
+obj 'Position'
 Position {
     has x: 'X Coordinate': int,
         y: 'Y Coordinate': int;
@@ -91,28 +91,27 @@ can get_map(map: Map) -> str {
     for wall in map.walls {
         for x in range(wall.start_pos.x, wall.end_pos.x + 1) {
             for y in range(wall.start_pos.y, wall.end_pos.y + 1) {
-                map_tiles[y][x] = 'B';
+                map_tiles[y-1][x-1] = 'B';
             }
         }
     }
     
     for obs in map.small_obstacles {
-        map_tiles[obs.y][obs.x] = 'B';
+        map_tiles[obs.y-1][obs.x-1] = 'B';
     }
     
     for enemy in map.enemies {
-        map_tiles[enemy.y][enemy.x] = 'E';
+        map_tiles[enemy.y-1][enemy.x-1] = 'E';
     }
-    map_tiles[map.player_pos.y][map.player_pos.x] = 'P';
+    map_tiles[map.player_pos.y-1][map.player_pos.x-1] = 'P';
     map_tiles = [['B'] + row + ['B'] for row in map_tiles];
     map_tiles = [['B' for _ in range(map.level.width + 2)]] + map_tiles + [['B' for _ in range(map.level.width + 2)]];
     return [''.join(row) for row in map_tiles];
 }
 
-with entry:__main__ {
+with entry {
     level_manager = LevelManager();
-    for _ in range(2) {
-        level_manager.get_next_level();
+    for _ in range(5) {
         (new_level, new_level_map) = level_manager.get_next_level();
         print(new_level);
         print('\n'.join(get_map(new_level_map)));

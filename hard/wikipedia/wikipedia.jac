@@ -22,7 +22,7 @@ QA {
                 {
                     "Thought": "High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft.",
                     "Action": "Finish: 1,800 to 7,000 ft"
-                }
+                },
             ]
         }
     ];
@@ -58,3 +58,4 @@ with entry {
     print("Question: ", question);
     print("Answer: ", answer);
 }
+

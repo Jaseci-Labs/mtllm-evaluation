@@ -1,0 +1,52 @@
+{
+    "EASY": {
+        "translation": {
+            "jac": "easy/translation/translation.jac",
+            "dspy": "easy/translation/translation_dspy.py"
+        },
+        "essay_reviewer": {
+            "jac": "easy/essay_reviewer/essay_reviewer.jac",
+            "dspy": "easy/essay_reviewer/essay_reviewer_dspy.py"
+        },
+        "joke_gen": {
+            "jac": "easy/joke_gen/jokes.jac",
+            "dspy": "easy/joke_gen/jokes_dspy.py"
+        },
+        "expert_answer": {
+            "jac": "easy/expert_answer/expert_answer.jac",
+            "dspy": "easy/expert_answer/expert_answer_dspy.py"
+        },
+        "odd_word_out": {
+            "jac": "easy/odd_word_out/odd_word_out.jac",
+            "dspy": "easy/odd_word_out/odd_word_out_dspy.py"
+        }
+    },
+    "MEDIUM": {
+        "mcq_reason": {
+            "jac": "medium/mcq_reason/mcq_reason.jac",
+            "dspy": "medium/mcq_reason/mcq_reason_dspy.py"
+        },
+        "personality_finder": {
+            "jac": "medium/personality_finder/personality_finder.jac",
+            "dspy": "medium/personality_finder/personality_finder_dspy.py"
+        },
+        "template": {
+            "jac": "medium/template/template.jac",
+            "dspy": "medium/template/template_dspy.py"
+        },
+        "text_to_type": {
+            "jac": "medium/text_to_type/text_to_type.jac",
+            "dspy": "medium/text_to_type/text_to_type_dspy.py"
+        }
+    },
+    "HARD": {
+        "rpg_level_gen": {
+            "jac": "hard/rpg_level_gen/level.jac",
+            "dspy": "hard/rpg_level_gen/level_dspy.py"
+        },
+        "wikipedia": {
+            "jac": "hard/wikipedia/wikipedia.jac",
+            "dspy": "hard/wikipedia/wikipedia_react_dspy.py"
+        }
+    }
+}

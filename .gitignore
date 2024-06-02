@@ -2,6 +2,8 @@
 __jac_gen__/
 .jaseci/
 local_cache/
+results/
+temp*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

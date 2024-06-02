@@ -10,7 +10,7 @@ glob jokes: 'Jokes with Punchlines': list[tuple[str, str]] = [
 can 'Generate a new Joke with Punchline'
 tell_a_joke() -> 'Joke with Punchline': tuple[str, str] by llm(incl_info=(jokes));
 
-with entry:__main__ {
+with entry {
     (joke, punchline) = tell_a_joke();
     print(f"{joke} : {punchline}");
 }
