@@ -22,6 +22,8 @@ def run_dspy_program(program_name, program_path):
     profiler.stop()
     with open(f"results/{program_name}/dspy/profile.txt", "w") as f:
         f.write(profiler.output_text())
+    with open(f"results/{program_name}/dspy/profile.html", "w") as f:
+        f.write(profiler.output_html())
 
     sys.stdout = sys.__stdout__
     results_file.close()
@@ -43,6 +45,8 @@ def run_jac_program(program_name, program_path):
     profiler.stop()
     with open(f"results/{program_name}/jac/profile.txt", "w") as f:
         f.write(profiler.output_text())
+    with open(f"results/{program_name}/jac/profile.html", "w") as f:
+        f.write(profiler.output_html())
 
     sys.stdout = sys.__stdout__
     results_file.close()
