@@ -114,3 +114,16 @@ snakeviz <path_to_cprofile_output(profile.prof)>
 gprof2dot -f pstats <path_to_cprofile_output(profile.prof)> -o <output_dot_file>
 Open the generated dot file in a dot viewer of your choice
 ```
+
+If you need to track the token usages, you can make the following changes in relevant files
+```python
+# file: dsp/modules/gpt3.py
+# line: 185 Add the following
+print(response.get("usage"))
+```
+```python
+# file: jaclang/core/llms/openai.py
+# line: 61 Add the following
+print(response.usage)
+```
+Token Usage will be recorded in the relevant results.txt files.
