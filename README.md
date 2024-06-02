@@ -94,3 +94,23 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 4. Its uses logit based approach for text generation, which is expensive and slow. Most of the models doesn't support logit based approach.
 5. Hard to Debug as the error messages are not very clear
 
+## How to run the evaluation
+1. Clone the repository
+2. Set the following environment variables based on the LLMs you are using
+```bash
+export OPENAI_API_KEY=<API_KEY>
+```
+3. Run the following command
+```bash
+python eval.py --profiler "cProfile"/"pyinstrument"
+```
+4. Evaluation Results will be saved in `results` folder
+5. To view profiling results, run the following command
+```bash
+# if used pyinstrument
+Double click on the `profile.html` file in the `results` folder
+# if used cProfile
+snakeviz <path_to_cprofile_output(profile.prof)>
+gprof2dot -f pstats <path_to_cprofile_output(profile.prof)> -o <output_dot_file>
+Open the generated dot file in a dot viewer of your choice
+```

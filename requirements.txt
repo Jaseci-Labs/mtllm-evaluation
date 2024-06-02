@@ -7,3 +7,4 @@ wikipedia
 openai
 loguru
 pyinstrument
+gprof2dot
