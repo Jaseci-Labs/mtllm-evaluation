@@ -33,9 +33,8 @@ def run_dspy_program(program_name, program_path, profiler):
         profiler.stop()
         with open(f"results/{program_name}/dspy/profile.html", "w") as f:
             f.write(profiler.output_html())
-        output_data = profiler.output(JSONRenderer())
         with open(f"results/{program_name}/dspy/profile.json", "w") as f:
-            json.dump(json.loads(output_data), f, indent=4)
+            json.dump(json.loads(profiler.output(JSONRenderer())), f, indent=4)
 
     sys.stdout = sys.__stdout__
     results_file.close()
@@ -65,9 +64,8 @@ def run_jac_program(program_name, program_path, profiler):
         profiler.stop()
         with open(f"results/{program_name}/jac/profile.html", "w") as f:
             f.write(profiler.output_html())
-        output_data = profiler.output(JSONRenderer())
         with open(f"results/{program_name}/jac/profile.json", "w") as f:
-            json.dump(json.loads(output_data), f, indent=4)
+            json.dump(json.loads(profiler.output(JSONRenderer())), f, indent=4)
 
     sys.stdout = sys.__stdout__
     results_file.close()
