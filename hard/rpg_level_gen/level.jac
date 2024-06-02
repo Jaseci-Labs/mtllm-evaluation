@@ -42,7 +42,8 @@ obj LevelManager {
         prev_level_maps: list[Map] = [];
 
     can 'Create the Next Level'
-    create_next_level(last_levels: 'Last Played Levels': list[Level], difficulty: 'Difficulty of the New Level': int)
+    create_next_level(last_levels: 'Last Played Levels': list[Level], difficulty: 'Difficulty of the New Level': int,
+     level_width: 'Width of the Level': int, level_height: 'Height of the Level': int)
     -> 'Next Level': Level by llm(temperature=1.0);
     
     '''Get the Next Level'''
@@ -57,7 +58,8 @@ obj LevelManager {
         # Generating the New Level
         new_level = self.create_next_level(
             self.prev_levels,
-            self.current_difficulty
+            self.current_difficulty,
+            20, 20
         );
         self.prev_levels.append(new_level);
         
@@ -100,7 +102,7 @@ can get_map(map: Map) -> str {
 
 with entry {
     level_manager = LevelManager();
-    for _ in range(5) {
+    for _ in range(2) {
         (new_level, new_level_map) = level_manager.get_next_level();
         print(new_level);
         print('\n'.join(get_map(new_level_map)));

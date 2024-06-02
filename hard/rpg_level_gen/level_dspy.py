@@ -41,6 +41,8 @@ class CreateNextLevel(dspy.Signature):
 
     last_levels: list[Level] = dspy.InputField(desc="Last Played Levels")
     difficulty: int = dspy.InputField(desc="Difficulty of the New Level")
+    level_width: int = dspy.InputField(desc="Width of the Level")
+    level_height: int = dspy.InputField(desc="Height of the Level")
     next_level: Level = dspy.OutputField(desc="Next Level")
 
 
@@ -68,7 +70,10 @@ class LevelManager(BaseModel):
 
         # Generating the New Level
         new_level = dspy.TypedPredictor(CreateNextLevel)(
-            last_levels=self.prev_levels, difficulty=self.current_difficulty
+            last_levels=self.prev_levels,
+            difficulty=self.current_difficulty,
+            level_width=20,
+            level_height=20,
         ).next_level
         self.prev_levels.append(new_level)
 
@@ -109,7 +114,7 @@ def get_map(map: Map) -> List[str]:
 
 
 level_manager = LevelManager()
-for _ in range(5):
+for _ in range(2):
     new_level, new_level_map = level_manager.get_next_level()
     print(new_level)
     print("\n".join(get_map(new_level_map)))
