@@ -1,6 +1,6 @@
 lmql
 dspy
-jaclang @git+https://github.com/Jaseci-Labs/jaclang@fix_unneccessary_class_to-info
+jaclang @git+https://github.com/Jaseci-Labs/jaclang@main
 anthropic
 black
 wikipedia

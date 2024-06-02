@@ -80,9 +80,15 @@ if __name__ == "__main__":
         type=str,
         choices=["cProfile", "pyinstrument"],
     )
+    parser.add_argument(
+        "--config",
+        help="Location to the Eval config",
+        default="eval.config.json",
+        type=str,
+    )
     args = parser.parse_args()
     logger.info(f"Using {args.profiler} as the profiler.")
-    with open("eval.config.json") as f:
+    with open(args.config) as f:
         EVAL_PROBLEMS = json.load(f)
     for difficulty, PROBLEM_SET in EVAL_PROBLEMS.items():
         for problem_name, paths in PROBLEM_SET.items():
@@ -93,4 +99,3 @@ if __name__ == "__main__":
 
             logger.info(f"Running Dspy program: {paths['dspy']}")
             run_dspy_program(problem_name, paths["dspy"], args.profiler)
-            exit()
