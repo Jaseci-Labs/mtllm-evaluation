@@ -8,3 +8,6 @@ openai
 loguru
 pyinstrument
 gprof2dot
+matplotlib
+pandas
+seaborn
