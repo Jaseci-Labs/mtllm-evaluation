@@ -2,7 +2,7 @@ import os
 import re
 import csv
 
-base_dir = ""  # 'path/to/directory/to/walk/through
+base_dir = ""  # Path to the directory to walk through
 output_file = "token_usage.csv"
 
 
@@ -34,11 +34,11 @@ with open(output_file, "w", newline="") as csvfile:
     for root, dirs, files in os.walk(base_dir):
         if "results.txt" in files:
             directory = os.path.relpath(root, base_dir)
-            type = "jac" if "jac" in directory else "dspy"
+            type = "MTLLM" if "jac" in directory else "dspy"
 
             with open(os.path.join(root, "results.txt"), "r") as f:
                 for line in f:
-                    if type == "jac":
+                    if type == "MTLLM":
                         pattern = r"CompletionUsage\(completion_tokens=(?P<completion_tokens>\d+), prompt_tokens=(?P<prompt_tokens>\d+), total_tokens=(?P<total_tokens>\d+)\)"
                     else:  # dspy
                         pattern = r"'completion_tokens': (?P<completion_tokens>\d+), 'prompt_tokens': (?P<prompt_tokens>\d+), 'total_tokens': (?P<total_tokens>\d+)"
