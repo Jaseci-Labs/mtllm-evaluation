@@ -3,7 +3,8 @@ import:py from jaclang.core.llms, OpenAI;
 glob llm = OpenAI(model_name="gpt-4o");
 
 can 'Provide the Answer for the Given Question (A-F)'
-get_answer(question: 'Question': str, choices: 'Answer Choices': dict) -> 'Answer (A-F)': str by llm(reason=True);
+get_answer(question: 'Question': str, choices: 'Answer Choices': dict) -> 'Answer (A-F)': str
+by llm(method="Chain-of-Thoughts", temperature=0.0);
 
 with entry {
     question: str = "It was Sept. 1st, 2021 a week ago. What is the date 10 days ago in MM/DD/YYYY?";

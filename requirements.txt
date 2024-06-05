@@ -8,3 +8,4 @@ openai
 loguru
 pyinstrument
 gprof2dot
+pandas
