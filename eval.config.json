@@ -45,7 +45,7 @@
             "dspy": "hard/rpg_level_gen/level_dspy.py"
         },
         "wikipedia": {
-            "jac": "hard/wikipedia/wikipedia.jac",
+            "jac": "hard/wikipedia/wikipedia_react.jac",
             "dspy": "hard/wikipedia/wikipedia_react_dspy.py"
         }
     }

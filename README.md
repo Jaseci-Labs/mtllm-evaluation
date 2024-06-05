@@ -124,6 +124,6 @@ print(response.get("usage"))
 ```python
 # file: jaclang/core/llms/openai.py
 # line: 61 Add the following
-print(response.usage)
+print(output.usage)
 ```
 Token Usage will be recorded in the relevant results.txt files.
