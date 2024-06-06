@@ -9,12 +9,11 @@ import json
 import sys
 import argparse
 
-
-def run_dspy_program(program_name, program_path, profiler):
-    os.makedirs(f"results/{program_name}/dspy", exist_ok=True)
+def run_dspy_program(program_name, program_path, profiler, output_dir):
+    os.makedirs(f"{output_dir}/{program_name}/dspy", exist_ok=True)
     program_path = program_path.replace(".py", "").replace("/", ".")
 
-    results_file = open(f"results/{program_name}/dspy/results.txt", "w")
+    results_file = open(f"{output_dir}/{program_name}/dspy/results.txt", "w")
     sys.stdout = results_file
 
     if profiler == "cProfile":
@@ -28,24 +27,24 @@ def run_dspy_program(program_name, program_path, profiler):
 
     if profiler == "cProfile":
         pr.disable()
-        pr.dump_stats(f"results/{program_name}/dspy/profile.prof")
+        pr.dump_stats(f"{output_dir}/{program_name}/dspy/profile.prof")
     else:
         profiler.stop()
-        with open(f"results/{program_name}/dspy/profile.html", "w") as f:
+        with open(f"{output_dir}/{program_name}/dspy/profile.html", "w") as f:
             f.write(profiler.output_html())
-        with open(f"results/{program_name}/dspy/profile.json", "w") as f:
+        with open(f"{output_dir}/{program_name}/dspy/profile.json", "w") as f:
             json.dump(json.loads(profiler.output(JSONRenderer())), f, indent=4)
 
     sys.stdout = sys.__stdout__
     results_file.close()
 
 
-def run_jac_program(program_name, program_path, profiler):
-    os.makedirs(f"results/{program_name}/jac", exist_ok=True)
+def run_jac_program(program_name, program_path, profiler, output_dir):
+    os.makedirs(f"{output_dir}/{program_name}/jac", exist_ok=True)
     program_path = os.path.abspath(program_path)
     program_dir, program_file = os.path.split(program_path)
 
-    results_file = open(f"results/{program_name}/jac/results.txt", "w")
+    results_file = open(f"{output_dir}/{program_name}/jac/results.txt", "w")
     sys.stdout = results_file
 
     if profiler == "cProfile":
@@ -59,12 +58,12 @@ def run_jac_program(program_name, program_path, profiler):
 
     if profiler == "cProfile":
         pr.disable()
-        pr.dump_stats(f"results/{program_name}/jac/profile.prof")
+        pr.dump_stats(f"{output_dir}/{program_name}/jac/profile.prof")
     else:
         profiler.stop()
-        with open(f"results/{program_name}/jac/profile.html", "w") as f:
+        with open(f"{output_dir}/{program_name}/jac/profile.html", "w") as f:
             f.write(profiler.output_html())
-        with open(f"results/{program_name}/jac/profile.json", "w") as f:
+        with open(f"{output_dir}/{program_name}/jac/profile.json", "w") as f:
             json.dump(json.loads(profiler.output(JSONRenderer())), f, indent=4)
 
     sys.stdout = sys.__stdout__
@@ -86,16 +85,27 @@ if __name__ == "__main__":
         default="eval.config.json",
         type=str,
     )
+    parser.add_argument(
+        "--output_dir",
+        help="Output Directory Location",
+        default="output",
+        type=str,
+    )
     args = parser.parse_args()
     logger.info(f"Using {args.profiler} as the profiler.")
     with open(args.config) as f:
         EVAL_PROBLEMS = json.load(f)
+    if os.path.exists(args.output_dir):
+        logger.info(f"Output directory exists. Do you want to overwrite it? (y/n)")
+        if input().lower() != "y":
+            logger.info("Exiting...")
+            exit(0)
     for difficulty, PROBLEM_SET in EVAL_PROBLEMS.items():
         for problem_name, paths in PROBLEM_SET.items():
             logger.info(f"Running {problem_name} problem from {difficulty} difficulty.")
 
             logger.info(f"Running JAC program: {paths['jac']}")
-            run_jac_program(problem_name, paths["jac"], args.profiler)
+            run_jac_program(problem_name, paths["jac"], args.profiler, args.output_dir)
 
             logger.info(f"Running Dspy program: {paths['dspy']}")
-            run_dspy_program(problem_name, paths["dspy"], args.profiler)
+            run_dspy_program(problem_name, paths["dspy"], args.profiler, args.output_dir)

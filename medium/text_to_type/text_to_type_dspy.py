@@ -27,5 +27,3 @@ class GetPerson(dspy.Signature):
 info = "Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, Switzerland."
 alice = dspy.TypedPredictor(GetPerson)(info=info).person
 print(f"Their name is {alice.name} and she works in {alice.employer.location}.")
-
-print(llm.inspect_history())
