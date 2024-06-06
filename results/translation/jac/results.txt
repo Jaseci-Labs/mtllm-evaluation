@@ -1,0 +1,33 @@
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+Example Translations (examples) (dict[str,str]) = {"sea otter": "loutre de mer", "peppermint": "menthe poivrÃ©e", "plush giraffe": "girafe en peluche"}
+
+[Context]
+
+
+[Inputs Information]
+English Word (english_word) (str) = "cheese"
+
+[Output Information]
+Translation (str)
+
+[Type Explanations]
+
+
+[Action]
+Translate
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+Output:
+ [Output] fromage
+CompletionUsage(completion_tokens=4, prompt_tokens=178, total_tokens=182)
+fromage

@@ -1,0 +1,70 @@
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "What are Large Language Models?"
+
+[Output Information]
+Expert Profession (str)
+
+[Type Explanations]
+
+
+[Action]
+Find the Expert Profession to answer the given question.
+
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+
+Output:
+ [Reasoning] The question "What are Large Language Models?" pertains to the field of artificial intelligence, specifically natural language processing and machine learning. Therefore, the expert best suited to answer this question would be a professional with a deep understanding of these areas.
+
+[Output] AI Research Scientist
+CompletionUsage(completion_tokens=57, prompt_tokens=144, total_tokens=201)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "What are Large Language Models?"
+Expert (expert) (str) = "AI Research Scientist"
+
+[Output Information]
+Expert's Answer (str)
+
+[Type Explanations]
+
+
+[Action]
+Get the answer for the question from expert's perspective
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+Output:
+ [Output] Large Language Models (LLMs) are advanced AI systems capable of understanding and generating human-like text based on large datasets they were trained on. They leverage deep learning techniques, particularly neural networks with many parameters, to predict and generate coherent text. Examples include OpenAI's GPT-3 and Google's BERT. LLMs can perform various language tasks such as translation, summarization, question-answering, and more, by learning patterns and nuances in human language.
+CompletionUsage(completion_tokens=95, prompt_tokens=152, total_tokens=247)
+AI Research Scientist says: 'Large Language Models (LLMs) are advanced AI systems capable of understanding and generating human-like text based on large datasets they were trained on. They leverage deep learning techniques, particularly neural networks with many parameters, to predict and generate coherent text. Examples include OpenAI's GPT-3 and Google's BERT. LLMs can perform various language tasks such as translation, summarization, question-answering, and more, by learning patterns and nuances in human language.
