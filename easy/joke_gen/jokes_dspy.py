@@ -1,7 +1,7 @@
 import dspy
 from dspy.teleprompt import BootstrapFewShot
 
-llm = dspy.OpenAI(model="gpt-4o")
+llm = dspy.OpenAI(model="gpt-3.5-turbo-instruct")
 dspy.settings.configure(lm=llm)
 
 examples: list[tuple[str, str]] = [

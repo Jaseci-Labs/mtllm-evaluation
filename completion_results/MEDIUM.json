@@ -1,0 +1,102 @@
+{
+    "mcq_reason": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\nQuestion (question) (str) = \"It was Sept. 1st, 2021 a week ago. What is the date 10 days ago in MM/DD/YYYY?\"\nAnswer Choices (choices) (dict[str, str]) = {\"A\": \"08/29/2021\", \"B\": \"08/28/2021\", \"C\": \"08/29/1925\", \"D\": \"08/30/2021\", \"E\": \"05/25/2021\", \"F\": \"09/19/2021\"}\n\n[Output Information]\nAnswer (A-F) (str)\n\n[Type Explanations]\n\n\n[Action]\nProvide the Answer for the Given Question (A-F)\n\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format. Perform the operation in a chain of thoughts.(Think Step by Step)\n\n[Chain of Thoughts] <Chain of Thoughts>\n[Output] <Result>\n\n---\n\n[Chain of Thoughts] Lets Think Step by Step,\n1.",
+                    "output": "10 days ago from Sept. 1st, 2021 is Aug. 22nd, 2021\n2. Aug. 22nd, 2021 is a Sunday\n3. The date 10 days ago in MM/DD/YYYY format is 08/22/2021\n4. The answer is A: 08/22/2021\n\n[Output] A: 08/22/2021",
+                    "token_usage": {
+                        "completion_tokens": 88,
+                        "prompt_tokens": 273,
+                        "total_tokens": 361
+                    }
+                }
+            ],
+            "output": ")\nA: 08/22/2021"
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Provide the Answer for the Given Question (A-F)\n\n---\n\nFollow the following format.\n\nQuestion: ${question}\n\nChoices: ${choices}\n\nReasoning: Let's think step by step in order to ${produce the answer}. We ...\n\nAnswer: ${answer}\n\n---\n\nQuestion: It was Sept. 1st, 2021 a week ago. What is the date 10 days ago in MM/DD/YYYY?\n\nChoices: (A) 08/29/2021 (B) 08/28/2021 (C) 08/29/1925 (D) 08/30/2021 (E) 05/25/2021 (F) 09/19/2021\n\nReasoning: Let's think step by step in order to",
+                    "output": "find the date 10 days ago. First, we need to subtract 10 from the day, which gives us 21. Then, we need to subtract 1 from the month, which gives us 08. Finally, we need to subtract 2021 from the year, which gives us 1925. Therefore, the date 10 days ago is 08/29/1925.\n\nAnswer: (C) 08/29/1925",
+                    "token_usage": {
+                        "completion_tokens": 93,
+                        "prompt_tokens": 157,
+                        "total_tokens": 250
+                    }
+                }
+            ],
+            "output": "find the date 10 days ago. First, we need to subtract 10 from the day, which gives us 21. Then, we need to subtract 1 from the month, which gives us 08. Finally, we need to subtract 2021 from the year, which gives us 1925. Therefore, the date 10 days ago is 08/29/1925. (C) 08/29/1925"
+        }
+    },
+    "personality_finder": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\nName of the Person (name) (str) = \"Martin Luther King Jr.\"\n\n[Output Information]\nPerson (Person)\n\n[Type Explanations]\nPerson (Person) (obj) eg:- Person(full_name=str, yod=int, personality=Personality) -> Fullname of the Person (full_name) (str), Year of Death (yod) (int), Personality of the Person (personality) (Personality)\nPersonality of the Person (Personality) (Enum) eg:- Personality.EXTROVERT -> Person who is shy and reticent (INTROVERT) (EnumItem), Person who is outgoing and socially confident (EXTROVERT) (EnumItem)\n\n[Action]\nGet Person Information use common knowledge\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>\n\n---\n\n[Output]",
+                    "output": "[Output] Person(full_name=\"Martin Luther King Jr.\", yod=1968, personality=Personality.EXTROVERT)",
+                    "token_usage": {
+                        "completion_tokens": 25,
+                        "prompt_tokens": 244,
+                        "total_tokens": 269
+                    }
+                }
+            ],
+            "output": ")\nMartin Luther King Jr. was a Extrovert person who died in 1968"
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Get Person Information use common knowledge.\n\n---\n\nFollow the following format.\n\nName: Name of the Person\nPerson: ${person}. Respond with a single JSON object. JSON Schema: {\"$defs\": {\"Personality\": {\"enum\": [\"Introvert\", \"Extrovert\"], \"title\": \"Personality\", \"type\": \"string\"}}, \"properties\": {\"full_name\": {\"description\": \"Fullname of the Person\", \"title\": \"Full Name\", \"type\": \"string\"}, \"yod\": {\"description\": \"Year of Death\", \"title\": \"Yod\", \"type\": \"integer\"}, \"personality\": {\"allOf\": [{\"$ref\": \"#/$defs/Personality\"}], \"description\": \"Personality Type\"}}, \"required\": [\"full_name\", \"yod\", \"personality\"], \"title\": \"Person\", \"type\": \"object\"}\n\n---\n\nName: Martin Luther King Jr.\nPerson:",
+                    "output": "{\"full_name\": \"Martin Luther King Jr.\", \"yod\": 1968, \"personality\": \"Extrovert\"}",
+                    "token_usage": {
+                        "completion_tokens": 27,
+                        "prompt_tokens": 190,
+                        "total_tokens": 217
+                    }
+                }
+            ],
+            "output": "Martin Luther King Jr. was an Extrovert person who died in 1968."
+        }
+    },
+    "template": {
+        "jac": {
+            "llm_requests": [],
+            "output": "Bruno Mars is 37 years old. His top 2 songs are ['Just the Way You Are', 'Uptown Funk']."
+        },
+        "dspy": {
+            "llm_requests": [],
+            "output": "Input Prompt:\n Get Person Information.\n\n---\n\nFollow the following format.\n\nName: name of the singer\nSinger: ${singer}. Respond with a single JSON object. JSON Schema: {\"description\": \"Singer.\", \"properties\": {\"name\": {\"description\": \"Name of the Singer\", \"title\": \"Name\", \"type\": \"string\"}, \"age\": {\"description\": \"Age\", \"title\": \"Age\", \"type\": \"integer\"}, \"top_songs\": {\"description\": \"His/Her's Top 2 Songs\", \"items\": {\"type\": \"string\"}, \"title\": \"Top Songs\", \"type\": \"array\"}}, \"required\": [\"name\", \"age\", \"top_songs\"], \"title\": \"Singer\", \"type\": \"object\"}\n\n---\n\nName: Bruno Mars\nSinger:"
+        }
+    },
+    "text_to_type": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nPerson's Information (info) (str) = \"Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, Switzerland.\"\n\n[Context]\n\n\n[Inputs Information]\n\n\n[Output Information]\nPerson (Person)\n\n[Type Explanations]\nPerson (Person) (obj) eg:- Person(name=str, age=int, employer=Employer, job=str) -> Name (name) (str), Age (age) (int), Employer (employer) (Employer), Job (job) (str)\nEmployer (Employer) (obj) eg:- Employer(employer_name=str, location=str) -> Employer Name (employer_name) (str), Location (location) (str)\n\n[Action]\nCreate an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>\n\n---\n\n[Output]",
+                    "output": "[Output] Person(name='Alice', age=21, employer=Employer(employer_name='LMQL Inc', location='Zurich'), job='engineer')",
+                    "token_usage": {
+                        "completion_tokens": 32,
+                        "prompt_tokens": 265,
+                        "total_tokens": 297
+                    }
+                }
+            ],
+            "output": ")\nTheir name is Alice and she works in Zurich."
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Get Person Information.\n\n---\n\nFollow the following format.\n\nInfo: Person Information\nPerson: ${person}. Respond with a single JSON object. JSON Schema: {\"$defs\": {\"Employer\": {\"properties\": {\"employer_name\": {\"description\": \"Employer Name\", \"title\": \"Employer Name\", \"type\": \"string\"}, \"location\": {\"description\": \"Location\", \"title\": \"Location\", \"type\": \"string\"}}, \"required\": [\"employer_name\", \"location\"], \"title\": \"Employer\", \"type\": \"object\"}}, \"properties\": {\"name\": {\"description\": \"Name\", \"title\": \"Name\", \"type\": \"string\"}, \"age\": {\"description\": \"Age\", \"title\": \"Age\", \"type\": \"integer\"}, \"job\": {\"description\": \"Job\", \"title\": \"Job\", \"type\": \"string\"}, \"employer\": {\"allOf\": [{\"$ref\": \"#/$defs/Employer\"}], \"description\": \"Employer\"}}, \"required\": [\"name\", \"age\", \"job\", \"employer\"], \"title\": \"Person\", \"type\": \"object\"}\n\n---\n\nInfo: Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, Switzerland.\nPerson:",
+                    "output": "{\"name\": \"Alice\", \"age\": 21, \"job\": \"engineer\", \"employer\": {\"employer_name\": \"LMQL Inc\", \"location\": \"Zurich, Switzerland\"}}",
+                    "token_usage": {
+                        "completion_tokens": 41,
+                        "prompt_tokens": 259,
+                        "total_tokens": 300
+                    }
+                }
+            ],
+            "output": "Their name is Alice and she works in Zurich, Switzerland."
+        }
+    }
+}

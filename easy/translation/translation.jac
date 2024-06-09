@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, OpenAI;
+import:py from mtllm.llms.openai, OpenAICompletion;
 
-glob llm = OpenAI(model_name="gpt-4o");
+glob llm = OpenAICompletion(model_name="gpt-3.5-turbo-instruct");
 
 glob examples: "Example Translations": dict[str, str] = {
     "sea otter": "loutre de mer",

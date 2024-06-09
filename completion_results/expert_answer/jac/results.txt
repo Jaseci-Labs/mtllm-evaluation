@@ -1,0 +1,75 @@
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "What are Large Language Models?"
+
+[Output Information]
+Expert Profession (str)
+
+[Type Explanations]
+
+
+[Action]
+Find the Expert Profession to answer the given question.
+
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+
+---
+
+[Reasoning] 
+Output:
+ Large Language Models are complex and advanced forms of artificial intelligence that use large amounts of data to generate human-like text or speech. Therefore, the expert profession needed to answer this question would likely be an AI researcher or data scientist.
+[Output] AI researcher or data scientist
+CompletionUsage(completion_tokens=53, prompt_tokens=143, total_tokens=196)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "What are Large Language Models?"
+Expert (expert) (str) = "AI researcher or data scientist"
+
+[Output Information]
+Expert's Answer (str)
+
+[Type Explanations]
+
+
+[Action]
+Get the answer for the question from expert's perspective
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+---
+
+[Output] 
+Output:
+ [Output] Large Language Models are powerful AI models that are trained on large datasets to perform a variety of natural language processing tasks, such as text generation, translation, and summarization. They are generally considered to have a high number of parameters, typically in the millions or billions, and have become increasingly popular in recent years due to advancements in deep learning techniques. From an expert's perspective, Large Language Models are a promising and exciting area of research that has the potential to greatly improve the capabilities of AI systems for processing and understanding human language.
+CompletionUsage(completion_tokens=106, prompt_tokens=152, total_tokens=258)
+AI researcher or data scientist says: 'Large Language Models are powerful AI models that are trained on large datasets to perform a variety of natural language processing tasks, such as text generation, translation, and summarization. They are generally considered to have a high number of parameters, typically in the millions or billions, and have become increasingly popular in recent years due to advancements in deep learning techniques. From an expert's perspective, Large Language Models are a promising and exciting area of research that has the potential to greatly improve the capabilities of AI systems for processing and understanding human language.

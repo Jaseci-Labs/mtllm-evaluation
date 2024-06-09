@@ -1,0 +1,73 @@
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: Which knight invented King Arthur's Round Table?
+Punchline: Sir Cumference.
+
+---
+
+Joke:
+Output:
+  Why did the tomato turn red?
+Punchline: Because it saw the salad dressing!
+{'completion_tokens': 18, 'prompt_tokens': 52, 'total_tokens': 70}
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: How does a penguin build its house?
+Punchline: Igloos it together.
+
+---
+
+Joke:
+Output:
+  Why couldn't the bicycle stand up by itself?
+Punchline: Because it was two-tired.
+{'completion_tokens': 21, 'prompt_tokens': 54, 'total_tokens': 75}
+Bootstrapped 2 full traces after 2 examples in round 0.
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: Why did the tomato turn red?
+Punchline: Because it saw the salad dressing!
+
+---
+
+Joke: Why couldn't the bicycle stand up by itself?
+Punchline: Because it was two-tired.
+
+---
+
+Joke:
+Output:
+  What do you call a fake noodle?
+Punchline: An impasta.
+{'completion_tokens': 17, 'prompt_tokens': 78, 'total_tokens': 95}
+What do you call a fake noodle?: An impasta.

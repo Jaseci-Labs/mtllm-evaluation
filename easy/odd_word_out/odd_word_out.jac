@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, OpenAI;
+import:py from mtllm.llms.openai, OpenAICompletion;
 
-glob llm = OpenAI(model_name="gpt-4o");
+glob llm = OpenAICompletion(model_name="gpt-3.5-turbo-instruct");
 
 glob examples: 'Examples for Picking Odd Word out (Options, Reasoing, Result)': list[tuple[list[str], str, str]] = [
     (["skirt", "dress", "pen", "jacket"], "skirt is clothing, dress is clothing, pen is an object, jacket is clothing.", "pen"),

@@ -1,6 +1,6 @@
 import:py from jaclang.core.llms, OpenAI, Ollama;
 
-glob llm = OpenAI(model_name="gpt-3.5-turbo");
+glob llm = OpenAICompletion(model_name="gpt-3.5-turbo");
 
 obj 'A work to be done in the future'
 Task {

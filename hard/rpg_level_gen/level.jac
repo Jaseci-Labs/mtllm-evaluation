@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, OpenAI;
+import:py from mtllm.llms.openai, OpenAICompletion;
 
-glob llm = OpenAI(model_name="gpt-4o");
+glob llm = OpenAICompletion(model_name="gpt-3.5-turbo-instruct");
 
 obj 'Position'
 Position {
@@ -64,7 +64,7 @@ obj LevelManager {
         self.prev_levels.append(new_level);
         
         # Generating the Map of the New Level
-        new_level_map = Map(level=new_level by llm());
+        new_level_map = Map(level=new_level by llm(max_tokens=1024));
         self.prev_level_maps.append(new_level_map);
         
         # Increasing the Difficulty for end of every 2 Levels

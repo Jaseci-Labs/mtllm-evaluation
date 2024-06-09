@@ -1,0 +1,111 @@
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+QA example with Thoughts and Actions (qa_example) (list[dict]) = [{"Question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "Thoughts and Observations": [{"Thought": "I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", "Action": "Search: Colorado orogeny", "Observation": "The Colorado orogeny was an episode of mountain building (an orogeny) ..."}, {"Thought": "It does not mention the eastern sector. So I need to look up eastern sector.", "Action": "Search: eastern sector of the Colorado orogeny", "Observation": "The eastern sector of the Colorado orogeny extends into the High Plains."}, {"Thought": "High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft.", "Action": "Finish: 1,800 to 7,000 ft"}]}]
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "Where is Apple Headquaters located?"
+Previous Thoughts, Actions, and Observations (prev_info) (list) = []
+
+[Output Information]
+Next Thought and Action (dict)
+
+[Type Explanations]
+
+
+[Action]
+Get next Thought and Action. Action should always startswith "Search:" or "Finish:" followed by the search term or the answer
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+---
+
+[Output] 
+Output:
+ [Output] {"Thought": "I need to search Apple Headquaters, find the location of the headquaters, and include it in the answer.", "Action": "Search: Apple Headquaters"}
+CompletionUsage(completion_tokens=40, prompt_tokens=394, total_tokens=434)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+QA example with Thoughts and Actions (qa_example) (list[dict]) = [{"Question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "Thoughts and Observations": [{"Thought": "I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", "Action": "Search: Colorado orogeny", "Observation": "The Colorado orogeny was an episode of mountain building (an orogeny) ..."}, {"Thought": "It does not mention the eastern sector. So I need to look up eastern sector.", "Action": "Search: eastern sector of the Colorado orogeny", "Observation": "The eastern sector of the Colorado orogeny extends into the High Plains."}, {"Thought": "High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft.", "Action": "Finish: 1,800 to 7,000 ft"}]}]
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "Where is Apple Headquaters located?"
+Previous Thoughts, Actions, and Observations (prev_info) (list) = [{"Thought": "I need to search Apple Headquaters, find the location of the headquaters, and include it in the answer.", "Action": "Search: Apple Headquaters", "Observation": "Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond."}]
+
+[Output Information]
+Next Thought and Action (dict)
+
+[Type Explanations]
+
+
+[Action]
+Get next Thought and Action. Action should always startswith "Search:" or "Finish:" followed by the search term or the answer
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+---
+
+[Output] 
+Output:
+ [Output] {"Thought": "I need to search the location of Apple Headquaters to find the answer.", "Action": "Search: Apple Headquaters"}
+CompletionUsage(completion_tokens=32, prompt_tokens=633, total_tokens=665)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+QA example with Thoughts and Actions (qa_example) (list[dict]) = [{"Question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "Thoughts and Observations": [{"Thought": "I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", "Action": "Search: Colorado orogeny", "Observation": "The Colorado orogeny was an episode of mountain building (an orogeny) ..."}, {"Thought": "It does not mention the eastern sector. So I need to look up eastern sector.", "Action": "Search: eastern sector of the Colorado orogeny", "Observation": "The eastern sector of the Colorado orogeny extends into the High Plains."}, {"Thought": "High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft.", "Action": "Finish: 1,800 to 7,000 ft"}]}]
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "Where is Apple Headquaters located?"
+Previous Thoughts, Actions, and Observations (prev_info) (list) = [{"Thought": "I need to search Apple Headquaters, find the location of the headquaters, and include it in the answer.", "Action": "Search: Apple Headquaters", "Observation": "Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond."}, {"Thought": "I need to search the location of Apple Headquaters to find the answer.", "Action": "Search: Apple Headquaters", "Observation": "Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond."}]
+
+[Output Information]
+Next Thought and Action (dict)
+
+[Type Explanations]
+
+
+[Action]
+Get next Thought and Action. Action should always startswith "Search:" or "Finish:" followed by the search term or the answer
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+---
+
+[Output] 
+Output:
+ [Output] {'Thought': 'I need to search the location of Apple Headquaters to find the answer.', 'Action': 'Search: location of Apple Headquaters'}
+CompletionUsage(completion_tokens=34, prompt_tokens=863, total_tokens=897)

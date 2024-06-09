@@ -1,0 +1,95 @@
+Input Prompt:
+ Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+
+---
+
+Follow the following format.
+
+Essay: Essay
+Criteria: Criteria
+Judgement: Judgement
+
+---
+
+Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.
+Criteria: Clarity
+Judgement:
+Output:
+  The essay is moderately clear. The introduction provides a brief overview of the topic and the main points that will be discussed. However, the transition between the introduction and the body paragraphs is not smooth, making it slightly confusing for the reader. Additionally, some sentences are worded awkwardly, making it difficult to understand the intended meaning. Overall, the essay could benefit from clearer and more concise language to improve its clarity.
+{'completion_tokens': 83, 'prompt_tokens': 181, 'total_tokens': 264}
+Input Prompt:
+ Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+
+---
+
+Follow the following format.
+
+Essay: Essay
+Criteria: Criteria
+Judgement: Judgement
+
+---
+
+Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.
+Criteria: Originality
+Judgement:
+Output:
+  The essay shows a moderate level of originality. While the topic of Spain's cultural diversity and language preservation is not unique, the writer presents their own perspective and insights on the subject. However, the essay could benefit from more specific and unique examples to support their points and make the essay stand out more. Overall, the essay is well-written and presents a thoughtful analysis of the topic, but it could use more originality to make it truly stand out.
+{'completion_tokens': 91, 'prompt_tokens': 181, 'total_tokens': 272}
+Input Prompt:
+ Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+
+---
+
+Follow the following format.
+
+Essay: Essay
+Criteria: Criteria
+Judgement: Judgement
+
+---
+
+Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.
+Criteria: Evidence
+Judgement:
+Output:
+  The essay provides a good amount of evidence to support its claims about the cultural diversity and linguistic challenges in Spain. The author mentions the population statistics, the country's economic status, and the fact that most Spaniards speak multiple languages. They also mention the struggles that Spaniards have faced in preserving their cultural identity and language rights. However, the essay could benefit from more specific examples or statistics to further strengthen its argument. Overall, the evidence provided is sufficient to support the main points of the essay.
+{'completion_tokens': 99, 'prompt_tokens': 180, 'total_tokens': 279}
+Input Prompt:
+ Generate a summary with the given judgements.
+
+---
+
+Follow the following format.
+
+Essay: Essay
+Judgements: Judgements
+Summary: Summary
+
+---
+
+Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.
+Judgements: {'Clarity': 'The essay is moderately clear. The introduction provides a brief overview of the topic and the main points that will be discussed. However, the transition between the introduction and the body paragraphs is not smooth, making it slightly confusing for the reader. Additionally, some sentences are worded awkwardly, making it difficult to understand the intended meaning. Overall, the essay could benefit from clearer and more concise language to improve its clarity.', 'Originality': "The essay shows a moderate level of originality. While the topic of Spain's cultural diversity and language preservation is not unique, the writer presents their own perspective and insights on the subject. However, the essay could benefit from more specific and unique examples to support their points and make the essay stand out more. Overall, the essay is well-written and presents a thoughtful analysis of the topic, but it could use more originality to make it truly stand out.", 'Evidence': "The essay provides a good amount of evidence to support its claims about the cultural diversity and linguistic challenges in Spain. The author mentions the population statistics, the country's economic status, and the fact that most Spaniards speak multiple languages. They also mention the struggles that Spaniards have faced in preserving their cultural identity and language rights. However, the essay could benefit from more specific examples or statistics to further strengthen its argument. Overall, the evidence provided is sufficient to support the main points of the essay."}
+Summary:
+Output:
+  The essay discusses the cultural diversity and linguistic challenges in Spain, a country with a population of 45 million Spaniards and 3.5 million immigrants. While the essay provides a brief overview of the topic and presents the writer's perspective, it could benefit from clearer and more concise language to improve its clarity. Additionally, the essay could use more specific and unique examples to make it stand out. However, the essay provides sufficient evidence to support its claims about the struggles faced by Spaniards in preserving their cultural identity and language rights.
+{'completion_tokens': 106, 'prompt_tokens': 460, 'total_tokens': 566}
+Input Prompt:
+ Give essay a letter grade (A-D).
+
+---
+
+Follow the following format.
+
+Summary: Summary
+Grade: Grade
+
+---
+
+Summary: The essay discusses the cultural diversity and linguistic challenges in Spain, a country with a population of 45 million Spaniards and 3.5 million immigrants. While the essay provides a brief overview of the topic and presents the writer's perspective, it could benefit from clearer and more concise language to improve its clarity. Additionally, the essay could use more specific and unique examples to make it stand out. However, the essay provides sufficient evidence to support its claims about the struggles faced by Spaniards in preserving their cultural identity and language rights.
+Grade:
+Output:
+  B-
+{'completion_tokens': 2, 'prompt_tokens': 134, 'total_tokens': 136}
+Reviewer Notes:  The essay discusses the cultural diversity and linguistic challenges in Spain, a country with a population of 45 million Spaniards and 3.5 million immigrants. While the essay provides a brief overview of the topic and presents the writer's perspective, it could benefit from clearer and more concise language to improve its clarity. Additionally, the essay could use more specific and unique examples to make it stand out. However, the essay provides sufficient evidence to support its claims about the struggles faced by Spaniards in preserving their cultural identity and language rights.
+Grade:  B-

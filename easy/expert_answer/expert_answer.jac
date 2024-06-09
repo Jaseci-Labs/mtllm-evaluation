@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, OpenAI;
+import:py from mtllm.llms.openai, OpenAICompletion;
 
-glob llm = OpenAI(model_name="gpt-4o");
+glob llm = OpenAICompletion(model_name="gpt-3.5-turbo-instruct");
 
 can 'Find the Expert Profession to answer the given question.'
 get_expert(question: 'Question': str) -> 'Expert Profession': str by llm(method="Reason");

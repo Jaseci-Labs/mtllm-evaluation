@@ -1,0 +1,18 @@
+Input Prompt:
+ Get Person Information.
+
+---
+
+Follow the following format.
+
+Info: Person Information
+Person: ${person}. Respond with a single JSON object. JSON Schema: {"$defs": {"Employer": {"properties": {"employer_name": {"description": "Employer Name", "title": "Employer Name", "type": "string"}, "location": {"description": "Location", "title": "Location", "type": "string"}}, "required": ["employer_name", "location"], "title": "Employer", "type": "object"}}, "properties": {"name": {"description": "Name", "title": "Name", "type": "string"}, "age": {"description": "Age", "title": "Age", "type": "integer"}, "job": {"description": "Job", "title": "Job", "type": "string"}, "employer": {"allOf": [{"$ref": "#/$defs/Employer"}], "description": "Employer"}}, "required": ["name", "age", "job", "employer"], "title": "Person", "type": "object"}
+
+---
+
+Info: Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, Switzerland.
+Person:
+Output:
+  {"name": "Alice", "age": 21, "job": "engineer", "employer": {"employer_name": "LMQL Inc", "location": "Zurich, Switzerland"}}
+{'completion_tokens': 41, 'prompt_tokens': 259, 'total_tokens': 300}
+Their name is Alice and she works in Zurich, Switzerland.

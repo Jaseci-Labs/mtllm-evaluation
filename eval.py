@@ -9,6 +9,8 @@ import json
 import sys
 import argparse
 
+from mtllm.llms import OpenAI
+
 def run_dspy_program(program_name, program_path, profiler, output_dir):
     os.makedirs(f"{output_dir}/{program_name}/dspy", exist_ok=True)
     program_path = program_path.replace(".py", "").replace("/", ".")
@@ -23,7 +25,13 @@ def run_dspy_program(program_name, program_path, profiler, output_dir):
         profiler = Profiler()
         profiler.start()
 
-    module = importlib.import_module(program_path)
+    try:
+        module = importlib.import_module(program_path)
+    except Exception as e:
+        logger.error(f"Failed: {program_path} : {e}")
+        pr.disable() if profiler=="cProfile" else profiler.stop()
+        results_file.close()
+        return
 
     if profiler == "cProfile":
         pr.disable()

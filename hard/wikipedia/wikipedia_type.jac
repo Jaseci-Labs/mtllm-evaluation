@@ -1,7 +1,7 @@
-import:py from jaclang.core.llms, OpenAI;
+import:py from mtllm.llms.openai, OpenAICompletion;
 import:py wikipedia;
 
-glob llm = OpenAI(model_name="gpt-4o");
+glob llm = OpenAICompletion(model_name="gpt-3.5-turbo-instruct");
 
 obj 'Thought, Action Observation'
 ThoughtActionObservation {
