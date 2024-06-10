@@ -1,0 +1,8 @@
+Bootstrapped 2 full traces after 2 examples in round 0.
+Joke: Why can't you give advice to a fish?: Because it bites your head off before listening!
+
+Joke: Joke: How many times have we heard that joke about the programmer and the light bulb?
+Punchline: Enough to know when hardware is just an excuse for bad coding!
+
+Joke: Why did the smartphone go to school?
+Punchline: To improve its education, because it was feeling a bit low-tech!

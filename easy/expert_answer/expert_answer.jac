@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, OpenAI;
+import:py from mtllm.llms, Ollama;
 
-glob llm = OpenAI(model_name="gpt-4o");
+glob llm = Ollama(host="http://52.23.242.52:11343");
 
 can 'Find the Expert Profession to answer the given question.'
 get_expert(question: 'Question': str) -> 'Expert Profession': str by llm(method="Reason");

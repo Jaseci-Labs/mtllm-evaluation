@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, OpenAI;
+import:py from mtllm.llms, Ollama;
 
-glob llm = OpenAI(model_name="gpt-4o");
+glob llm = Ollama(host="http://52.23.242.52:11343");
 
 glob jokes: 'Jokes with Punchlines': list[tuple[str, str]] = [
     ("How does a penguin build its house?", "Igloos it together."),

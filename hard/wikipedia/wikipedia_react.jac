@@ -1,7 +1,7 @@
-import:py from jaclang.core.llms, OpenAI;
 import:py wikipedia;
+import:py from mtllm.llms, Ollama;
 
-glob llm = OpenAI(model_name="gpt-4o");
+glob llm = Ollama(host="http://52.23.242.52:11343");
 
 obj 'Question Answering'
 QA {
@@ -33,6 +33,7 @@ QA {
         prev_info = [];
         while len(prev_info) < 100 {
             next_info = self.get_throught_and_actions(question, prev_info[-3:]);
+            print(next_info);
             if next_info["Action"].startswith("Search:") {
                 obs = wikipedia.summary(
                     next_info["Action"].replace("Search: ", "")

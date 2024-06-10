@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field
 from typing import List
 
 
-llm = dspy.OpenAI(model="gpt-4o", max_tokens=1024)
+llm = dspy.OllamaLocal(model="phi3", base_url="http://52.23.242.52:11343")
 dspy.settings.configure(lm=llm)
 
 

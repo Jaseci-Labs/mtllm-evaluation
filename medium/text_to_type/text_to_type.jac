@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, OpenAI;
+import:py from jaclang.core.llms, Ollama;
 
-glob llm = OpenAI(model_name="gpt-4o");
+glob llm = Ollama(host="http://52.23.242.52:11343");
 
 obj 'Employer'
 Employer {

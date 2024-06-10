@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, OpenAI;
+import:py from mtllm.llms, Ollama;
 
-glob llm = OpenAI(model_name="gpt-4o");
+glob llm = Ollama(verbose=True, host="http://52.23.242.52:11343");
 
 obj 'Singer'
 Singer {
@@ -10,7 +10,7 @@ Singer {
 }
 
 with entry {
-    bruno_mars = Singer(name="Bruno Mars"by llm());
+    bruno_mars = Singer(name="Bruno Mars" by llm());
     print(
         f"{bruno_mars.name} is {bruno_mars.age} years old. His top 2 songs are {bruno_mars.top_songs}."
     );

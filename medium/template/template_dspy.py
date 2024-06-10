@@ -1,7 +1,7 @@
 import dspy
 from pydantic import BaseModel, Field
 
-llm = dspy.OpenAI(model="gpt-4o")
+llm = dspy.OllamaLocal(model="phi3", base_url="http://52.23.242.52:11343")
 dspy.settings.configure(lm=llm)
 
 

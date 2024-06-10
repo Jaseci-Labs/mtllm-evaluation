@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, OpenAI, Ollama;
+import:py from mtllm.llms, Ollama;
 
-glob llm = OpenAI(model_name="gpt-3.5-turbo");
+glob llm = Ollama(host="http://52.23.242.52:11343");
 
 obj 'A work to be done in the future'
 Task {

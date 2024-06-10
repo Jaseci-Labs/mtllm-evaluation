@@ -1,0 +1,18 @@
+```json
+{
+  "level": {
+    "name": "Terrain of Trials",
+    "difficulty": 3,
+    "width": 50,
+    "height": 50,
+    "num_wall": 12,
+    "num_enemies": 8,
+    "time_countdown": 90,
+    "n_retries_allowed": 3
+  },
+  "walls": [],
+  "small_obstacles": [],
+  "enemies": [],
+  "player_pos": {}
+}
+```

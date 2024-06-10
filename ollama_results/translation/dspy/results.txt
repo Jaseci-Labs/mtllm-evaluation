@@ -1,0 +1,3 @@
+Bootstrapped 3 full traces after 3 examples in round 0.
+English Word: cheese
+Translation: English Word: cheese Translation: fromage

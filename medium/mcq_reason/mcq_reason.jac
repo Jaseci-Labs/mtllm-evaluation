@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, OpenAI;
+import:py from mtllm.llms, Ollama;
 
-glob llm = OpenAI(model_name="gpt-4o");
+glob llm = Ollama(verbose=True, host="http://52.23.242.52:11343");
 
 can 'Provide the Answer for the Given Question (A-F)'
 get_answer(question: 'Question': str, choices: 'Answer Choices': dict) -> 'Answer (A-F)': str
