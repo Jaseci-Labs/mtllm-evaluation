@@ -12,7 +12,7 @@
                     }
                 }
             ],
-            "output": ")\nA: 08/22/2021"
+            "output": "A: 08/22/2021"
         },
         "dspy": {
             "llm_requests": [
@@ -42,7 +42,7 @@
                     }
                 }
             ],
-            "output": ")\nMartin Luther King Jr. was a Extrovert person who died in 1968"
+            "output": "Martin Luther King Jr. was a Extrovert person who died in 1968"
         },
         "dspy": {
             "llm_requests": [
@@ -82,7 +82,7 @@
                     }
                 }
             ],
-            "output": ")\nTheir name is Alice and she works in Zurich."
+            "output": "Their name is Alice and she works in Zurich."
         },
         "dspy": {
             "llm_requests": [

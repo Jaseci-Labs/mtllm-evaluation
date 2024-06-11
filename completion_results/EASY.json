@@ -12,7 +12,7 @@
                     }
                 }
             ],
-            "output": ")\nfromage"
+            "output": "fromage"
         },
         "dspy": {
             "llm_requests": [
@@ -105,7 +105,7 @@
                     }
                 }
             ],
-            "output": ")\nReviewer Notes:  The essay effectively conveys information about Spain's diverse culture and language, highlighting the struggles the Spanish population has faced in preserving their identity. It is an original piece of work that showcases the rich culture and diversity of Spain. The essay is well-written, engaging, and well-researched, making it a strong piece of writing. Overall, it is a highly original and thought-provoking piece that deserves recognition.\nGrade:  A"
+            "output": "Reviewer Notes:  The essay effectively conveys information about Spain's diverse culture and language, highlighting the struggles the Spanish population has faced in preserving their identity. It is an original piece of work that showcases the rich culture and diversity of Spain. The essay is well-written, engaging, and well-researched, making it a strong piece of writing. Overall, it is a highly original and thought-provoking piece that deserves recognition.\nGrade:  A"
         },
         "dspy": {
             "llm_requests": [
@@ -171,7 +171,7 @@
                     }
                 }
             ],
-            "output": ")\nWhat do you call an alligator in a vest? : An investi-gator."
+            "output": "What do you call an alligator in a vest? : An investi-gator."
         },
         "dspy": {
             "llm_requests": [
@@ -228,7 +228,7 @@
                     }
                 }
             ],
-            "output": ")\nAI researcher or data scientist says: 'Large Language Models are powerful AI models that are trained on large datasets to perform a variety of natural language processing tasks, such as text generation, translation, and summarization. They are generally considered to have a high number of parameters, typically in the millions or billions, and have become increasingly popular in recent years due to advancements in deep learning techniques. From an expert's perspective, Large Language Models are a promising and exciting area of research that has the potential to greatly improve the capabilities of AI systems for processing and understanding human language."
+            "output": "AI researcher or data scientist says: 'Large Language Models are powerful AI models that are trained on large datasets to perform a variety of natural language processing tasks, such as text generation, translation, and summarization. They are generally considered to have a high number of parameters, typically in the millions or billions, and have become increasingly popular in recent years due to advancements in deep learning techniques. From an expert's perspective, Large Language Models are a promising and exciting area of research that has the potential to greatly improve the capabilities of AI systems for processing and understanding human language."
         },
         "dspy": {
             "llm_requests": [
@@ -267,7 +267,7 @@
                     }
                 }
             ],
-            "output": ")\n('Casio', 'Bentley, Ferrari, Lamborghini and Toyota are all car brands, Casio is a watch brand.')"
+            "output": "('Casio', 'Bentley, Ferrari, Lamborghini and Toyota are all car brands, Casio is a watch brand.')"
         },
         "dspy": {
             "llm_requests": [
