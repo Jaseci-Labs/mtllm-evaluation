@@ -50,10 +50,10 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 
 | Problem Name | Methodology | Runtime (s) | Readability | Number of Lines |
 | ------------ | ----------- | ---------- | ----------- | --------------- |
-| MCQ Reasoning | DSpy | 4.55 |  | 20 |
+| MCQ Reasoning | DSpy | 4.55 |  | `20` |
 |  | LMQL | 3.56 |  | 21 |
-|  | Jaclang | `2.05` |  | `19` |
-| Text to Type | DSpy | 2.70 |  | 31 |
+|  | Jaclang | `2.05` |  | `20` |
+| Text to Type | DSpy | 2.70 |  | 29 |
 |  | LMQL | 3.01 |  | 30 |
 |  | Jaclang | `1.73` |  | `23` |
 | Template | DSpy | 1.04 |  | 26 |
@@ -67,12 +67,12 @@ We are evaluating DSpy, LMQL and Jaclang's MTLLM Feature on the following metric
 
 | Problem Name | Methodology | Runtime (s) | Readability | Number of Lines |
 | ------------ | ----------- | ---------- | ----------- | --------------- |
-| Wikipedia (ReACT) | DSpy | 10.76 |  | 118 |
+| Wikipedia (ReACT) | DSpy | 10.76 |  | 31 |
 |  | LMQL | - |  | - |
-|  | Jaclang | `8.73` |  | `67` |
-| RPG Level Generation | DSpy | - |  | 117 |
+|  | Jaclang | `8.73` |  | `61` |
+| RPG Level Generation | DSpy | - |  | 120 |
 |  | LMQL |  |  |  |
-|  | Jaclang | **31.99** |  | **109** |
+|  | Jaclang | **31.99** |  | **110** |
 
 
 
