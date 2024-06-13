@@ -1,0 +1,69 @@
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "Who is the first Man on Earth?"
+
+[Output Information]
+Expert Profession (str)
+
+[Type Explanations]
+
+
+[Action]
+Find the Expert Profession to answer the given question.
+
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+
+Output:
+ [Reasoning] The question pertains to a subject related to the origins of humanity, which falls under the domain of anthropology.
+[Output] Anthropologist
+CompletionUsage(completion_tokens=30, prompt_tokens=146, total_tokens=176)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "Who is the first Man on Earth?"
+Expert (expert) (str) = "Anthropologist"
+
+[Output Information]
+Expert's Answer (str)
+
+[Type Explanations]
+
+
+[Action]
+Get the answer for the question from expert's perspective
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+Output:
+ [Output] "From an anthropologist's perspective, there isn't a specific 'first man' on Earth. Human evolution is a gradual process that took place over millions of years, with Homo sapiens emerging around 300,000 years ago in Africa."
+CompletionUsage(completion_tokens=51, prompt_tokens=154, total_tokens=205)
+Anthropologist says: 'From an anthropologist's perspective, there isn't a specific 'first man' on Earth. Human evolution is a gradual process that took place over millions of years, with Homo sapiens emerging around 300,000 years ago in Africa.

@@ -17,11 +17,11 @@ class GetTask(dspy.Signature):
     task: Task = dspy.OutputField()
 
 task_contents = [
-    "Have some sleep",
-    "Enjoy a better weekend with my girlfriend",
-    "Work on Jaseci Project",
-    "Teach EECS 281 Students",
-    "Enjoy family time with my parents"
+    "Complete the Medium Article",
+    "Prepare for the upcoming Exam",
+    "Finish the pending Project",
+    "Clean the House",
+    "Cook the Dinner",
 ]
 tasks = []
 for task_content in task_contents:

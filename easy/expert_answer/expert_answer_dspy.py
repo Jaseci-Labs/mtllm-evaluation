@@ -19,7 +19,7 @@ class GetAnswer(dspy.Signature):
     answer: str = dspy.OutputField(desc="Expert's answer")
 
 
-question = "What are Large Language Models?"
+question = "Who is the first Man on Earth?"
 expert = dspy.Predict(GetExpert)(question=question).expert
 answer = dspy.Predict(GetAnswer)(question=question, expert=expert).answer
 print(f"{expert} says: {answer}")

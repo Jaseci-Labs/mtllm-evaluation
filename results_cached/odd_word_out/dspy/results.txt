@@ -1,0 +1,33 @@
+Input Prompt:
+ Pict the Odd Word Out from the given list of words.
+
+---
+
+Follow the following format.
+
+Options: Options to pick from
+Reasoning: Let's think step by step in order to ${produce the odd_word}. We ...
+Odd Word: Odd Word
+
+---
+
+Options: ['skirt', 'dress', 'pen', 'jacket']
+Reasoning: Let's think step by step in order to Options: ['skirt', 'dress', 'pen', 'jacket'] Reasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. 'Skirt', 'dress', and 'jacket' are all types of clothing, whereas 'pen' is a writing instrument.
+Odd Word: pen
+
+---
+
+Options: ['Spain', 'France', 'German', 'England', 'Singapore']
+Reasoning: Let's think step by step in order to Options: ['Spain', 'France', 'German', 'England', 'Singapore'] Reasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. Spain, France, and England are all countries. German is a language, and Singapore is also a country. Therefore, the odd word out is 'German' because it is not a country.
+Odd Word: German
+
+---
+
+Options: [Elephant, Lion, Peacock, Zebra, Bear]
+Reasoning: Let's think step by step in order to
+Output:
+ Options: ['Elephant', 'Lion', 'Peacock', 'Zebra', 'Bear']
+Reasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. 'Elephant', 'Lion', 'Zebra', and 'Bear' are all mammals, whereas 'Peacock' is a bird.
+Odd Word: Peacock
+{'completion_tokens': 88, 'prompt_tokens': 322, 'total_tokens': 410}
+("Options: ['Elephant', 'Lion', 'Peacock', 'Zebra', 'Bear']\nReasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. 'Elephant', 'Lion', 'Zebra', and 'Bear' are all mammals, whereas 'Peacock' is a bird.", 'Peacock')

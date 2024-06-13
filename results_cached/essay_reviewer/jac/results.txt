@@ -1,0 +1,162 @@
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+None (essay) (None) = "Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty."
+
+[Context]
+
+
+[Inputs Information]
+Criteria (criteria) (str) = "Clarity"
+
+[Output Information]
+Judgement (str)
+
+[Type Explanations]
+
+
+[Action]
+Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+Output:
+ [Output] The essay is clear and well-structured, effectively conveying the historical and cultural significance of Sigiriya.
+CompletionUsage(completion_tokens=23, prompt_tokens=284, total_tokens=307)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+None (essay) (None) = "Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty."
+
+[Context]
+
+
+[Inputs Information]
+Criteria (criteria) (str) = "Originality"
+
+[Output Information]
+Judgement (str)
+
+[Type Explanations]
+
+
+[Action]
+Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+Output:
+ [Output] The essay demonstrates a high level of originality by providing a detailed and vivid description of Sigiriya, an ancient rock fortress in Sri Lanka. It includes specific historical, architectural, and cultural details that contribute to its uniqueness, making it not only informative but also engaging. The mention of Sigiriya being a UNESCO World Heritage Site and its significance in ancient urban planning further adds to the essay’s originality and depth.
+CompletionUsage(completion_tokens=83, prompt_tokens=284, total_tokens=367)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+None (essay) (None) = "Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty."
+
+[Context]
+
+
+[Inputs Information]
+Criteria (criteria) (str) = "Evidence"
+
+[Output Information]
+Judgement (str)
+
+[Type Explanations]
+
+
+[Action]
+Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+Output:
+ [Output] The essay provides substantial evidence to support its claims about Sigiriya's historical and architectural significance. It includes specific details such as its height, the transformation by King Kasyapa, the presence of gardens, frescoes, and the lion-shaped gateway. Additionally, it mentions the site's recognition as a UNESCO World Heritage Site and its importance as a tourist attraction.
+CompletionUsage(completion_tokens=73, prompt_tokens=283, total_tokens=356)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+None (essay) (None) = "Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty."
+
+[Context]
+
+
+[Inputs Information]
+Judgements (judgements) (dict[str, str]) = {"Clarity": "The essay is clear and well-structured, effectively conveying the historical and cultural significance of Sigiriya.", "Originality": "The essay demonstrates a high level of originality by providing a detailed and vivid description of Sigiriya, an ancient rock fortress in Sri Lanka. It includes specific historical, architectural, and cultural details that contribute to its uniqueness, making it not only informative but also engaging. The mention of Sigiriya being a UNESCO World Heritage Site and its significance in ancient urban planning further adds to the essay’s originality and depth.", "Evidence": "The essay provides substantial evidence to support its claims about Sigiriya's historical and architectural significance. It includes specific details such as its height, the transformation by King Kasyapa, the presence of gardens, frescoes, and the lion-shaped gateway. Additionally, it mentions the site's recognition as a UNESCO World Heritage Site and its importance as a tourist attraction."}
+
+[Output Information]
+Summary (str)
+
+[Type Explanations]
+
+
+[Action]
+Generate a summary with the given judgements.
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+Output:
+ [Output] The essay on Sigiriya is clear and well-structured, effectively conveying its historical and cultural significance. It demonstrates originality with a detailed description of the ancient rock fortress, including specific historical, architectural, and cultural details. The essay provides substantial evidence, mentioning the site's transformation by King Kasyapa, its gardens, frescoes, lion-shaped gateway, and recognition as a UNESCO World Heritage Site.
+CompletionUsage(completion_tokens=81, prompt_tokens=463, total_tokens=544)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Summary (summary) (str) = "The essay on Sigiriya is clear and well-structured, effectively conveying its historical and cultural significance. It demonstrates originality with a detailed description of the ancient rock fortress, including specific historical, architectural, and cultural details. The essay provides substantial evidence, mentioning the site's transformation by King Kasyapa, its gardens, frescoes, lion-shaped gateway, and recognition as a UNESCO World Heritage Site."
+
+[Output Information]
+Grade (str)
+
+[Type Explanations]
+
+
+[Action]
+Give essay a letter grade (A-D)
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+Output:
+ [Output] A
+CompletionUsage(completion_tokens=4, prompt_tokens=207, total_tokens=211)
+Reviewer Notes:  The essay on Sigiriya is clear and well-structured, effectively conveying its historical and cultural significance. It demonstrates originality with a detailed description of the ancient rock fortress, including specific historical, architectural, and cultural details. The essay provides substantial evidence, mentioning the site's transformation by King Kasyapa, its gardens, frescoes, lion-shaped gateway, and recognition as a UNESCO World Heritage Site.
+Grade:  A

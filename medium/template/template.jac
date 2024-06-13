@@ -10,7 +10,7 @@ Singer {
 }
 
 with entry {
-    bruno_mars = Singer(name="Bruno Mars"by llm());
+    bruno_mars = Singer(name="Ed Sheeran" by llm());
     print(
         f"{bruno_mars.name} is {bruno_mars.age} years old. His top 2 songs are {bruno_mars.top_songs}."
     );

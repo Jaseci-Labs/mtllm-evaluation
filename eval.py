@@ -10,8 +10,6 @@ import sys
 import argparse
 import time
 
-from dspy import OpenAI
-
 
 def run_dspy_program(program_name, program_path, profiler, output_dir):
     os.makedirs(f"{output_dir}/{program_name}/dspy", exist_ok=True)

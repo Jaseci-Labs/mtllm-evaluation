@@ -1,0 +1,176 @@
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Content of the Job to be done (description) (str) = "Complete the Medium Article"
+
+[Output Information]
+A work to be done in the future (Task)
+
+[Type Explanations]
+A work to be done in the future (Task) (obj) eg:- Task(description=str, time=int, priority=int) -> Content of the Job to be done (description) (str), Estimated time in minutes for one to finish the job (time) (int), Estimated Priority for the Task (0-10) (priority) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+
+Output:
+ [Reasoning] The task is to create a Task object for completing the Medium Article with the given description.
+[Output] Task(description="Complete the Medium Article", time=120, priority=8)
+CompletionUsage(completion_tokens=41, prompt_tokens=250, total_tokens=291)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Content of the Job to be done (description) (str) = "Prepare for the upcoming Exam"
+
+[Output Information]
+A work to be done in the future (Task)
+
+[Type Explanations]
+A work to be done in the future (Task) (obj) eg:- Task(description=str, time=int, priority=int) -> Content of the Job to be done (description) (str), Estimated time in minutes for one to finish the job (time) (int), Estimated Priority for the Task (0-10) (priority) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+
+Output:
+ [Reasoning] The task is to create an object of type Task with the given description "Prepare for the upcoming Exam".
+[Output] Task(description="Prepare for the upcoming Exam", time=120, priority=8)
+CompletionUsage(completion_tokens=45, prompt_tokens=251, total_tokens=296)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Content of the Job to be done (description) (str) = "Finish the pending Project"
+
+[Output Information]
+A work to be done in the future (Task)
+
+[Type Explanations]
+A work to be done in the future (Task) (obj) eg:- Task(description=str, time=int, priority=int) -> Content of the Job to be done (description) (str), Estimated time in minutes for one to finish the job (time) (int), Estimated Priority for the Task (0-10) (priority) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+
+Output:
+ [Reasoning] The input provided is "Finish the pending Project" which is a task that needs to be done in the future.
+[Output] Task(description="Finish the pending Project", time=240, priority=8)
+CompletionUsage(completion_tokens=46, prompt_tokens=250, total_tokens=296)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Content of the Job to be done (description) (str) = "Clean the House"
+
+[Output Information]
+A work to be done in the future (Task)
+
+[Type Explanations]
+A work to be done in the future (Task) (obj) eg:- Task(description=str, time=int, priority=int) -> Content of the Job to be done (description) (str), Estimated time in minutes for one to finish the job (time) (int), Estimated Priority for the Task (0-10) (priority) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+
+Output:
+ [Reasoning] The task "Clean the House" needs to be converted into a Task object with the description filled in.
+[Output] Task(description="Clean the House", time=60, priority=5)
+CompletionUsage(completion_tokens=43, prompt_tokens=249, total_tokens=292)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Content of the Job to be done (description) (str) = "Cook the Dinner"
+
+[Output Information]
+A work to be done in the future (Task)
+
+[Type Explanations]
+A work to be done in the future (Task) (obj) eg:- Task(description=str, time=int, priority=int) -> Content of the Job to be done (description) (str), Estimated time in minutes for one to finish the job (time) (int), Estimated Priority for the Task (0-10) (priority) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+
+Output:
+ [Reasoning] The task of "Cook the Dinner" needs to be transformed into a Task object with a description, estimated time, and priority.
+[Output] Task(description="Cook the Dinner", time=60, priority=5)
+CompletionUsage(completion_tokens=48, prompt_tokens=249, total_tokens=297)
+[Task(description='Complete the Medium Article', time=120, priority=8), Task(description='Prepare for the upcoming Exam', time=120, priority=8), Task(description='Finish the pending Project', time=240, priority=8), Task(description='Clean the House', time=60, priority=5), Task(description='Cook the Dinner', time=60, priority=5)]

@@ -8,7 +8,7 @@ can "Get the answer for the question from expert's perspective"
 get_answer(question: 'Question': str, expert: 'Expert': str) -> "Expert's Answer": str by llm();
 
 with entry {
-    question = "What are Large Language Models?";
+    question = "Who is the first Man on Earth?";
     expert = get_expert(question);
     answer = get_answer(question, expert);
     print(f"{expert} says: '{answer}' ");

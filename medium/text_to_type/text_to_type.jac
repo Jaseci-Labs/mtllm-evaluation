@@ -17,7 +17,7 @@ Person {
 }
 
 with entry {
-    info: "Person's Information": str = "Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, Switzerland.";
+    info: "Person's Information": str = "Kugesan is a 24 years old and works as an engineer at Jaseci, USA.";
     person = Person(by llm(incl_info=(info)));
     print(f"Their name is {person.name} and she works in {person.employer.location}.");
 }

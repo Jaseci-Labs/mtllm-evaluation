@@ -20,6 +20,6 @@ can 'Get Person Information use common knowledge'
 get_person_info(name: 'Name of the Person': str) -> 'Person': Person by llm();
 
 with entry {
-    person_obj = get_person_info('Martin Luther King Jr.');
+    person_obj = get_person_info('Mahatma Gandhi');
     print(f"{person_obj.full_name} was a {person_obj.personality.value} person who died in {person_obj.yod}");
 }

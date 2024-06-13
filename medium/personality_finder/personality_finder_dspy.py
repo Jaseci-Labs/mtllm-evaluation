@@ -24,7 +24,7 @@ class GetPersonInfo(dspy.Signature):
     person: Person = dspy.OutputField()
 
 
-name = "Martin Luther King Jr."
+name = "Mahatma Gandhi"
 person = dspy.TypedPredictor(GetPersonInfo)(name=name).person
 print(
     f"{person.full_name} was an {person.personality.value} person who died in {person.yod}."

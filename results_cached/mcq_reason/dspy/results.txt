@@ -1,0 +1,48 @@
+Input Prompt:
+ Provide the Answer for the Given Question (A-F)
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Choices: ${choices}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: ${answer}
+
+---
+
+Question: 2*1012+1/2 = ?
+
+Choices: (A) 1023 (B) 2024.5 (C) 2024 (D) 1024 (E) 2023.5 (F) 1023.5
+
+Reasoning: Let's think step by step in order to
+Output:
+ Reasoning: Let's think step by step in order to produce the answer. We need to evaluate the expression \(2 \times 1012 + \frac{1}{2}\).
+
+1. First, calculate \(2 \times 1012\):
+   \[
+   2 \times 1012 = 2024
+   \]
+
+2. Next, add \(\frac{1}{2}\) to the result:
+   \[
+   2024 + \frac{1}{2} = 2024.5
+   \]
+
+Answer: (B) 2024.5
+{'completion_tokens': 123, 'prompt_tokens': 127, 'total_tokens': 250}
+Reasoning: Let's think step by step in order to produce the answer. We need to evaluate the expression \(2 \times 1012 + \frac{1}{2}\).
+
+1. First, calculate \(2 \times 1012\):
+   \[
+   2 \times 1012 = 2024
+   \]
+
+2. Next, add \(\frac{1}{2}\) to the result:
+   \[
+   2024 + \frac{1}{2} = 2024.5
+   \] (B) 2024.5

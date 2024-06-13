@@ -11,5 +11,5 @@ can 'Pick the Odd word out'
 odd_word_out(options: 'Options to pick from': list[str]) -> 'REASONING & RESULT': tuple[str, str] by llm(incl_info=(examples));
 
 with entry {
-    print(odd_word_out(["Bentley", "Ferrari", "Lamborghini", "Casio", "Toyota"]));
+    print(odd_word_out(["Elephant", "Lion", "Peacock", "Zebra", "Bear"]));
 }

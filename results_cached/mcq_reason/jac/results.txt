@@ -1,0 +1,42 @@
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "2*1012+1/2 = ?"
+Answer Choices (choices) (dict[str, str]) = {"A": "1023", "B": "2024.5", "C": "2024", "D": "1024", "E": "2023.5", "F": "1023.5"}
+
+[Output Information]
+Answer (A-F) (str)
+
+[Type Explanations]
+
+
+[Action]
+Provide the Answer for the Given Question (A-F)
+
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format. Perform the operation in a chain of thoughts.(Think Step by Step)
+
+[Chain of Thoughts] <Chain of Thoughts>
+[Output] <Result>
+
+Output:
+ [Chain of Thoughts] 
+1. First, calculate the multiplication part: 2 * 1012 = 2024.
+2. Next, calculate the division part: 1 / 2 = 0.5.
+3. Add the results of the multiplication and division: 2024 + 0.5 = 2024.5.
+4. Compare the result with the answer choices.
+
+[Output] B
+CompletionUsage(completion_tokens=86, prompt_tokens=230, total_tokens=316)
+B

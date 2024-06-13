@@ -12,5 +12,5 @@ can 'Translate'
 translate(english_word: 'English Word': str) -> 'Translation': str by llm(incl_info=(examples));
 
 with entry {
-    print(translate("cheese"));
+    print(translate("chair"));
 }

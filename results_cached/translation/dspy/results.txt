@@ -1,0 +1,64 @@
+Input Prompt:
+ Translate the given English word
+
+---
+
+Follow the following format.
+
+English Word: English word to translate
+Translation: Translation
+
+---
+
+English Word: peppermint
+Translation: menthe poivrée
+
+---
+
+English Word: sea otter
+Translation: loutre de mer
+
+---
+
+English Word: plush giraffe
+Translation:
+Output:
+ English Word: plush giraffe
+Translation: girafe en peluche
+{'completion_tokens': 14, 'prompt_tokens': 71, 'total_tokens': 85}
+Bootstrapped 3 full traces after 3 examples in round 0.
+Input Prompt:
+ Translate the given English word
+
+---
+
+Follow the following format.
+
+English Word: English word to translate
+Translation: Translation
+
+---
+
+English Word: sea otter
+Translation: English Word: sea otter Translation: loutre de mer
+
+---
+
+English Word: peppermint
+Translation: English Word: peppermint Translation: menthe poivrée
+
+---
+
+English Word: plush giraffe
+Translation: English Word: plush giraffe Translation: girafe en peluche
+
+---
+
+English Word: chair
+Translation:
+Output:
+ English Word: chair
+Translation: English Word: chair Translation: chaise
+{'completion_tokens': 14, 'prompt_tokens': 107, 'total_tokens': 121}
+English Word: chair
+Translation: English Word: chair Translation: chaise

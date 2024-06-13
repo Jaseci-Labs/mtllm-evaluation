@@ -1,0 +1,24 @@
+Input Prompt:
+ Get Person Information.
+
+---
+
+Follow the following format.
+
+Name: name of the singer
+Singer: ${singer}. Respond with a single JSON object. JSON Schema: {"description": "Singer.", "properties": {"name": {"description": "Name of the Singer", "title": "Name", "type": "string"}, "age": {"description": "Age", "title": "Age", "type": "integer"}, "top_songs": {"description": "His/Her's Top 2 Songs", "items": {"type": "string"}, "title": "Top Songs", "type": "array"}}, "required": ["name", "age", "top_songs"], "title": "Singer", "type": "object"}
+
+---
+
+Name: Ed Sheeran
+Singer:
+Output:
+ ```json
+{
+  "name": "Ed Sheeran",
+  "age": 32,
+  "top_songs": ["Shape of You", "Perfect"]
+}
+```
+{'completion_tokens': 36, 'prompt_tokens': 170, 'total_tokens': 206}
+Ed Sheeran is 32 years old. His top 2 songs are ['Shape of You', 'Perfect'].

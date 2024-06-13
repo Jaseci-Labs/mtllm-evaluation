@@ -1,0 +1,43 @@
+Input Prompt:
+ Find the Expert Profession to answer the given question.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+Expert: Expert Profession
+
+---
+
+Question: Who is the first Man on Earth?
+Expert:
+Output:
+ Question: Who is the first Man on Earth?
+Expert: Historian or Theologian
+{'completion_tokens': 18, 'prompt_tokens': 46, 'total_tokens': 64}
+Input Prompt:
+ Get the Expert's answer to the given question.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+Expert: ${expert}
+Answer: Expert's answer
+
+---
+
+Question: Who is the first Man on Earth?
+Expert: Question: Who is the first Man on Earth? Expert: Historian or Theologian
+Answer:
+Output:
+ Question: Who is the first Man on Earth?
+Expert: Historian or Theologian
+Answer: The identity of the first man on Earth varies depending on the perspective. From a theological standpoint, particularly within the Abrahamic religions (Judaism, Christianity, and Islam), the first man is traditionally considered to be Adam. According to the Bible and the Quran, Adam was created by God and is regarded as the first human being. From a scientific and historical perspective, the concept of a "first man" is more complex. Modern humans (Homo sapiens) evolved over hundreds of thousands of years, and there is no single individual who can be identified as the "first" human. Instead, humanity emerged gradually through a process of evolution.
+{'completion_tokens': 150, 'prompt_tokens': 73, 'total_tokens': 223}
+Question: Who is the first Man on Earth?
+Expert: Historian or Theologian says: Question: Who is the first Man on Earth?
+Expert: Historian or Theologian
+Answer: The identity of the first man on Earth varies depending on the perspective. From a theological standpoint, particularly within the Abrahamic religions (Judaism, Christianity, and Islam), the first man is traditionally considered to be Adam. According to the Bible and the Quran, Adam was created by God and is regarded as the first human being. From a scientific and historical perspective, the concept of a "first man" is more complex. Modern humans (Homo sapiens) evolved over hundreds of thousands of years, and there is no single individual who can be identified as the "first" human. Instead, humanity emerged gradually through a process of evolution.

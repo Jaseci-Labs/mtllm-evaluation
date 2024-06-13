@@ -1,0 +1,116 @@
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Complete the Medium Article
+Task:
+Output:
+ ```json
+{
+  "description": "Write and edit the remaining sections of the Medium article, ensuring it is coherent, engaging, and free of grammatical errors. Add relevant images and references where necessary.",
+  "time": 120,
+  "priority": 8
+}
+```
+{'completion_tokens': 57, 'prompt_tokens': 160, 'total_tokens': 217}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Prepare for the upcoming Exam
+Task:
+Output:
+ ```json
+{
+  "description": "Review all study materials, complete practice exams, and ensure understanding of key concepts for the upcoming exam.",
+  "time": 240,
+  "priority": 9
+}
+```
+{'completion_tokens': 45, 'prompt_tokens': 161, 'total_tokens': 206}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Finish the pending Project
+Task:
+Output:
+ ```json
+{
+  "description": "Complete all remaining tasks and deliverables for the project, including finalizing documentation, testing, and any necessary revisions.",
+  "time": 240,
+  "priority": 9
+}
+```
+{'completion_tokens': 48, 'prompt_tokens': 160, 'total_tokens': 208}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Clean the House
+Task:
+Output:
+ ```json
+{
+  "description": "Clean the entire house, including dusting, vacuuming, mopping floors, cleaning bathrooms, and organizing common areas.",
+  "time": 180,
+  "priority": 8
+}
+```
+{'completion_tokens': 49, 'prompt_tokens': 159, 'total_tokens': 208}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Cook the Dinner
+Task:
+Output:
+ ```json
+{
+  "description": "Prepare and cook a complete dinner, including main course, side dishes, and dessert.",
+  "time": 120,
+  "priority": 8
+}
+```
+{'completion_tokens': 42, 'prompt_tokens': 159, 'total_tokens': 201}
+[Task(description='Write and edit the remaining sections of the Medium article, ensuring it is coherent, engaging, and free of grammatical errors. Add relevant images and references where necessary.', time=120, priority=8), Task(description='Review all study materials, complete practice exams, and ensure understanding of key concepts for the upcoming exam.', time=240, priority=9), Task(description='Complete all remaining tasks and deliverables for the project, including finalizing documentation, testing, and any necessary revisions.', time=240, priority=9), Task(description='Clean the entire house, including dusting, vacuuming, mopping floors, cleaning bathrooms, and organizing common areas.', time=180, priority=8), Task(description='Prepare and cook a complete dinner, including main course, side dishes, and dessert.', time=120, priority=8)]

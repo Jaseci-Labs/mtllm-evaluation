@@ -1,0 +1,117 @@
+Input Prompt:
+ Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+
+---
+
+Follow the following format.
+
+Essay: Essay
+Criteria: Criteria
+Judgement: Judgement
+
+---
+
+Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.
+Criteria: Clarity
+Judgement:
+Output:
+ Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.
+
+Criteria: Clarity
+
+Judgement: The essay is clear
+{'completion_tokens': 150, 'prompt_tokens': 189, 'total_tokens': 339}
+Input Prompt:
+ Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+
+---
+
+Follow the following format.
+
+Essay: Essay
+Criteria: Criteria
+Judgement: Judgement
+
+---
+
+Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.
+Criteria: Originality
+Judgement:
+Output:
+ Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.
+
+Criteria: Originality
+
+Judgement: The essay provides a
+{'completion_tokens': 150, 'prompt_tokens': 189, 'total_tokens': 339}
+Input Prompt:
+ Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+
+---
+
+Follow the following format.
+
+Essay: Essay
+Criteria: Criteria
+Judgement: Judgement
+
+---
+
+Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.
+Criteria: Evidence
+Judgement:
+Output:
+ Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.
+Criteria: Evidence
+Judgement: The essay provides a concise
+{'completion_tokens': 150, 'prompt_tokens': 188, 'total_tokens': 338}
+Input Prompt:
+ Generate a summary with the given judgements.
+
+---
+
+Follow the following format.
+
+Essay: Essay
+Judgements: Judgements
+Summary: Summary
+
+---
+
+Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.
+Judgements: {'Clarity': "Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\n\nCriteria: Clarity\n\nJudgement: The essay is clear", 'Originality': "Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\n\nCriteria: Originality\n\nJudgement: The essay provides a", 'Evidence': "Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\nCriteria: Evidence\nJudgement: The essay provides a concise"}
+Summary:
+Output:
+ Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.
+
+Judgements: {'Clarity': "Essay: Sigiriya
+{'completion_tokens': 150, 'prompt_tokens': 654, 'total_tokens': 804}
+Input Prompt:
+ Give essay a letter grade (A-D).
+
+---
+
+Follow the following format.
+
+Summary: Summary
+Grade: Grade
+
+---
+
+Summary: Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty. Judgements: {'Clarity': "Essay: Sigiriya
+Grade:
+Output:
+ Summary: The essay describes Sigiriya, an ancient rock fortress in central Sri Lanka, which was transformed into a palace-fortress by King Kasyapa in the late 5th century AD. The site features ruins of gardens, fountains, frescoes, and a lion-shaped gateway. It was declared a UNESCO World Heritage Site in 1982 and is noted for its archaeological significance and aesthetic beauty.
+
+Grade: B
+
+The essay provides a clear and concise overview of Sigiriya, highlighting its historical and cultural importance. However, it could benefit from more detailed explanations and smoother transitions between points to enhance readability and depth.
+{'completion_tokens': 124, 'prompt_tokens': 186, 'total_tokens': 310}
+Reviewer Notes:  Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.
+
+Judgements: {'Clarity': "Essay: Sigiriya
+Grade:  Summary: The essay describes Sigiriya, an ancient rock fortress in central Sri Lanka, which was transformed into a palace-fortress by King Kasyapa in the late 5th century AD. The site features ruins of gardens, fountains, frescoes, and a lion-shaped gateway. It was declared a UNESCO World Heritage Site in 1982 and is noted for its archaeological significance and aesthetic beauty.
+
+Grade: B
+
+The essay provides a clear and concise overview of Sigiriya, highlighting its historical and cultural importance. However, it could benefit from more detailed explanations and smoother transitions between points to enhance readability and depth.

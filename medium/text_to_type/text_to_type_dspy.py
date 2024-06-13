@@ -24,6 +24,6 @@ class GetPerson(dspy.Signature):
     person: Person = dspy.OutputField()
 
 
-info = "Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, Switzerland."
+info = "Kugesan is a 24 years old and works as an engineer at Jaseci, USA."
 alice = dspy.TypedPredictor(GetPerson)(info=info).person
 print(f"Their name is {alice.name} and she works in {alice.employer.location}.")

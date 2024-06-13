@@ -36,5 +36,5 @@ class TranslationModule(dspy.Module):
 
 
 translate = BootstrapFewShot().compile(TranslationModule(), trainset=dataset)
-pred = translate(english_word="cheese")
+pred = translate(english_word="chair")
 print(pred.translation)

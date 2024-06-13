@@ -1,0 +1,241 @@
+{
+    "translation": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nExample Translations (examples) (dict[str,str]) = {\"sea otter\": \"loutre de mer\", \"peppermint\": \"menthe poivr\u00c3\u00a9e\", \"plush giraffe\": \"girafe en peluche\"}\n\n[Context]\n\n\n[Inputs Information]\nEnglish Word (english_word) (str) = \"chair\"\n\n[Output Information]\nTranslation (str)\n\n[Type Explanations]\n\n\n[Action]\nTranslate\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] chaise",
+                    "token_usage": {
+                        "completion_tokens": 4,
+                        "prompt_tokens": 177,
+                        "total_tokens": 181
+                    }
+                }
+            ],
+            "output": ")\nchaise"
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Translate the given English word\n\n---\n\nFollow the following format.\n\nEnglish Word: English word to translate\nTranslation: Translation\n\n---\n\nEnglish Word: peppermint\nTranslation: menthe poivr\u00e9e\n\n---\n\nEnglish Word: sea otter\nTranslation: loutre de mer\n\n---\n\nEnglish Word: plush giraffe\nTranslation:",
+                    "output": "English Word: plush giraffe\nTranslation: girafe en peluche",
+                    "token_usage": {
+                        "completion_tokens": 14,
+                        "prompt_tokens": 71,
+                        "total_tokens": 85
+                    }
+                },
+                {
+                    "prompt": "Translate the given English word\n\n---\n\nFollow the following format.\n\nEnglish Word: English word to translate\nTranslation: Translation\n\n---\n\nEnglish Word: sea otter\nTranslation: English Word: sea otter Translation: loutre de mer\n\n---\n\nEnglish Word: peppermint\nTranslation: English Word: peppermint Translation: menthe poivr\u00e9e\n\n---\n\nEnglish Word: plush giraffe\nTranslation: English Word: plush giraffe Translation: girafe en peluche\n\n---\n\nEnglish Word: chair\nTranslation:",
+                    "output": "English Word: chair\nTranslation: English Word: chair Translation: chaise",
+                    "token_usage": {
+                        "completion_tokens": 14,
+                        "prompt_tokens": 107,
+                        "total_tokens": 121
+                    }
+                }
+            ],
+            "output": "English Word: chair\nTranslation: English Word: chair Translation: chaise"
+        }
+    },
+    "essay_reviewer": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nNone (essay) (None) = \"Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\"\n\n[Context]\n\n\n[Inputs Information]\nCriteria (criteria) (str) = \"Clarity\"\n\n[Output Information]\nJudgement (str)\n\n[Type Explanations]\n\n\n[Action]\nEvaluate the given essay based on the given criteria. Provide Detailed Judgement.\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] The essay is clear and well-structured, effectively conveying the historical and cultural significance of Sigiriya.",
+                    "token_usage": {
+                        "completion_tokens": 23,
+                        "prompt_tokens": 284,
+                        "total_tokens": 307
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nNone (essay) (None) = \"Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\"\n\n[Context]\n\n\n[Inputs Information]\nCriteria (criteria) (str) = \"Originality\"\n\n[Output Information]\nJudgement (str)\n\n[Type Explanations]\n\n\n[Action]\nEvaluate the given essay based on the given criteria. Provide Detailed Judgement.\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] The essay demonstrates a high level of originality by providing a detailed and vivid description of Sigiriya, an ancient rock fortress in Sri Lanka. It includes specific historical, architectural, and cultural details that contribute to its uniqueness, making it not only informative but also engaging. The mention of Sigiriya being a UNESCO World Heritage Site and its significance in ancient urban planning further adds to the essay\u2019s originality and depth.",
+                    "token_usage": {
+                        "completion_tokens": 83,
+                        "prompt_tokens": 284,
+                        "total_tokens": 367
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nNone (essay) (None) = \"Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\"\n\n[Context]\n\n\n[Inputs Information]\nCriteria (criteria) (str) = \"Evidence\"\n\n[Output Information]\nJudgement (str)\n\n[Type Explanations]\n\n\n[Action]\nEvaluate the given essay based on the given criteria. Provide Detailed Judgement.\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] The essay provides substantial evidence to support its claims about Sigiriya's historical and architectural significance. It includes specific details such as its height, the transformation by King Kasyapa, the presence of gardens, frescoes, and the lion-shaped gateway. Additionally, it mentions the site's recognition as a UNESCO World Heritage Site and its importance as a tourist attraction.",
+                    "token_usage": {
+                        "completion_tokens": 73,
+                        "prompt_tokens": 283,
+                        "total_tokens": 356
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nNone (essay) (None) = \"Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\"\n\n[Context]\n\n\n[Inputs Information]\nJudgements (judgements) (dict[str, str]) = {\"Clarity\": \"The essay is clear and well-structured, effectively conveying the historical and cultural significance of Sigiriya.\", \"Originality\": \"The essay demonstrates a high level of originality by providing a detailed and vivid description of Sigiriya, an ancient rock fortress in Sri Lanka. It includes specific historical, architectural, and cultural details that contribute to its uniqueness, making it not only informative but also engaging. The mention of Sigiriya being a UNESCO World Heritage Site and its significance in ancient urban planning further adds to the essay\u2019s originality and depth.\", \"Evidence\": \"The essay provides substantial evidence to support its claims about Sigiriya's historical and architectural significance. It includes specific details such as its height, the transformation by King Kasyapa, the presence of gardens, frescoes, and the lion-shaped gateway. Additionally, it mentions the site's recognition as a UNESCO World Heritage Site and its importance as a tourist attraction.\"}\n\n[Output Information]\nSummary (str)\n\n[Type Explanations]\n\n\n[Action]\nGenerate a summary with the given judgements.\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] The essay on Sigiriya is clear and well-structured, effectively conveying its historical and cultural significance. It demonstrates originality with a detailed description of the ancient rock fortress, including specific historical, architectural, and cultural details. The essay provides substantial evidence, mentioning the site's transformation by King Kasyapa, its gardens, frescoes, lion-shaped gateway, and recognition as a UNESCO World Heritage Site.",
+                    "token_usage": {
+                        "completion_tokens": 81,
+                        "prompt_tokens": 463,
+                        "total_tokens": 544
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\nSummary (summary) (str) = \"The essay on Sigiriya is clear and well-structured, effectively conveying its historical and cultural significance. It demonstrates originality with a detailed description of the ancient rock fortress, including specific historical, architectural, and cultural details. The essay provides substantial evidence, mentioning the site's transformation by King Kasyapa, its gardens, frescoes, lion-shaped gateway, and recognition as a UNESCO World Heritage Site.\"\n\n[Output Information]\nGrade (str)\n\n[Type Explanations]\n\n\n[Action]\nGive essay a letter grade (A-D)\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] A",
+                    "token_usage": {
+                        "completion_tokens": 4,
+                        "prompt_tokens": 207,
+                        "total_tokens": 211
+                    }
+                }
+            ],
+            "output": ")\nReviewer Notes:  The essay on Sigiriya is clear and well-structured, effectively conveying its historical and cultural significance. It demonstrates originality with a detailed description of the ancient rock fortress, including specific historical, architectural, and cultural details. The essay provides substantial evidence, mentioning the site's transformation by King Kasyapa, its gardens, frescoes, lion-shaped gateway, and recognition as a UNESCO World Heritage Site.\nGrade:  A"
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Evaluate the given essay based on the given criteria. Provide Detailed Judgement.\n\n---\n\nFollow the following format.\n\nEssay: Essay\nCriteria: Criteria\nJudgement: Judgement\n\n---\n\nEssay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\nCriteria: Clarity\nJudgement:",
+                    "output": "Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\n\nCriteria: Clarity\n\nJudgement: The essay is clear",
+                    "token_usage": {
+                        "completion_tokens": 150,
+                        "prompt_tokens": 189,
+                        "total_tokens": 339
+                    }
+                },
+                {
+                    "prompt": "Evaluate the given essay based on the given criteria. Provide Detailed Judgement.\n\n---\n\nFollow the following format.\n\nEssay: Essay\nCriteria: Criteria\nJudgement: Judgement\n\n---\n\nEssay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\nCriteria: Originality\nJudgement:",
+                    "output": "Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\n\nCriteria: Originality\n\nJudgement: The essay provides a",
+                    "token_usage": {
+                        "completion_tokens": 150,
+                        "prompt_tokens": 189,
+                        "total_tokens": 339
+                    }
+                },
+                {
+                    "prompt": "Evaluate the given essay based on the given criteria. Provide Detailed Judgement.\n\n---\n\nFollow the following format.\n\nEssay: Essay\nCriteria: Criteria\nJudgement: Judgement\n\n---\n\nEssay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\nCriteria: Evidence\nJudgement:",
+                    "output": "Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\nCriteria: Evidence\nJudgement: The essay provides a concise",
+                    "token_usage": {
+                        "completion_tokens": 150,
+                        "prompt_tokens": 188,
+                        "total_tokens": 338
+                    }
+                },
+                {
+                    "prompt": "Generate a summary with the given judgements.\n\n---\n\nFollow the following format.\n\nEssay: Essay\nJudgements: Judgements\nSummary: Summary\n\n---\n\nEssay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\nJudgements: {'Clarity': \"Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\\n\\nCriteria: Clarity\\n\\nJudgement: The essay is clear\", 'Originality': \"Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\\n\\nCriteria: Originality\\n\\nJudgement: The essay provides a\", 'Evidence': \"Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\\nCriteria: Evidence\\nJudgement: The essay provides a concise\"}\nSummary:",
+                    "output": "Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\n\nJudgements: {'Clarity': \"Essay: Sigiriya",
+                    "token_usage": {
+                        "completion_tokens": 150,
+                        "prompt_tokens": 654,
+                        "total_tokens": 804
+                    }
+                },
+                {
+                    "prompt": "Give essay a letter grade (A-D).\n\n---\n\nFollow the following format.\n\nSummary: Summary\nGrade: Grade\n\n---\n\nSummary: Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty. Judgements: {'Clarity': \"Essay: Sigiriya\nGrade:",
+                    "output": "Summary: The essay describes Sigiriya, an ancient rock fortress in central Sri Lanka, which was transformed into a palace-fortress by King Kasyapa in the late 5th century AD. The site features ruins of gardens, fountains, frescoes, and a lion-shaped gateway. It was declared a UNESCO World Heritage Site in 1982 and is noted for its archaeological significance and aesthetic beauty.\n\nGrade: B\n\nThe essay provides a clear and concise overview of Sigiriya, highlighting its historical and cultural importance. However, it could benefit from more detailed explanations and smoother transitions between points to enhance readability and depth.",
+                    "token_usage": {
+                        "completion_tokens": 124,
+                        "prompt_tokens": 186,
+                        "total_tokens": 310
+                    }
+                }
+            ],
+            "output": "Reviewer Notes:  Essay: Sigiriya is an ancient rock fortress located in central Sri Lanka. Rising up 660 feet (200 meters) from the surrounding plains, the massive rock column was transformed into an impregnable palace-fortress in the late 5th century AD by King Kasyapa. The site contains the ruins of elaborate gardens, fountains, frescoes of maidens that once adorned the rock face, and a gateway in the form of an enormous lion. Declared a UNESCO World Heritage Site in 1982, Sigiriya is considered one of the best preserved examples of ancient urban planning and is one of Sri Lanka's major attractions for visitors due to its archaeological significance and striking aesthetic beauty.\n\nJudgements: {'Clarity': \"Essay: Sigiriya\nGrade:  Summary: The essay describes Sigiriya, an ancient rock fortress in central Sri Lanka, which was transformed into a palace-fortress by King Kasyapa in the late 5th century AD. The site features ruins of gardens, fountains, frescoes, and a lion-shaped gateway. It was declared a UNESCO World Heritage Site in 1982 and is noted for its archaeological significance and aesthetic beauty.\n\nGrade: B\n\nThe essay provides a clear and concise overview of Sigiriya, highlighting its historical and cultural importance. However, it could benefit from more detailed explanations and smoother transitions between points to enhance readability and depth."
+        }
+    },
+    "joke_gen": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nJokes with Punchlines (jokes) (list[tuple[str,str]]) = [(\"How does a penguin build its house?\", \"Igloos it together.\"), (\"Which knight invented King Arthur's Round Table?\", \"Sir Cumference.\")]\n\n[Context]\n\n\n[Inputs Information]\n\n\n[Output Information]\nJoke with Punchline (tuple[str,str])\n\n[Type Explanations]\n\n\n[Action]\nGenerate a new Joke with Punchline\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] (\"Why don't scientists trust atoms?\", \"Because they make up everything.\")",
+                    "token_usage": {
+                        "completion_tokens": 17,
+                        "prompt_tokens": 176,
+                        "total_tokens": 193
+                    }
+                }
+            ],
+            "output": ")\nWhy don't scientists trust atoms? : Because they make up everything."
+        },
+        "dspy": {
+            "llm_requests": [],
+            "output": ""
+        }
+    },
+    "expert_answer": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\nQuestion (question) (str) = \"Who is the first Man on Earth?\"\n\n[Output Information]\nExpert Profession (str)\n\n[Type Explanations]\n\n\n[Action]\nFind the Expert Profession to answer the given question.\n\n\nReason and return the output result(s) only, adhering to the provided Type in the following format\n\n[Reasoning] <Reason>\n[Output] <Result>",
+                    "output": "[Reasoning] The question pertains to a subject related to the origins of humanity, which falls under the domain of anthropology.\n[Output] Anthropologist",
+                    "token_usage": {
+                        "completion_tokens": 30,
+                        "prompt_tokens": 146,
+                        "total_tokens": 176
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\nQuestion (question) (str) = \"Who is the first Man on Earth?\"\nExpert (expert) (str) = \"Anthropologist\"\n\n[Output Information]\nExpert's Answer (str)\n\n[Type Explanations]\n\n\n[Action]\nGet the answer for the question from expert's perspective\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] \"From an anthropologist's perspective, there isn't a specific 'first man' on Earth. Human evolution is a gradual process that took place over millions of years, with Homo sapiens emerging around 300,000 years ago in Africa.\"",
+                    "token_usage": {
+                        "completion_tokens": 51,
+                        "prompt_tokens": 154,
+                        "total_tokens": 205
+                    }
+                }
+            ],
+            "output": ")\nAnthropologist says: 'From an anthropologist's perspective, there isn't a specific 'first man' on Earth. Human evolution is a gradual process that took place over millions of years, with Homo sapiens emerging around 300,000 years ago in Africa."
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Find the Expert Profession to answer the given question.\n\n---\n\nFollow the following format.\n\nQuestion: ${question}\nExpert: Expert Profession\n\n---\n\nQuestion: Who is the first Man on Earth?\nExpert:",
+                    "output": "Question: Who is the first Man on Earth?\nExpert: Historian or Theologian",
+                    "token_usage": {
+                        "completion_tokens": 18,
+                        "prompt_tokens": 46,
+                        "total_tokens": 64
+                    }
+                },
+                {
+                    "prompt": "Get the Expert's answer to the given question.\n\n---\n\nFollow the following format.\n\nQuestion: ${question}\nExpert: ${expert}\nAnswer: Expert's answer\n\n---\n\nQuestion: Who is the first Man on Earth?\nExpert: Question: Who is the first Man on Earth? Expert: Historian or Theologian\nAnswer:",
+                    "output": "Question: Who is the first Man on Earth?\nExpert: Historian or Theologian\nAnswer: The identity of the first man on Earth varies depending on the perspective. From a theological standpoint, particularly within the Abrahamic religions (Judaism, Christianity, and Islam), the first man is traditionally considered to be Adam. According to the Bible and the Quran, Adam was created by God and is regarded as the first human being. From a scientific and historical perspective, the concept of a \"first man\" is more complex. Modern humans (Homo sapiens) evolved over hundreds of thousands of years, and there is no single individual who can be identified as the \"first\" human. Instead, humanity emerged gradually through a process of evolution.",
+                    "token_usage": {
+                        "completion_tokens": 150,
+                        "prompt_tokens": 73,
+                        "total_tokens": 223
+                    }
+                }
+            ],
+            "output": "Question: Who is the first Man on Earth?\nExpert: Historian or Theologian says: Question: Who is the first Man on Earth?\nExpert: Historian or Theologian\nAnswer: The identity of the first man on Earth varies depending on the perspective. From a theological standpoint, particularly within the Abrahamic religions (Judaism, Christianity, and Islam), the first man is traditionally considered to be Adam. According to the Bible and the Quran, Adam was created by God and is regarded as the first human being. From a scientific and historical perspective, the concept of a \"first man\" is more complex. Modern humans (Homo sapiens) evolved over hundreds of thousands of years, and there is no single individual who can be identified as the \"first\" human. Instead, humanity emerged gradually through a process of evolution."
+        }
+    },
+    "odd_word_out": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nExamples for Picking Odd Word out (Options, Reasoing, Result) (examples) (list[tuple[list[str],str,str]]) = [([\"skirt\", \"dress\", \"pen\", \"jacket\"], \"skirt is clothing, dress is clothing, pen is an object, jacket is clothing.\", \"pen\"), ([\"Spain\", \"France\", \"German\", \"England\", \"Singapore\"], \"Spain, France, England, Singapore is a country, German is a language.\", \"German\")]\n\n[Context]\n\n\n[Inputs Information]\nOptions to pick from (options) (list) = [\"Elephant\", \"Lion\", \"Peacock\", \"Zebra\", \"Bear\"]\n\n[Output Information]\nREASONING & RESULT (tuple[str,str])\n\n[Type Explanations]\n\n\n[Action]\nPick the Odd word out\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] (\"Elephant, Lion, Zebra, Bear are mammals, Peacock is a bird.\", \"Peacock\")",
+                    "token_usage": {
+                        "completion_tokens": 24,
+                        "prompt_tokens": 255,
+                        "total_tokens": 279
+                    }
+                }
+            ],
+            "output": ")\n('Elephant, Lion, Zebra, Bear are mammals, Peacock is a bird.', 'Peacock')"
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Pict the Odd Word Out from the given list of words.\n\n---\n\nFollow the following format.\n\nOptions: Options to pick from\nReasoning: Let's think step by step in order to ${produce the odd_word}. We ...\nOdd Word: Odd Word\n\n---\n\nOptions: ['skirt', 'dress', 'pen', 'jacket']\nReasoning: Let's think step by step in order to Options: ['skirt', 'dress', 'pen', 'jacket'] Reasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. 'Skirt', 'dress', and 'jacket' are all types of clothing, whereas 'pen' is a writing instrument.\nOdd Word: pen\n\n---\n\nOptions: ['Spain', 'France', 'German', 'England', 'Singapore']\nReasoning: Let's think step by step in order to Options: ['Spain', 'France', 'German', 'England', 'Singapore'] Reasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. Spain, France, and England are all countries. German is a language, and Singapore is also a country. Therefore, the odd word out is 'German' because it is not a country.\nOdd Word: German\n\n---\n\nOptions: [Elephant, Lion, Peacock, Zebra, Bear]\nReasoning: Let's think step by step in order to",
+                    "output": "Options: ['Elephant', 'Lion', 'Peacock', 'Zebra', 'Bear']\nReasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. 'Elephant', 'Lion', 'Zebra', and 'Bear' are all mammals, whereas 'Peacock' is a bird.\nOdd Word: Peacock",
+                    "token_usage": {
+                        "completion_tokens": 88,
+                        "prompt_tokens": 322,
+                        "total_tokens": 410
+                    }
+                }
+            ],
+            "output": "(\"Options: ['Elephant', 'Lion', 'Peacock', 'Zebra', 'Bear']\\nReasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. 'Elephant', 'Lion', 'Zebra', and 'Bear' are all mammals, whereas 'Peacock' is a bird.\", 'Peacock')"
+        }
+    }
+}

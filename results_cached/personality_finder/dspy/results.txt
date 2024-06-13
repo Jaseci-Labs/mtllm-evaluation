@@ -1,0 +1,24 @@
+Input Prompt:
+ Get Person Information use common knowledge.
+
+---
+
+Follow the following format.
+
+Name: Name of the Person
+Person: ${person}. Respond with a single JSON object. JSON Schema: {"$defs": {"Personality": {"enum": ["Introvert", "Extrovert"], "title": "Personality", "type": "string"}}, "properties": {"full_name": {"description": "Fullname of the Person", "title": "Full Name", "type": "string"}, "yod": {"description": "Year of Death", "title": "Yod", "type": "integer"}, "personality": {"allOf": [{"$ref": "#/$defs/Personality"}], "description": "Personality Type"}}, "required": ["full_name", "yod", "personality"], "title": "Person", "type": "object"}
+
+---
+
+Name: Mahatma Gandhi
+Person:
+Output:
+ ```json
+{
+  "full_name": "Mahatma Gandhi",
+  "yod": 1948,
+  "personality": "Introvert"
+}
+```
+{'completion_tokens': 35, 'prompt_tokens': 196, 'total_tokens': 231}
+Mahatma Gandhi was an Introvert person who died in 1948.
