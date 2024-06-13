@@ -1,0 +1,70 @@
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "What are Large Language Models?"
+
+[Output Information]
+Expert Profession (str)
+
+[Type Explanations]
+
+
+[Action]
+Find the Expert Profession to answer the given question.
+
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+
+Output:
+ [Reasoning] Large Language Models (LLMs) relate to the field of artificial intelligence and natural language processing, which is typically the expertise of a Data Scientist or AI Researcher.
+
+[Output] AI Researcher
+CompletionUsage(completion_tokens=43, prompt_tokens=144, total_tokens=187)
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "What are Large Language Models?"
+Expert (expert) (str) = "AI Researcher"
+
+[Output Information]
+Expert's Answer (str)
+
+[Type Explanations]
+
+
+[Action]
+Get the answer for the question from expert's perspective
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+Output:
+ [Output] Large Language Models are advanced AI systems trained on vast amounts of text data to understand, generate, and manipulate human language at a high level of proficiency. They leverage deep learning techniques, particularly transformer architectures, to capture the nuances of language, enabling applications such as text generation, translation, summarization, and more.
+CompletionUsage(completion_tokens=65, prompt_tokens=152, total_tokens=217)
+AI Researcher says: 'Large Language Models are advanced AI systems trained on vast amounts of text data to understand, generate, and manipulate human language at a high level of proficiency. They leverage deep learning techniques, particularly transformer architectures, to capture the nuances of language, enabling applications such as text generation, translation, summarization, and more.

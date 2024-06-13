@@ -8,6 +8,10 @@ from loguru import logger
 import json
 import sys
 import argparse
+import time
+
+from dspy import OpenAI
+
 
 def run_dspy_program(program_name, program_path, profiler, output_dir):
     os.makedirs(f"{output_dir}/{program_name}/dspy", exist_ok=True)
@@ -106,6 +110,8 @@ if __name__ == "__main__":
 
             logger.info(f"Running JAC program: {paths['jac']}")
             run_jac_program(problem_name, paths["jac"], args.profiler, args.output_dir)
+            time.sleep(60)
 
             logger.info(f"Running Dspy program: {paths['dspy']}")
             run_dspy_program(problem_name, paths["dspy"], args.profiler, args.output_dir)
+            time.sleep(60)

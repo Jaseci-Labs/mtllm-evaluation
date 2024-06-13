@@ -118,12 +118,28 @@ Open the generated dot file in a dot viewer of your choice
 If you need to track the token usages, you can make the following changes in relevant files
 ```python
 # file: dsp/modules/gpt3.py
-# line: 185 Add the following
+# Replace line response = self.request(prompt, **kwargs) with following
+print("Input Prompt:\n", prompt)
+response = self.request(prompt, **kwargs)
+print("Output:\n", response["choices"][0]["message"]["content"])
 print(response.get("usage"))
 ```
 ```python
 # file: jaclang/core/llms/openai.py
-# line: 61 Add the following
+# line: replace the out = self.client .... with following
+print("Input Prompt:\n", meaning_in)
+output = self.client.chat.completions.create(
+    model=kwargs.get("model_name", self.model_name),
+    temperature=kwargs.get("temperature", self.temperature),
+    max_tokens=kwargs.get("max_tokens", self.max_tokens),
+    messages=messages,
+)
+print("Output:\n", output.choices[0].message.content)
 print(output.usage)
 ```
 Token Usage will be recorded in the relevant results.txt files.
+
+### Delete DSPY Cache
+```bash
+rm -rf ~/cachedir_joblib
+```

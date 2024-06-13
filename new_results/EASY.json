@@ -1,0 +1,305 @@
+{
+    "translation": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nExample Translations (examples) (dict[str,str]) = {\"sea otter\": \"loutre de mer\", \"peppermint\": \"menthe poivr\u00c3\u00a9e\", \"plush giraffe\": \"girafe en peluche\"}\n\n[Context]\n\n\n[Inputs Information]\nEnglish Word (english_word) (str) = \"cheese\"\n\n[Output Information]\nTranslation (str)\n\n[Type Explanations]\n\n\n[Action]\nTranslate\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] fromage",
+                    "token_usage": {
+                        "completion_tokens": 4,
+                        "prompt_tokens": 178,
+                        "total_tokens": 182
+                    }
+                }
+            ],
+            "output": ")\nfromage"
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Translate the given English word\n\n---\n\nFollow the following format.\n\nEnglish Word: English word to translate\nTranslation: Translation\n\n---\n\nEnglish Word: peppermint\nTranslation: menthe poivr\u00e9e\n\n---\n\nEnglish Word: plush giraffe\nTranslation: girafe en peluche\n\n---\n\nEnglish Word: sea otter\nTranslation:",
+                    "output": "English Word: sea otter\nTranslation: loutre de mer",
+                    "token_usage": {
+                        "completion_tokens": 14,
+                        "prompt_tokens": 71,
+                        "total_tokens": 85
+                    }
+                },
+                {
+                    "prompt": "Translate the given English word\n\n---\n\nFollow the following format.\n\nEnglish Word: English word to translate\nTranslation: Translation\n\n---\n\nEnglish Word: plush giraffe\nTranslation: girafe en peluche\n\n---\n\nEnglish Word: sea otter\nTranslation: loutre de mer\n\n---\n\nEnglish Word: peppermint\nTranslation:",
+                    "output": "English Word: peppermint\nTranslation: menthe poivr\u00e9e",
+                    "token_usage": {
+                        "completion_tokens": 12,
+                        "prompt_tokens": 71,
+                        "total_tokens": 83
+                    }
+                },
+                {
+                    "prompt": "Translate the given English word\n\n---\n\nFollow the following format.\n\nEnglish Word: English word to translate\nTranslation: Translation\n\n---\n\nEnglish Word: peppermint\nTranslation: menthe poivr\u00e9e\n\n---\n\nEnglish Word: sea otter\nTranslation: loutre de mer\n\n---\n\nEnglish Word: plush giraffe\nTranslation:",
+                    "output": "English Word: plush giraffe\nTranslation: girafe en peluche",
+                    "token_usage": {
+                        "completion_tokens": 14,
+                        "prompt_tokens": 71,
+                        "total_tokens": 85
+                    }
+                },
+                {
+                    "prompt": "Translate the given English word\n\n---\n\nFollow the following format.\n\nEnglish Word: English word to translate\nTranslation: Translation\n\n---\n\nEnglish Word: sea otter\nTranslation: English Word: sea otter Translation: loutre de mer\n\n---\n\nEnglish Word: peppermint\nTranslation: English Word: peppermint Translation: menthe poivr\u00e9e\n\n---\n\nEnglish Word: plush giraffe\nTranslation: English Word: plush giraffe Translation: girafe en peluche\n\n---\n\nEnglish Word: cheese\nTranslation:",
+                    "output": "English Word: cheese\nTranslation: English Word: cheese Translation: fromage",
+                    "token_usage": {
+                        "completion_tokens": 14,
+                        "prompt_tokens": 107,
+                        "total_tokens": 121
+                    }
+                }
+            ],
+            "output": "English Word: cheese\nTranslation: English Word: cheese Translation: fromage"
+        }
+    },
+    "essay_reviewer": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nNone (essay) (None) = \"With a population of approximately 45 million Spaniards and 3.5 million immigrants,Spain is a country of contrasts where the richness of its culture blends it up withthe variety of languages and dialects used. Being one of the largest economies worldwide,and the second largest country in Europe, Spain is a very appealing destination for touristsas well as for immigrants from around the globe. Almost all Spaniards are used to speaking atleast two different languages, but protecting and preserving that right has not beeneasy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments,in order to preserve and defend what identifies them, and deal with the consequences.\"\n\n[Context]\n\n\n[Inputs Information]\nCriteria (criteria) (str) = \"Clarity\"\n\n[Output Information]\nJudgement (str)\n\n[Type Explanations]\n\n\n[Action]\nEvaluate the given essay based on the given criteria. Provide Detailed Judgement.\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] The essay lacks clarity due to several issues. The sentences are lengthy and sometimes convoluted, making it difficult to follow the main points. Additionally, there are minor grammatical errors and awkward phrasings that further obscure the meaning. To improve clarity, the essay should be restructured into shorter, more concise sentences, and the language should be refined to ensure smooth readability and comprehension.",
+                    "token_usage": {
+                        "completion_tokens": 78,
+                        "prompt_tokens": 281,
+                        "total_tokens": 359
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nNone (essay) (None) = \"With a population of approximately 45 million Spaniards and 3.5 million immigrants,Spain is a country of contrasts where the richness of its culture blends it up withthe variety of languages and dialects used. Being one of the largest economies worldwide,and the second largest country in Europe, Spain is a very appealing destination for touristsas well as for immigrants from around the globe. Almost all Spaniards are used to speaking atleast two different languages, but protecting and preserving that right has not beeneasy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments,in order to preserve and defend what identifies them, and deal with the consequences.\"\n\n[Context]\n\n\n[Inputs Information]\nCriteria (criteria) (str) = \"Originality\"\n\n[Output Information]\nJudgement (str)\n\n[Type Explanations]\n\n\n[Action]\nEvaluate the given essay based on the given criteria. Provide Detailed Judgement.\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] The essay demonstrates a high level of originality by discussing Spain's cultural and linguistic diversity in a unique and engaging manner. It effectively integrates historical challenges faced by Spaniards in preserving their linguistic heritage, setting it apart from more generic essays on the topic. The blend of statistical data, cultural insights, and historical context provides a fresh perspective, making the essay stand out in terms of originality.",
+                    "token_usage": {
+                        "completion_tokens": 79,
+                        "prompt_tokens": 281,
+                        "total_tokens": 360
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nNone (essay) (None) = \"With a population of approximately 45 million Spaniards and 3.5 million immigrants,Spain is a country of contrasts where the richness of its culture blends it up withthe variety of languages and dialects used. Being one of the largest economies worldwide,and the second largest country in Europe, Spain is a very appealing destination for touristsas well as for immigrants from around the globe. Almost all Spaniards are used to speaking atleast two different languages, but protecting and preserving that right has not beeneasy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments,in order to preserve and defend what identifies them, and deal with the consequences.\"\n\n[Context]\n\n\n[Inputs Information]\nCriteria (criteria) (str) = \"Evidence\"\n\n[Output Information]\nJudgement (str)\n\n[Type Explanations]\n\n\n[Action]\nEvaluate the given essay based on the given criteria. Provide Detailed Judgement.\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] The essay does provide evidence for its claims, such as mentioning Spain's population, its status as one of the largest economies worldwide, and the multilingual nature of its residents. However, it could benefit from more specific data or sources to strengthen its arguments further.",
+                    "token_usage": {
+                        "completion_tokens": 54,
+                        "prompt_tokens": 280,
+                        "total_tokens": 334
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nNone (essay) (None) = \"With a population of approximately 45 million Spaniards and 3.5 million immigrants,Spain is a country of contrasts where the richness of its culture blends it up withthe variety of languages and dialects used. Being one of the largest economies worldwide,and the second largest country in Europe, Spain is a very appealing destination for touristsas well as for immigrants from around the globe. Almost all Spaniards are used to speaking atleast two different languages, but protecting and preserving that right has not beeneasy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments,in order to preserve and defend what identifies them, and deal with the consequences.\"\n\n[Context]\n\n\n[Inputs Information]\nJudgements (judgements) (dict[str, str]) = {\"Clarity\": \"The essay lacks clarity due to several issues. The sentences are lengthy and sometimes convoluted, making it difficult to follow the main points. Additionally, there are minor grammatical errors and awkward phrasings that further obscure the meaning. To improve clarity, the essay should be restructured into shorter, more concise sentences, and the language should be refined to ensure smooth readability and comprehension.\", \"Originality\": \"The essay demonstrates a high level of originality by discussing Spain's cultural and linguistic diversity in a unique and engaging manner. It effectively integrates historical challenges faced by Spaniards in preserving their linguistic heritage, setting it apart from more generic essays on the topic. The blend of statistical data, cultural insights, and historical context provides a fresh perspective, making the essay stand out in terms of originality.\", \"Evidence\": \"The essay does provide evidence for its claims, such as mentioning Spain's population, its status as one of the largest economies worldwide, and the multilingual nature of its residents. However, it could benefit from more specific data or sources to strengthen its arguments further.\"}\n\n[Output Information]\nSummary (str)\n\n[Type Explanations]\n\n\n[Action]\nGenerate a summary with the given judgements.\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] The essay provides a unique and engaging perspective on Spain's cultural and linguistic diversity, integrating historical challenges and statistical data effectively. However, it lacks clarity due to lengthy and convoluted sentences, minor grammatical errors, and awkward phrasings. Restructuring the essay into shorter, more concise sentences and refining the language would enhance readability and comprehension. While the essay supports its claims with evidence, more specific data or sources could further strengthen its arguments.",
+                    "token_usage": {
+                        "completion_tokens": 91,
+                        "prompt_tokens": 492,
+                        "total_tokens": 583
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\nSummary (summary) (str) = \"The essay provides a unique and engaging perspective on Spain's cultural and linguistic diversity, integrating historical challenges and statistical data effectively. However, it lacks clarity due to lengthy and convoluted sentences, minor grammatical errors, and awkward phrasings. Restructuring the essay into shorter, more concise sentences and refining the language would enhance readability and comprehension. While the essay supports its claims with evidence, more specific data or sources could further strengthen its arguments.\"\n\n[Output Information]\nGrade (str)\n\n[Type Explanations]\n\n\n[Action]\nGive essay a letter grade (A-D)\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] B",
+                    "token_usage": {
+                        "completion_tokens": 4,
+                        "prompt_tokens": 217,
+                        "total_tokens": 221
+                    }
+                }
+            ],
+            "output": ")\nReviewer Notes:  The essay provides a unique and engaging perspective on Spain's cultural and linguistic diversity, integrating historical challenges and statistical data effectively. However, it lacks clarity due to lengthy and convoluted sentences, minor grammatical errors, and awkward phrasings. Restructuring the essay into shorter, more concise sentences and refining the language would enhance readability and comprehension. While the essay supports its claims with evidence, more specific data or sources could further strengthen its arguments.\nGrade:  B"
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Evaluate the given essay based on the given criteria. Provide Detailed Judgement.\n\n---\n\nFollow the following format.\n\nEssay: Essay\nCriteria: Criteria\nJudgement: Judgement\n\n---\n\nEssay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\nCriteria: Clarity\nJudgement:",
+                    "output": "Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\n\nCriteria: Clarity\n\nJudgement: The essay is generally",
+                    "token_usage": {
+                        "completion_tokens": 150,
+                        "prompt_tokens": 189,
+                        "total_tokens": 339
+                    }
+                },
+                {
+                    "prompt": "Evaluate the given essay based on the given criteria. Provide Detailed Judgement.\n\n---\n\nFollow the following format.\n\nEssay: Essay\nCriteria: Criteria\nJudgement: Judgement\n\n---\n\nEssay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\nCriteria: Originality\nJudgement:",
+                    "output": "Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\n\nCriteria: Originality\n\nJudgement: The essay presents a",
+                    "token_usage": {
+                        "completion_tokens": 150,
+                        "prompt_tokens": 189,
+                        "total_tokens": 339
+                    }
+                },
+                {
+                    "prompt": "Evaluate the given essay based on the given criteria. Provide Detailed Judgement.\n\n---\n\nFollow the following format.\n\nEssay: Essay\nCriteria: Criteria\nJudgement: Judgement\n\n---\n\nEssay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\nCriteria: Evidence\nJudgement:",
+                    "output": "Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\n\nCriteria: Evidence\nJudgement: The essay provides some general",
+                    "token_usage": {
+                        "completion_tokens": 150,
+                        "prompt_tokens": 188,
+                        "total_tokens": 338
+                    }
+                },
+                {
+                    "prompt": "Generate a summary with the given judgements.\n\n---\n\nFollow the following format.\n\nEssay: Essay\nJudgements: Judgements\nSummary: Summary\n\n---\n\nEssay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\nJudgements: {'Clarity': 'Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\\n\\nCriteria: Clarity\\n\\nJudgement: The essay is generally', 'Originality': 'Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\\n\\nCriteria: Originality\\n\\nJudgement: The essay presents a', 'Evidence': 'Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\\n\\nCriteria: Evidence\\nJudgement: The essay provides some general'}\nSummary:",
+                    "output": "Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\n\nJudgements: {'Clarity': 'Essay: With a",
+                    "token_usage": {
+                        "completion_tokens": 150,
+                        "prompt_tokens": 655,
+                        "total_tokens": 805
+                    }
+                },
+                {
+                    "prompt": "Give essay a letter grade (A-D).\n\n---\n\nFollow the following format.\n\nSummary: Summary\nGrade: Grade\n\n---\n\nSummary: Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences. Judgements: {'Clarity': 'Essay: With a\nGrade:",
+                    "output": "Summary: The essay discusses Spain's diverse population, which includes approximately 45 million Spaniards and 3.5 million immigrants. It highlights Spain's cultural richness, linguistic diversity, and its status as one of the largest economies in the world and the second largest country in Europe. The essay also touches on the challenges Spaniards have faced in preserving their linguistic rights amidst war, ignorance, criticism, and governmental issues.\n\nGrade: C\n\nThe essay provides a general overview of Spain's demographic and cultural landscape but lacks depth and detailed analysis. The transition between ideas is somewhat abrupt, and the essay could benefit from more specific examples and a clearer structure. Additionally, the summary provided seems to be cut off, indicating a possible issue with clarity and completeness.",
+                    "token_usage": {
+                        "completion_tokens": 149,
+                        "prompt_tokens": 186,
+                        "total_tokens": 335
+                    }
+                }
+            ],
+            "output": "Reviewer Notes:  Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\n\nJudgements: {'Clarity': 'Essay: With a\nGrade:  Summary: The essay discusses Spain's diverse population, which includes approximately 45 million Spaniards and 3.5 million immigrants. It highlights Spain's cultural richness, linguistic diversity, and its status as one of the largest economies in the world and the second largest country in Europe. The essay also touches on the challenges Spaniards have faced in preserving their linguistic rights amidst war, ignorance, criticism, and governmental issues.\n\nGrade: C\n\nThe essay provides a general overview of Spain's demographic and cultural landscape but lacks depth and detailed analysis. The transition between ideas is somewhat abrupt, and the essay could benefit from more specific examples and a clearer structure. Additionally, the summary provided seems to be cut off, indicating a possible issue with clarity and completeness."
+        }
+    },
+    "joke_gen": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nJokes with Punchlines (jokes) (list[tuple[str,str]]) = [(\"How does a penguin build its house?\", \"Igloos it together.\"), (\"Which knight invented King Arthur's Round Table?\", \"Sir Cumference.\")]\n\n[Context]\n\n\n[Inputs Information]\n\n\n[Output Information]\nJoke with Punchline (tuple[str,str])\n\n[Type Explanations]\n\n\n[Action]\nGenerate a new Joke with Punchline\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] (\"Why don't skeletons fight each other?\", \"They don't have the guts.\")",
+                    "token_usage": {
+                        "completion_tokens": 19,
+                        "prompt_tokens": 176,
+                        "total_tokens": 195
+                    }
+                }
+            ],
+            "output": ")\nWhy don't skeletons fight each other? : They don't have the guts."
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Tell a joke with a punchline.\n\n---\n\nFollow the following format.\n\nJoke: Joke\nPunchline: Punchline\n\n---\n\nJoke: Which knight invented King Arthur's Round Table?\nPunchline: Sir Cumference.\n\n---\n\nJoke:",
+                    "output": "Joke: Why don't scientists trust atoms?\nPunchline: Because they make up everything!",
+                    "token_usage": {
+                        "completion_tokens": 18,
+                        "prompt_tokens": 56,
+                        "total_tokens": 74
+                    }
+                },
+                {
+                    "prompt": "Tell a joke with a punchline.\n\n---\n\nFollow the following format.\n\nJoke: Joke\nPunchline: Punchline\n\n---\n\nJoke: How does a penguin build its house?\nPunchline: Igloos it together.\n\n---\n\nJoke:",
+                    "output": "Joke: Why don't skeletons fight each other?\nPunchline: They don't have the guts.",
+                    "token_usage": {
+                        "completion_tokens": 20,
+                        "prompt_tokens": 57,
+                        "total_tokens": 77
+                    }
+                },
+                {
+                    "prompt": "Tell a joke with a punchline.\n\n---\n\nFollow the following format.\n\nJoke: Joke\nPunchline: Punchline\n\n---\n\nJoke: Joke: Why don't scientists trust atoms?\nPunchline: Because they make up everything!\n\n---\n\nJoke: Joke: Why don't skeletons fight each other?\nPunchline: They don't have the guts.\n\n---\n\nJoke:",
+                    "output": "Joke: Why did the scarecrow win an award?\nPunchline: Because he was outstanding in his field!",
+                    "token_usage": {
+                        "completion_tokens": 23,
+                        "prompt_tokens": 80,
+                        "total_tokens": 103
+                    }
+                }
+            ],
+            "output": "Joke: Why did the scarecrow win an award?: Because he was outstanding in his field!"
+        }
+    },
+    "expert_answer": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\nQuestion (question) (str) = \"What are Large Language Models?\"\n\n[Output Information]\nExpert Profession (str)\n\n[Type Explanations]\n\n\n[Action]\nFind the Expert Profession to answer the given question.\n\n\nReason and return the output result(s) only, adhering to the provided Type in the following format\n\n[Reasoning] <Reason>\n[Output] <Result>",
+                    "output": "[Reasoning] Large Language Models (LLMs) relate to the field of artificial intelligence and natural language processing, which is typically the expertise of a Data Scientist or AI Researcher.\n\n[Output] AI Researcher",
+                    "token_usage": {
+                        "completion_tokens": 43,
+                        "prompt_tokens": 144,
+                        "total_tokens": 187
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\nQuestion (question) (str) = \"What are Large Language Models?\"\nExpert (expert) (str) = \"AI Researcher\"\n\n[Output Information]\nExpert's Answer (str)\n\n[Type Explanations]\n\n\n[Action]\nGet the answer for the question from expert's perspective\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] Large Language Models are advanced AI systems trained on vast amounts of text data to understand, generate, and manipulate human language at a high level of proficiency. They leverage deep learning techniques, particularly transformer architectures, to capture the nuances of language, enabling applications such as text generation, translation, summarization, and more.",
+                    "token_usage": {
+                        "completion_tokens": 65,
+                        "prompt_tokens": 152,
+                        "total_tokens": 217
+                    }
+                }
+            ],
+            "output": ")\nAI Researcher says: 'Large Language Models are advanced AI systems trained on vast amounts of text data to understand, generate, and manipulate human language at a high level of proficiency. They leverage deep learning techniques, particularly transformer architectures, to capture the nuances of language, enabling applications such as text generation, translation, summarization, and more."
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Find the Expert Profession to answer the given question.\n\n---\n\nFollow the following format.\n\nQuestion: ${question}\nExpert: Expert Profession\n\n---\n\nQuestion: What are Large Language Models?\nExpert:",
+                    "output": "Artificial Intelligence Researcher",
+                    "token_usage": {
+                        "completion_tokens": 4,
+                        "prompt_tokens": 44,
+                        "total_tokens": 48
+                    }
+                },
+                {
+                    "prompt": "Get the Expert's answer to the given question.\n\n---\n\nFollow the following format.\n\nQuestion: ${question}\nExpert: ${expert}\nAnswer: Expert's answer\n\n---\n\nQuestion: What are Large Language Models?\nExpert: Artificial Intelligence Researcher\nAnswer:",
+                    "output": "Question: What are Large Language Models?\nExpert: Artificial Intelligence Researcher\nAnswer: Large Language Models (LLMs) are a type of artificial intelligence model designed to understand and generate human language. These models are typically based on deep learning architectures, such as transformers, and are trained on vast amounts of text data. The training process involves learning the statistical properties of language, which allows the model to predict and generate coherent and contextually relevant text. Examples of large language models include OpenAI's GPT-3 and Google's BERT. These models have a wide range of applications, including natural language processing tasks like translation, summarization, question answering, and conversational agents.",
+                    "token_usage": {
+                        "completion_tokens": 133,
+                        "prompt_tokens": 57,
+                        "total_tokens": 190
+                    }
+                }
+            ],
+            "output": "Artificial Intelligence Researcher says: Question: What are Large Language Models?\nExpert: Artificial Intelligence Researcher\nAnswer: Large Language Models (LLMs) are a type of artificial intelligence model designed to understand and generate human language. These models are typically based on deep learning architectures, such as transformers, and are trained on vast amounts of text data. The training process involves learning the statistical properties of language, which allows the model to predict and generate coherent and contextually relevant text. Examples of large language models include OpenAI's GPT-3 and Google's BERT. These models have a wide range of applications, including natural language processing tasks like translation, summarization, question answering, and conversational agents."
+        }
+    },
+    "odd_word_out": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n\n[Information]\nExamples for Picking Odd Word out (Options, Reasoing, Result) (examples) (list[tuple[list[str],str,str]]) = [([\"skirt\", \"dress\", \"pen\", \"jacket\"], \"skirt is clothing, dress is clothing, pen is an object, jacket is clothing.\", \"pen\"), ([\"Spain\", \"France\", \"German\", \"England\", \"Singapore\"], \"Spain, France, England, Singapore is a country, German is a language.\", \"German\")]\n\n[Context]\n\n\n[Inputs Information]\nOptions to pick from (options) (list) = [\"Bentley\", \"Ferrari\", \"Lamborghini\", \"Casio\", \"Toyota\"]\n\n[Output Information]\nREASONING & RESULT (tuple[str,str])\n\n[Type Explanations]\n\n\n[Action]\nPick the Odd word out\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] (\"Bentley, Ferrari, Lamborghini, and Toyota are car brands, Casio is a watch brand.\", \"Casio\")",
+                    "token_usage": {
+                        "completion_tokens": 28,
+                        "prompt_tokens": 257,
+                        "total_tokens": 285
+                    }
+                }
+            ],
+            "output": ")\n('Bentley, Ferrari, Lamborghini, and Toyota are car brands, Casio is a watch brand.', 'Casio')"
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Pict the Odd Word Out from the given list of words.\n\n---\n\nFollow the following format.\n\nOptions: Options to pick from\nReasoning: Let's think step by step in order to ${produce the odd_word}. We ...\nOdd Word: Odd Word\n\n---\n\nOptions: ['Spain', 'France', 'German', 'England', 'Singapore']\nOdd Word: German\n\n---\n\nOptions: ['skirt', 'dress', 'pen', 'jacket']\nReasoning: Let's think step by step in order to",
+                    "output": "Options: ['skirt', 'dress', 'pen', 'jacket']\nReasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. 'Skirt', 'dress', and 'jacket' are all types of clothing, whereas 'pen' is a writing instrument.\nOdd Word: pen",
+                    "token_usage": {
+                        "completion_tokens": 83,
+                        "prompt_tokens": 109,
+                        "total_tokens": 192
+                    }
+                },
+                {
+                    "prompt": "Pict the Odd Word Out from the given list of words.\n\n---\n\nFollow the following format.\n\nOptions: Options to pick from\nReasoning: Let's think step by step in order to ${produce the odd_word}. We ...\nOdd Word: Odd Word\n\n---\n\nOptions: ['skirt', 'dress', 'pen', 'jacket']\nOdd Word: pen\n\n---\n\nOptions: ['Spain', 'France', 'German', 'England', 'Singapore']\nReasoning: Let's think step by step in order to",
+                    "output": "Options: ['Spain', 'France', 'German', 'England', 'Singapore']\nReasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. Spain, France, and England are all countries. German is a language, and Singapore is also a country. Therefore, the odd word out is 'German' because it is not a country.\nOdd Word: German",
+                    "token_usage": {
+                        "completion_tokens": 96,
+                        "prompt_tokens": 109,
+                        "total_tokens": 205
+                    }
+                },
+                {
+                    "prompt": "Pict the Odd Word Out from the given list of words.\n\n---\n\nFollow the following format.\n\nOptions: Options to pick from\nReasoning: Let's think step by step in order to ${produce the odd_word}. We ...\nOdd Word: Odd Word\n\n---\n\nOptions: ['skirt', 'dress', 'pen', 'jacket']\nReasoning: Let's think step by step in order to Options: ['skirt', 'dress', 'pen', 'jacket'] Reasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. 'Skirt', 'dress', and 'jacket' are all types of clothing, whereas 'pen' is a writing instrument.\nOdd Word: pen\n\n---\n\nOptions: ['Spain', 'France', 'German', 'England', 'Singapore']\nReasoning: Let's think step by step in order to Options: ['Spain', 'France', 'German', 'England', 'Singapore'] Reasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. Spain, France, and England are all countries. German is a language, and Singapore is also a country. Therefore, the odd word out is 'German' because it is not a country.\nOdd Word: German\n\n---\n\nOptions: [Bentley, Ferrari, Lamborghini, Casio, Toyota]\nReasoning: Let's think step by step in order to",
+                    "output": "Options: [Bentley, Ferrari, Lamborghini, Casio, Toyota]\nReasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. Bentley, Ferrari, Lamborghini, and Toyota are all car manufacturers, whereas Casio is a brand known for electronics, such as watches and calculators.\nOdd Word: Casio",
+                    "token_usage": {
+                        "completion_tokens": 85,
+                        "prompt_tokens": 323,
+                        "total_tokens": 408
+                    }
+                }
+            ],
+            "output": "(\"Options: [Bentley, Ferrari, Lamborghini, Casio, Toyota]\\nReasoning: Let's think step by step in order to produce the odd word. We need to identify the common category for most of the words and find the one that doesn't fit. Bentley, Ferrari, Lamborghini, and Toyota are all car manufacturers, whereas Casio is a brand known for electronics, such as watches and calculators.\", 'Casio')"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+Input Prompt:
+ 
+[System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+
+[Information]
+Person's Information (info) (str) = "Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, Switzerland."
+
+[Context]
+
+
+[Inputs Information]
+
+
+[Output Information]
+Person (Person)
+
+[Type Explanations]
+Person (Person) (obj) eg:- Person(name=str, age=int, employer=Employer, job=str) -> Name (name) (str), Age (age) (int), Employer (employer) (Employer), Job (job) (str)
+Employer (Employer) (obj) eg:- Employer(employer_name=str, location=str) -> Employer Name (employer_name) (str), Location (location) (str)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+
+Output:
+ [Output] Person(name="Alice", age=21, employer=Employer(employer_name="LMQL Inc", location="Zurich, Switzerland"), job="Engineer")
+CompletionUsage(completion_tokens=34, prompt_tokens=265, total_tokens=299)
+Their name is Alice and she works in Zurich, Switzerland.
