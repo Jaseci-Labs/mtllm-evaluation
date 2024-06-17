@@ -35,3 +35,33 @@ can give_grade_A_to_D(summary: str) -> Grade by llm();
 change the variable names, need to provide more context or need more inputs or rules.
 - Semstring approach uses more tokens (prompt tokens)
 - It is advised to start with the non-semstring approach in the begining and add semstring according to your need.
+
+
+== Result Analysis ==
+1. essay_reviewer
+jac - 5/5
+2. expert_answer
+jac - 5/5
+3. joke_gen
+jac - 5/5
+4. mcq_reason
+jac - 5/5 - Correct Reasoning and Answer
+5. odd_word_out
+jac - 5/5
+6. personality_finder
+jac - 5/5
+7. rpg_level_gen
+jac - 5/5
+8. taskman
+jac - 5/5
+9. template
+jac - 5/5
+10. text_to_type
+jac - 5/5
+11. translation
+jac - 5/5
+12. wikipedia
+jac - 5/5
+
+== Overall Performance ==
+jac -  

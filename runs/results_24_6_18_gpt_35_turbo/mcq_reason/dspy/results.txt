@@ -1,0 +1,28 @@
+Input Prompt:
+ Provide the Answer for the Given Question (A-F)
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Choices: ${choices}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: ${answer}
+
+---
+
+Question: It was Sept. 1st, 2021 a week ago. What is the date 10 days ago in MM/DD/YYYY?
+
+Choices: (A) 08/29/2021 (B) 08/28/2021 (C) 08/29/1925 (D) 08/30/2021 (E) 05/25/2021 (F) 09/19/2021
+
+Reasoning: Let's think step by step in order to
+Output:
+  produce the answer. We know that 7 days ago was August 25th, 2021. Therefore, 10 days ago would be August 22nd, 2021.
+
+Answer: (B) 08/28/2021
+{'completion_tokens': 50, 'prompt_tokens': 164, 'total_tokens': 214}
+produce the answer. We know that 7 days ago was August 25th, 2021. Therefore, 10 days ago would be August 22nd, 2021. (B) 08/28/2021

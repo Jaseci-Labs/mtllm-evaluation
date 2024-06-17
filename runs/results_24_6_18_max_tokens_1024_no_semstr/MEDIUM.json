@@ -1,0 +1,224 @@
+{
+    "mcq_reason": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\n(question) (str) = \"It was Sept. 1st, 2021 a week ago. What is the date 10 days ago in MM/DD/YYYY?\"\n(choices) (dict[str, str]) = {\"A\": \"08/29/2021\", \"B\": \"08/28/2021\", \"C\": \"08/29/1925\", \"D\": \"08/30/2021\", \"E\": \"05/25/2021\", \"F\": \"09/19/2021\"}\n\n[Output Information]\n(str)\n\n[Type Explanations]\n\n\n[Action]\nget_answer_key\n\nGenerate and return the output result(s) only, adhering to the provided Type in the following format. Perform the operation in a chain of thoughts.(Think Step by Step)\n\n[Chain of Thoughts] <Chain of Thoughts>\n[Output] <Result>",
+                    "output": "[Chain of Thoughts] \n1. Determine the date 10 days ago from Sept. 1st, 2021.\n2. Calculate the date using the information that Sept. 1st, 2021 was a week ago.\n3. Subtract 10 days from Sept. 1st, 2021.\n4. The resulting date is August 22, 2021.\n5. Compare the calculated date with the given choices.\n\n[Output] B",
+                    "token_usage": {
+                        "completion_tokens": 96,
+                        "prompt_tokens": 247,
+                        "total_tokens": 343
+                    }
+                }
+            ],
+            "output": ")\nB"
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Provide the Answer for the Given Question (A-F)\n\n---\n\nFollow the following format.\n\nQuestion: ${question}\n\nChoices: ${choices}\n\nReasoning: Let's think step by step in order to ${produce the answer}. We ...\n\nAnswer: ${answer}\n\n---\n\nQuestion: It was Sept. 1st, 2021 a week ago. What is the date 10 days ago in MM/DD/YYYY?\n\nChoices: (A) 08/29/2021 (B) 08/28/2021 (C) 08/29/1925 (D) 08/30/2021 (E) 05/25/2021 (F) 09/19/2021\n\nReasoning: Let's think step by step in order to",
+                    "output": "Reasoning: Let's think step by step in order to determine the date 10 days ago from a week before September 1st, 2021. \n\n1. First, we need to establish the date a week before September 1st, 2021. \n   - September 1st, 2021 is 09/01/2021.\n   - A week before September 1st, 2021 is 7 days earlier.\n   - Subtracting 7 days from September 1st, 2021, we get August 25th, 2021 (09/01/2021 - 7 days = 08/25/2021).\n\n2. Next, we need to find the date 10 days before August 25th, 2021.\n   - Subtracting 10 days from August 25th, 2021, we get August 15th, 2021 (08/25/2021 - 10 days = 08/15/2021).\n\n3. Now, we need to match this date with the given choices.\n\nAnswer: None of the given choices (A-F) match the calculated date of 08/15/2021. Therefore, there is no correct answer among the provided options.",
+                    "token_usage": {
+                        "completion_tokens": 263,
+                        "prompt_tokens": 162,
+                        "total_tokens": 425
+                    }
+                }
+            ],
+            "output": "Reasoning: Let's think step by step in order to determine the date 10 days ago from a week before September 1st, 2021. \n\n1. First, we need to establish the date a week before September 1st, 2021. \n   - September 1st, 2021 is 09/01/2021.\n   - A week before September 1st, 2021 is 7 days earlier.\n   - Subtracting 7 days from September 1st, 2021, we get August 25th, 2021 (09/01/2021 - 7 days = 08/25/2021).\n\n2. Next, we need to find the date 10 days before August 25th, 2021.\n   - Subtracting 10 days from August 25th, 2021, we get August 15th, 2021 (08/25/2021 - 10 days = 08/15/2021).\n\n3. Now, we need to match this date with the given choices. None of the given choices (A-F) match the calculated date of 08/15/2021. Therefore, there is no correct answer among the provided options."
+        }
+    },
+    "personality_finder": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\n(name) (str) = \"Martin Luther King Jr.\"\n\n[Output Information]\n(Person)\n\n[Type Explanations]\n(Person) (obj) eg:- Person(full_name=str, yod=int, personality=Personality) -> (full_name) (str), (yod) (int), (personality) (Personality)\n(Personality) (Enum) eg:- Personality.EXTROVERT -> (INTROVERT) (EnumItem), (EXTROVERT) (EnumItem)\n\n[Action]\nget_person_info\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] Person(full_name=\"Martin Luther King Jr.\", yod=1968, personality=Personality.EXTROVERT)",
+                    "token_usage": {
+                        "completion_tokens": 27,
+                        "prompt_tokens": 199,
+                        "total_tokens": 226
+                    }
+                }
+            ],
+            "output": ")\nMartin Luther King Jr. was a Extrovert person who died in 1968"
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Get Person Information use common knowledge.\n\n---\n\nFollow the following format.\n\nName: Name of the Person\nPerson: ${person}. Respond with a single JSON object. JSON Schema: {\"$defs\": {\"Personality\": {\"enum\": [\"Introvert\", \"Extrovert\"], \"title\": \"Personality\", \"type\": \"string\"}}, \"properties\": {\"full_name\": {\"description\": \"Fullname of the Person\", \"title\": \"Full Name\", \"type\": \"string\"}, \"yod\": {\"description\": \"Year of Death\", \"title\": \"Yod\", \"type\": \"integer\"}, \"personality\": {\"allOf\": [{\"$ref\": \"#/$defs/Personality\"}], \"description\": \"Personality Type\"}}, \"required\": [\"full_name\", \"yod\", \"personality\"], \"title\": \"Person\", \"type\": \"object\"}\n\n---\n\nName: Martin Luther King Jr.\nPerson:",
+                    "output": "```json",
+                    "token_usage": {
+                        "completion_tokens": 36,
+                        "prompt_tokens": 197,
+                        "total_tokens": 233
+                    }
+                }
+            ],
+            "output": "Martin Luther King Jr. was an Extrovert person who died in 1968."
+        }
+    },
+    "template": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\n(name) (str) = \"Bruno Mars\"\n\n[Output Information]\n(Singer)\n\n[Type Explanations]\n(Singer) (obj) eg:- Singer(name=str, age=int, top_2_songs=list[str]) -> (name) (str), (age) (int), (top_2_songs) (list[str])\n\n[Action]\nCreate an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] Singer(name=\"Bruno Mars\", age=37, top_2_songs=[\"Uptown Funk\", \"Just the Way You Are\"])",
+                    "token_usage": {
+                        "completion_tokens": 32,
+                        "prompt_tokens": 200,
+                        "total_tokens": 232
+                    }
+                }
+            ],
+            "output": ")\nBruno Mars is 37 years old. His top 2 songs are ['Uptown Funk', 'Just the Way You Are']."
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Get Person Information.\n\n---\n\nFollow the following format.\n\nName: name of the singer\nSinger: ${singer}. Respond with a single JSON object. JSON Schema: {\"description\": \"Singer.\", \"properties\": {\"name\": {\"description\": \"Name of the Singer\", \"title\": \"Name\", \"type\": \"string\"}, \"age\": {\"description\": \"Age\", \"title\": \"Age\", \"type\": \"integer\"}, \"top_songs\": {\"description\": \"His/Her's Top 2 Songs\", \"items\": {\"type\": \"string\"}, \"title\": \"Top Songs\", \"type\": \"array\"}}, \"required\": [\"name\", \"age\", \"top_songs\"], \"title\": \"Singer\", \"type\": \"object\"}\n\n---\n\nName: Bruno Mars\nSinger:",
+                    "output": "```json",
+                    "token_usage": {
+                        "completion_tokens": 41,
+                        "prompt_tokens": 169,
+                        "total_tokens": 210
+                    }
+                }
+            ],
+            "output": "Bruno Mars is 37 years old. His top 2 songs are ['Uptown Funk', 'Just the Way You Are']."
+        }
+    },
+    "text_to_type": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n[Information]\n(info) (str) = \"Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, Switzerland.\"\n\n[Context]\n\n\n[Inputs Information]\n\n\n[Output Information]\n(Person)\n\n[Type Explanations]\n(Person) (obj) eg:- Person(name=str, age=int, employer=Employer, job=str) -> (name) (str), (age) (int), (employer) (Employer), (job) (str)\n(Employer) (obj) eg:- Employer(employer_name=str, location=str) -> (employer_name) (str), (location) (str)\n\n[Action]\nCreate an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.\nGenerate and return the output result(s) only, adhering to the provided Type in the following format\n\n[Output] <result>",
+                    "output": "[Output] Person(name=\"Alice\", age=21, employer=Employer(employer_name=\"LMQL Inc\", location=\"Zurich, Switzerland\"), job=\"engineer\")",
+                    "token_usage": {
+                        "completion_tokens": 35,
+                        "prompt_tokens": 248,
+                        "total_tokens": 283
+                    }
+                }
+            ],
+            "output": ")\nTheir name is Alice and she works in Zurich, Switzerland."
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Get Person Information.\n\n---\n\nFollow the following format.\n\nInfo: Person Information\nPerson: ${person}. Respond with a single JSON object. JSON Schema: {\"$defs\": {\"Employer\": {\"properties\": {\"employer_name\": {\"description\": \"Employer Name\", \"title\": \"Employer Name\", \"type\": \"string\"}, \"location\": {\"description\": \"Location\", \"title\": \"Location\", \"type\": \"string\"}}, \"required\": [\"employer_name\", \"location\"], \"title\": \"Employer\", \"type\": \"object\"}}, \"properties\": {\"name\": {\"description\": \"Name\", \"title\": \"Name\", \"type\": \"string\"}, \"age\": {\"description\": \"Age\", \"title\": \"Age\", \"type\": \"integer\"}, \"job\": {\"description\": \"Job\", \"title\": \"Job\", \"type\": \"string\"}, \"employer\": {\"allOf\": [{\"$ref\": \"#/$defs/Employer\"}], \"description\": \"Employer\"}}, \"required\": [\"name\", \"age\", \"job\", \"employer\"], \"title\": \"Person\", \"type\": \"object\"}\n\n---\n\nInfo: Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, Switzerland.\nPerson:",
+                    "output": "```json",
+                    "token_usage": {
+                        "completion_tokens": 57,
+                        "prompt_tokens": 264,
+                        "total_tokens": 321
+                    }
+                }
+            ],
+            "output": "Their name is Alice and she works in Zurich, Switzerland."
+        }
+    },
+    "taskman": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\n(description) (str) = \"Have some sleep\"\n\n[Output Information]\n(Task)\n\n[Type Explanations]\n(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)\n\n[Action]\nCreate an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.\n\nReason and return the output result(s) only, adhering to the provided Type in the following format\n\n[Reasoning] <Reason>\n[Output] <Result>",
+                    "output": "[Reasoning] The description provided is \"Have some sleep\". Based on research, the recommended sleep duration for health is around 7-9 hours. We'll consider sleep duration at the average of 8 hours (480 minutes). The priority of sleep is generally high for health and well-being, so we'll assign it a priority of 9 out of 10.\n\n[Output] Task(description=\"Have some sleep\", time_in_min=480, priority_out_of_10=9)",
+                    "token_usage": {
+                        "completion_tokens": 97,
+                        "prompt_tokens": 207,
+                        "total_tokens": 304
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\n(description) (str) = \"Enjoy a better weekend with my girlfriend\"\n\n[Output Information]\n(Task)\n\n[Type Explanations]\n(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)\n\n[Action]\nCreate an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.\n\nReason and return the output result(s) only, adhering to the provided Type in the following format\n\n[Reasoning] <Reason>\n[Output] <Result>",
+                    "output": "[Reasoning] The task \"Enjoy a better weekend with my girlfriend\" is a leisure activity. Based on research, an average weekend activity like this might last around 240 minutes (4 hours). Assigning a priority of 8 out of 10 reflects its importance for personal relationships and well-being.\n\n[Output] Task(description=\"Enjoy a better weekend with my girlfriend\", time_in_min=240, priority_out_of_10=8)",
+                    "token_usage": {
+                        "completion_tokens": 89,
+                        "prompt_tokens": 211,
+                        "total_tokens": 300
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\n(description) (str) = \"Work on Jaseci Project\"\n\n[Output Information]\n(Task)\n\n[Type Explanations]\n(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)\n\n[Action]\nCreate an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.\n\nReason and return the output result(s) only, adhering to the provided Type in the following format\n\n[Reasoning] <Reason>\n[Output] <Result>",
+                    "output": "[Reasoning] The description is provided. Based on a typical project task, I will assign a reasonable time and priority.\n[Output] Task(description=\"Work on Jaseci Project\", time_in_min=120, priority_out_of_10=7)",
+                    "token_usage": {
+                        "completion_tokens": 52,
+                        "prompt_tokens": 210,
+                        "total_tokens": 262
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\n(description) (str) = \"Teach EECS 281 Students\"\n\n[Output Information]\n(Task)\n\n[Type Explanations]\n(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)\n\n[Action]\nCreate an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.\n\nReason and return the output result(s) only, adhering to the provided Type in the following format\n\n[Reasoning] <Reason>\n[Output] <Result>",
+                    "output": "[Reasoning] The input description is \"Teach EECS 281 Students\". Based on the nature of the task, teaching a class typically takes around 60 to 90 minutes. The priority of teaching students can be considered high, so assigning an 8 out of 10 for priority seems reasonable.\n\n[Output] Task(description=\"Teach EECS 281 Students\", time_in_min=90, priority_out_of_10=8)",
+                    "token_usage": {
+                        "completion_tokens": 88,
+                        "prompt_tokens": 210,
+                        "total_tokens": 298
+                    }
+                },
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\n(description) (str) = \"Enjoy family time with my parents\"\n\n[Output Information]\n(Task)\n\n[Type Explanations]\n(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)\n\n[Action]\nCreate an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.\n\nReason and return the output result(s) only, adhering to the provided Type in the following format\n\n[Reasoning] <Reason>\n[Output] <Result>",
+                    "output": "[Reasoning] The task involves spending time with family, which generally requires a significant amount of time and is of high priority. Based on similar activities, the time is estimated to be around 120 minutes, and the priority is rated at 8 out of 10 due to the importance of family bonding.\n\n[Output] Task(description=\"Enjoy family time with my parents\", time_in_min=120, priority_out_of_10=8)",
+                    "token_usage": {
+                        "completion_tokens": 89,
+                        "prompt_tokens": 210,
+                        "total_tokens": 299
+                    }
+                }
+            ],
+            "output": ")\n[Task(description='Have some sleep', time_in_min=480, priority_out_of_10=9), Task(description='Enjoy a better weekend with my girlfriend', time_in_min=240, priority_out_of_10=8), Task(description='Work on Jaseci Project', time_in_min=120, priority_out_of_10=7), Task(description='Teach EECS 281 Students', time_in_min=90, priority_out_of_10=8), Task(description='Enjoy family time with my parents', time_in_min=120, priority_out_of_10=8)]"
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\nTask: ${task}. Respond with a single JSON object. JSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Have some sleep\nTask:",
+                    "output": "```json",
+                    "token_usage": {
+                        "completion_tokens": 40,
+                        "prompt_tokens": 159,
+                        "total_tokens": 199
+                    }
+                },
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\nTask: ${task}. Respond with a single JSON object. JSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Enjoy a better weekend with my girlfriend\nTask:",
+                    "output": "```json",
+                    "token_usage": {
+                        "completion_tokens": 62,
+                        "prompt_tokens": 163,
+                        "total_tokens": 225
+                    }
+                },
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\nTask: ${task}. Respond with a single JSON object. JSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Work on Jaseci Project\nTask:",
+                    "output": "```json",
+                    "token_usage": {
+                        "completion_tokens": 45,
+                        "prompt_tokens": 162,
+                        "total_tokens": 207
+                    }
+                },
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\nTask: ${task}. Respond with a single JSON object. JSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Teach EECS 281 Students\nTask:",
+                    "output": "```json",
+                    "token_usage": {
+                        "completion_tokens": 48,
+                        "prompt_tokens": 162,
+                        "total_tokens": 210
+                    }
+                },
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\nTask: ${task}. Respond with a single JSON object. JSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Enjoy family time with my parents\nTask:",
+                    "output": "```json",
+                    "token_usage": {
+                        "completion_tokens": 51,
+                        "prompt_tokens": 162,
+                        "total_tokens": 213
+                    }
+                }
+            ],
+            "output": "[Task(description=\"Take a nap or get a full night's sleep to rest and rejuvenate.\", time=480, priority=8), Task(description='Plan and organize a weekend itinerary with activities that both you and your girlfriend enjoy, such as dining at a favorite restaurant, visiting a local attraction, or having a relaxing day at home.', time=240, priority=8), Task(description='Develop and implement new features for the Jaseci project, including debugging, testing, and documentation.', time=240, priority=8), Task(description='Prepare and deliver lectures, create and grade assignments, and provide support to students for the EECS 281 course.', time=240, priority=8), Task(description='Spend quality time with parents, engaging in activities such as talking, playing games, watching a movie, or having a meal together.', time=120, priority=10)]"
+        }
+    }
+}

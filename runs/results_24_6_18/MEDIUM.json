@@ -12,7 +12,7 @@
                     }
                 }
             ],
-            "output": ")\nA"
+            "output": "A"
         },
         "dspy": {
             "llm_requests": [
@@ -51,7 +51,7 @@
                     }
                 }
             ],
-            "output": ")\nMartin Luther King Jr. was a Extrovert person who died in 1968"
+            "output": "Martin Luther King Jr. was a Extrovert person who died in 1968"
         },
         "dspy": {
             "llm_requests": [
@@ -81,7 +81,7 @@
                     }
                 }
             ],
-            "output": ")\nBruno Mars is 37 years old. His top 2 songs are ['Just the Way You Are', 'Uptown Funk']."
+            "output": "Bruno Mars is 37 years old. His top 2 songs are ['Just the Way You Are', 'Uptown Funk']."
         },
         "dspy": {
             "llm_requests": [
@@ -111,7 +111,7 @@
                     }
                 }
             ],
-            "output": ")\nTheir name is Alice and she works in Zurich, Switzerland."
+            "output": "Their name is Alice and she works in Zurich, Switzerland."
         },
         "dspy": {
             "llm_requests": [
@@ -177,7 +177,7 @@
                     }
                 }
             ],
-            "output": ")\n[Task(description='Have some sleep', time=480, priority=5), Task(description='Enjoy a better weekend with my girlfriend', time=0, priority=5), Task(description='Work on Jaseci Project', time=120, priority=7), Task(description='Teach EECS 281 Students', time=120, priority=8), Task(description='Enjoy family time with my parents', time=120, priority=8)]"
+            "output": "[Task(description='Have some sleep', time=480, priority=5), Task(description='Enjoy a better weekend with my girlfriend', time=0, priority=5), Task(description='Work on Jaseci Project', time=120, priority=7), Task(description='Teach EECS 281 Students', time=120, priority=8), Task(description='Enjoy family time with my parents', time=120, priority=8)]"
         },
         "dspy": {
             "llm_requests": [

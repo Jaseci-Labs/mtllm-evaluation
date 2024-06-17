@@ -25,7 +25,10 @@ def run_dspy_program(program_name, program_path, profiler, output_dir):
         profiler = Profiler()
         profiler.start()
 
-    module = importlib.import_module(program_path)
+    try:
+        module = importlib.import_module(program_path)
+    except Exception as e:
+        logger.error(f"Error while running {program_path}: {e}")
 
     if profiler == "cProfile":
         pr.disable()
@@ -56,7 +59,10 @@ def run_jac_program(program_name, program_path, profiler, output_dir):
         profiler = Profiler()
         profiler.start()
 
-    module = jac_import(program_file.replace(".jac", ""), base_path=program_dir)
+    try:
+        module = jac_import(program_file.replace(".jac", ""), base_path=program_dir)
+    except Exception as e:
+        logger.error(f"Error while running {program_path}: {e}")
 
     if profiler == "cProfile":
         pr.disable()
@@ -117,8 +123,8 @@ if __name__ == "__main__":
             run_jac_program(problem_name, paths["jac"], args.profiler, args.output_dir)
             time.sleep(60)
 
-            # logger.info(f"Running Dspy program: {paths['dspy']}")
-            # run_dspy_program(
-            #     problem_name, paths["dspy"], args.profiler, args.output_dir
-            # )
-            # time.sleep(60)
+            logger.info(f"Running Dspy program: {paths['dspy']}")
+            run_dspy_program(
+                problem_name, paths["dspy"], args.profiler, args.output_dir
+            )
+            time.sleep(60)

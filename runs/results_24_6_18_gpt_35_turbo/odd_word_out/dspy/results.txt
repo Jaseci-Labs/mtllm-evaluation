@@ -1,0 +1,81 @@
+Input Prompt:
+ Pict the Odd Word Out from the given list of words.
+
+---
+
+Follow the following format.
+
+Options: Options to pick from
+Reasoning: Let's think step by step in order to ${produce the odd_word}. We ...
+Odd Word: Odd Word
+
+---
+
+Options: ['Spain', 'France', 'German', 'England', 'Singapore']
+Odd Word: German
+
+---
+
+Options: ['skirt', 'dress', 'pen', 'jacket']
+Reasoning: Let's think step by step in order to
+Output:
+ produce the odd word. We can see that 'pen' is the only item that is not a piece of clothing.
+Odd Word: Pen
+{'completion_tokens': 28, 'prompt_tokens': 111, 'total_tokens': 139}
+Input Prompt:
+ Pict the Odd Word Out from the given list of words.
+
+---
+
+Follow the following format.
+
+Options: Options to pick from
+Reasoning: Let's think step by step in order to ${produce the odd_word}. We ...
+Odd Word: Odd Word
+
+---
+
+Options: ['skirt', 'dress', 'pen', 'jacket']
+Odd Word: pen
+
+---
+
+Options: ['Spain', 'France', 'German', 'England', 'Singapore']
+Reasoning: Let's think step by step in order to
+Output:
+ produce the odd word. We notice that all the countries listed are European countries except for Singapore, which is in Asia.
+Odd Word: Singapore
+{'completion_tokens': 28, 'prompt_tokens': 111, 'total_tokens': 139}
+Bootstrapped 2 full traces after 2 examples in round 0.
+Input Prompt:
+ Pict the Odd Word Out from the given list of words.
+
+---
+
+Follow the following format.
+
+Options: Options to pick from
+Reasoning: Let's think step by step in order to ${produce the odd_word}. We ...
+Odd Word: Odd Word
+
+---
+
+Options: ['skirt', 'dress', 'pen', 'jacket']
+Reasoning: Let's think step by step in order to produce the odd word. We can see that 'pen' is the only item that is not a piece of clothing.
+Odd Word: Pen
+
+---
+
+Options: ['Spain', 'France', 'German', 'England', 'Singapore']
+Reasoning: Let's think step by step in order to produce the odd word. We notice that all the countries listed are European countries except for Singapore, which is in Asia.
+Odd Word: Singapore
+
+---
+
+Options: [Bentley, Ferrari, Lamborghini, Casio, Toyota]
+Reasoning: Let's think step by step in order to
+Output:
+  produce the odd word. We can see that 'Casio' is the only brand that is not a luxury car brand.
+Odd Word: Casio
+{'completion_tokens': 30, 'prompt_tokens': 206, 'total_tokens': 236}
+("produce the odd word. We can see that 'Casio' is the only brand that is not a luxury car brand.", 'Casio')

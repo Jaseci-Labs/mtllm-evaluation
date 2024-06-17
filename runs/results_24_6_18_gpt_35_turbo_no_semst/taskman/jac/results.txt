@@ -1,0 +1,62 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(description) (str) = "Have some sleep"
+
+[Output Information]
+(Task)
+
+[Type Explanations]
+(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] The task "Have some sleep" is important for overall well-being and health maintenance.
+[Output] Task(description="Have some sleep", time_in_min=480, priority_out_of_10=10)
+CompletionUsage(completion_tokens=45, prompt_tokens=207, total_tokens=252)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(description) (str) = "Enjoy a better weekend with my girlfriend"
+
+[Output Information]
+(Task)
+
+[Type Explanations]
+(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] Creating a Task object with the provided input value.
+[Output] Task(description="Enjoy a better weekend with my girlfriend")
+CompletionUsage(completion_tokens=28, prompt_tokens=211, total_tokens=239)

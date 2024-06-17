@@ -1,0 +1,62 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Last Played Levels (last_levels) (list) = []
+Difficulty of the New Level (difficulty) (int) = 1
+Width of the Level (level_width) (int) = 20
+Height of the Level (level_height) (int) = 20
+
+[Output Information]
+Next Level (Level)
+
+[Type Explanations]
+Game Level (Level) (obj) eg:- Level(name=str, difficulty=int, width=int, height=int, num_wall=int, num_enemies=int, time_countdown=int, n_retries_allowed=int) -> Name of the Level (name) (str), Difficulty of the Level (difficulty) (int), Width of the Map (width) (int), Height of the Map (height) (int), Number of Walls in the Map (num_wall) (int), Number of Enemies in the Map (num_enemies) (int), Time Countdown of the Level (time_countdown) (int), Number of Retries Allowed (n_retries_allowed) (int)
+
+[Action]
+Create the Next Level
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] Level(name="Level 1", difficulty=1, width=20, height=20, num_wall=10, num_enemies=5, time_countdown=60, n_retries_allowed=3)
+CompletionUsage(completion_tokens=46, prompt_tokens=311, total_tokens=357)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Level of the Map (level) (Level) = Level(name="Level 1", difficulty=1, width=20, height=20, num_wall=10, num_enemies=5, time_countdown=60, n_retries_allowed=3)
+
+[Output Information]
+Map of the Level (Map)
+
+[Type Explanations]
+Game Level (Level) (obj) eg:- Level(name=str, difficulty=int, width=int, height=int, num_wall=int, num_enemies=int, time_countdown=int, n_retries_allowed=int) -> Name of the Level (name) (str), Difficulty of the Level (difficulty) (int), Width of the Map (width) (int), Height of the Map (height) (int), Number of Walls in the Map (num_wall) (int), Number of Enemies in the Map (num_enemies) (int), Time Countdown of the Level (time_countdown) (int), Number of Retries Allowed (n_retries_allowed) (int)
+Map of the Level (Map) (obj) eg:- Map(level=Level, walls=list[Wall], small_obstacles=list[Position], enemies=list[Position], player_pos=Position) -> Level of the Map (level) (Level), Walls in the Map Other than Edges (walls) (list[Wall]), Obstacles in the Map (small_obstacles) (list[Position]), Enemies in the Map (enemies) (list[Position]), Player Position in the Map (player_pos) (Position)
+Position (Position) (obj) eg:- Position(x=int, y=int) -> X Coordinate (x) (int), Y Coordinate (y) (int)
+Wall (Wall) (obj) eg:- Wall(start_pos=Position, end_pos=Position) -> Start Position of the Wall (start_pos) (Position), End Position of the Wall (end_pos) (Position)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] Map(level=Level(name="Level 1", difficulty=1, width=20, height=20, num_wall=10, num_enemies=5, time_countdown=60, n_retries_allowed=3), walls=[], small_obstacles=[], enemies=[], player_pos=Position(x=0, y=0)
+CompletionUsage(completion_tokens=69, prompt_tokens=522, total_tokens=591)

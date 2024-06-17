@@ -1,0 +1,3 @@
+problem,jac_completion_tokens,jac_prompt_tokens,jac_total_tokens,dspy_completion_tokens,dspy_prompt_tokens,dspy_total_tokens,jac_cost,dspy_cost,jac_runtime,jac_llm_time,dspy_runtime,dspy_llm_time,jac_non_llm_time,dspy_non_llm_time,jac_non_llm_time_percent,dspy_non_llm_time_percent
+rpg_level_gen,590,1715,2305,1178,2220,3398,0.017425000000000003,0.02877,13.398203322000017,13.136899470000001,19.962690202000015,19.886529478,0.26130385200001527,0.07616072400001528,0.019502902420576878,0.0038151533300048363
+wikipedia,185,2572,2757,30,149,179,0.015635,0.001195,8.976608837000011,5.439182795000001,0.0,0.0,3.5374260420000105,0.0,0.39407153706189796,

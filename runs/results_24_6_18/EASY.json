@@ -12,7 +12,7 @@
                     }
                 }
             ],
-            "output": ")\nfromage"
+            "output": "fromage"
         },
         "dspy": {
             "llm_requests": [
@@ -105,7 +105,7 @@
                     }
                 }
             ],
-            "output": ")\nReviewer Notes:  The essay lacks clarity due to run-on sentences, improper punctuation, and confusing phrases, making it difficult to follow the main points. It jumps between topics without clear transitions. While it provides some original insights into Spain's cultural and linguistic diversity, the information is general and lacks specific, novel perspectives. The essay presents evidence supporting Spain's rich culture and diverse languages and discusses the challenges in preserving linguistic rights, but it could be strengthened with specific examples and sources.\nGrade:  C"
+            "output": "Reviewer Notes:  The essay lacks clarity due to run-on sentences, improper punctuation, and confusing phrases, making it difficult to follow the main points. It jumps between topics without clear transitions. While it provides some original insights into Spain's cultural and linguistic diversity, the information is general and lacks specific, novel perspectives. The essay presents evidence supporting Spain's rich culture and diverse languages and discusses the challenges in preserving linguistic rights, but it could be strengthened with specific examples and sources.\nGrade:  C"
         },
         "dspy": {
             "llm_requests": [
@@ -171,7 +171,7 @@
                     }
                 }
             ],
-            "output": ")\nWhy don't skeletons fight each other? : They don't have the guts."
+            "output": "Why don't skeletons fight each other? : They don't have the guts."
         },
         "dspy": {
             "llm_requests": [
@@ -228,7 +228,7 @@
                     }
                 }
             ],
-            "output": ")\nAI Researcher says: 'Large Language Models (LLMs) are a type of artificial intelligence system designed to understand and generate human language. These models are trained on vast amounts of text data and use deep learning techniques to predict and produce coherent and contextually relevant text. Examples include OpenAI's GPT-3 and Google's BERT, which have various applications such as language translation, content creation, and conversational agents."
+            "output": "AI Researcher says: 'Large Language Models (LLMs) are a type of artificial intelligence system designed to understand and generate human language. These models are trained on vast amounts of text data and use deep learning techniques to predict and produce coherent and contextually relevant text. Examples include OpenAI's GPT-3 and Google's BERT, which have various applications such as language translation, content creation, and conversational agents."
         },
         "dspy": {
             "llm_requests": [
@@ -267,7 +267,7 @@
                     }
                 }
             ],
-            "output": ")\n('Bentley, Ferrari, Lamborghini, Toyota are car brands, Casio is a watch brand.', 'Casio')"
+            "output": "('Bentley, Ferrari, Lamborghini, Toyota are car brands, Casio is a watch brand.', 'Casio')"
         },
         "dspy": {
             "llm_requests": [

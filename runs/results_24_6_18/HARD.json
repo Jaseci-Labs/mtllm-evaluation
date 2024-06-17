@@ -39,7 +39,7 @@
                     }
                 }
             ],
-            "output": ")\nLevel(name='Level_2', difficulty=1, width=20, height=20, num_wall=5, num_enemies=3, time_countdown=300, n_retries_allowed=3)\nBBBBBBBBBBBBBBBBBBBBBB\nBP...................B\nB.B...............B..B\nB.BB..............B..B\nB.B.E.............B..B\nB.B..BBBB.........B..B\nB.....B..............B\nB......E.............B\nB....................B\nB........B...........B\nB.........B..........B\nB.........B..........B\nB.........B.E........B\nB.........B..........B\nB....................B\nB..............B.....B\nB..............B.....B\nB..............B.....B\nB..............B.....B\nB....................B\nB....................B\nBBBBBBBBBBBBBBBBBBBBBB"
+            "output": "Level(name='Level_2', difficulty=1, width=20, height=20, num_wall=5, num_enemies=3, time_countdown=300, n_retries_allowed=3)\nBBBBBBBBBBBBBBBBBBBBBB\nBP...................B\nB.B...............B..B\nB.BB..............B..B\nB.B.E.............B..B\nB.B..BBBB.........B..B\nB.....B..............B\nB......E.............B\nB....................B\nB........B...........B\nB.........B..........B\nB.........B..........B\nB.........B.E........B\nB.........B..........B\nB....................B\nB..............B.....B\nB..............B.....B\nB..............B.....B\nB..............B.....B\nB....................B\nB....................B\nBBBBBBBBBBBBBBBBBBBBBB"
         },
         "dspy": {
             "llm_requests": [
@@ -123,7 +123,7 @@
                     }
                 }
             ],
-            "output": ")\nThoughtAction(thought='I now have enough information about Jason Mars.', action_type=<ActionType.Finish: 2>, action_info='Jason O. Mars is an American computer scientist, author, and entrepreneur known for his work in computer architecture and AI, particularly in conversational AI. He is an Associate Professor at the University of Michigan and co-director of the Clarity Lab.')\nQuestion:  Who is Jason Mars?\nAnswer:  Jason O. Mars is an American computer scientist, author, and entrepreneur known for his work in computer architecture and AI, particularly in conversational AI. He is an Associate Professor at the University of Michigan and co-director of the Clarity Lab."
+            "output": "Question:  Who is Jason Mars?\nAnswer:  Jason O. Mars is an American computer scientist, author, and entrepreneur known for his work in computer architecture and AI, particularly in conversational AI. He is an Associate Professor at the University of Michigan and co-director of the Clarity Lab."
         },
         "dspy": {
             "llm_requests": [
