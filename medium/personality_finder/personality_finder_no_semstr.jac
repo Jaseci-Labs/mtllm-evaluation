@@ -3,21 +3,18 @@ import:py from jaclang.core.llms, OpenAI;
 glob llm = OpenAI(model_name="gpt-4o");
 
 
-enum 'Personality of the Person'
-Personality {
-   INTROVERT: 'Person who is shy and reticent' = "Introvert",
-   EXTROVERT: 'Person who is outgoing and socially confident' = "Extrovert"
+enum Personality {
+   INTROVERT = "Introvert",
+   EXTROVERT = "Extrovert"
 }
 
-obj 'Person'
-Person {
-    has full_name: 'Fullname of the Person': str,
-        yod: 'Year of Death': int,
-        personality: 'Personality of the Person': Personality;
+obj Person {
+    has full_name: str,
+        yod: int,
+        personality: Personality;
 }
 
-can 'Get Person Information use common knowledge'
-get_person_info(name: 'Name of the Person': str) -> 'Person': Person by llm();
+can get_person_info(name: str) -> Person by llm();
 
 with entry {
     person_obj = get_person_info('Martin Luther King Jr.');

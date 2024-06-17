@@ -7,7 +7,7 @@ obj Essay {
 
     can essay_judge(criteria: str) -> str by llm(incl_info=(self.essay));
     can generate_summary(judgements: dict) -> str by llm(incl_info=(self.essay));
-    can give_grade(summary: str) -> 'A-D': str by llm();
+    can give_grade_A_to_D(summary: str) -> str by llm();
 }
 
 with entry {
@@ -27,7 +27,7 @@ with entry {
         judgements[criteria] = judgement;
     }
     summary = essay.generate_summary(judgements);
-    grade = essay.give_grade(summary);
+    grade = essay.give_grade_A_to_D(summary);
     print("Reviewer Notes: ", summary);
     print("Grade: ", grade);
 }

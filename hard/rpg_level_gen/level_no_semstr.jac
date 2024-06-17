@@ -2,37 +2,33 @@ import:py from jaclang.core.llms, OpenAI;
 
 glob llm = OpenAI(model_name="gpt-4o");
 
-obj 'Position'
-Position {
-    has x: 'X Coordinate': int,
-        y: 'Y Coordinate': int;
+obj Position {
+    has x: int,
+        y: int;
 }
 
-obj 'Wall'
-Wall {
-    has start_pos: 'Start Position of the Wall': Position,
-        end_pos: 'End Position of the Wall': Position;
+obj Wall {
+    has start_pos: Position,
+        end_pos: Position;
 }
 
-obj 'Map of the Level'
-Map {
-    has level: 'Level of the Map': Level;
-    has walls: 'Walls in the Map Other than Edges': list[Wall],
-        small_obstacles: 'Obstacles in the Map': list[Position];
-    has enemies: 'Enemies in the Map': list[Position];
-    has player_pos: 'Player Position in the Map': Position;
+obj Map {
+    has level: Level;
+    has walls: list[Wall],
+        small_obstacles: list[Position];
+    has enemies: list[Position];
+    has player_pos: Position;
 }
 
-obj 'Game Level'
-Level {
-    has name: 'Name of the Level': str,
-        difficulty: 'Difficulty of the Level': int;
-    has width: 'Width of the Map': int,
-        height: 'Height of the Map': int,
-        num_wall: 'Number of Walls in the Map': int,
-        num_enemies: 'Number of Enemies in the Map': int;
-    has time_countdown: 'Time Countdown of the Level': int,
-        n_retries_allowed: 'Number of Retries Allowed': int;
+obj Level {
+    has name: str,
+        difficulty: int;
+    has width: int,
+        height: int,
+        num_wall: int,
+        num_enemies: int;
+    has time_countdown: int,
+        n_retries_allowed: int;
 }
 
 obj LevelManager {
@@ -41,10 +37,8 @@ obj LevelManager {
         prev_levels: list[Level] = [],
         prev_level_maps: list[Map] = [];
 
-    can 'Create the Next Level'
-    create_next_level(last_levels: 'Last Played Levels': list[Level], difficulty: 'Difficulty of the New Level': int,
-     level_width: 'Width of the Level': int, level_height: 'Height of the Level': int)
-    -> 'Next Level': Level by llm(temperature=1.0);
+    can create_next_level(last_levels: list[Level], difficulty: int, level_width: int, level_height: int)
+    -> Level by llm(temperature=1.0);
     
     '''Get the Next Level'''
     can get_next_level -> tuple(Level, Map) {

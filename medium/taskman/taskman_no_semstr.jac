@@ -1,12 +1,11 @@
 import:py from jaclang.core.llms, OpenAI, Ollama;
 
-glob llm = OpenAI(model_name="gpt-3.5-turbo");
+glob llm = OpenAI(model_name="gpt-4o");
 
-obj 'A work to be done in the future'
-Task {
-    has description: 'Content of the Job to be done': str;
-    has time: 'Estimated time in minutes for one to finish the job': int,
-        priority: 'Estimated Priority for the Task (0-10)': int;
+obj Task {
+    has description: str;
+    has time_in_min: int,
+        priority_out_of_10: int;
 }
 
 with entry {

@@ -3,26 +3,23 @@ import:py wikipedia;
 
 glob llm = OpenAI(model_name="gpt-4o");
 
-enum 'Action Type'
-ActionType {
+enum ActionType {
     Search,
     Finish
 }
 
-obj 'Thought and Action'
-ThoughtAction {
+obj ThoughtAction {
     has thought: str,
         action_type: ActionType,
         action_info: str;
 }
 
-obj 'Thought Action Observation'
-ThoughtActionObservation {
+obj ThoughtActionObservation {
     has thought_action: ThoughtAction,
         observation: str;
 }
 
-glob example: 'Example of ReAct Process': dict = {
+glob example: dict = {
     "question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?",
     "react_process": [
         ThoughtActionObservation(
@@ -49,9 +46,8 @@ glob example: 'Example of ReAct Process': dict = {
     )
 };
 
-can 'Get Next Thought Action'
-get_next_thought_action(question: 'Question': str, prev_thought_action_observation: 'Previous Thought, Action and Observation': list[ThoughtActionObservation])
--> 'Thought & Action': ThoughtAction by llm(incl_info=(example));
+can get_next_thought_action(question: str, prev_thought_action_observation: list[ThoughtActionObservation])
+-> ThoughtAction by llm(incl_info=(example));
 
 """Get Answer to the Question"""
 can get_answer(question: str) -> str {
