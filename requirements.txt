@@ -9,3 +9,4 @@ loguru
 pyinstrument
 gprof2dot
 pandas
+matplotlib

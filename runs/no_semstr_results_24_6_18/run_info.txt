@@ -1,0 +1,19 @@
+model_used: gpt-4o
+mtllm_max_token = 1024 (default)
+mtllm_temperature = 0.7 (default)
+dspy_max_token = 1024 on level generation, rest kept the default value (150)
+dspy_temperature = 0.0 (default)
+
+Experimentation
+- Checking whether not providing Semstring to MTLLM reduced the results quality.
+
+Jac implementations
+- No Semstring were used. Function names were changed to adhere to additional information
+
+Conclusion
+- Even without Semstring (with additional function name changes on some occasions) Jac implementations ran smoothly and was 
+able to get desired outputs for harder problems such as wikipedia(ReACT implementation), Level Generation (Following Nested Types)
+etc.
+- Jaclang's way of providing direct typing hints (input and outputs) allowed models to correctly understand the desired outputs
+this can be seen evidently in the odd word out problem where even the examples is a list of list[str], str, str and the desired
+output is typed list[str, str], it was able to not repeat the list[str] portion.

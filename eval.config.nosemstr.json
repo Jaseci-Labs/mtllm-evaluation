@@ -1,12 +1,24 @@
 {
     "EASY": {
+        "translation": {
+            "jac": "easy/translation/translation_no_semstr.jac",
+            "dspy": "easy/translation/translation_dspy.py"
+        },
         "essay_reviewer": {
             "jac": "easy/essay_reviewer/essay_reviewer_no_semstr.jac",
             "dspy": "easy/essay_reviewer/essay_reviewer_dspy.py"
         },
+        "joke_gen": {
+            "jac": "easy/joke_gen/jokes_no_semstr.jac",
+            "dspy": "easy/joke_gen/jokes_dspy.py"
+        },
         "expert_answer": {
             "jac": "easy/expert_answer/expert_answer_no_semstr.jac",
             "dspy": "easy/expert_answer/expert_answer_dspy.py"
+        },
+        "odd_word_out": {
+            "jac": "easy/odd_word_out/odd_word_out_no_semstr.jac",
+            "dspy": "easy/odd_word_out/odd_word_out_dspy.py"
         }
     },
     "MEDIUM": {

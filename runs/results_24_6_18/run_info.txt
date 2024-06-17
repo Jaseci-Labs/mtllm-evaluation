@@ -1,0 +1,37 @@
+model_used: gpt-4o
+mtllm_max_token = 1024 (default)
+mtllm_temperature = 0.7 (default)
+
+* dspy implementations were not ran. as it similar to runs/no_semstr_results_24_6_18 or runs/no_semstr_results_24_6_18_max_token_1024
+
+Experimentation
+- Capturing Performance of MTLLM with Semstring
+
+Jac implementations
+- Everything thats going to involve with MTLLM is Semstringed heavily to make sure that the model is understanding the 
+context
+
+Conclusion
+- By comparing the non semstring evaluation results against semstring evaluation results, we can see there is no big difference
+when it comes to the typed outputs. Both provide correct typed output with required information.
+- But in non semstring implementations, developer has to makesure the variable names and function names are properly named
+and gives some kind of insight we are tring to achieve.
+for examples-
+In problem essay_reviewer, we have to provide that we are expecting a str which is A-D by naming the function `give_grade_A_to_D`
+instead of `give_grade` in semstring version.
+In this the best solution could be one of the Following
+1. Adding Semstring to the Return Type hints
+```jac
+can give_grade(summary: str) -> 'A-D': str by llm();
+```
+2. Using a ENUM as the output instead of str
+```jac
+enum Grade {
+    A, B, C, D
+}
+can give_grade_A_to_D(summary: str) -> Grade by llm();
+```
+- Implementation with Semstring is more robust when it comes using already created classes where you dont want to 
+change the variable names, need to provide more context or need more inputs or rules.
+- Semstring approach uses more tokens (prompt tokens)
+- It is advised to start with the non-semstring approach in the begining and add semstring according to your need.

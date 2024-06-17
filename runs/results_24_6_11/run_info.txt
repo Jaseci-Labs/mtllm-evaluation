@@ -1,0 +1,5 @@
+model_used: gpt-4o
+mtllm_max_token = 1024 (default)
+mtllm_temperature = 0.7 (default)
+dspy_max_token = 1024 on level generation, rest kept the default value (150)
+dspy_temperature = 0.0 (default)

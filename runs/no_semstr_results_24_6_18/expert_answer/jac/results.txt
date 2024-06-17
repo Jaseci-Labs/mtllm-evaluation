@@ -1,0 +1,61 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "What are Large Language Models?"
+
+[Output Information]
+(str)
+
+[Type Explanations]
+
+
+[Action]
+get_suitable_expert
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] The question "What are Large Language Models?" pertains to the field of artificial intelligence and natural language processing.
+[Output] AI/NLP Expert
+CompletionUsage(completion_tokens=32, prompt_tokens=134, total_tokens=166)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "What are Large Language Models?"
+(expert) (str) = "AI/NLP Expert"
+
+[Output Information]
+(str)
+
+[Type Explanations]
+
+
+[Action]
+get_answer_of_expert
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] Large Language Models (LLMs) are advanced artificial intelligence systems trained on vast amounts of text data from diverse sources. They can understand, generate, and manipulate human language with a high degree of fluency and accuracy. Examples include OpenAI's GPT-3 and Google's BERT. These models are used in various applications such as chatbots, translation services, and content creation.
+CompletionUsage(completion_tokens=78, prompt_tokens=140, total_tokens=218)
+AI/NLP Expert says: 'Large Language Models (LLMs) are advanced artificial intelligence systems trained on vast amounts of text data from diverse sources. They can understand, generate, and manipulate human language with a high degree of fluency and accuracy. Examples include OpenAI's GPT-3 and Google's BERT. These models are used in various applications such as chatbots, translation services, and content creation.
