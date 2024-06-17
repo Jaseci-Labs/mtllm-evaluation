@@ -10,8 +10,6 @@ import sys
 import argparse
 import time
 
-from dspy import OpenAI
-
 
 def run_dspy_program(program_name, program_path, profiler, output_dir):
     os.makedirs(f"{output_dir}/{program_name}/dspy", exist_ok=True)
@@ -113,5 +111,7 @@ if __name__ == "__main__":
             time.sleep(60)
 
             logger.info(f"Running Dspy program: {paths['dspy']}")
-            run_dspy_program(problem_name, paths["dspy"], args.profiler, args.output_dir)
+            run_dspy_program(
+                problem_name, paths["dspy"], args.profiler, args.output_dir
+            )
             time.sleep(60)
