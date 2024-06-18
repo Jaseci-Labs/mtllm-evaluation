@@ -1,13 +1,6 @@
-import:py sys;
-::py::
-sys.path.append('/root/miniconda3/lib/python3.12/site-packages/Ollama')
-::py::
+import:py from jaclang.core.llms, OpenAI;
 
-import:py from jaclang.core.llms, Ollama;
-
-glob llm = Ollama(
-            model_name = "phi3:3.8b" # Will pull model if does not exists
-            );
+glob llm = OpenAI(model_name='gpt-4o');
 
 can 'evaluate essay'
 evaluate(essay:str, evaluation_criteria:list)

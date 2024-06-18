@@ -1,7 +1,7 @@
-global llm = OpenAI();
+glob llm = OpenAI();
 
 walker essay_evaluator {
-    has essay;
+    has essay:str;
 
     can review_essay {
         report {remarks: llm.prompt("Generate a brief remark for the following essay: " + essay)};
@@ -10,9 +10,9 @@ walker essay_evaluator {
 }
 
 walker init {
-    spawn here > essay_evaluator {
+    root spawn essay_evaluator := essay_evaluator {
         essay: "This is a sample essay to test the evaluation system."
     };
-    take > essay_evaluator.review_essay;
+    take = essay_evaluator.review_essay;
     print(take)
 }

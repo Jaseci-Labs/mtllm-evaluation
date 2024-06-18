@@ -1,13 +1,11 @@
-import:py sys;
-::py::
-sys.path.append('/root/miniconda3/lib/python3.12/site-packages/Ollama')
-::py::
+# import:py sys;
+# ::py::
+# sys.path.append('/root/miniconda3/lib/python3.12/site-packages/Ollama')
+# ::py::
 
-import:py from jaclang.core.llms, Ollama;
+import:py from jaclang.core.llms, OpenAI;
 
-glob llm = Ollama(
-            model_name = "phi3:3.8b" # Will pull model if does not exists
-            );
+glob llm = OpenAI(model_name='gpt-4o');
 can 
 summarize(body : str, criteria : str)
     -> 'complete the task described in the above criteria and give resoning for your answer' : str by llm(temperature=0.8, reason=True);
