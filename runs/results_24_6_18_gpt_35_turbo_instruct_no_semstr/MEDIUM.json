@@ -1,0 +1,268 @@
+{
+    "mcq_reason": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\n(question) (str) = \"It was Sept. 1st, 2021 a week ago. What is the date 10 days ago in MM/DD/YYYY?\"\n(choices) (dict[str, str]) = {\"A\": \"08/29/2021\", \"B\": \"08/28/2021\", \"C\": \"08/29/1925\", \"D\": \"08/30/2021\", \"E\": \"05/25/2021\", \"F\": \"09/19/2021\"}\n\n[Output Information]\n(str)\n\n[Type Explanations]\n\n\n[Action]\nget_answer_key\n\nGenerate and return the output result(s) only, adhering to the provided Output Type in the following format. Perform the operation in a chain of thoughts.(Think Step by Step)\n\n[Chain of Thoughts] <Chain of Thoughts>\n[Output] <Result>\n\n---\n\n[Chain of Thoughts] Lets Think Step by Step,\n1.",
+                    "output": "Convert the given string input into a date format using strptime function and store it in a variable (date_input)\n2. Use timedelta function to subtract 10 days from the date_input and store it in a variable (date_output)\n3. Convert the date_output into a string format using strftime function and store it in a variable (str_output)\n4. Check the given choices dictionary and find the key with the value equal to str_output\n5. Return the key as output\n\n[Output] \"A\"",
+                    "token_usage": {
+                        "completion_tokens": 103,
+                        "prompt_tokens": 254,
+                        "total_tokens": 357
+                    }
+                }
+            ],
+            "output": ")\nA"
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Provide the Answer for the Given Question (A-F)\n\n---\n\nFollow the following format.\n\nQuestion: ${question}\n\nChoices: ${choices}\n\nReasoning: Let's think step by step in order to ${produce the answer}. We ...\n\nAnswer: ${answer}\n\n---\n\nQuestion: It was Sept. 1st, 2021 a week ago. What is the date 10 days ago in MM/DD/YYYY?\n\nChoices: (A) 08/29/2021 (B) 08/28/2021 (C) 08/29/1925 (D) 08/30/2021 (E) 05/25/2021 (F) 09/19/2021\n\nReasoning: Let's think step by step in order to",
+                    "output": "find the date 10 days ago. First, we need to subtract 10 from the day, which gives us 21. Then, we need to subtract 1 from the month, which gives us 08. Finally, we need to subtract 2021 from the year, which gives us 1925. Therefore, the date 10 days ago is 08/29/1925.\n\nAnswer: (C) 08/29/1925",
+                    "token_usage": {
+                        "completion_tokens": 93,
+                        "prompt_tokens": 157,
+                        "total_tokens": 250
+                    }
+                }
+            ],
+            "output": "find the date 10 days ago. First, we need to subtract 10 from the day, which gives us 21. Then, we need to subtract 1 from the month, which gives us 08. Finally, we need to subtract 2021 from the year, which gives us 1925. Therefore, the date 10 days ago is 08/29/1925. (C) 08/29/1925"
+        }
+    },
+    "personality_finder": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\n(name) (str) = \"Martin Luther King Jr.\"\n\n[Output Information]\n(Person)\n\n[Type Explanations]\n(Person) (obj) eg:- Person(full_name=str, yod=int, personality=Personality) -> (full_name) (str), (yod) (int), (personality) (Personality)\n(Personality) (Enum) eg:- Personality.EXTROVERT -> (INTROVERT) (EnumItem), (EXTROVERT) (EnumItem)\n\n[Action]\nget_person_info\nGenerate and return the output result(s) only, adhering to the provided Output Type in the following format\n\n[Output] <result>\n\n---\n\n[Output]",
+                    "output": "[Output] Martin Luther King Jr., 1929, EXTROVERT",
+                    "token_usage": {
+                        "completion_tokens": 12,
+                        "prompt_tokens": 198,
+                        "total_tokens": 210
+                    }
+                }
+            ],
+            "output": ")"
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Get Person Information use common knowledge.\n\n---\n\nFollow the following format.\n\nName: Name of the Person\nPerson: ${person}. Respond with a single JSON object. JSON Schema: {\"$defs\": {\"Personality\": {\"enum\": [\"Introvert\", \"Extrovert\"], \"title\": \"Personality\", \"type\": \"string\"}}, \"properties\": {\"full_name\": {\"description\": \"Fullname of the Person\", \"title\": \"Full Name\", \"type\": \"string\"}, \"yod\": {\"description\": \"Year of Death\", \"title\": \"Yod\", \"type\": \"integer\"}, \"personality\": {\"allOf\": [{\"$ref\": \"#/$defs/Personality\"}], \"description\": \"Personality Type\"}}, \"required\": [\"full_name\", \"yod\", \"personality\"], \"title\": \"Person\", \"type\": \"object\"}\n\n---\n\nName: Martin Luther King Jr.\nPerson:",
+                    "output": "{\"full_name\": \"Martin Luther King Jr.\", \"yod\": 1968, \"personality\": \"Extrovert\"}",
+                    "token_usage": {
+                        "completion_tokens": 27,
+                        "prompt_tokens": 190,
+                        "total_tokens": 217
+                    }
+                }
+            ],
+            "output": "Martin Luther King Jr. was an Extrovert person who died in 1968."
+        }
+    },
+    "template": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n[Information]\n\n\n[Context]\n\n\n[Inputs Information]\n(name) (str) = \"Bruno Mars\"\n\n[Output Information]\n(Singer)\n\n[Type Explanations]\n(Singer) (obj) eg:- Singer(name=str, age=int, top_2_songs=list[str]) -> (name) (str), (age) (int), (top_2_songs) (list[str])\n\n[Action]\nCreate an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.\nGenerate and return the output result(s) only, adhering to the provided Output Type in the following format\n\n[Output] <result>\n\n---\n\n[Output]",
+                    "output": "[Output] Singer(name=\"Bruno Mars\", age=36, top_2_songs=[\"Uptown Funk\", \"Just The Way You Are\"])",
+                    "token_usage": {
+                        "completion_tokens": 29,
+                        "prompt_tokens": 198,
+                        "total_tokens": 227
+                    }
+                }
+            ],
+            "output": ")\nBruno Mars is 36 years old. His top 2 songs are ['Uptown Funk', 'Just The Way You Are']."
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Get Person Information.\n\n---\n\nFollow the following format.\n\nName: name of the singer\nSinger: ${singer}. Respond with a single JSON object. JSON Schema: {\"description\": \"Singer.\", \"properties\": {\"name\": {\"description\": \"Name of the Singer\", \"title\": \"Name\", \"type\": \"string\"}, \"age\": {\"description\": \"Age\", \"title\": \"Age\", \"type\": \"integer\"}, \"top_songs\": {\"description\": \"His/Her's Top 2 Songs\", \"items\": {\"type\": \"string\"}, \"title\": \"Top Songs\", \"type\": \"array\"}}, \"required\": [\"name\", \"age\", \"top_songs\"], \"title\": \"Singer\", \"type\": \"object\"}\n\n---\n\nName: Bruno Mars\nSinger:",
+                    "output": "${singer}. Respond with a single JSON object. JSON Schema: {\"description\": \"Singer.\", \"properties\": {\"name\": {\"description\": \"Name of the Singer\", \"title\": \"Name\", \"type\": \"string\"}, \"age\": {\"description\": \"Age\", \"title\": \"Age\", \"type\": \"integer\"}, \"top_songs\": {\"description\": \"His/Her's Top 2 Songs\", \"items\": {\"type\": \"string\"}, \"title\": \"Top Songs\", \"type\": \"array\"}}, \"required\": [\"name\", \"age\", \"top_songs\"], \"title\": \"Singer\", \"type\": \"object\"}",
+                    "token_usage": {
+                        "completion_tokens": 150,
+                        "prompt_tokens": 166,
+                        "total_tokens": 316
+                    }
+                },
+                {
+                    "prompt": "Make a very succinct json object that validates with the following schema\n\n---\n\nFollow the following format.\n\nJson Schema: ${json_schema}\nJson Object: ${json_object}\n\n---\n\nJson Schema: {\"description\": \"Singer.\", \"properties\": {\"name\": {\"description\": \"Name of the Singer\", \"title\": \"Name\", \"type\": \"string\"}, \"age\": {\"description\": \"Age\", \"title\": \"Age\", \"type\": \"integer\"}, \"top_songs\": {\"description\": \"His/Her's Top 2 Songs\", \"items\": {\"type\": \"string\"}, \"title\": \"Top Songs\", \"type\": \"array\"}}, \"required\": [\"name\", \"age\", \"top_songs\"], \"title\": \"Singer\", \"type\": \"object\"}\nJson Object:",
+                    "output": "{\"name\": \"Adele\", \"age\": 33, \"top_songs\": [\"Hello\", \"Someone Like You\"]}",
+                    "token_usage": {
+                        "completion_tokens": 27,
+                        "prompt_tokens": 163,
+                        "total_tokens": 190
+                    }
+                },
+                {
+                    "prompt": "Get Person Information.\n\n---\n\nFollow the following format.\n\nName: name of the singer\n\nPast Error (singer): An error to avoid in the future\n\nSinger:\n${singer}. Respond with a single JSON object. \nYou MUST use this format: {\"name\": \"Adele\", \"age\": 33, \"top_songs\": [\"Hello\", \"Someone Like You\"]}\nJSON Schema: {\"description\": \"Singer.\", \"properties\": {\"name\": {\"description\": \"Name of the Singer\", \"title\": \"Name\", \"type\": \"string\"}, \"age\": {\"description\": \"Age\", \"title\": \"Age\", \"type\": \"integer\"}, \"top_songs\": {\"description\": \"His/Her's Top 2 Songs\", \"items\": {\"type\": \"string\"}, \"title\": \"Top Songs\", \"type\": \"array\"}}, \"required\": [\"name\", \"age\", \"top_songs\"], \"title\": \"Singer\", \"type\": \"object\"}\n\n---\n\nName: Bruno Mars\n\nPast Error (singer): ValueError('json output should start and end with { and }')\n\nSinger:",
+                    "output": "",
+                    "token_usage": {
+                        "completion_tokens": 33,
+                        "prompt_tokens": 233,
+                        "total_tokens": 266
+                    }
+                }
+            ],
+            "output": "Bruno Mars is 36 years old. His top 2 songs are ['Just the Way You Are', 'Uptown Funk']."
+        }
+    },
+    "text_to_type": {
+        "jac": {
+            "llm_requests": [
+                {
+                    "prompt": "[System Prompt]\nThis is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.\nInput/Type formatting: Explanation of the Input (variable_name) (type) = value\n\n[Information]\n(info) (str) = \"Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, Switzerland.\"\n\n[Context]\n\n\n[Inputs Information]\n\n\n[Output Information]\n(Person)\n\n[Type Explanations]\n(Person) (obj) eg:- Person(name=str, age=int, employer=Employer, job=str) -> (name) (str), (age) (int), (employer) (Employer), (job) (str)\n(Employer) (obj) eg:- Employer(employer_name=str, location=str) -> (employer_name) (str), (location) (str)\n\n[Action]\nCreate an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.\nGenerate and return the output result(s) only, adhering to the provided Output Type in the following format\n\n[Output] <result>\n\n---\n\n[Output]",
+                    "output": "[Output] Person(name='Alice', age=21, employer=Employer(employer_name='LMQL Inc', location='Zurich'), job='engineer')",
+                    "token_usage": {
+                        "completion_tokens": 32,
+                        "prompt_tokens": 247,
+                        "total_tokens": 279
+                    }
+                }
+            ],
+            "output": ")\nTheir name is Alice and she works in Zurich."
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Get Person Information.\n\n---\n\nFollow the following format.\n\nInfo: Person Information\nPerson: ${person}. Respond with a single JSON object. JSON Schema: {\"$defs\": {\"Employer\": {\"properties\": {\"employer_name\": {\"description\": \"Employer Name\", \"title\": \"Employer Name\", \"type\": \"string\"}, \"location\": {\"description\": \"Location\", \"title\": \"Location\", \"type\": \"string\"}}, \"required\": [\"employer_name\", \"location\"], \"title\": \"Employer\", \"type\": \"object\"}}, \"properties\": {\"name\": {\"description\": \"Name\", \"title\": \"Name\", \"type\": \"string\"}, \"age\": {\"description\": \"Age\", \"title\": \"Age\", \"type\": \"integer\"}, \"job\": {\"description\": \"Job\", \"title\": \"Job\", \"type\": \"string\"}, \"employer\": {\"allOf\": [{\"$ref\": \"#/$defs/Employer\"}], \"description\": \"Employer\"}}, \"required\": [\"name\", \"age\", \"job\", \"employer\"], \"title\": \"Person\", \"type\": \"object\"}\n\n---\n\nInfo: Alice is a 21 years old and works as an engineer at LMQL Inc in Zurich, Switzerland.\nPerson:",
+                    "output": "{\"name\": \"Alice\", \"age\": 21, \"job\": \"engineer\", \"employer\": {\"employer_name\": \"LMQL Inc\", \"location\": \"Zurich, Switzerland\"}}",
+                    "token_usage": {
+                        "completion_tokens": 41,
+                        "prompt_tokens": 259,
+                        "total_tokens": 300
+                    }
+                }
+            ],
+            "output": "Their name is Alice and she works in Zurich, Switzerland."
+        }
+    },
+    "taskman": {
+        "jac": {
+            "llm_requests": [],
+            "output": ""
+        },
+        "dspy": {
+            "llm_requests": [
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\nTask: ${task}. Respond with a single JSON object. JSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Have some sleep\nTask:",
+                    "output": "{\"properties\": {\"description\": {\"description\": \"Get some rest and sleep for at least 8 hours\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"480\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"8\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}",
+                    "token_usage": {
+                        "completion_tokens": 101,
+                        "prompt_tokens": 152,
+                        "total_tokens": 253
+                    }
+                },
+                {
+                    "prompt": "Make a very succinct json object that validates with the following schema\n\n---\n\nFollow the following format.\n\nJson Schema: ${json_schema}\nJson Object: ${json_object}\n\n---\n\nJson Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\nJson Object:",
+                    "output": "{\"description\": \"Clean the house\", \"time\": 60, \"priority\": 8}",
+                    "token_usage": {
+                        "completion_tokens": 20,
+                        "prompt_tokens": 154,
+                        "total_tokens": 174
+                    }
+                },
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\n\nPast Error (task): An error to avoid in the future\n\nTask:\n${task}. Respond with a single JSON object. \nYou MUST use this format: {\"description\": \"Clean the house\", \"time\": 60, \"priority\": 8}\nJSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Have some sleep\n\nPast Error (task): Field required: description (error type: missing); Field required: time (error type: missing); Field required: priority (error type: missing)\n\nTask:",
+                    "output": "",
+                    "token_usage": {
+                        "completion_tokens": 21,
+                        "prompt_tokens": 227,
+                        "total_tokens": 248
+                    }
+                },
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\nTask: ${task}. Respond with a single JSON object. JSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Enjoy a better weekend with my girlfriend\nTask:",
+                    "output": "{\"properties\": {\"description\": {\"description\": \"Spend quality time with my girlfriend and make her feel special\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"120 minutes\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"10 - High Priority\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}",
+                    "token_usage": {
+                        "completion_tokens": 106,
+                        "prompt_tokens": 156,
+                        "total_tokens": 262
+                    }
+                },
+                {
+                    "prompt": "Make a very succinct json object that validates with the following schema\n\n---\n\nFollow the following format.\n\nJson Schema: ${json_schema}\nJson Object: ${json_object}\n\n---\n\nJson Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\nJson Object:",
+                    "output": "{\"description\": \"Clean the house\", \"time\": 60, \"priority\": 8}",
+                    "token_usage": {
+                        "completion_tokens": 20,
+                        "prompt_tokens": 154,
+                        "total_tokens": 174
+                    }
+                },
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\n\nPast Error (task): An error to avoid in the future\n\nTask:\n${task}. Respond with a single JSON object. \nYou MUST use this format: {\"description\": \"Clean the house\", \"time\": 60, \"priority\": 8}\nJSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Enjoy a better weekend with my girlfriend\n\nPast Error (task): Field required: description (error type: missing); Field required: time (error type: missing); Field required: priority (error type: missing)\n\nTask:",
+                    "output": "",
+                    "token_usage": {
+                        "completion_tokens": 25,
+                        "prompt_tokens": 231,
+                        "total_tokens": 256
+                    }
+                },
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\nTask: ${task}. Respond with a single JSON object. JSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Work on Jaseci Project\nTask:",
+                    "output": "{\"properties\": {\"description\": {\"description\": \"Work on the Jaseci Project by completing the assigned tasks and meeting deadlines\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the project\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Project (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}",
+                    "token_usage": {
+                        "completion_tokens": 122,
+                        "prompt_tokens": 155,
+                        "total_tokens": 277
+                    }
+                },
+                {
+                    "prompt": "Make a very succinct json object that validates with the following schema\n\n---\n\nFollow the following format.\n\nJson Schema: ${json_schema}\nJson Object: ${json_object}\n\n---\n\nJson Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\nJson Object:",
+                    "output": "{\"description\": \"Clean the house\", \"time\": 60, \"priority\": 8}",
+                    "token_usage": {
+                        "completion_tokens": 20,
+                        "prompt_tokens": 154,
+                        "total_tokens": 174
+                    }
+                },
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\n\nPast Error (task): An error to avoid in the future\n\nTask:\n${task}. Respond with a single JSON object. \nYou MUST use this format: {\"description\": \"Clean the house\", \"time\": 60, \"priority\": 8}\nJSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Work on Jaseci Project\n\nPast Error (task): Field required: description (error type: missing); Field required: time (error type: missing); Field required: priority (error type: missing)\n\nTask:",
+                    "output": "",
+                    "token_usage": {
+                        "completion_tokens": 24,
+                        "prompt_tokens": 230,
+                        "total_tokens": 254
+                    }
+                },
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\nTask: ${task}. Respond with a single JSON object. JSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Teach EECS 281 Students\nTask:",
+                    "output": "{\"description\": \"Teach EECS 281 students about algorithms and data structures\", \"time\": 60, \"priority\": 9}",
+                    "token_usage": {
+                        "completion_tokens": 29,
+                        "prompt_tokens": 155,
+                        "total_tokens": 184
+                    }
+                },
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\nTask: ${task}. Respond with a single JSON object. JSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Enjoy family time with my parents\nTask:",
+                    "output": "{\"properties\": {\"description\": {\"description\": \"Spend quality time with my parents and enjoy their company\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"2 hours\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"8\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}",
+                    "token_usage": {
+                        "completion_tokens": 102,
+                        "prompt_tokens": 155,
+                        "total_tokens": 257
+                    }
+                },
+                {
+                    "prompt": "Make a very succinct json object that validates with the following schema\n\n---\n\nFollow the following format.\n\nJson Schema: ${json_schema}\nJson Object: ${json_object}\n\n---\n\nJson Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\nJson Object:",
+                    "output": "{\"description\": \"Clean the house\", \"time\": 60, \"priority\": 8}",
+                    "token_usage": {
+                        "completion_tokens": 20,
+                        "prompt_tokens": 154,
+                        "total_tokens": 174
+                    }
+                },
+                {
+                    "prompt": "Get Task.\n\n---\n\nFollow the following format.\n\nInfo: Task Information\n\nPast Error (task): An error to avoid in the future\n\nTask:\n${task}. Respond with a single JSON object. \nYou MUST use this format: {\"description\": \"Clean the house\", \"time\": 60, \"priority\": 8}\nJSON Schema: {\"properties\": {\"description\": {\"description\": \"Content of the Job to be done\", \"title\": \"Description\", \"type\": \"string\"}, \"time\": {\"description\": \"Estimated time in minutes for one to finish the job\", \"title\": \"Time\", \"type\": \"integer\"}, \"priority\": {\"description\": \"Estimated Priority for the Task (0-10)\", \"title\": \"Priority\", \"type\": \"integer\"}}, \"required\": [\"description\", \"time\", \"priority\"], \"title\": \"Task\", \"type\": \"object\"}\n\n---\n\nInfo: Enjoy family time with my parents\n\nPast Error (task): Field required: description (error type: missing); Field required: time (error type: missing); Field required: priority (error type: missing)\n\nTask:",
+                    "output": "",
+                    "token_usage": {
+                        "completion_tokens": 25,
+                        "prompt_tokens": 230,
+                        "total_tokens": 255
+                    }
+                }
+            ],
+            "output": "[Task(description='Have some sleep', time=480, priority=10), Task(description='Spend quality time with my girlfriend', time=120, priority=9), Task(description='Work on Jaseci Project', time=120, priority=9), Task(description='Teach EECS 281 students about algorithms and data structures', time=60, priority=9), Task(description='Spend quality time with my parents', time=120, priority=9)]"
+        }
+    }
+}
