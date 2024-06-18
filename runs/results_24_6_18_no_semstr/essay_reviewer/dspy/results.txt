@@ -1,0 +1,119 @@
+Input Prompt:
+ Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+
+---
+
+Follow the following format.
+
+Essay: Essay
+Criteria: Criteria
+Judgement: Judgement
+
+---
+
+Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.
+Criteria: Clarity
+Judgement:
+Output:
+ Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.
+
+Criteria: Clarity
+
+Judgement: The essay is generally
+{'completion_tokens': 150, 'prompt_tokens': 189, 'total_tokens': 339}
+Input Prompt:
+ Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+
+---
+
+Follow the following format.
+
+Essay: Essay
+Criteria: Criteria
+Judgement: Judgement
+
+---
+
+Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.
+Criteria: Originality
+Judgement:
+Output:
+ Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.
+
+Criteria: Originality
+
+Judgement: The essay presents a
+{'completion_tokens': 150, 'prompt_tokens': 189, 'total_tokens': 339}
+Input Prompt:
+ Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+
+---
+
+Follow the following format.
+
+Essay: Essay
+Criteria: Criteria
+Judgement: Judgement
+
+---
+
+Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.
+Criteria: Evidence
+Judgement:
+Output:
+ Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.
+
+Criteria: Evidence
+
+Judgement: The essay provides some general
+{'completion_tokens': 150, 'prompt_tokens': 188, 'total_tokens': 338}
+Input Prompt:
+ Generate a summary with the given judgements.
+
+---
+
+Follow the following format.
+
+Essay: Essay
+Judgements: Judgements
+Summary: Summary
+
+---
+
+Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.
+Judgements: {'Clarity': 'Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\n\nCriteria: Clarity\n\nJudgement: The essay is generally', 'Originality': 'Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\n\nCriteria: Originality\n\nJudgement: The essay presents a', 'Evidence': 'Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.\n\nCriteria: Evidence\n\nJudgement: The essay provides some general'}
+Summary:
+Output:
+ Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.
+
+Judgements: {'Clarity': 'Essay: With a
+{'completion_tokens': 150, 'prompt_tokens': 656, 'total_tokens': 806}
+Input Prompt:
+ Give essay a letter grade (A-D).
+
+---
+
+Follow the following format.
+
+Summary: Summary
+Grade: Grade
+
+---
+
+Summary: Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences. Judgements: {'Clarity': 'Essay: With a
+Grade:
+Output:
+ Summary: The essay discusses Spain's diverse population, including its 45 million native Spaniards and 3.5 million immigrants. It highlights Spain's cultural richness, linguistic diversity, and its status as a major global economy and a popular destination for tourists and immigrants. The essay also touches on the challenges Spaniards have faced in preserving their linguistic rights amidst war, ignorance, criticism, and governmental issues.
+
+Grade: B
+
+The essay provides a clear overview of Spain's demographic and cultural landscape, but it could benefit from more detailed examples and a smoother flow of ideas. The abrupt ending and incomplete sentence in the judgments section suggest a need for better proofreading and coherence.
+{'completion_tokens': 132, 'prompt_tokens': 186, 'total_tokens': 318}
+Reviewer Notes:  Essay: With a population of approximately 45 million Spaniards and 3.5 million immigrants, Spain is a country of contrasts where the richness of its culture blends it up with the variety of languages and dialects used. Being one of the largest economies worldwide, and the second largest country in Europe, Spain is a very appealing destination for tourists as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at least two different languages, but protecting and preserving that right has not been easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments, in order to preserve and defend what identifies them, and deal with the consequences.
+
+Judgements: {'Clarity': 'Essay: With a
+Grade:  Summary: The essay discusses Spain's diverse population, including its 45 million native Spaniards and 3.5 million immigrants. It highlights Spain's cultural richness, linguistic diversity, and its status as a major global economy and a popular destination for tourists and immigrants. The essay also touches on the challenges Spaniards have faced in preserving their linguistic rights amidst war, ignorance, criticism, and governmental issues.
+
+Grade: B
+
+The essay provides a clear overview of Spain's demographic and cultural landscape, but it could benefit from more detailed examples and a smoother flow of ideas. The abrupt ending and incomplete sentence in the judgments section suggest a need for better proofreading and coherence.

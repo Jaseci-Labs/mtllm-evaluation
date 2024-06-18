@@ -1,0 +1,160 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(description) (str) = "Have some sleep"
+
+[Output Information]
+(Task)
+
+[Type Explanations]
+(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] Based on the input, we need to create a task object. The description of the task is provided. We need to come up with the time in minutes and priority out of 10 for the task. Since the task is "Have some sleep", a reasonable duration would be 480 minutes (8 hours), which is the recommended sleep duration for adults. The priority could be set to 10, as sleep is extremely important for overall health and wellbeing.
+
+[Output] ("Have some sleep", 480, 10)
+CompletionUsage(completion_tokens=109, prompt_tokens=207, total_tokens=316)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(description) (str) = "Enjoy a better weekend with my girlfriend"
+
+[Output Information]
+(Task)
+
+[Type Explanations]
+(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] As no specific time or priority level is given for the task in the input, we will assign arbitrary values. Let's assume the task takes up the whole day (24 hours or 1440 minutes) and is of high priority (8 out of 10).
+
+[Output] ("Enjoy a better weekend with my girlfriend", 1440, 8)
+CompletionUsage(completion_tokens=76, prompt_tokens=211, total_tokens=287)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(description) (str) = "Work on Jaseci Project"
+
+[Output Information]
+(Task)
+
+[Type Explanations]
+(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] Based on the given input, the task description is provided but the time in minutes and priority out of 10 are not provided. These values are subjective and can vary greatly depending on the individual and the specific circumstances. However, for the purpose of this operation, we will assume that the "Work on Jaseci Project" task takes 120 minutes and has a priority of 8 out of 10.
+
+[Output] ("Work on Jaseci Project", 120, 8)
+CompletionUsage(completion_tokens=103, prompt_tokens=210, total_tokens=313)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(description) (str) = "Teach EECS 281 Students"
+
+[Output Information]
+(Task)
+
+[Type Explanations]
+(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] Based on the description provided, it seems the task involves teaching a computer science course (EECS 281). This task would probably take around 180 minutes (3 hours) assuming it's a standard university class length. The priority could be considered high, let's say 8 out of 10, as teaching students in a computer science course is crucial task.
+[Output] ("Teach EECS 281 Students", 180, 8)
+CompletionUsage(completion_tokens=95, prompt_tokens=211, total_tokens=306)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(description) (str) = "Enjoy family time with my parents"
+
+[Output Information]
+(Task)
+
+[Type Explanations]
+(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] As per the task, we need to create an object with the provided description "Enjoy family time with my parents". We don't have the exact values for time_in_min and priority_out_of_10. However, assuming a reasonable time to spend with family could be around 120 minutes (2 hours) and considering the importance of family time, the priority could be set as 8 out of 10.
+
+[Output] "Enjoy family time with my parents", 120, 8
+CompletionUsage(completion_tokens=102, prompt_tokens=210, total_tokens=312)
+[('Have some sleep', 480, 10), ('Enjoy a better weekend with my girlfriend', 1440, 8), ('Work on Jaseci Project', 120, 8), ('Teach EECS 281 Students', 180, 8), ('Enjoy family time with my parents', 120, 8)]

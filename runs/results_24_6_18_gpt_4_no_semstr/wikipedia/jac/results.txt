@@ -1,0 +1,499 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+(example) (dict) = {"question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "react_process": [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", action_type=ActionType.Search, action_info="Colorado orogeny"), observation="The Colorado orogeny was an episode of mountain building (an orogeny) ..."), ThoughtActionObservation(thought_action=ThoughtAction(thought="It does not mention the eastern sector. So I need to look up eastern sector.", action_type=ActionType.Search, action_info="eastern sector of the Colorado orogeny"), observation="The eastern sector of the Colorado orogeny extends into the High Plains.... ")], "final_thought_action": ThoughtAction(thought="High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft", action_type=ActionType.Finish, action_info="1,800 to 7,000 ft")}
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "Where is Apple Headquaters located?"
+(prev_thought_action_observation) (list) = []
+
+[Output Information]
+(ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+[Action]
+get_next_thought_action
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ ThoughtAction(thought="I need to search for the location of Apple Headquarters.", action_type=ActionType.Search, action_info="Apple Headquarters location")
+CompletionUsage(completion_tokens=30, prompt_tokens=457, total_tokens=487)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="I need to search for the location of Apple Headquarters.", action_type=ActionType.Search, action_info="Apple Headquarters location")
+
+[Previous Result You Provided]
+None
+
+[Desired Output Type]
+ (ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Above output is not in the desired Output Format/Type. Please provide the output in the desired type. Do not repeat the previously provided output.
+Important: Do not provide the code or the methodology. Only provide
+the output in the desired format.
+
+Output:
+ ThoughtAction(thought="I need to find out where Apple's main office is.", action_type=ActionType.Search, action_info="Apple main office location")
+CompletionUsage(completion_tokens=32, prompt_tokens=188, total_tokens=220)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="I need to find out where Apple's main office is.", action_type=ActionType.Search, action_info="Apple main office location")
+
+[Desired Output Type]
+ThoughtAction
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Check if the output is exactly in the desired Output Type. Important: Just say 'Yes' or 'No'.
+
+Output:
+ Yes
+CompletionUsage(completion_tokens=1, prompt_tokens=154, total_tokens=155)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+(example) (dict) = {"question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "react_process": [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", action_type=ActionType.Search, action_info="Colorado orogeny"), observation="The Colorado orogeny was an episode of mountain building (an orogeny) ..."), ThoughtActionObservation(thought_action=ThoughtAction(thought="It does not mention the eastern sector. So I need to look up eastern sector.", action_type=ActionType.Search, action_info="eastern sector of the Colorado orogeny"), observation="The eastern sector of the Colorado orogeny extends into the High Plains.... ")], "final_thought_action": ThoughtAction(thought="High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft", action_type=ActionType.Finish, action_info="1,800 to 7,000 ft")}
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "Where is Apple Headquaters located?"
+(prev_thought_action_observation) (list) = [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to find out where Apple's main office is.", action_type=ActionType.Search, action_info="Apple main office location"), observation="Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond.")]
+
+[Output Information]
+(ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+[Action]
+get_next_thought_action
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ ThoughtAction(thought="Apple's headquarters, Apple Park, is located in Cupertino, California, United States.", action_type=ActionType.Finish, action_info="Cupertino, California, United States")
+CompletionUsage(completion_tokens=41, prompt_tokens=693, total_tokens=734)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="Apple's headquarters, Apple Park, is located in Cupertino, California, United States.", action_type=ActionType.Finish, action_info="Cupertino, California, United States")
+
+[Previous Result You Provided]
+None
+
+[Desired Output Type]
+ (ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Above output is not in the desired Output Format/Type. Please provide the output in the desired type. Do not repeat the previously provided output.
+Important: Do not provide the code or the methodology. Only provide
+the output in the desired format.
+
+Output:
+ ThoughtAction(thought="Apple Park is the corporate headquarters of Apple Inc., located in Cupertino, California.", action_type=ActionType.Search, action_info="Apple Park, Cupertino, California")
+CompletionUsage(completion_tokens=38, prompt_tokens=199, total_tokens=237)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="Apple Park is the corporate headquarters of Apple Inc., located in Cupertino, California.", action_type=ActionType.Search, action_info="Apple Park, Cupertino, California")
+
+[Desired Output Type]
+ThoughtAction
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Check if the output is exactly in the desired Output Type. Important: Just say 'Yes' or 'No'.
+
+Output:
+ Yes
+CompletionUsage(completion_tokens=1, prompt_tokens=160, total_tokens=161)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+(example) (dict) = {"question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "react_process": [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", action_type=ActionType.Search, action_info="Colorado orogeny"), observation="The Colorado orogeny was an episode of mountain building (an orogeny) ..."), ThoughtActionObservation(thought_action=ThoughtAction(thought="It does not mention the eastern sector. So I need to look up eastern sector.", action_type=ActionType.Search, action_info="eastern sector of the Colorado orogeny"), observation="The eastern sector of the Colorado orogeny extends into the High Plains.... ")], "final_thought_action": ThoughtAction(thought="High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft", action_type=ActionType.Finish, action_info="1,800 to 7,000 ft")}
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "Where is Apple Headquaters located?"
+(prev_thought_action_observation) (list) = [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to find out where Apple's main office is.", action_type=ActionType.Search, action_info="Apple main office location"), observation="Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond."), ThoughtActionObservation(thought_action=ThoughtAction(thought="Apple Park is the corporate headquarters of Apple Inc., located in Cupertino, California.", action_type=ActionType.Search, action_info="Apple Park, Cupertino, California"), observation="Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond.")]
+
+[Output Information]
+(ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+[Action]
+get_next_thought_action
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ ThoughtAction(thought="Apple Headquaters is located at Apple Park, Cupertino, California.", action_type=ActionType.Finish, action_info="Apple Park, Cupertino, California")
+CompletionUsage(completion_tokens=37, prompt_tokens=934, total_tokens=971)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="Apple Headquaters is located at Apple Park, Cupertino, California.", action_type=ActionType.Finish, action_info="Apple Park, Cupertino, California")
+
+[Previous Result You Provided]
+None
+
+[Desired Output Type]
+ (ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Above output is not in the desired Output Format/Type. Please provide the output in the desired type. Do not repeat the previously provided output.
+Important: Do not provide the code or the methodology. Only provide
+the output in the desired format.
+
+Output:
+ ThoughtAction(thought="Apple Headquaters is located at Apple Park, Cupertino, California.", action_type=ActionType.Search, action_info="Apple Park, Cupertino, California")
+CompletionUsage(completion_tokens=36, prompt_tokens=195, total_tokens=231)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="Apple Headquaters is located at Apple Park, Cupertino, California.", action_type=ActionType.Search, action_info="Apple Park, Cupertino, California")
+
+[Desired Output Type]
+ThoughtAction
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Check if the output is exactly in the desired Output Type. Important: Just say 'Yes' or 'No'.
+
+Output:
+ Yes
+CompletionUsage(completion_tokens=1, prompt_tokens=158, total_tokens=159)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+(example) (dict) = {"question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "react_process": [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", action_type=ActionType.Search, action_info="Colorado orogeny"), observation="The Colorado orogeny was an episode of mountain building (an orogeny) ..."), ThoughtActionObservation(thought_action=ThoughtAction(thought="It does not mention the eastern sector. So I need to look up eastern sector.", action_type=ActionType.Search, action_info="eastern sector of the Colorado orogeny"), observation="The eastern sector of the Colorado orogeny extends into the High Plains.... ")], "final_thought_action": ThoughtAction(thought="High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft", action_type=ActionType.Finish, action_info="1,800 to 7,000 ft")}
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "Where is Apple Headquaters located?"
+(prev_thought_action_observation) (list) = [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to find out where Apple's main office is.", action_type=ActionType.Search, action_info="Apple main office location"), observation="Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond."), ThoughtActionObservation(thought_action=ThoughtAction(thought="Apple Park is the corporate headquarters of Apple Inc., located in Cupertino, California.", action_type=ActionType.Search, action_info="Apple Park, Cupertino, California"), observation="Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond."), ThoughtActionObservation(thought_action=ThoughtAction(thought="Apple Headquaters is located at Apple Park, Cupertino, California.", action_type=ActionType.Search, action_info="Apple Park, Cupertino, California"), observation="Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond.")]
+
+[Output Information]
+(ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+[Action]
+get_next_thought_action
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ ThoughtAction(thought="Apple Headquaters is located at Apple Park, Cupertino, California.", action_type=ActionType.Finish, action_info="Apple Park, Cupertino, California")
+CompletionUsage(completion_tokens=37, prompt_tokens=1173, total_tokens=1210)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="Apple Headquaters is located at Apple Park, Cupertino, California.", action_type=ActionType.Finish, action_info="Apple Park, Cupertino, California")
+
+[Previous Result You Provided]
+None
+
+[Desired Output Type]
+ (ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Above output is not in the desired Output Format/Type. Please provide the output in the desired type. Do not repeat the previously provided output.
+Important: Do not provide the code or the methodology. Only provide
+the output in the desired format.
+
+Output:
+ ThoughtAction(thought="Apple Headquaters is in California.", action_type=ActionType.Search, action_info="Apple Park, Cupertino, California")
+CompletionUsage(completion_tokens=30, prompt_tokens=195, total_tokens=225)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="Apple Headquaters is in California.", action_type=ActionType.Search, action_info="Apple Park, Cupertino, California")
+
+[Desired Output Type]
+ThoughtAction
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Check if the output is exactly in the desired Output Type. Important: Just say 'Yes' or 'No'.
+
+Output:
+ Yes
+CompletionUsage(completion_tokens=1, prompt_tokens=152, total_tokens=153)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+(example) (dict) = {"question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "react_process": [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", action_type=ActionType.Search, action_info="Colorado orogeny"), observation="The Colorado orogeny was an episode of mountain building (an orogeny) ..."), ThoughtActionObservation(thought_action=ThoughtAction(thought="It does not mention the eastern sector. So I need to look up eastern sector.", action_type=ActionType.Search, action_info="eastern sector of the Colorado orogeny"), observation="The eastern sector of the Colorado orogeny extends into the High Plains.... ")], "final_thought_action": ThoughtAction(thought="High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft", action_type=ActionType.Finish, action_info="1,800 to 7,000 ft")}
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "Where is Apple Headquaters located?"
+(prev_thought_action_observation) (list) = [ThoughtActionObservation(thought_action=ThoughtAction(thought="Apple Park is the corporate headquarters of Apple Inc., located in Cupertino, California.", action_type=ActionType.Search, action_info="Apple Park, Cupertino, California"), observation="Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond."), ThoughtActionObservation(thought_action=ThoughtAction(thought="Apple Headquaters is located at Apple Park, Cupertino, California.", action_type=ActionType.Search, action_info="Apple Park, Cupertino, California"), observation="Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond."), ThoughtActionObservation(thought_action=ThoughtAction(thought="Apple Headquaters is in California.", action_type=ActionType.Search, action_info="Apple Park, Cupertino, California"), observation="Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond.")]
+
+[Output Information]
+(ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+[Action]
+get_next_thought_action
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ ThoughtAction(thought="Apple Headquaters is located at Apple Park, Cupertino, California.", action_type=ActionType.Finish, action_info="Apple Park, Cupertino, California")
+CompletionUsage(completion_tokens=37, prompt_tokens=1171, total_tokens=1208)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="Apple Headquaters is located at Apple Park, Cupertino, California.", action_type=ActionType.Finish, action_info="Apple Park, Cupertino, California")
+
+[Previous Result You Provided]
+None
+
+[Desired Output Type]
+ (ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Above output is not in the desired Output Format/Type. Please provide the output in the desired type. Do not repeat the previously provided output.
+Important: Do not provide the code or the methodology. Only provide
+the output in the desired format.
+
+Output:
+ ThoughtAction(thought="Apple Inc. is headquartered in Cupertino, California.", action_type=ActionType.Finish, action_info="Cupertino, California")
+CompletionUsage(completion_tokens=31, prompt_tokens=195, total_tokens=226)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="Apple Inc. is headquartered in Cupertino, California.", action_type=ActionType.Finish, action_info="Cupertino, California")
+
+[Desired Output Type]
+ThoughtAction
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Check if the output is exactly in the desired Output Type. Important: Just say 'Yes' or 'No'.
+
+Output:
+ Yes
+CompletionUsage(completion_tokens=1, prompt_tokens=153, total_tokens=154)
+Question:  Where is Apple Headquaters located?
+Answer:  Cupertino, California
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+(example) (dict) = {"question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "react_process": [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", action_type=ActionType.Search, action_info="Colorado orogeny"), observation="The Colorado orogeny was an episode of mountain building (an orogeny) ..."), ThoughtActionObservation(thought_action=ThoughtAction(thought="It does not mention the eastern sector. So I need to look up eastern sector.", action_type=ActionType.Search, action_info="eastern sector of the Colorado orogeny"), observation="The eastern sector of the Colorado orogeny extends into the High Plains.... ")], "final_thought_action": ThoughtAction(thought="High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft", action_type=ActionType.Finish, action_info="1,800 to 7,000 ft")}
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "Who is Jason Mars?"
+(prev_thought_action_observation) (list) = []
+
+[Output Information]
+(ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+[Action]
+get_next_thought_action
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ ThoughtAction(thought="I need to search who Jason Mars is.", action_type=ActionType.Search, action_info="Jason Mars")
+CompletionUsage(completion_tokens=27, prompt_tokens=454, total_tokens=481)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="I need to search who Jason Mars is.", action_type=ActionType.Search, action_info="Jason Mars")
+
+[Previous Result You Provided]
+None
+
+[Desired Output Type]
+ (ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Above output is not in the desired Output Format/Type. Please provide the output in the desired type. Do not repeat the previously provided output.
+Important: Do not provide the code or the methodology. Only provide
+the output in the desired format.
+
+Output:
+ ThoughtAction(thought="I need to find out more about Jason Mars.", action_type=ActionType.Search, action_info="Jason Mars")
+CompletionUsage(completion_tokens=28, prompt_tokens=185, total_tokens=213)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="I need to find out more about Jason Mars.", action_type=ActionType.Search, action_info="Jason Mars")
+
+[Desired Output Type]
+ThoughtAction
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Check if the output is exactly in the desired Output Type. Important: Just say 'Yes' or 'No'.
+
+Output:
+ Yes
+CompletionUsage(completion_tokens=1, prompt_tokens=150, total_tokens=151)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+(example) (dict) = {"question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "react_process": [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", action_type=ActionType.Search, action_info="Colorado orogeny"), observation="The Colorado orogeny was an episode of mountain building (an orogeny) ..."), ThoughtActionObservation(thought_action=ThoughtAction(thought="It does not mention the eastern sector. So I need to look up eastern sector.", action_type=ActionType.Search, action_info="eastern sector of the Colorado orogeny"), observation="The eastern sector of the Colorado orogeny extends into the High Plains.... ")], "final_thought_action": ThoughtAction(thought="High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft", action_type=ActionType.Finish, action_info="1,800 to 7,000 ft")}
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "Who is Jason Mars?"
+(prev_thought_action_observation) (list) = [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to find out more about Jason Mars.", action_type=ActionType.Search, action_info="Jason Mars"), observation="Jason O. Mars (Born May 27, 1983) is an American computer scientist, author, and entrepreneur. He is best known for his research into computer architecture and artificial intelligence, particularly in the design and deployment of conversational AI. The best-selling author of Breaking Bots: Inventing a New Voice in the AI Revolution, he has been involved in multiple AI initiatives and startups over the course of his career, including ZeroShotBot, Jaseci, Clinc, Myca, and ImpactfulAI.
+Mars holds a PhD in Computer Science from the University of Virginia(UVA), and is currently employed as an Associate Professor of Computer Science and Engineering at the University of Michigan(U-M). He is also acting co-director of U-M's Clarity Lab alongside his wife, Professor Lingjia Tang. There, Mars helps direct advanced research within artificial intelligence, large-scale computing, and coding. Among the lab's most notable projects is the open source Sirius, later rebranded as Lucida. 
+A virtual assistant capable of understanding both visual and auditory queries, Lucida was intended by Mars and his colleagues as a sandbox that would help programmers explore the complexities of speech recognition. Mars also hoped that it would act as a foundation for the development of hardware better-suited for conversational AI. The project was supported by Google, the Defense Advanced Research Projects Agency (DARPA), and the National Science Foundation.
+Jason Mars was one of ten individuals celebrated at the 28th Annual Caribbean American Heritage (CARAH) Awards. Mars received the Vanguard Award from the Institute of Caribbean Studies for his technological impact and "contributions to America and the world." Other winners include Pfizer Principal Scientist for Viral Vaccines Vidia Roopchand and Grammy-winning songwriter Gordon Chambers. Past honorees of the CARAH Awards include former United States Attorney General Eric Holder, former United States Ambassador to the United Nations Andrew Young and Olympian Usain Bolt.")]
+
+[Output Information]
+(ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+[Action]
+get_next_thought_action
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ ThoughtAction(thought="I found extensive information about Jason Mars. He is an American computer scientist, author, and entrepreneur known for his research into computer architecture and artificial intelligence. He is also an Associate Professor at the University of Michigan, co-director of U-M's Clarity Lab, and has been involved in multiple AI startups. He was a recipient of the Vanguard Award from the Institute of Caribbean Studies for his technological impact.", action_type=ActionType.Finish, action_info="Jason O. Mars (Born May 27, 1983) is an American computer scientist, author, and entrepreneur.")
+CompletionUsage(completion_tokens=122, prompt_tokens=889, total_tokens=1011)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="I found extensive information about Jason Mars. He is an American computer scientist, author, and entrepreneur known for his research into computer architecture and artificial intelligence. He is also an Associate Professor at the University of Michigan, co-director of U-M's Clarity Lab, and has been involved in multiple AI startups. He was a recipient of the Vanguard Award from the Institute of Caribbean Studies for his technological impact.", action_type=ActionType.Finish, action_info="Jason O. Mars (Born May 27, 1983) is an American computer scientist, author, and entrepreneur.")
+
+[Previous Result You Provided]
+None
+
+[Desired Output Type]
+ (ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Above output is not in the desired Output Format/Type. Please provide the output in the desired type. Do not repeat the previously provided output.
+Important: Do not provide the code or the methodology. Only provide
+the output in the desired format.
+
+Output:
+ ThoughtAction(thought="I found extensive information about Jason Mars. He is an American computer scientist, author, and entrepreneur known for his research into computer architecture and artificial intelligence. He is also an Associate Professor at the University of Michigan, co-director of U-M's Clarity Lab, and has been involved in multiple AI startups. He was a recipient of the Vanguard Award from the Institute of Caribbean Studies for his technological impact.", action_type=ActionType.Finish, action_info={'Name': 'Jason O. Mars', 'Date of Birth': 'May 27, 1983', 'Profession': 'American computer scientist, author, and entrepreneur'})
+CompletionUsage(completion_tokens=133, prompt_tokens=280, total_tokens=413)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="I found extensive information about Jason Mars. He is an American computer scientist, author, and entrepreneur known for his research into computer architecture and artificial intelligence. He is also an Associate Professor at the University of Michigan, co-director of U-M's Clarity Lab, and has been involved in multiple AI startups. He was a recipient of the Vanguard Award from the Institute of Caribbean Studies for his technological impact.", action_type=ActionType.Finish, action_info={'Name': 'Jason O. Mars', 'Date of Birth': 'May 27, 1983', 'Profession': 'American computer scientist, author, and entrepreneur'})
+
+[Desired Output Type]
+ThoughtAction
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Check if the output is exactly in the desired Output Type. Important: Just say 'Yes' or 'No'.
+
+Output:
+ Yes
+CompletionUsage(completion_tokens=1, prompt_tokens=255, total_tokens=256)
+Question:  Who is Jason Mars?
+Answer:  {'Name': 'Jason O. Mars', 'Date of Birth': 'May 27, 1983', 'Profession': 'American computer scientist, author, and entrepreneur'}

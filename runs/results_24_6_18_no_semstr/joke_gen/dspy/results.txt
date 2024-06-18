@@ -1,0 +1,73 @@
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: Which knight invented King Arthur's Round Table?
+Punchline: Sir Cumference.
+
+---
+
+Joke:
+Output:
+ Joke: Why don't scientists trust atoms?
+Punchline: Because they make up everything!
+{'completion_tokens': 18, 'prompt_tokens': 56, 'total_tokens': 74}
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: How does a penguin build its house?
+Punchline: Igloos it together.
+
+---
+
+Joke:
+Output:
+ Joke: Why don't skeletons fight each other?
+Punchline: They don't have the guts.
+{'completion_tokens': 20, 'prompt_tokens': 57, 'total_tokens': 77}
+Bootstrapped 2 full traces after 2 examples in round 0.
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: Joke: Why don't scientists trust atoms?
+Punchline: Because they make up everything!
+
+---
+
+Joke: Joke: Why don't skeletons fight each other?
+Punchline: They don't have the guts.
+
+---
+
+Joke:
+Output:
+ Joke: Why did the scarecrow win an award?
+Punchline: Because he was outstanding in his field!
+{'completion_tokens': 23, 'prompt_tokens': 80, 'total_tokens': 103}
+Joke: Why did the scarecrow win an award?: Because he was outstanding in his field!

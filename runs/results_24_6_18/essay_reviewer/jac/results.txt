@@ -1,0 +1,142 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+(essay) (None) = "With a population of approximately 45 million Spaniards and 3.5 million immigrants,Spain is a country of contrasts where the richness of its culture blends it up withthe variety of languages and dialects used. Being one of the largest economies worldwide,and the second largest country in Europe, Spain is a very appealing destination for touristsas well as for immigrants from around the globe. Almost all Spaniards are used to speaking atleast two different languages, but protecting and preserving that right has not beeneasy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments,in order to preserve and defend what identifies them, and deal with the consequences."
+
+[Context]
+
+
+[Inputs Information]
+Criteria (criteria) (str) = "Clarity"
+
+[Output Information]
+Judgement (str)
+
+[Type Explanations]
+
+
+[Action]
+Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] The essay lacks clarity due to several factors: it has run-on sentences, improper punctuation, and some confusing phrases that make it difficult to follow the main points. For instance, the phrase "blends it up withthe variety" should be clearer and more coherent. Additionally, the essay jumps between topics without clear transitions, making it hard to understand the relationships between ideas. Improving sentence structure and ensuring proper punctuation would enhance clarity significantly.
+CompletionUsage(completion_tokens=89, prompt_tokens=279, total_tokens=368)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+(essay) (None) = "With a population of approximately 45 million Spaniards and 3.5 million immigrants,Spain is a country of contrasts where the richness of its culture blends it up withthe variety of languages and dialects used. Being one of the largest economies worldwide,and the second largest country in Europe, Spain is a very appealing destination for touristsas well as for immigrants from around the globe. Almost all Spaniards are used to speaking atleast two different languages, but protecting and preserving that right has not beeneasy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments,in order to preserve and defend what identifies them, and deal with the consequences."
+
+[Context]
+
+
+[Inputs Information]
+Criteria (criteria) (str) = "Originality"
+
+[Output Information]
+Judgement (str)
+
+[Type Explanations]
+
+
+[Action]
+Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] The essay presents some original insights into the cultural and linguistic diversity of Spain, highlighting the unique struggles Spaniards have faced in preserving their heritage. However, the information provided is somewhat general and lacks specific, novel perspectives or anecdotes that would make it stand out more distinctly in terms of originality.
+CompletionUsage(completion_tokens=60, prompt_tokens=279, total_tokens=339)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+(essay) (None) = "With a population of approximately 45 million Spaniards and 3.5 million immigrants,Spain is a country of contrasts where the richness of its culture blends it up withthe variety of languages and dialects used. Being one of the largest economies worldwide,and the second largest country in Europe, Spain is a very appealing destination for touristsas well as for immigrants from around the globe. Almost all Spaniards are used to speaking atleast two different languages, but protecting and preserving that right has not beeneasy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments,in order to preserve and defend what identifies them, and deal with the consequences."
+
+[Context]
+
+
+[Inputs Information]
+Criteria (criteria) (str) = "Evidence"
+
+[Output Information]
+Judgement (str)
+
+[Type Explanations]
+
+
+[Action]
+Evaluate the given essay based on the given criteria. Provide Detailed Judgement.
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] The essay provides evidence to support the claim that Spain is a country of contrasts with a rich culture and diverse languages. It mentions the population statistics of Spaniards and immigrants, highlighting the multicultural aspect. The essay also references Spain's significant economic status and appeal as a tourist and immigrant destination. Additionally, it discusses the challenges Spaniards have faced in preserving their linguistic rights, thus providing a historical and social context. However, the evidence could be further strengthened with specific examples and sources.
+CompletionUsage(completion_tokens=98, prompt_tokens=278, total_tokens=376)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+(essay) (None) = "With a population of approximately 45 million Spaniards and 3.5 million immigrants,Spain is a country of contrasts where the richness of its culture blends it up withthe variety of languages and dialects used. Being one of the largest economies worldwide,and the second largest country in Europe, Spain is a very appealing destination for touristsas well as for immigrants from around the globe. Almost all Spaniards are used to speaking atleast two different languages, but protecting and preserving that right has not beeneasy for them.Spaniards have had to struggle with war, ignorance, criticism and the governments,in order to preserve and defend what identifies them, and deal with the consequences."
+
+[Context]
+
+
+[Inputs Information]
+Judgements (judgements) (dict[str, str]) = {"Clarity": "The essay lacks clarity due to several factors: it has run-on sentences, improper punctuation, and some confusing phrases that make it difficult to follow the main points. For instance, the phrase "blends it up withthe variety" should be clearer and more coherent. Additionally, the essay jumps between topics without clear transitions, making it hard to understand the relationships between ideas. Improving sentence structure and ensuring proper punctuation would enhance clarity significantly.", "Originality": "The essay presents some original insights into the cultural and linguistic diversity of Spain, highlighting the unique struggles Spaniards have faced in preserving their heritage. However, the information provided is somewhat general and lacks specific, novel perspectives or anecdotes that would make it stand out more distinctly in terms of originality.", "Evidence": "The essay provides evidence to support the claim that Spain is a country of contrasts with a rich culture and diverse languages. It mentions the population statistics of Spaniards and immigrants, highlighting the multicultural aspect. The essay also references Spain's significant economic status and appeal as a tourist and immigrant destination. Additionally, it discusses the challenges Spaniards have faced in preserving their linguistic rights, thus providing a historical and social context. However, the evidence could be further strengthened with specific examples and sources."}
+
+[Output Information]
+Summary (str)
+
+[Type Explanations]
+
+
+[Action]
+Generate a summary with the given judgements.
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] The essay lacks clarity due to run-on sentences, improper punctuation, and confusing phrases, making it difficult to follow the main points. It jumps between topics without clear transitions. While it provides some original insights into Spain's cultural and linguistic diversity, the information is general and lacks specific, novel perspectives. The essay presents evidence supporting Spain's rich culture and diverse languages and discusses the challenges in preserving linguistic rights, but it could be strengthened with specific examples and sources.
+CompletionUsage(completion_tokens=94, prompt_tokens=526, total_tokens=620)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Summary (summary) (str) = "The essay lacks clarity due to run-on sentences, improper punctuation, and confusing phrases, making it difficult to follow the main points. It jumps between topics without clear transitions. While it provides some original insights into Spain's cultural and linguistic diversity, the information is general and lacks specific, novel perspectives. The essay presents evidence supporting Spain's rich culture and diverse languages and discusses the challenges in preserving linguistic rights, but it could be strengthened with specific examples and sources."
+
+[Output Information]
+Grade (str)
+
+[Type Explanations]
+
+
+[Action]
+Give essay a letter grade (A-D)
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] C
+CompletionUsage(completion_tokens=4, prompt_tokens=219, total_tokens=223)
+Reviewer Notes:  The essay lacks clarity due to run-on sentences, improper punctuation, and confusing phrases, making it difficult to follow the main points. It jumps between topics without clear transitions. While it provides some original insights into Spain's cultural and linguistic diversity, the information is general and lacks specific, novel perspectives. The essay presents evidence supporting Spain's rich culture and diverse languages and discusses the challenges in preserving linguistic rights, but it could be strengthened with specific examples and sources.
+Grade:  C

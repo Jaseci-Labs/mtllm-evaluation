@@ -1,0 +1,43 @@
+Input Prompt:
+ Find the Expert Profession to answer the given question.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+Expert: Expert Profession
+
+---
+
+Question: What are Large Language Models?
+Expert:
+Output:
+ Question: What are Large Language Models?
+Expert: Artificial Intelligence Researcher
+{'completion_tokens': 14, 'prompt_tokens': 44, 'total_tokens': 58}
+Input Prompt:
+ Get the Expert's answer to the given question.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+Expert: ${expert}
+Answer: Expert's answer
+
+---
+
+Question: What are Large Language Models?
+Expert: Question: What are Large Language Models? Expert: Artificial Intelligence Researcher
+Answer:
+Output:
+ Question: What are Large Language Models?
+Expert: Artificial Intelligence Researcher
+Answer: Large Language Models (LLMs) are a type of artificial intelligence model designed to understand and generate human language. These models are trained on vast amounts of text data and use deep learning techniques, particularly neural networks, to learn the statistical patterns and structures of language. Examples of large language models include OpenAI's GPT-3 and Google's BERT. They are capable of performing a wide range of language-related tasks such as translation, summarization, question answering, and even creative writing. The "large" in LLMs refers to the extensive number of parameters (often in the billions) that these models have, which allows them to capture complex linguistic nuances and generate coherent and contextually relevant text.
+{'completion_tokens': 156, 'prompt_tokens': 67, 'total_tokens': 223}
+Question: What are Large Language Models?
+Expert: Artificial Intelligence Researcher says: Question: What are Large Language Models?
+Expert: Artificial Intelligence Researcher
+Answer: Large Language Models (LLMs) are a type of artificial intelligence model designed to understand and generate human language. These models are trained on vast amounts of text data and use deep learning techniques, particularly neural networks, to learn the statistical patterns and structures of language. Examples of large language models include OpenAI's GPT-3 and Google's BERT. They are capable of performing a wide range of language-related tasks such as translation, summarization, question answering, and even creative writing. The "large" in LLMs refers to the extensive number of parameters (often in the billions) that these models have, which allows them to capture complex linguistic nuances and generate coherent and contextually relevant text.

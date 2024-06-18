@@ -1,0 +1,27 @@
+Input Prompt:
+ You will be given `question` and you will respond with `answer`.
+
+To do this, you will interleave Thought, Action, and Observation steps.
+
+Thought can reason about the current situation, and Action can be the following types:
+
+(1) Search[query], which takes a search query and returns summary from wikipedia
+(2) Finish[answer], which returns the final `answer` and finishes the task
+
+---
+
+Follow the following format.
+
+Question: ${question}
+Thought 1: next steps to take based on last observation
+Action 1: always either Search[query] or, when done, Finish[answer]
+
+---
+
+Question: Where is Apple Headquaters located?
+Thought 1:
+Output:
+ To determine the location of Apple Headquarters, I need to look up the most recent and accurate information.
+
+Action 1: Search["Apple Headquarters location"]
+{'completion_tokens': 30, 'prompt_tokens': 149, 'total_tokens': 179}

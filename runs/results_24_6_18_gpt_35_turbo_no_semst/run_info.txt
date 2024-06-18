@@ -1,0 +1,41 @@
+== Setup ==
+model_used: gpt-3.5-turbo
+mtllm_max_token = 1024 (default)
+mtllm_temperature = 0.7 (default)
+
+
+== Experimentation ==
+- Capturing Performance of MTLLM (without semstr) using gpt-3.5-turbo
+
+== Conclusion ==
+- MTLLM in gpt-3.5-turbo failed in str and custom type problems. Worst Performance.
+
+
+== Result Analysis ==
+1. essay_reviewer
+jac - 1/5 - Desired format is followed, but incomplete answers, as not the answer that is expected
+2. expert_answer
+jac - 5/5
+3. joke_gen
+jac - 5/5
+4. mcq_reason
+jac - 1/5 - expect the key of the answer got the value. incorrect reasoning
+5. odd_word_out
+jac - 2/5 - Contains the correct answer, wrong reasoning
+6. personality_finder
+jac - 0/5 - Incomplete object filling
+7. rpg_level_gen
+jac - 0/5 - Incomplete object filling, not following inputs
+8. taskman
+jac - 0/5 - Incomplete Object filling
+9. template
+jac - 0/5 - Incomplete Object Filling
+10. text_to_type
+jac - 5/5
+11. translation
+jac - 0/5 - returned None
+12. wikipedia
+jac - 2/5 - followed necessary format but incorrect information
+
+== Overall Performance ==
+- jac = 21/60

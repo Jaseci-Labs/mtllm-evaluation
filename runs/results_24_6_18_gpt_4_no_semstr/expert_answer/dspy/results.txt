@@ -1,0 +1,37 @@
+Input Prompt:
+ Find the Expert Profession to answer the given question.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+Expert: Expert Profession
+
+---
+
+Question: What are Large Language Models?
+Expert:
+Output:
+ Artificial Intelligence Specialist
+{'completion_tokens': 4, 'prompt_tokens': 44, 'total_tokens': 48}
+Input Prompt:
+ Get the Expert's answer to the given question.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+Expert: ${expert}
+Answer: Expert's answer
+
+---
+
+Question: What are Large Language Models?
+Expert: Artificial Intelligence Specialist
+Answer:
+Output:
+ Large Language Models are machine learning models that are trained on a vast amount of text data. They are designed to generate human-like text based on the input they receive. These models learn patterns in the data, including grammar, facts about the world, and even some reasoning abilities, and they can use this knowledge to generate creative and coherent text. Examples of Large Language Models include OpenAI's GPT-3 and Google's BERT.
+{'completion_tokens': 87, 'prompt_tokens': 56, 'total_tokens': 143}
+Artificial Intelligence Specialist says: Large Language Models are machine learning models that are trained on a vast amount of text data. They are designed to generate human-like text based on the input they receive. These models learn patterns in the data, including grammar, facts about the world, and even some reasoning abilities, and they can use this knowledge to generate creative and coherent text. Examples of Large Language Models include OpenAI's GPT-3 and Google's BERT.

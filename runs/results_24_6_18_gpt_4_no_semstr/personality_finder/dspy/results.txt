@@ -1,0 +1,22 @@
+Input Prompt:
+ Get Person Information use common knowledge.
+
+---
+
+Follow the following format.
+
+Name: Name of the Person
+Person: ${person}. Respond with a single JSON object. JSON Schema: {"$defs": {"Personality": {"enum": ["Introvert", "Extrovert"], "title": "Personality", "type": "string"}}, "properties": {"full_name": {"description": "Fullname of the Person", "title": "Full Name", "type": "string"}, "yod": {"description": "Year of Death", "title": "Yod", "type": "integer"}, "personality": {"allOf": [{"$ref": "#/$defs/Personality"}], "description": "Personality Type"}}, "required": ["full_name", "yod", "personality"], "title": "Person", "type": "object"}
+
+---
+
+Name: Martin Luther King Jr.
+Person:
+Output:
+ {
+  "full_name": "Martin Luther King Jr.",
+  "yod": 1968,
+  "personality": "Extrovert"
+}
+{'completion_tokens': 32, 'prompt_tokens': 197, 'total_tokens': 229}
+Martin Luther King Jr. was an Extrovert person who died in 1968.

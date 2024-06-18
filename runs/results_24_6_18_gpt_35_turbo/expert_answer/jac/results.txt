@@ -1,0 +1,61 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "What are Large Language Models?"
+
+[Output Information]
+Expert Profession (str)
+
+[Type Explanations]
+
+
+[Action]
+Find the Expert Profession to answer the given question.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] The expert profession to answer questions about Large Language Models would likely be a Data Scientist or a Machine Learning Engineer.
+[Output] Data Scientist or Machine Learning Engineer
+CompletionUsage(completion_tokens=35, prompt_tokens=143, total_tokens=178)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "What are Large Language Models?"
+Expert (expert) (str) = "Data Scientist or Machine Learning Engineer"
+
+[Output Information]
+Expert's Answer (str)
+
+[Type Explanations]
+
+
+[Action]
+Get the answer for the question from expert's perspective
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] Large Language Models are advanced AI models that have been trained on massive amounts of text data to understand and generate human-like language.
+CompletionUsage(completion_tokens=28, prompt_tokens=154, total_tokens=182)
+Data Scientist or Machine Learning Engineer says: 'Large Language Models are advanced AI models that have been trained on massive amounts of text data to understand and generate human-like language.

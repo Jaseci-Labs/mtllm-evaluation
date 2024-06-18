@@ -1,0 +1,289 @@
+Input Prompt:
+ Create Next Level
+
+---
+
+Follow the following format.
+
+Last Levels: Last Played Levels
+
+Difficulty: Difficulty of the New Level
+
+Level Width: Width of the Level
+
+Level Height: Height of the Level
+
+Next Level: Next Level. Respond with a single JSON object. JSON Schema: {"properties": {"name": {"description": "Name of the Level", "title": "Name", "type": "string"}, "difficulty": {"description": "Difficulty of the Level", "title": "Difficulty", "type": "integer"}, "width": {"description": "Width of the Map", "title": "Width", "type": "integer"}, "height": {"description": "Height of the Map", "title": "Height", "type": "integer"}, "num_wall": {"description": "Number of Walls in the Map", "title": "Num Wall", "type": "integer"}, "num_enemies": {"description": "Number of Enemies in the Map", "title": "Num Enemies", "type": "integer"}, "time_countdown": {"description": "Time Countdown of the Level", "title": "Time Countdown", "type": "integer"}, "n_retries_allowed": {"description": "Number of Retries Allowed", "title": "N Retries Allowed", "type": "integer"}}, "required": ["name", "difficulty", "width", "height", "num_wall", "num_enemies", "time_countdown", "n_retries_allowed"], "title": "Level", "type": "object"}
+
+---
+
+Last Levels: []
+
+Difficulty: 1
+
+Level Width: 20
+
+Level Height: 20
+
+Next Level:
+Output:
+ {
+    "name": "Beginner's Maze",
+    "difficulty": 1,
+    "width": 20,
+    "height": 20,
+    "num_wall": 30,
+    "num_enemies": 5,
+    "time_countdown": 60,
+    "n_retries_allowed": 3
+}
+{'completion_tokens': 69, 'prompt_tokens': 352, 'total_tokens': 421}
+Input Prompt:
+ Create Map for the Level
+
+---
+
+Follow the following format.
+
+Level: Level
+Map: Map. Respond with a single JSON object. JSON Schema: {"$defs": {"Level": {"properties": {"name": {"description": "Name of the Level", "title": "Name", "type": "string"}, "difficulty": {"description": "Difficulty of the Level", "title": "Difficulty", "type": "integer"}, "width": {"description": "Width of the Map", "title": "Width", "type": "integer"}, "height": {"description": "Height of the Map", "title": "Height", "type": "integer"}, "num_wall": {"description": "Number of Walls in the Map", "title": "Num Wall", "type": "integer"}, "num_enemies": {"description": "Number of Enemies in the Map", "title": "Num Enemies", "type": "integer"}, "time_countdown": {"description": "Time Countdown of the Level", "title": "Time Countdown", "type": "integer"}, "n_retries_allowed": {"description": "Number of Retries Allowed", "title": "N Retries Allowed", "type": "integer"}}, "required": ["name", "difficulty", "width", "height", "num_wall", "num_enemies", "time_countdown", "n_retries_allowed"], "title": "Level", "type": "object"}, "Position": {"properties": {"x": {"description": "X Coordinate", "title": "X", "type": "integer"}, "y": {"description": "Y Coordinate", "title": "Y", "type": "integer"}}, "required": ["x", "y"], "title": "Position", "type": "object"}, "Wall": {"properties": {"start_pos": {"allOf": [{"$ref": "#/$defs/Position"}], "description": "Start Position of the Wall"}, "end_pos": {"allOf": [{"$ref": "#/$defs/Position"}], "description": "End Position of the Wall"}}, "required": ["start_pos", "end_pos"], "title": "Wall", "type": "object"}}, "properties": {"level": {"allOf": [{"$ref": "#/$defs/Level"}], "description": "Level of the Map"}, "walls": {"description": "Walls in the Map Other than Edges", "items": {"$ref": "#/$defs/Wall"}, "title": "Walls", "type": "array"}, "small_obstacles": {"description": "Obstacles in the Map", "items": {"$ref": "#/$defs/Position"}, "title": "Small Obstacles", "type": "array"}, "enemies": {"description": "Enemies in the Map", "items": {"$ref": "#/$defs/Position"}, "title": "Enemies", "type": "array"}, "player_pos": {"allOf": [{"$ref": "#/$defs/Position"}], "description": "Player Position in the Map"}}, "required": ["level", "walls", "small_obstacles", "enemies", "player_pos"], "title": "Map", "type": "object"}
+
+---
+
+Level: {"name":"Beginner's Maze","difficulty":1,"width":20,"height":20,"num_wall":30,"num_enemies":5,"time_countdown":60,"n_retries_allowed":3}
+Map:
+Output:
+ {
+  "level": {
+    "name": "Beginner's Maze",
+    "difficulty": 1,
+    "width": 20,
+    "height": 20,
+    "num_wall": 30,
+    "num_enemies": 5,
+    "time_countdown": 60,
+    "n_retries_allowed": 3
+  },
+  "walls": [
+    {
+      "start_pos": {
+        "x": 2,
+        "y": 2
+      },
+      "end_pos": {
+        "x": 2,
+        "y": 10
+      }
+    },
+    {
+      "start_pos": {
+        "x": 5,
+        "y": 5
+      },
+      "end_pos": {
+        "x": 15,
+        "y": 5
+      }
+    }
+  ],
+  "small_obstacles": [
+    {
+      "x": 8,
+      "y": 8
+    },
+    {
+      "x": 12,
+      "y": 12
+    }
+  ],
+  "enemies": [
+    {
+      "x": 3,
+      "y": 3
+    },
+    {
+      "x": 17,
+      "y": 17
+    }
+  ],
+  "player_pos": {
+    "x": 1,
+    "y": 1
+  }
+}
+{'completion_tokens': 290, 'prompt_tokens': 734, 'total_tokens': 1024}
+name="Beginner's Maze" difficulty=1 width=20 height=20 num_wall=30 num_enemies=5 time_countdown=60 n_retries_allowed=3
+BBBBBBBBBBBBBBBBBBBBBB
+B....................B
+B.P..................B
+B..B.................B
+B..BE................B
+B..B.................B
+B..B..BBBBBBBBBBB....B
+B..B.................B
+B..B.................B
+B..B.....B...........B
+B..B.................B
+B..B.................B
+B....................B
+B............B.......B
+B....................B
+B....................B
+B....................B
+B....................B
+B.................E..B
+B....................B
+B....................B
+BBBBBBBBBBBBBBBBBBBBBB
+Input Prompt:
+ Create Next Level
+
+---
+
+Follow the following format.
+
+Last Levels: Last Played Levels
+
+Difficulty: Difficulty of the New Level
+
+Level Width: Width of the Level
+
+Level Height: Height of the Level
+
+Next Level: Next Level. Respond with a single JSON object. JSON Schema: {"properties": {"name": {"description": "Name of the Level", "title": "Name", "type": "string"}, "difficulty": {"description": "Difficulty of the Level", "title": "Difficulty", "type": "integer"}, "width": {"description": "Width of the Map", "title": "Width", "type": "integer"}, "height": {"description": "Height of the Map", "title": "Height", "type": "integer"}, "num_wall": {"description": "Number of Walls in the Map", "title": "Num Wall", "type": "integer"}, "num_enemies": {"description": "Number of Enemies in the Map", "title": "Num Enemies", "type": "integer"}, "time_countdown": {"description": "Time Countdown of the Level", "title": "Time Countdown", "type": "integer"}, "n_retries_allowed": {"description": "Number of Retries Allowed", "title": "N Retries Allowed", "type": "integer"}}, "required": ["name", "difficulty", "width", "height", "num_wall", "num_enemies", "time_countdown", "n_retries_allowed"], "title": "Level", "type": "object"}
+
+---
+
+Last Levels: [{"name":"Beginner's Maze","difficulty":1,"width":20,"height":20,"num_wall":30,"num_enemies":5,"time_countdown":60,"n_retries_allowed":3}]
+
+Difficulty: 1
+
+Level Width: 20
+
+Level Height: 20
+
+Next Level:
+Output:
+ {
+    "name": "Intermediate Challenge",
+    "difficulty": 2,
+    "width": 25,
+    "height": 25,
+    "num_wall": 40,
+    "num_enemies": 8,
+    "time_countdown": 90,
+    "n_retries_allowed": 5
+}
+{'completion_tokens': 67, 'prompt_tokens': 396, 'total_tokens': 463}
+Input Prompt:
+ Create Map for the Level
+
+---
+
+Follow the following format.
+
+Level: Level
+Map: Map. Respond with a single JSON object. JSON Schema: {"$defs": {"Level": {"properties": {"name": {"description": "Name of the Level", "title": "Name", "type": "string"}, "difficulty": {"description": "Difficulty of the Level", "title": "Difficulty", "type": "integer"}, "width": {"description": "Width of the Map", "title": "Width", "type": "integer"}, "height": {"description": "Height of the Map", "title": "Height", "type": "integer"}, "num_wall": {"description": "Number of Walls in the Map", "title": "Num Wall", "type": "integer"}, "num_enemies": {"description": "Number of Enemies in the Map", "title": "Num Enemies", "type": "integer"}, "time_countdown": {"description": "Time Countdown of the Level", "title": "Time Countdown", "type": "integer"}, "n_retries_allowed": {"description": "Number of Retries Allowed", "title": "N Retries Allowed", "type": "integer"}}, "required": ["name", "difficulty", "width", "height", "num_wall", "num_enemies", "time_countdown", "n_retries_allowed"], "title": "Level", "type": "object"}, "Position": {"properties": {"x": {"description": "X Coordinate", "title": "X", "type": "integer"}, "y": {"description": "Y Coordinate", "title": "Y", "type": "integer"}}, "required": ["x", "y"], "title": "Position", "type": "object"}, "Wall": {"properties": {"start_pos": {"allOf": [{"$ref": "#/$defs/Position"}], "description": "Start Position of the Wall"}, "end_pos": {"allOf": [{"$ref": "#/$defs/Position"}], "description": "End Position of the Wall"}}, "required": ["start_pos", "end_pos"], "title": "Wall", "type": "object"}}, "properties": {"level": {"allOf": [{"$ref": "#/$defs/Level"}], "description": "Level of the Map"}, "walls": {"description": "Walls in the Map Other than Edges", "items": {"$ref": "#/$defs/Wall"}, "title": "Walls", "type": "array"}, "small_obstacles": {"description": "Obstacles in the Map", "items": {"$ref": "#/$defs/Position"}, "title": "Small Obstacles", "type": "array"}, "enemies": {"description": "Enemies in the Map", "items": {"$ref": "#/$defs/Position"}, "title": "Enemies", "type": "array"}, "player_pos": {"allOf": [{"$ref": "#/$defs/Position"}], "description": "Player Position in the Map"}}, "required": ["level", "walls", "small_obstacles", "enemies", "player_pos"], "title": "Map", "type": "object"}
+
+---
+
+Level: {"name":"Intermediate Challenge","difficulty":2,"width":25,"height":25,"num_wall":40,"num_enemies":8,"time_countdown":90,"n_retries_allowed":5}
+Map:
+Output:
+ {
+  "level": {
+    "name": "Intermediate Challenge",
+    "difficulty": 2,
+    "width": 25,
+    "height": 25,
+    "num_wall": 40,
+    "num_enemies": 8,
+    "time_countdown": 90,
+    "n_retries_allowed": 5
+  },
+  "walls": [
+    {
+      "start_pos": {
+        "x": 5,
+        "y": 5
+      },
+      "end_pos": {
+        "x": 5,
+        "y": 15
+      }
+    },
+    {
+      "start_pos": {
+        "x": 10,
+        "y": 10
+      },
+      "end_pos": {
+        "x": 20,
+        "y": 10
+      }
+    },
+    {
+      "start_pos": {
+        "x": 15,
+        "y": 5
+      },
+      "end_pos": {
+        "x": 15,
+        "y": 20
+      }
+    }
+  ],
+  "small_obstacles": [
+    {
+      "x": 8,
+      "y": 8
+    },
+    {
+      "x": 12,
+      "y": 12
+    }
+  ],
+  "enemies": [
+    {
+      "x": 3,
+      "y": 3
+    },
+    {
+      "x": 22,
+      "y": 22
+    }
+  ],
+  "player_pos": {
+    "x": 1,
+    "y": 1
+  }
+}
+{'completion_tokens': 336, 'prompt_tokens': 732, 'total_tokens': 1068}
+name='Intermediate Challenge' difficulty=2 width=25 height=25 num_wall=40 num_enemies=8 time_countdown=90 n_retries_allowed=5
+BBBBBBBBBBBBBBBBBBBBBBBBBBB
+B.........................B
+B.P.......................B
+B.........................B
+B...E.....................B
+B.........................B
+B.....B.........B.........B
+B.....B.........B.........B
+B.....B.........B.........B
+B.....B..B......B.........B
+B.....B.........B.........B
+B.....B....BBBBBBBBBBB....B
+B.....B.........B.........B
+B.....B......B..B.........B
+B.....B.........B.........B
+B.....B.........B.........B
+B.....B.........B.........B
+B...............B.........B
+B...............B.........B
+B...............B.........B
+B...............B.........B
+B...............B.........B
+B.........................B
+B......................E..B
+B.........................B
+B.........................B
+BBBBBBBBBBBBBBBBBBBBBBBBBBB

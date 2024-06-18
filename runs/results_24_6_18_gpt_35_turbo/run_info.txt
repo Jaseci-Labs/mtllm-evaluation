@@ -1,0 +1,65 @@
+== Setup ==
+model_used: gpt-3.5-turbo
+mtllm_max_token = 1024 (default)
+mtllm_temperature = 0.7 (default)
+dspy_max_tokens = 150 (default) and used 1024 in the level gen
+dspy_temperature = 0.0 (default)
+
+
+== Experimentation ==
+- Capturing Performance of MTLLM and DSPy using gpt-3.5-turbo
+
+Jac implementations
+- Everything thats going to involve with MTLLM is Semstringed heavily to make sure that the model is understanding the 
+context
+
+== Conclusion ==
+- Comparing to the gpt-4o outputs, MTLLM performs similarly and provide consistent results. Though DSPy failed in the gpt-4o
+DSPy performs better in gpt-3.5-turbo while not rephrasing inputs again and using less unnecessary words.
+- DSPy shines in this model as everything worked exactly as desired
+- MTLLM failed to run the level generation. as the model didnt followed the instructions properly and provided less thought to
+the inputs
+- MTLLM in gpt-3.5-turbo showed less confidence when it comes to custom types.
+
+
+== Result Analysis ==
+1. essay_reviewer
+jac - 4/5 - Judgement are not detailed but the output is correct
+dspy - 4/5 - Similar
+2. expert_answer
+jac - 5/5
+dspy - 4/5 - Introduced unnecessary words
+3. joke_gen
+jac - 5/5
+dspy - 5/5
+4. mcq_reason
+jac - 1/5 - Chain of thought is done but incorrectly, output is not captured
+dspy -  2/5 - Incorrect answer but value was returned
+5. odd_word_out
+jac - 5/5
+dspy - 4/5 - Introduced unnecessary words
+6. personality_finder
+jac - 5/5
+dspy - 5/5
+7. rpg_level_gen
+jac - 0/5 - Incomplete object filling
+dspy - 5/5
+8. taskman
+jac - 5/5
+dspy - 5/5
+9. template
+jac - 4/5 - Incorrect output in the first attempt, but the correction step fixed the issue
+dspy - 5/5
+10. text_to_type
+jac - 5/5
+dspy - 5/5
+11. translation
+jac - 5/5
+dspy - 5/5
+12. wikipedia
+jac - 3/5 - Correctly have captured the context but failed to provide the correct answer to correct field
+dspy - 5/5
+
+== Overall Performance ==
+jac - 47/60
+dspy -  54/60

@@ -1,0 +1,73 @@
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: Which knight invented King Arthur's Round Table?
+Punchline: Sir Cumference.
+
+---
+
+Joke:
+Output:
+ Why did the scarecrow win an award?
+Punchline: Because he was outstanding in his field!
+{'completion_tokens': 21, 'prompt_tokens': 59, 'total_tokens': 80}
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: How does a penguin build its house?
+Punchline: Igloos it together.
+
+---
+
+Joke:
+Output:
+ Why did the scarecrow win an award?
+Punchline: Because he was outstanding in his field!
+{'completion_tokens': 21, 'prompt_tokens': 61, 'total_tokens': 82}
+Bootstrapped 2 full traces after 2 examples in round 0.
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: Why did the scarecrow win an award?
+Punchline: Because he was outstanding in his field!
+
+---
+
+Joke: Why did the scarecrow win an award?
+Punchline: Because he was outstanding in his field!
+
+---
+
+Joke:
+Output:
+ Why couldn't the bicycle stand up by itself?
+Punchline: Because it was two tired!
+{'completion_tokens': 20, 'prompt_tokens': 88, 'total_tokens': 108}
+Why couldn't the bicycle stand up by itself?: Because it was two tired!

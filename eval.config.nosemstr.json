@@ -1,0 +1,56 @@
+{
+    "EASY": {
+        "translation": {
+            "jac": "easy/translation/translation_no_semstr.jac",
+            "dspy": "easy/translation/translation_dspy.py"
+        },
+        "essay_reviewer": {
+            "jac": "easy/essay_reviewer/essay_reviewer_no_semstr.jac",
+            "dspy": "easy/essay_reviewer/essay_reviewer_dspy.py"
+        },
+        "joke_gen": {
+            "jac": "easy/joke_gen/jokes_no_semstr.jac",
+            "dspy": "easy/joke_gen/jokes_dspy.py"
+        },
+        "expert_answer": {
+            "jac": "easy/expert_answer/expert_answer_no_semstr.jac",
+            "dspy": "easy/expert_answer/expert_answer_dspy.py"
+        },
+        "odd_word_out": {
+            "jac": "easy/odd_word_out/odd_word_out_no_semstr.jac",
+            "dspy": "easy/odd_word_out/odd_word_out_dspy.py"
+        }
+    },
+    "MEDIUM": {
+        "mcq_reason": {
+            "jac": "medium/mcq_reason/mcq_reason_no_semstr.jac",
+            "dspy": "medium/mcq_reason/mcq_reason_dspy.py"
+        },
+        "personality_finder": {
+            "jac": "medium/personality_finder/personality_finder_no_semstr.jac",
+            "dspy": "medium/personality_finder/personality_finder_dspy.py"
+        },
+        "template": {
+            "jac": "medium/template/template_no_semstr.jac",
+            "dspy": "medium/template/template_dspy.py"
+        },
+        "text_to_type": {
+            "jac": "medium/text_to_type/text_to_type_no_semstr.jac",
+            "dspy": "medium/text_to_type/text_to_type_dspy.py"
+        },
+        "taskman": {
+            "jac": "medium/taskman/taskman_no_semstr.jac",
+            "dspy": "medium/taskman/taskman_dspy.py"
+        }
+    },
+    "HARD": {
+        "rpg_level_gen": {
+            "jac": "hard/rpg_level_gen/level_no_semstr.jac",
+            "dspy": "hard/rpg_level_gen/level_dspy.py"
+        },
+        "wikipedia": {
+            "jac": "hard/wikipedia/wikipedia_react_no_semstr.jac",
+            "dspy": "hard/wikipedia/wikipedia_react_dspy.py"
+        }
+    }
+}

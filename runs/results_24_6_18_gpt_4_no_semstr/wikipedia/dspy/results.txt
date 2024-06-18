@@ -1,0 +1,96 @@
+Input Prompt:
+ You will be given `question` and you will respond with `answer`.
+
+To do this, you will interleave Thought, Action, and Observation steps.
+
+Thought can reason about the current situation, and Action can be the following types:
+
+(1) Search[query], which takes a search query and returns summary from wikipedia
+(2) Finish[answer], which returns the final `answer` and finishes the task
+
+---
+
+Follow the following format.
+
+Question: ${question}
+Thought 1: next steps to take based on last observation
+Action 1: always either Search[query] or, when done, Finish[answer]
+
+---
+
+Question: Where is Apple Headquaters located?
+Thought 1:
+Output:
+ I know that Apple's headquarters is located in Cupertino, California. There's no need to search for this information.
+Action 1: Finish[Apple's headquarters is located in Cupertino, California.]
+{'completion_tokens': 39, 'prompt_tokens': 149, 'total_tokens': 188}
+Question:  Where is Apple Headquaters located?
+Answer:  Apple's headquarters is located in Cupertino, California.
+Input Prompt:
+ You will be given `question` and you will respond with `answer`.
+
+To do this, you will interleave Thought, Action, and Observation steps.
+
+Thought can reason about the current situation, and Action can be the following types:
+
+(1) Search[query], which takes a search query and returns summary from wikipedia
+(2) Finish[answer], which returns the final `answer` and finishes the task
+
+---
+
+Follow the following format.
+
+Question: ${question}
+Thought 1: next steps to take based on last observation
+Action 1: always either Search[query] or, when done, Finish[answer]
+
+---
+
+Question: Who is Jason Mars?
+Thought 1:
+Output:
+ I am not sure who Jason Mars is. I should look up this person to provide an accurate answer.
+Action 1: Search["Jason Mars"]
+{'completion_tokens': 30, 'prompt_tokens': 146, 'total_tokens': 176}
+Input Prompt:
+ You will be given `question` and you will respond with `answer`.
+
+To do this, you will interleave Thought, Action, and Observation steps.
+
+Thought can reason about the current situation, and Action can be the following types:
+
+(1) Search[query], which takes a search query and returns summary from wikipedia
+(2) Finish[answer], which returns the final `answer` and finishes the task
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Thought 1: next steps to take based on last observation
+
+Action 1: always either Search[query] or, when done, Finish[answer]
+
+Observation 1: observations based on action
+
+Thought 2: next steps to take based on last observation
+
+Action 2: always either Search[query] or, when done, Finish[answer]
+
+---
+
+Question: Who is Jason Mars?
+
+Thought 1: I am not sure who Jason Mars is. I should look up this person to provide an accurate answer.
+
+Action 1: Search["Jason Mars"]
+
+Observation 1: Curly Wurly is a brand of chocolate bar manufactured by Cadbury and sold worldwide. It was launched in the UK in 1970. Its shape resembles three flattened, intertwined serpentine strings. The bar is made of chocolate-coated caramel.
+
+Thought 2:
+Output:
+ The search results seem to be incorrect. They are about a chocolate bar, not Jason Mars. I should try the search again.
+
+Action 2: Search["Jason Mars biography"]
+{'completion_tokens': 36, 'prompt_tokens': 279, 'total_tokens': 315}

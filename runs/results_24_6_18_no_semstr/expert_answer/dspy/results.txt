@@ -1,0 +1,43 @@
+Input Prompt:
+ Find the Expert Profession to answer the given question.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+Expert: Expert Profession
+
+---
+
+Question: What are Large Language Models?
+Expert:
+Output:
+ Question: What are Large Language Models?
+Expert: Artificial Intelligence Researcher
+{'completion_tokens': 14, 'prompt_tokens': 44, 'total_tokens': 58}
+Input Prompt:
+ Get the Expert's answer to the given question.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+Expert: ${expert}
+Answer: Expert's answer
+
+---
+
+Question: What are Large Language Models?
+Expert: Question: What are Large Language Models? Expert: Artificial Intelligence Researcher
+Answer:
+Output:
+ Question: What are Large Language Models?
+Expert: Artificial Intelligence Researcher
+Answer: Large Language Models (LLMs) are a type of artificial intelligence model designed to understand and generate human language. They are built using deep learning techniques, particularly neural networks with many layers, and are trained on vast amounts of text data. This training allows them to learn the statistical properties of language, such as grammar, context, and even some level of reasoning. Examples of LLMs include OpenAI's GPT-3 and Google's BERT. These models can perform a variety of tasks, including text generation, translation, summarization, and answering questions, often with a high degree of fluency and coherence.
+{'completion_tokens': 139, 'prompt_tokens': 67, 'total_tokens': 206}
+Question: What are Large Language Models?
+Expert: Artificial Intelligence Researcher says: Question: What are Large Language Models?
+Expert: Artificial Intelligence Researcher
+Answer: Large Language Models (LLMs) are a type of artificial intelligence model designed to understand and generate human language. They are built using deep learning techniques, particularly neural networks with many layers, and are trained on vast amounts of text data. This training allows them to learn the statistical properties of language, such as grammar, context, and even some level of reasoning. Examples of LLMs include OpenAI's GPT-3 and Google's BERT. These models can perform a variety of tasks, including text generation, translation, summarization, and answering questions, often with a high degree of fluency and coherence.

@@ -1,0 +1,160 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(description) (str) = "Have some sleep"
+
+[Output Information]
+(Task)
+
+[Type Explanations]
+(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] The description provided is "Have some sleep". Based on research, the recommended sleep duration for health is around 7-9 hours. We'll consider sleep duration at the average of 8 hours (480 minutes). The priority of sleep is generally high for health and well-being, so we'll assign it a priority of 9 out of 10.
+
+[Output] Task(description="Have some sleep", time_in_min=480, priority_out_of_10=9)
+CompletionUsage(completion_tokens=97, prompt_tokens=207, total_tokens=304)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(description) (str) = "Enjoy a better weekend with my girlfriend"
+
+[Output Information]
+(Task)
+
+[Type Explanations]
+(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] The task "Enjoy a better weekend with my girlfriend" is a leisure activity. Based on research, an average weekend activity like this might last around 240 minutes (4 hours). Assigning a priority of 8 out of 10 reflects its importance for personal relationships and well-being.
+
+[Output] Task(description="Enjoy a better weekend with my girlfriend", time_in_min=240, priority_out_of_10=8)
+CompletionUsage(completion_tokens=89, prompt_tokens=211, total_tokens=300)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(description) (str) = "Work on Jaseci Project"
+
+[Output Information]
+(Task)
+
+[Type Explanations]
+(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] The description is provided. Based on a typical project task, I will assign a reasonable time and priority.
+[Output] Task(description="Work on Jaseci Project", time_in_min=120, priority_out_of_10=7)
+CompletionUsage(completion_tokens=52, prompt_tokens=210, total_tokens=262)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(description) (str) = "Teach EECS 281 Students"
+
+[Output Information]
+(Task)
+
+[Type Explanations]
+(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] The input description is "Teach EECS 281 Students". Based on the nature of the task, teaching a class typically takes around 60 to 90 minutes. The priority of teaching students can be considered high, so assigning an 8 out of 10 for priority seems reasonable.
+
+[Output] Task(description="Teach EECS 281 Students", time_in_min=90, priority_out_of_10=8)
+CompletionUsage(completion_tokens=88, prompt_tokens=210, total_tokens=298)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(description) (str) = "Enjoy family time with my parents"
+
+[Output Information]
+(Task)
+
+[Type Explanations]
+(Task) (obj) eg:- Task(description=str, time_in_min=int, priority_out_of_10=int) -> (description) (str), (time_in_min) (int), (priority_out_of_10) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] The task involves spending time with family, which generally requires a significant amount of time and is of high priority. Based on similar activities, the time is estimated to be around 120 minutes, and the priority is rated at 8 out of 10 due to the importance of family bonding.
+
+[Output] Task(description="Enjoy family time with my parents", time_in_min=120, priority_out_of_10=8)
+CompletionUsage(completion_tokens=89, prompt_tokens=210, total_tokens=299)
+[Task(description='Have some sleep', time_in_min=480, priority_out_of_10=9), Task(description='Enjoy a better weekend with my girlfriend', time_in_min=240, priority_out_of_10=8), Task(description='Work on Jaseci Project', time_in_min=120, priority_out_of_10=7), Task(description='Teach EECS 281 Students', time_in_min=90, priority_out_of_10=8), Task(description='Enjoy family time with my parents', time_in_min=120, priority_out_of_10=8)]

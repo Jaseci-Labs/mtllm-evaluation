@@ -1,6 +1,6 @@
 lmql
 dspy
-jaclang @git+https://github.com/Jaseci-Labs/jaclang@main
+jaclang @git+https://github.com/Jaseci-Labs/jaclang@mtllm-no-semstr-none
 anthropic
 black
 wikipedia
@@ -9,3 +9,4 @@ loguru
 pyinstrument
 gprof2dot
 pandas
+matplotlib

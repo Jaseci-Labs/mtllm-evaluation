@@ -1,0 +1,138 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+Example of ReAct Process (example) (dict) = {"question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "react_process": [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", action_type=ActionType.Search, action_info="Colorado orogeny"), observation="The Colorado orogeny was an episode of mountain building (an orogeny) ..."), ThoughtActionObservation(thought_action=ThoughtAction(thought="It does not mention the eastern sector. So I need to look up eastern sector.", action_type=ActionType.Search, action_info="eastern sector of the Colorado orogeny"), observation="The eastern sector of the Colorado orogeny extends into the High Plains.... ")], "final_thought_action": ThoughtAction(thought="High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft", action_type=ActionType.Finish, action_info="1,800 to 7,000 ft")}
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "Where is Apple Headquaters located?"
+Previous Thought, Action and Observation (prev_thought_action_observation) (list) = []
+
+[Output Information]
+Thought & Action (ThoughtAction)
+
+[Type Explanations]
+Thought and Action (ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+Action Type (ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+[Action]
+Get Next Thought Action
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] ThoughtAction(thought="I need to search for the location of Apple Headquarters", action_type=ActionType.Search, action_info="Apple Headquarters location")
+CompletionUsage(completion_tokens=33, prompt_tokens=480, total_tokens=513)
+ThoughtAction(thought='I need to search for the location of Apple Headquarters', action_type=<ActionType.Search: 1>, action_info='Apple Headquarters location')
+Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond.
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+Example of ReAct Process (example) (dict) = {"question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "react_process": [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", action_type=ActionType.Search, action_info="Colorado orogeny"), observation="The Colorado orogeny was an episode of mountain building (an orogeny) ..."), ThoughtActionObservation(thought_action=ThoughtAction(thought="It does not mention the eastern sector. So I need to look up eastern sector.", action_type=ActionType.Search, action_info="eastern sector of the Colorado orogeny"), observation="The eastern sector of the Colorado orogeny extends into the High Plains.... ")], "final_thought_action": ThoughtAction(thought="High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft", action_type=ActionType.Finish, action_info="1,800 to 7,000 ft")}
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "Where is Apple Headquaters located?"
+Previous Thought, Action and Observation (prev_thought_action_observation) (list) = [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search for the location of Apple Headquarters", action_type=ActionType.Search, action_info="Apple Headquarters location"), observation="Apple Park, also known as Apple Campus 2, is the corporate headquarters of Apple Inc., located in Cupertino, California, United States. It was opened to employees in April 2017, while construction was still underway, and superseded Apple Campus as the company's corporate headquarters, which opened in 1993.
+The main building's scale and circular groundscraper design, by Norman Foster, have earned the structure the media nickname "the spaceship". Located on a suburban site totaling 1.46 km2 (360 acres), it houses more than 12,000 employees in one central four-story circular building of approximately 0.26 km2 (64 acres). Apple co-founder Steve Jobs wanted the campus to look less like a business park and more like a nature refuge; 80 percent of the site consists of green space planted with drought-resistant trees and plants indigenous to the Cupertino area, and the center courtyard of the main building features an artificial pond.")]
+
+[Output Information]
+Thought & Action (ThoughtAction)
+
+[Type Explanations]
+Thought and Action (ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+Action Type (ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+[Action]
+Get Next Thought Action
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] ThoughtAction(thought="The headquarters of Apple, known as Apple Park, is located in Cupertino, California, United States.", action_type=ActionType.Finish, action_info="Cupertino, California, United States")
+CompletionUsage(completion_tokens=47, prompt_tokens=714, total_tokens=761)
+ThoughtAction(thought='The headquarters of Apple, known as Apple Park, is located in Cupertino, California, United States.', action_type=<ActionType.Finish: 2>, action_info='Cupertino, California, United States')
+Question:  Where is Apple Headquaters located?
+Answer:  Cupertino, California, United States
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+Example of ReAct Process (example) (dict) = {"question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "react_process": [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", action_type=ActionType.Search, action_info="Colorado orogeny"), observation="The Colorado orogeny was an episode of mountain building (an orogeny) ..."), ThoughtActionObservation(thought_action=ThoughtAction(thought="It does not mention the eastern sector. So I need to look up eastern sector.", action_type=ActionType.Search, action_info="eastern sector of the Colorado orogeny"), observation="The eastern sector of the Colorado orogeny extends into the High Plains.... ")], "final_thought_action": ThoughtAction(thought="High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft", action_type=ActionType.Finish, action_info="1,800 to 7,000 ft")}
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "Who is Jason Mars?"
+Previous Thought, Action and Observation (prev_thought_action_observation) (list) = []
+
+[Output Information]
+Thought & Action (ThoughtAction)
+
+[Type Explanations]
+Thought and Action (ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+Action Type (ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+[Action]
+Get Next Thought Action
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] ThoughtAction(thought="I need to search for information about Jason Mars.", action_type=ActionType.Search, action_info="Jason Mars")
+CompletionUsage(completion_tokens=31, prompt_tokens=477, total_tokens=508)
+ThoughtAction(thought='I need to search for information about Jason Mars.', action_type=<ActionType.Search: 1>, action_info='Jason Mars')
+Jason O. Mars (Born May 27, 1983) is an American computer scientist, author, and entrepreneur. He is best known for his research into computer architecture and artificial intelligence, particularly in the design and deployment of conversational AI. The best-selling author of Breaking Bots: Inventing a New Voice in the AI Revolution, he has been involved in multiple AI initiatives and startups over the course of his career, including ZeroShotBot, Jaseci, Clinc, Myca, and ImpactfulAI.
+Mars holds a PhD in Computer Science from the University of Virginia(UVA), and is currently employed as an Associate Professor of Computer Science and Engineering at the University of Michigan(U-M). He is also acting co-director of U-M's Clarity Lab alongside his wife, Professor Lingjia Tang. There, Mars helps direct advanced research within artificial intelligence, large-scale computing, and coding. Among the lab's most notable projects is the open source Sirius, later rebranded as Lucida. 
+A virtual assistant capable of understanding both visual and auditory queries, Lucida was intended by Mars and his colleagues as a sandbox that would help programmers explore the complexities of speech recognition. Mars also hoped that it would act as a foundation for the development of hardware better-suited for conversational AI. The project was supported by Google, the Defense Advanced Research Projects Agency (DARPA), and the National Science Foundation.
+Jason Mars was one of ten individuals celebrated at the 28th Annual Caribbean American Heritage (CARAH) Awards. Mars received the Vanguard Award from the Institute of Caribbean Studies for his technological impact and "contributions to America and the world." Other winners include Pfizer Principal Scientist for Viral Vaccines Vidia Roopchand and Grammy-winning songwriter Gordon Chambers. Past honorees of the CARAH Awards include former United States Attorney General Eric Holder, former United States Ambassador to the United Nations Andrew Young and Olympian Usain Bolt.
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+Example of ReAct Process (example) (dict) = {"question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "react_process": [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", action_type=ActionType.Search, action_info="Colorado orogeny"), observation="The Colorado orogeny was an episode of mountain building (an orogeny) ..."), ThoughtActionObservation(thought_action=ThoughtAction(thought="It does not mention the eastern sector. So I need to look up eastern sector.", action_type=ActionType.Search, action_info="eastern sector of the Colorado orogeny"), observation="The eastern sector of the Colorado orogeny extends into the High Plains.... ")], "final_thought_action": ThoughtAction(thought="High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft", action_type=ActionType.Finish, action_info="1,800 to 7,000 ft")}
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "Who is Jason Mars?"
+Previous Thought, Action and Observation (prev_thought_action_observation) (list) = [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search for information about Jason Mars.", action_type=ActionType.Search, action_info="Jason Mars"), observation="Jason O. Mars (Born May 27, 1983) is an American computer scientist, author, and entrepreneur. He is best known for his research into computer architecture and artificial intelligence, particularly in the design and deployment of conversational AI. The best-selling author of Breaking Bots: Inventing a New Voice in the AI Revolution, he has been involved in multiple AI initiatives and startups over the course of his career, including ZeroShotBot, Jaseci, Clinc, Myca, and ImpactfulAI.
+Mars holds a PhD in Computer Science from the University of Virginia(UVA), and is currently employed as an Associate Professor of Computer Science and Engineering at the University of Michigan(U-M). He is also acting co-director of U-M's Clarity Lab alongside his wife, Professor Lingjia Tang. There, Mars helps direct advanced research within artificial intelligence, large-scale computing, and coding. Among the lab's most notable projects is the open source Sirius, later rebranded as Lucida. 
+A virtual assistant capable of understanding both visual and auditory queries, Lucida was intended by Mars and his colleagues as a sandbox that would help programmers explore the complexities of speech recognition. Mars also hoped that it would act as a foundation for the development of hardware better-suited for conversational AI. The project was supported by Google, the Defense Advanced Research Projects Agency (DARPA), and the National Science Foundation.
+Jason Mars was one of ten individuals celebrated at the 28th Annual Caribbean American Heritage (CARAH) Awards. Mars received the Vanguard Award from the Institute of Caribbean Studies for his technological impact and "contributions to America and the world." Other winners include Pfizer Principal Scientist for Viral Vaccines Vidia Roopchand and Grammy-winning songwriter Gordon Chambers. Past honorees of the CARAH Awards include former United States Attorney General Eric Holder, former United States Ambassador to the United Nations Andrew Young and Olympian Usain Bolt.")]
+
+[Output Information]
+Thought & Action (ThoughtAction)
+
+[Type Explanations]
+Thought and Action (ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+Action Type (ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+[Action]
+Get Next Thought Action
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] ThoughtAction(thought="Jason Mars is an American computer scientist, author, and entrepreneur known for his research in computer architecture and artificial intelligence.", action_type=ActionType.Finish, action_info="Information about Jason Mars")
+CompletionUsage(completion_tokens=47, prompt_tokens=912, total_tokens=959)
+ThoughtAction(thought='Jason Mars is an American computer scientist, author, and entrepreneur known for his research in computer architecture and artificial intelligence.', action_type=<ActionType.Finish: 2>, action_info='Information about Jason Mars')
+Question:  Who is Jason Mars?
+Answer:  Information about Jason Mars

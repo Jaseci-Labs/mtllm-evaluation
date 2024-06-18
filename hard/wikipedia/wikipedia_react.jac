@@ -3,59 +3,80 @@ import:py wikipedia;
 
 glob llm = OpenAI(model_name="gpt-4o");
 
-obj 'Question Answering'
-QA {
-    has qa_example: 'QA example with Thoughts and Actions': list[dict] = [
-        {
-            "Question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?",
-            "Thoughts and Observations": [
-                {
-                    "Thought": "I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...",
-                    "Action": "Search: Colorado orogeny",
-                    "Observation": "The Colorado orogeny was an episode of mountain building (an orogeny) ..."
-                },
-                {
-                    "Thought": "It does not mention the eastern sector. So I need to look up eastern sector.",
-                    "Action": "Search: eastern sector of the Colorado orogeny",
-                    "Observation": "The eastern sector of the Colorado orogeny extends into the High Plains."
-                },
-                {
-                    "Thought": "High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft.",
-                    "Action": "Finish: 1,800 to 7,000 ft"
-                }
-            ]
-        }
-    ];
+enum 'Action Type'
+ActionType {
+    Search,
+    Finish
+}
 
-    can 'Get next Thought and Action. Action should always startswith "Search:" or "Finish:" followed by the search term or the answer'
-    get_throught_and_actions(question: 'Question': str, prev_info: 'Previous Thoughts, Actions, and Observations': list[dict]=[]) -> 'Next Thought and Action': dict by llm(incl_info=(self.qa_example));
-    can get_answer(question: str) -> str {
-        prev_info = [];
-        while len(prev_info) < 100 {
-            next_info = self.get_throught_and_actions(question, prev_info[-3:]);
-            if next_info["Action"].startswith("Search:") {
-                obs = wikipedia.summary(
-                    next_info["Action"].replace("Search: ", "")
-                );
-                next_info["Observation"] = obs;
-            } elif next_info["Action"].startswith("Finish:") {
-                return next_info["Action"].replace("Finish: ", "");
-            }
-            prev_info.append(next_info);
+obj 'Thought and Action'
+ThoughtAction {
+    has thought: str,
+        action_type: ActionType,
+        action_info: str;
+}
+
+obj 'Thought Action Observation'
+ThoughtActionObservation {
+    has thought_action: ThoughtAction,
+        observation: str;
+}
+
+glob example: 'Example of ReAct Process': dict = {
+    "question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?",
+    "react_process": [
+        ThoughtActionObservation(
+            thought_action=ThoughtAction(
+               thought="I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...",
+                action_type=ActionType.Search,
+                action_info="Colorado orogeny"
+            ),
+            observation="The Colorado orogeny was an episode of mountain building (an orogeny) ..."
+        ),
+        ThoughtActionObservation(
+            thought_action=ThoughtAction( 
+                thought="It does not mention the eastern sector. So I need to look up eastern sector.",
+                action_type=ActionType.Search,
+                action_info="eastern sector of the Colorado orogeny"
+            ),
+            observation="The eastern sector of the Colorado orogeny extends into the High Plains.... "
+        )
+    ],
+    "final_thought_action": ThoughtAction(
+        thought="High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft",
+        action_type=ActionType.Finish,
+        action_info="1,800 to 7,000 ft"
+    )
+};
+
+can 'Get Next Thought Action'
+get_next_thought_action(question: 'Question': str, prev_thought_action_observation: 'Previous Thought, Action and Observation': list[ThoughtActionObservation])
+-> 'Thought & Action': ThoughtAction by llm(incl_info=(example));
+
+"""Get Answer to the Question"""
+can get_answer(question: str) -> str {
+    prev_info = [];
+    while len(prev_info) < 100 {
+        next_thought_action = get_next_thought_action(question, prev_info[-3:]);
+        print(next_thought_action);
+        if next_thought_action.action_type == ActionType.Search {
+            obs= wikipedia.summary(next_thought_action.action_info);
+            prev_info.append(ThoughtActionObservation(thought_action=next_thought_action, observation=obs));
+            print(obs);
         }
-        return "I am sorry, I could not find the answer.";
+        if next_thought_action.action_type == ActionType.Finish{
+            return next_thought_action.action_info;
+        }
     }
 }
 
 with entry {
-    qa = QA();
     question = "Where is Apple Headquaters located?";
-    answer = qa.get_answer(question);
+    answer = get_answer(question);
     print("Question: ", question);
     print("Answer: ", answer);
     question = "Who is Jason Mars?";
-    answer = qa.get_answer(question);
+    answer = get_answer(question);
     print("Question: ", question);
     print("Answer: ", answer);
 }
-

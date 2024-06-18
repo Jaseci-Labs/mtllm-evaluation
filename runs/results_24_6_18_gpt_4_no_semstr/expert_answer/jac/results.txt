@@ -1,0 +1,62 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "What are Large Language Models?"
+
+[Output Information]
+(str)
+
+[Type Explanations]
+
+
+[Action]
+get_suitable_expert
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] The question asks for information about Large Language Models. An appropriate expert to answer this question would be an AI and Machine Learning Specialist, as they would have knowledge and experience in this field.
+
+[Output] AI and Machine Learning Specialist
+CompletionUsage(completion_tokens=49, prompt_tokens=134, total_tokens=183)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "What are Large Language Models?"
+(expert) (str) = "AI and Machine Learning Specialist"
+
+[Output Information]
+(str)
+
+[Type Explanations]
+
+
+[Action]
+get_answer_of_expert
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] "Large Language Models are machine learning models that are trained on a large amount of text data. They are designed to generate human-like text and can be used for various applications like translation, question answering, summarizing text, etc. These models, like GPT-3, have billions of parameters and are capable of understanding and generating text in a very sophisticated manner."
+CompletionUsage(completion_tokens=76, prompt_tokens=141, total_tokens=217)
+AI and Machine Learning Specialist says: 'Large Language Models are machine learning models that are trained on a large amount of text data. They are designed to generate human-like text and can be used for various applications like translation, question answering, summarizing text, etc. These models, like GPT-3, have billions of parameters and are capable of understanding and generating text in a very sophisticated manner.

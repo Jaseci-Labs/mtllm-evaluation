@@ -2,7 +2,7 @@ import dspy
 import wikipedia
 from dspy.predict.parameter import Parameter
 
-llm = dspy.OllamaLocal(base_url="http://52.23.242.52:11343", model="phi3")
+llm = dspy.OpenAI(model="gpt-4o")
 dspy.settings.configure(lm=llm)
 
 

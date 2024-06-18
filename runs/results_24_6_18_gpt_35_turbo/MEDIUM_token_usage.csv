@@ -1,0 +1,6 @@
+problem,jac_completion_tokens,jac_prompt_tokens,jac_total_tokens,dspy_completion_tokens,dspy_prompt_tokens,dspy_total_tokens,jac_cost,dspy_cost
+mcq_reason,73,264,337,50,164,214,0.0024150000000000005,0.0015700000000000002
+personality_finder,27,245,272,32,197,229,0.0016300000000000002,0.001465
+template,58,531,589,37,173,210,0.0035250000000000004,0.0014200000000000003
+text_to_type,37,266,303,52,266,318,0.001885,0.00211
+taskman,277,1254,1531,153,808,961,0.010425,0.006335

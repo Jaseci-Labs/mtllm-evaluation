@@ -1,0 +1,92 @@
+Input Prompt:
+ Pict the Odd Word Out from the given list of words.
+
+---
+
+Follow the following format.
+
+Options: Options to pick from
+Reasoning: Let's think step by step in order to ${produce the odd_word}. We ...
+Odd Word: Odd Word
+
+---
+
+Options: ['Spain', 'France', 'German', 'England', 'Singapore']
+Odd Word: German
+
+---
+
+Options: ['skirt', 'dress', 'pen', 'jacket']
+Reasoning: Let's think step by step in order to
+Output:
+ produce the odd word. We see that most of the words are related to clothing items. However, 'pen' is not a clothing item.
+Odd Word: Pen
+{'completion_tokens': 33, 'prompt_tokens': 111, 'total_tokens': 144}
+Input Prompt:
+ Pict the Odd Word Out from the given list of words.
+
+---
+
+Follow the following format.
+
+Options: Options to pick from
+Reasoning: Let's think step by step in order to ${produce the odd_word}. We ...
+Odd Word: Odd Word
+
+---
+
+Options: ['skirt', 'dress', 'pen', 'jacket']
+Odd Word: pen
+
+---
+
+Options: ['Spain', 'France', 'German', 'England', 'Singapore']
+Reasoning: Let's think step by step in order to
+Output:
+ produce the odd word. We see that all the options are names of countries, except for 'German' which is a language and a nationality.
+Odd Word: German
+
+---
+
+Options: ['apple', 'banana', 'grape', 'carrot', 'orange']
+Reasoning: Let's think step by step in order to produce the odd word. We see that all the options are fruits, except for 'carrot' which is a vegetable.
+Odd Word: carrot
+
+---
+
+Options: ['dog', 'cat', 'lion', 'tiger', 'elephant']
+Reasoning: Let's think step by step in order to produce the odd word. We see that all the options are animals, but 'dog' and 'cat'
+{'completion_tokens': 150, 'prompt_tokens': 111, 'total_tokens': 261}
+Bootstrapped 2 full traces after 2 examples in round 0.
+Input Prompt:
+ Pict the Odd Word Out from the given list of words.
+
+---
+
+Follow the following format.
+
+Options: Options to pick from
+Reasoning: Let's think step by step in order to ${produce the odd_word}. We ...
+Odd Word: Odd Word
+
+---
+
+Options: ['skirt', 'dress', 'pen', 'jacket']
+Reasoning: Let's think step by step in order to produce the odd word. We see that most of the words are related to clothing items. However, 'pen' is not a clothing item.
+Odd Word: Pen
+
+---
+
+Options: ['Spain', 'France', 'German', 'England', 'Singapore']
+Reasoning: Let's think step by step in order to produce the odd word. We see that all the options are names of countries, except for 'German' which is a language and a nationality.
+Odd Word: German --- Options: ['apple', 'banana', 'grape', 'carrot', 'orange'] Reasoning: Let's think step by step in order to produce the odd word. We see that all the options are fruits, except for 'carrot' which is a vegetable. Odd Word: carrot --- Options: ['dog', 'cat', 'lion', 'tiger', 'elephant'] Reasoning: Let's think step by step in order to produce the odd word. We see that all the options are animals, but 'dog' and 'cat'
+
+---
+
+Options: [Bentley, Ferrari, Lamborghini, Casio, Toyota]
+Reasoning: Let's think step by step in order to
+Output:
+ produce the odd word. We see that all the options are brands, but Bentley, Ferrari, Lamborghini, and Toyota are car manufacturers, while Casio is a brand that produces watches, calculators, and other electronic devices.
+Odd Word: Casio
+{'completion_tokens': 51, 'prompt_tokens': 330, 'total_tokens': 381}
+('produce the odd word. We see that all the options are brands, but Bentley, Ferrari, Lamborghini, and Toyota are car manufacturers, while Casio is a brand that produces watches, calculators, and other electronic devices.', 'Casio')

@@ -1,0 +1,42 @@
+model_used: gpt-4o
+dspy_max_token = 1024 on level generation, rest kept the default. default is set to 1024
+dspy_temperature = 0.0 (default)
+
+* jac implementations were not ran. as it similar to runs/no_semstr_results_24_6_18 or runs/results_24_6_18
+
+Experimentation
+- Checking whether even giving additional room for generation to dspy when using the chat models improves the results
+
+Conclusion
+- Additional room for generation didnt improved the result of dspy. It seems dspy is able to work better with chat models
+when typed outputs are expected. when there is no specific mention of typed (json schema), dspy seems to rephrase unnecessarily.
+- It is not advisable to use higher max token limit on dspy when using chat models. see the graphs
+
+== Result Analysis ==
+1. essay_reviewer
+dspy - 
+2. expert_answer
+dspy - 
+3. joke_gen
+dspy - 
+4. mcq_reason
+dspy - 
+5. odd_word_out
+dspy - 
+6. personality_finder
+dspy - 
+7. rpg_level_gen
+dspy - 
+8. taskman
+dspy - 
+9. template
+dspy - 
+10. text_to_type
+dspy - 
+11. translation
+dspy - 
+12. wikipedia
+dspy - 
+
+== Overall Performance ==
+dspy -  
