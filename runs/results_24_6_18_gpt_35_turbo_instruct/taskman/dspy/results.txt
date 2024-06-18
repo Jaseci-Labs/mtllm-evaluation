@@ -1,0 +1,262 @@
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Have some sleep
+Task:
+Output:
+  {"properties": {"description": {"description": "Get some rest and sleep for at least 8 hours", "title": "Description", "type": "string"}, "time": {"description": "480", "title": "Time", "type": "integer"}, "priority": {"description": "8", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+{'completion_tokens': 101, 'prompt_tokens': 152, 'total_tokens': 253}
+Input Prompt:
+ Make a very succinct json object that validates with the following schema
+
+---
+
+Follow the following format.
+
+Json Schema: ${json_schema}
+Json Object: ${json_object}
+
+---
+
+Json Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+Json Object:
+Output:
+  {"description": "Clean the house", "time": 60, "priority": 8}
+{'completion_tokens': 20, 'prompt_tokens': 154, 'total_tokens': 174}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+
+Past Error (task): An error to avoid in the future
+
+Task:
+${task}. Respond with a single JSON object. 
+You MUST use this format: {"description": "Clean the house", "time": 60, "priority": 8}
+JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Have some sleep
+
+Past Error (task): Field required: description (error type: missing); Field required: time (error type: missing); Field required: priority (error type: missing)
+
+Task:
+Output:
+ 
+{"description": "Have some sleep", "time": 480, "priority": 10}
+{'completion_tokens': 21, 'prompt_tokens': 227, 'total_tokens': 248}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Enjoy a better weekend with my girlfriend
+Task:
+Output:
+  {"properties": {"description": {"description": "Spend quality time with my girlfriend and make her feel special", "title": "Description", "type": "string"}, "time": {"description": "120 minutes", "title": "Time", "type": "integer"}, "priority": {"description": "10 - High Priority", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+{'completion_tokens': 106, 'prompt_tokens': 156, 'total_tokens': 262}
+Input Prompt:
+ Make a very succinct json object that validates with the following schema
+
+---
+
+Follow the following format.
+
+Json Schema: ${json_schema}
+Json Object: ${json_object}
+
+---
+
+Json Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+Json Object:
+Output:
+  {"description": "Clean the house", "time": 60, "priority": 8}
+{'completion_tokens': 20, 'prompt_tokens': 154, 'total_tokens': 174}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+
+Past Error (task): An error to avoid in the future
+
+Task:
+${task}. Respond with a single JSON object. 
+You MUST use this format: {"description": "Clean the house", "time": 60, "priority": 8}
+JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Enjoy a better weekend with my girlfriend
+
+Past Error (task): Field required: description (error type: missing); Field required: time (error type: missing); Field required: priority (error type: missing)
+
+Task:
+Output:
+ 
+{"description": "Spend quality time with my girlfriend", "time": 120, "priority": 9}
+{'completion_tokens': 25, 'prompt_tokens': 231, 'total_tokens': 256}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Work on Jaseci Project
+Task:
+Output:
+  {"properties": {"description": {"description": "Work on the Jaseci Project by completing the assigned tasks and meeting deadlines", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the project", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Project (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+{'completion_tokens': 122, 'prompt_tokens': 155, 'total_tokens': 277}
+Input Prompt:
+ Make a very succinct json object that validates with the following schema
+
+---
+
+Follow the following format.
+
+Json Schema: ${json_schema}
+Json Object: ${json_object}
+
+---
+
+Json Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+Json Object:
+Output:
+  {"description": "Clean the house", "time": 60, "priority": 8}
+{'completion_tokens': 20, 'prompt_tokens': 154, 'total_tokens': 174}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+
+Past Error (task): An error to avoid in the future
+
+Task:
+${task}. Respond with a single JSON object. 
+You MUST use this format: {"description": "Clean the house", "time": 60, "priority": 8}
+JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Work on Jaseci Project
+
+Past Error (task): Field required: description (error type: missing); Field required: time (error type: missing); Field required: priority (error type: missing)
+
+Task:
+Output:
+ 
+{"description": "Work on Jaseci Project", "time": 120, "priority": 9}
+{'completion_tokens': 24, 'prompt_tokens': 230, 'total_tokens': 254}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Teach EECS 281 Students
+Task:
+Output:
+  {"description": "Teach EECS 281 students about algorithms and data structures", "time": 60, "priority": 9}
+{'completion_tokens': 29, 'prompt_tokens': 155, 'total_tokens': 184}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Enjoy family time with my parents
+Task:
+Output:
+  {"properties": {"description": {"description": "Spend quality time with my parents and enjoy their company", "title": "Description", "type": "string"}, "time": {"description": "2 hours", "title": "Time", "type": "integer"}, "priority": {"description": "8", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+{'completion_tokens': 102, 'prompt_tokens': 155, 'total_tokens': 257}
+Input Prompt:
+ Make a very succinct json object that validates with the following schema
+
+---
+
+Follow the following format.
+
+Json Schema: ${json_schema}
+Json Object: ${json_object}
+
+---
+
+Json Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+Json Object:
+Output:
+  {"description": "Clean the house", "time": 60, "priority": 8}
+{'completion_tokens': 20, 'prompt_tokens': 154, 'total_tokens': 174}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+
+Past Error (task): An error to avoid in the future
+
+Task:
+${task}. Respond with a single JSON object. 
+You MUST use this format: {"description": "Clean the house", "time": 60, "priority": 8}
+JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Enjoy family time with my parents
+
+Past Error (task): Field required: description (error type: missing); Field required: time (error type: missing); Field required: priority (error type: missing)
+
+Task:
+Output:
+ 
+{"description": "Spend quality time with my parents", "time": 120, "priority": 9}
+{'completion_tokens': 25, 'prompt_tokens': 230, 'total_tokens': 255}
+[Task(description='Have some sleep', time=480, priority=10), Task(description='Spend quality time with my girlfriend', time=120, priority=9), Task(description='Work on Jaseci Project', time=120, priority=9), Task(description='Teach EECS 281 students about algorithms and data structures', time=60, priority=9), Task(description='Spend quality time with my parents', time=120, priority=9)]

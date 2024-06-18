@@ -1,0 +1,66 @@
+Input Prompt:
+ Get Person Information.
+
+---
+
+Follow the following format.
+
+Name: name of the singer
+Singer: ${singer}. Respond with a single JSON object. JSON Schema: {"description": "Singer.", "properties": {"name": {"description": "Name of the Singer", "title": "Name", "type": "string"}, "age": {"description": "Age", "title": "Age", "type": "integer"}, "top_songs": {"description": "His/Her's Top 2 Songs", "items": {"type": "string"}, "title": "Top Songs", "type": "array"}}, "required": ["name", "age", "top_songs"], "title": "Singer", "type": "object"}
+
+---
+
+Name: Bruno Mars
+Singer:
+Output:
+  ${singer}. Respond with a single JSON object. JSON Schema: {"description": "Singer.", "properties": {"name": {"description": "Name of the Singer", "title": "Name", "type": "string"}, "age": {"description": "Age", "title": "Age", "type": "integer"}, "top_songs": {"description": "His/Her's Top 2 Songs", "items": {"type": "string"}, "title": "Top Songs", "type": "array"}}, "required": ["name", "age", "top_songs"], "title": "Singer", "type": "object"}
+
+{
+    "name": "Bruno Mars",
+    "age
+{'completion_tokens': 150, 'prompt_tokens': 166, 'total_tokens': 316}
+Input Prompt:
+ Make a very succinct json object that validates with the following schema
+
+---
+
+Follow the following format.
+
+Json Schema: ${json_schema}
+Json Object: ${json_object}
+
+---
+
+Json Schema: {"description": "Singer.", "properties": {"name": {"description": "Name of the Singer", "title": "Name", "type": "string"}, "age": {"description": "Age", "title": "Age", "type": "integer"}, "top_songs": {"description": "His/Her's Top 2 Songs", "items": {"type": "string"}, "title": "Top Songs", "type": "array"}}, "required": ["name", "age", "top_songs"], "title": "Singer", "type": "object"}
+Json Object:
+Output:
+  {"name": "Adele", "age": 33, "top_songs": ["Hello", "Someone Like You"]}
+{'completion_tokens': 27, 'prompt_tokens': 163, 'total_tokens': 190}
+Input Prompt:
+ Get Person Information.
+
+---
+
+Follow the following format.
+
+Name: name of the singer
+
+Past Error (singer): An error to avoid in the future
+
+Singer:
+${singer}. Respond with a single JSON object. 
+You MUST use this format: {"name": "Adele", "age": 33, "top_songs": ["Hello", "Someone Like You"]}
+JSON Schema: {"description": "Singer.", "properties": {"name": {"description": "Name of the Singer", "title": "Name", "type": "string"}, "age": {"description": "Age", "title": "Age", "type": "integer"}, "top_songs": {"description": "His/Her's Top 2 Songs", "items": {"type": "string"}, "title": "Top Songs", "type": "array"}}, "required": ["name", "age", "top_songs"], "title": "Singer", "type": "object"}
+
+---
+
+Name: Bruno Mars
+
+Past Error (singer): ValueError('json output should start and end with { and }')
+
+Singer:
+Output:
+ 
+{"name": "Bruno Mars", "age": 36, "top_songs": ["Just the Way You Are", "Uptown Funk"]}
+{'completion_tokens': 33, 'prompt_tokens': 233, 'total_tokens': 266}
+Bruno Mars is 36 years old. His top 2 songs are ['Just the Way You Are', 'Uptown Funk'].

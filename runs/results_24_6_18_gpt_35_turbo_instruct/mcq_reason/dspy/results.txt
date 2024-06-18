@@ -1,0 +1,28 @@
+Input Prompt:
+ Provide the Answer for the Given Question (A-F)
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Choices: ${choices}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: ${answer}
+
+---
+
+Question: It was Sept. 1st, 2021 a week ago. What is the date 10 days ago in MM/DD/YYYY?
+
+Choices: (A) 08/29/2021 (B) 08/28/2021 (C) 08/29/1925 (D) 08/30/2021 (E) 05/25/2021 (F) 09/19/2021
+
+Reasoning: Let's think step by step in order to
+Output:
+  find the date 10 days ago. First, we need to subtract 10 from the day, which gives us 21. Then, we need to subtract 1 from the month, which gives us 08. Finally, we need to subtract 2021 from the year, which gives us 1925. Therefore, the date 10 days ago is 08/29/1925.
+
+Answer: (C) 08/29/1925
+{'completion_tokens': 93, 'prompt_tokens': 157, 'total_tokens': 250}
+find the date 10 days ago. First, we need to subtract 10 from the day, which gives us 21. Then, we need to subtract 1 from the month, which gives us 08. Finally, we need to subtract 2021 from the year, which gives us 1925. Therefore, the date 10 days ago is 08/29/1925. (C) 08/29/1925

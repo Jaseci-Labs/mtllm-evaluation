@@ -1,0 +1,69 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "What are Large Language Models?"
+
+[Output Information]
+Expert Profession (str)
+
+[Type Explanations]
+
+
+[Action]
+Find the Expert Profession to answer the given question.
+
+Reason and return the output result(s) only, adhering to the provided Output Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+
+---
+
+[Reasoning]
+Output:
+ The question is about language models, which are used in artificial intelligence and natural language processing. Therefore, the expert profession would likely be a data scientist, machine learning engineer, or computational linguist.
+[Output] Data Scientist
+CompletionUsage(completion_tokens=44, prompt_tokens=142, total_tokens=186)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "What are Large Language Models?"
+Expert (expert) (str) = "Data Scientist"
+
+[Output Information]
+Expert's Answer (str)
+
+[Type Explanations]
+
+
+[Action]
+Get the answer for the question from expert's perspective
+Generate and return the output result(s) only, adhering to the provided Output Type in the following format
+
+[Output] <result>
+
+---
+
+[Output]
+Output:
+ [Output] Large Language Models are advanced natural language processing models that are trained on massive amounts of data to achieve better performance on various tasks such as text generation, translation, and language understanding. As a Data Scientist, I have used Large Language Models in my work to analyze and process large amounts of text data, as well as develop new models and techniques for language processing.
+CompletionUsage(completion_tokens=72, prompt_tokens=148, total_tokens=220)
+Data Scientist says: 'Large Language Models are advanced natural language processing models that are trained on massive amounts of data to achieve better performance on various tasks such as text generation, translation, and language understanding. As a Data Scientist, I have used Large Language Models in my work to analyze and process large amounts of text data, as well as develop new models and techniques for language processing.

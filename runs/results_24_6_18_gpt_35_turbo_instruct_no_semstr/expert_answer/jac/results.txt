@@ -1,0 +1,69 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "What are Large Language Models?"
+
+[Output Information]
+(str)
+
+[Type Explanations]
+
+
+[Action]
+get_suitable_expert
+
+Reason and return the output result(s) only, adhering to the provided Output Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+
+---
+
+[Reasoning]
+Output:
+ The prompt requires a simple string output describing the definition of Large Language Models.
+[Output] "Large Language Models are powerful artificial intelligence models that can process large amounts of text data and generate human-like language."
+CompletionUsage(completion_tokens=41, prompt_tokens=133, total_tokens=174)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "What are Large Language Models?"
+(expert) (str) = "Large Language Models are powerful artificial intelligence models that can process large amounts of text data and generate human-like language."
+
+[Output Information]
+(str)
+
+[Type Explanations]
+
+
+[Action]
+get_answer_of_expert
+Generate and return the output result(s) only, adhering to the provided Output Type in the following format
+
+[Output] <result>
+
+---
+
+[Output]
+Output:
+ [Output] Large Language Models are powerful artificial intelligence models that can process large amounts of text data and generate human-like language.
+CompletionUsage(completion_tokens=22, prompt_tokens=155, total_tokens=177)
+Large Language Models are powerful artificial intelligence models that can process large amounts of text data and generate human-like language. says: 'Large Language Models are powerful artificial intelligence models that can process large amounts of text data and generate human-like language.

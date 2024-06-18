@@ -106,18 +106,24 @@ if __name__ == "__main__":
         type=str,
         choices=["both", "dspy", "jac"],
     )
+    parser.add_argument(
+        "-y",
+        help="Skip confirmation",
+        action="store_true",
+        default=False,
+    )
     args = parser.parse_args()
     logger.info(f"Using {args.profiler} as the profiler.")
     with open(args.config) as f:
         EVAL_PROBLEMS = json.load(f)
-    if os.path.exists(args.output_dir):
+    if os.path.exists(args.output_dir) and not args.y:
         logger.info(f"Output directory exists. Do you want to overwrite it? (y/n)")
         if input().lower() != "y":
             logger.info("Exiting...")
             exit(0)
     for difficulty, PROBLEM_SET in EVAL_PROBLEMS.items():
         for problem_name, paths in PROBLEM_SET.items():
-            if os.path.exists(f"{args.output_dir}/{problem_name}"):
+            if os.path.exists(f"{args.output_dir}/{problem_name}") and not args.y:
                 logger.info(f"Output directory for {problem_name} exists.")
                 logger.info(f"Do you want to overwrite it? (y/n)")
                 if input().lower() != "y":

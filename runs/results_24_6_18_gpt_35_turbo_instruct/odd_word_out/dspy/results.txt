@@ -1,0 +1,81 @@
+Input Prompt:
+ Pict the Odd Word Out from the given list of words.
+
+---
+
+Follow the following format.
+
+Options: Options to pick from
+Reasoning: Let's think step by step in order to ${produce the odd_word}. We ...
+Odd Word: Odd Word
+
+---
+
+Options: ['Spain', 'France', 'German', 'England', 'Singapore']
+Odd Word: German
+
+---
+
+Options: ['skirt', 'dress', 'pen', 'jacket']
+Reasoning: Let's think step by step in order to
+Output:
+  pick the odd word. We can group the words into two categories: clothing items and writing instruments. 'Pen' is the only word that does not fit into the category of clothing items, making it the odd word out.
+Odd Word: Pen
+{'completion_tokens': 49, 'prompt_tokens': 104, 'total_tokens': 153}
+Input Prompt:
+ Pict the Odd Word Out from the given list of words.
+
+---
+
+Follow the following format.
+
+Options: Options to pick from
+Reasoning: Let's think step by step in order to ${produce the odd_word}. We ...
+Odd Word: Odd Word
+
+---
+
+Options: ['skirt', 'dress', 'pen', 'jacket']
+Odd Word: pen
+
+---
+
+Options: ['Spain', 'France', 'German', 'England', 'Singapore']
+Reasoning: Let's think step by step in order to
+Output:
+  produce the odd_word. We can eliminate 'Singapore' because it is the only country that is not in Europe. Then, we can eliminate 'German' because it is the only country that is spelled differently from the others. Finally, we can eliminate 'pen' because it is not a country at all. This leaves us with 'Spain', 'France', and 'England'. Out of these three, 'Spain' is the odd word out because it is the only country that does not start with the letter 'F'.
+Odd Word: Spain
+{'completion_tokens': 109, 'prompt_tokens': 104, 'total_tokens': 213}
+Bootstrapped 2 full traces after 2 examples in round 0.
+Input Prompt:
+ Pict the Odd Word Out from the given list of words.
+
+---
+
+Follow the following format.
+
+Options: Options to pick from
+Reasoning: Let's think step by step in order to ${produce the odd_word}. We ...
+Odd Word: Odd Word
+
+---
+
+Options: ['skirt', 'dress', 'pen', 'jacket']
+Reasoning: Let's think step by step in order to pick the odd word. We can group the words into two categories: clothing items and writing instruments. 'Pen' is the only word that does not fit into the category of clothing items, making it the odd word out.
+Odd Word: Pen
+
+---
+
+Options: ['Spain', 'France', 'German', 'England', 'Singapore']
+Reasoning: Let's think step by step in order to produce the odd_word. We can eliminate 'Singapore' because it is the only country that is not in Europe. Then, we can eliminate 'German' because it is the only country that is spelled differently from the others. Finally, we can eliminate 'pen' because it is not a country at all. This leaves us with 'Spain', 'France', and 'England'. Out of these three, 'Spain' is the odd word out because it is the only country that does not start with the letter 'F'.
+Odd Word: Spain
+
+---
+
+Options: [Bentley, Ferrari, Lamborghini, Casio, Toyota]
+Reasoning: Let's think step by step in order to
+Output:
+  produce the odd_word. We can group the words into two categories: luxury car brands and regular car brands. 'Casio' is the only word that does not fit into the category of car brands, making it the odd word out.
+Odd Word: Casio
+{'completion_tokens': 53, 'prompt_tokens': 301, 'total_tokens': 354}
+("produce the odd_word. We can group the words into two categories: luxury car brands and regular car brands. 'Casio' is the only word that does not fit into the category of car brands, making it the odd word out.", 'Casio')

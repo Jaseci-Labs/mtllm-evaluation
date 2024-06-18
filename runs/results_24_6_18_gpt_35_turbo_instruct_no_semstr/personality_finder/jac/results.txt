@@ -1,0 +1,33 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(name) (str) = "Martin Luther King Jr."
+
+[Output Information]
+(Person)
+
+[Type Explanations]
+(Person) (obj) eg:- Person(full_name=str, yod=int, personality=Personality) -> (full_name) (str), (yod) (int), (personality) (Personality)
+(Personality) (Enum) eg:- Personality.EXTROVERT -> (INTROVERT) (EnumItem), (EXTROVERT) (EnumItem)
+
+[Action]
+get_person_info
+Generate and return the output result(s) only, adhering to the provided Output Type in the following format
+
+[Output] <result>
+
+---
+
+[Output]
+Output:
+ [Output] Martin Luther King Jr., 1929, EXTROVERT
+CompletionUsage(completion_tokens=12, prompt_tokens=198, total_tokens=210)
