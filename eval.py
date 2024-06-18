@@ -134,9 +134,11 @@ if __name__ == "__main__":
 
             if args.impl == "jac" or args.impl == "both":
                 logger.info(f"Running JAC program: {paths['jac']}")
-                run_jac_program(problem_name, paths["jac"], args.profiler, args.output_dir)
+                run_jac_program(
+                    problem_name, paths["jac"], args.profiler, args.output_dir
+                )
                 time.sleep(60)
-            
+
             if args.impl == "dspy" or args.impl == "both":
                 logger.info(f"Running Dspy program: {paths['dspy']}")
                 run_dspy_program(
