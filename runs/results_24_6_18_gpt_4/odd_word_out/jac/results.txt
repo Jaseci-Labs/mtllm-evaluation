@@ -1,0 +1,66 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+Examples for Picking Odd Word out (Options, Reasoing, Result) (examples) (list[tuple[list[str],str,str]]) = [(["skirt", "dress", "pen", "jacket"], "skirt is clothing, dress is clothing, pen is an object, jacket is clothing.", "pen"), (["Spain", "France", "German", "England", "Singapore"], "Spain, France, England, Singapore is a country, German is a language.", "German")]
+
+[Context]
+
+
+[Inputs Information]
+Options to pick from (options) (list) = ["Bentley", "Ferrari", "Lamborghini", "Casio", "Toyota"]
+
+[Output Information]
+REASONING & RESULT (tuple[str,str])
+
+[Type Explanations]
+
+
+[Action]
+Pick the Odd word out
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ ("Bentley, Ferrari, Lamborghini, Toyota are car brands, Casio is a watch brand.", "Casio")
+CompletionUsage(completion_tokens=26, prompt_tokens=258, total_tokens=284)
+Input Prompt:
+ 
+[Output]
+("Bentley, Ferrari, Lamborghini, Toyota are car brands, Casio is a watch brand.", "Casio")
+
+[Previous Result You Provided]
+None
+
+[Desired Output Type]
+REASONING & RESULT (tuple[str,str])
+
+[Type Explanations]
+
+
+Above output is not in the desired Output Format/Type. Please provide the output in the desired type. Do not repeat the previously provided output.
+Important: Do not provide the code or the methodology. Only provide
+the output in the desired format.
+
+Output:
+ ("Bentley, Ferrari, Lamborghini, Toyota are car brands, Casio is a watch brand.", "Casio is a watch brand")
+CompletionUsage(completion_tokens=30, prompt_tokens=117, total_tokens=147)
+Input Prompt:
+ 
+[Output]
+("Bentley, Ferrari, Lamborghini, Toyota are car brands, Casio is a watch brand.", "Casio is a watch brand")
+
+[Desired Output Type]
+tuple[str,str]
+
+[Type Explanations]
+
+
+Check if the output is exactly in the desired Output Type. Important: Just say 'Yes' or 'No'.
+
+Output:
+ Yes
+CompletionUsage(completion_tokens=1, prompt_tokens=80, total_tokens=81)
+('Bentley, Ferrari, Lamborghini, Toyota are car brands, Casio is a watch brand.', 'Casio is a watch brand')

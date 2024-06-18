@@ -1,0 +1,73 @@
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: Which knight invented King Arthur's Round Table?
+Punchline: Sir Cumference.
+
+---
+
+Joke:
+Output:
+ Why don't scientists trust atoms?
+Punchline: Because they make up everything!
+{'completion_tokens': 17, 'prompt_tokens': 59, 'total_tokens': 76}
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: How does a penguin build its house?
+Punchline: Igloos it together.
+
+---
+
+Joke:
+Output:
+ Why don't scientists trust atoms?
+Punchline: Because they make up everything!
+{'completion_tokens': 17, 'prompt_tokens': 61, 'total_tokens': 78}
+Bootstrapped 2 full traces after 2 examples in round 0.
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: Why don't scientists trust atoms?
+Punchline: Because they make up everything!
+
+---
+
+Joke: Why don't scientists trust atoms?
+Punchline: Because they make up everything!
+
+---
+
+Joke:
+Output:
+ Why was the math book sad?
+Punchline: Because it had too many problems!
+{'completion_tokens': 18, 'prompt_tokens': 80, 'total_tokens': 98}
+Why was the math book sad?: Because it had too many problems!
