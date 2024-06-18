@@ -1,6 +1,6 @@
-import:py from jaclang.core.llms, Anthropic;
+"import:py from jaclang.core.llms, Anthropic;
 
-glob llm = Anthropic(model_name="claude-3-sonnet-20240229");
+glob llm = Anthropic(model_name=""claude-3-sonnet-20240229"");
 
 
 obj Essay {
@@ -18,10 +18,10 @@ obj Essay {
 
 with entry{
 
-    essay = input("Write your essay here : ");
+    essay = input(""Write your essay here : "");
     essay = Essay(essay);
 
-    criterias = ["Clarity","Coherence" , "Originality", "Evidence","Correct Spelling and grammar"];
+    criterias = [""Clarity"",""Coherence"" , ""Originality"", ""Evidence"",""Correct Spelling and grammar""];
     judgements = {};
     for criteria in criterias {
         judgement = essay.essay_judge(criteria);

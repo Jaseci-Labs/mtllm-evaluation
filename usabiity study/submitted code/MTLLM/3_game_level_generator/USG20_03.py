@@ -29,3 +29,12 @@ if __name__ == "__main__":
     # Display the generated map
     print("Generated map:")
     print(new_map)
+
+def generate_level(previous_levels):
+    response = jac.llm_generate_level(previous_levels)
+    new_level = response['new_level']
+    return new_level
+
+previous_levels_data = "Your previous levels data here"
+new_level = generate_level(previous_levels_data)
+print(f"New Level: {new_level}")
