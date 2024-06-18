@@ -1,0 +1,65 @@
+Input Prompt:
+ Provide the Answer for the Given Question (A-F)
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Choices: ${choices}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: ${answer}
+
+---
+
+Question: It was Sept. 1st, 2021 a week ago. What is the date 10 days ago in MM/DD/YYYY?
+
+Choices: (A) 08/29/2021 (B) 08/28/2021 (C) 08/29/1925 (D) 08/30/2021 (E) 05/25/2021 (F) 09/19/2021
+
+Reasoning: Let's think step by step in order to
+Output:
+ Reasoning: Let's think step by step in order to determine the correct date 10 days before September 1, 2021. We start by understanding that if it was September 1st, 2021 a week ago, then today is September 8, 2021. To find the date 10 days before September 1, 2021, we subtract 10 days from September 1, 2021. 
+
+1. September has 30 days, so subtracting 10 days from September 1st takes us into August.
+2. September 1 minus 1 day is August 31.
+3. Continuing to subtract the remaining 9 days from August 31, we get August 31 - 
+{'completion_tokens': 150, 'prompt_tokens': 164, 'total_tokens': 314}
+Input Prompt:
+ Provide the Answer for the Given Question (A-F)
+
+---
+
+Follow the following format.
+
+Question: ${question}
+
+Choices: ${choices}
+
+Reasoning: Let's think step by step in order to ${produce the answer}. We ...
+
+Answer: ${answer}
+
+---
+
+Question: It was Sept. 1st, 2021 a week ago. What is the date 10 days ago in MM/DD/YYYY?
+
+Choices: (A) 08/29/2021 (B) 08/28/2021 (C) 08/29/1925 (D) 08/30/2021 (E) 05/25/2021 (F) 09/19/2021
+
+Reasoning: Let's think step by step in order to Reasoning: Let's think step by step in order to determine the correct date 10 days before September 1, 2021. We start by understanding that if it was September 1st, 2021 a week ago, then today is September 8, 2021. To find the date 10 days before September 1, 2021, we subtract 10 days from September 1, 2021. 1. September has 30 days, so subtracting 10 days from September 1st takes us into August. 2. September 1 minus 1 day is August 31. 3. Continuing to subtract the remaining 9 days from August 31, we get August 31 -
+
+Answer:
+Output:
+ 22 = August 22, 2021. Therefore, the date 10 days before September 1, 2021, is August 22, 2021.
+
+Answer: None of the choices match the correct date calculated (August 22, 2021). All provided choices are incorrect based on the calculation.
+{'completion_tokens': 65, 'prompt_tokens': 317, 'total_tokens': 382}
+Reasoning: Let's think step by step in order to determine the correct date 10 days before September 1, 2021. We start by understanding that if it was September 1st, 2021 a week ago, then today is September 8, 2021. To find the date 10 days before September 1, 2021, we subtract 10 days from September 1, 2021. 
+
+1. September has 30 days, so subtracting 10 days from September 1st takes us into August.
+2. September 1 minus 1 day is August 31.
+3. Continuing to subtract the remaining 9 days from August 31, we get August 31 - 22 = August 22, 2021. Therefore, the date 10 days before September 1, 2021, is August 22, 2021.
+
+Answer: None of the choices match the correct date calculated (August 22, 2021). All provided choices are incorrect based on the calculation.

@@ -1,0 +1,70 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+(example) (dict) = {"question": "What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?", "react_process": [ThoughtActionObservation(thought_action=ThoughtAction(thought="I need to search Colorado orogeny, find the area that the eastern sector of the Colorado ...", action_type=ActionType.Search, action_info="Colorado orogeny"), observation="The Colorado orogeny was an episode of mountain building (an orogeny) ..."), ThoughtActionObservation(thought_action=ThoughtAction(thought="It does not mention the eastern sector. So I need to look up eastern sector.", action_type=ActionType.Search, action_info="eastern sector of the Colorado orogeny"), observation="The eastern sector of the Colorado orogeny extends into the High Plains.... ")], "final_thought_action": ThoughtAction(thought="High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft", action_type=ActionType.Finish, action_info="1,800 to 7,000 ft")}
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "Where is Apple Headquaters located?"
+(prev_thought_action_observation) (list) = []
+
+[Output Information]
+(ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+[Action]
+get_next_thought_action
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ ThoughtAction(thought="I need to search for the location of Apple Headquarters.", action_type=ActionType.Search, action_info="Apple Headquarters location")
+CompletionUsage(completion_tokens=30, prompt_tokens=457, total_tokens=487)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="I need to search for the location of Apple Headquarters.", action_type=ActionType.Search, action_info="Apple Headquarters location")
+
+[Previous Result You Provided]
+None
+
+[Desired Output Type]
+ (ThoughtAction)
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Above output is not in the desired Output Format/Type. Please provide the output in the desired type. Do not repeat the previously provided output.
+Important: Do not provide the code or the methodology. Only provide
+the output in the desired format.
+
+Output:
+ ThoughtAction(thought="I need to search for the location of Apple Headquarters.", action_type=ActionType.Search, action_info="Location of Apple Headquarters")
+CompletionUsage(completion_tokens=31, prompt_tokens=188, total_tokens=219)
+Input Prompt:
+ 
+[Output]
+ThoughtAction(thought="I need to search for the location of Apple Headquarters.", action_type=ActionType.Search, action_info="Location of Apple Headquarters")
+
+[Desired Output Type]
+ThoughtAction
+
+[Type Explanations]
+(ThoughtAction) (obj) eg:- ThoughtAction(thought=str, action_type=ActionType, action_info=str) -> (thought) (str), (action_type) (ActionType), (action_info) (str)
+(ActionType) (Enum) eg:- ActionType.Finish -> (Search) (EnumItem), (Finish) (EnumItem)
+
+Check if the output is exactly in the desired Output Type. Important: Just say 'Yes' or 'No'.
+
+Output:
+ Yes
+CompletionUsage(completion_tokens=1, prompt_tokens=153, total_tokens=154)
+ThoughtAction(thought='I need to search for the location of Apple Headquarters.', action_type=<ActionType.Search: 1>, action_info='Location of Apple Headquarters')

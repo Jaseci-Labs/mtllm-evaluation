@@ -1,0 +1,66 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+(examples) (list[tuple[list[str],str,str]]) = [(["skirt", "dress", "pen", "jacket"], "skirt is clothing, dress is clothing, pen is an object, jacket is clothing.", "pen"), (["Spain", "France", "German", "England", "Singapore"], "Spain, France, England, Singapore is a country, German is a language.", "German")]
+
+[Context]
+
+
+[Inputs Information]
+(options) (list) = ["Bentley", "Ferrari", "Lamborghini", "Casio", "Toyota"]
+
+[Output Information]
+(tuple[str,str])
+
+[Type Explanations]
+
+
+[Action]
+odd_word_out
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ ("Casio", "Bentley, Ferrari, Lamborghini, Toyota is a car brand, Casio is not.")
+CompletionUsage(completion_tokens=25, prompt_tokens=229, total_tokens=254)
+Input Prompt:
+ 
+[Output]
+("Casio", "Bentley, Ferrari, Lamborghini, Toyota is a car brand, Casio is not.")
+
+[Previous Result You Provided]
+None
+
+[Desired Output Type]
+ (tuple[str,str])
+
+[Type Explanations]
+
+
+Above output is not in the desired Output Format/Type. Please provide the output in the desired type. Do not repeat the previously provided output.
+Important: Do not provide the code or the methodology. Only provide
+the output in the desired format.
+
+Output:
+ ("Casio", "Bentley, Ferrari, Lamborghini, Toyota are car brands, Casio is not.")
+CompletionUsage(completion_tokens=24, prompt_tokens=111, total_tokens=135)
+Input Prompt:
+ 
+[Output]
+("Casio", "Bentley, Ferrari, Lamborghini, Toyota are car brands, Casio is not.")
+
+[Desired Output Type]
+tuple[str,str]
+
+[Type Explanations]
+
+
+Check if the output is exactly in the desired Output Type. Important: Just say 'Yes' or 'No'.
+
+Output:
+ Yes
+CompletionUsage(completion_tokens=1, prompt_tokens=74, total_tokens=75)
+('Casio', 'Bentley, Ferrari, Lamborghini, Toyota are car brands, Casio is not.')

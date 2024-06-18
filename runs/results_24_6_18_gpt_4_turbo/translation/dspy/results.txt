@@ -1,0 +1,120 @@
+Input Prompt:
+ Translate the given English word
+
+---
+
+Follow the following format.
+
+English Word: English word to translate
+Translation: Translation
+
+---
+
+English Word: peppermint
+Translation: menthe poivrée
+
+---
+
+English Word: plush giraffe
+Translation: girafe en peluche
+
+---
+
+English Word: sea otter
+Translation:
+Output:
+ English Word: sea otter
+Translation: loutre de mer
+{'completion_tokens': 14, 'prompt_tokens': 72, 'total_tokens': 86}
+Input Prompt:
+ Translate the given English word
+
+---
+
+Follow the following format.
+
+English Word: English word to translate
+Translation: Translation
+
+---
+
+English Word: plush giraffe
+Translation: girafe en peluche
+
+---
+
+English Word: sea otter
+Translation: loutre de mer
+
+---
+
+English Word: peppermint
+Translation:
+Output:
+ English Word: peppermint
+Translation: menthe poivrée
+{'completion_tokens': 13, 'prompt_tokens': 72, 'total_tokens': 85}
+Input Prompt:
+ Translate the given English word
+
+---
+
+Follow the following format.
+
+English Word: English word to translate
+Translation: Translation
+
+---
+
+English Word: peppermint
+Translation: menthe poivrée
+
+---
+
+English Word: sea otter
+Translation: loutre de mer
+
+---
+
+English Word: plush giraffe
+Translation:
+Output:
+ English Word: plush giraffe
+Translation: girafe en peluche
+{'completion_tokens': 14, 'prompt_tokens': 72, 'total_tokens': 86}
+Bootstrapped 3 full traces after 3 examples in round 0.
+Input Prompt:
+ Translate the given English word
+
+---
+
+Follow the following format.
+
+English Word: English word to translate
+Translation: Translation
+
+---
+
+English Word: sea otter
+Translation: English Word: sea otter Translation: loutre de mer
+
+---
+
+English Word: peppermint
+Translation: English Word: peppermint Translation: menthe poivrée
+
+---
+
+English Word: plush giraffe
+Translation: English Word: plush giraffe Translation: girafe en peluche
+
+---
+
+English Word: cheese
+Translation:
+Output:
+ English Word: cheese
+Translation: fromage
+{'completion_tokens': 9, 'prompt_tokens': 109, 'total_tokens': 118}
+English Word: cheese
+Translation: fromage

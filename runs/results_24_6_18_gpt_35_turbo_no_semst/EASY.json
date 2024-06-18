@@ -12,7 +12,7 @@
                     }
                 }
             ],
-            "output": "None"
+            "output": ")\nNone"
         },
         "dspy": {
             "llm_requests": [
@@ -105,7 +105,7 @@
                     }
                 }
             ],
-            "output": "Reviewer Notes:  Spaniards have faced significant challenges in preserving and defending their language and culture, struggling against war, ignorance, criticism, and government interference.\nGrade:  A"
+            "output": ")\nReviewer Notes:  Spaniards have faced significant challenges in preserving and defending their language and culture, struggling against war, ignorance, criticism, and government interference.\nGrade:  A"
         },
         "dspy": {
             "llm_requests": [
@@ -171,7 +171,7 @@
                     }
                 }
             ],
-            "output": "Why couldn't the bicycle stand up by itself? : It was two tired."
+            "output": ")\nWhy couldn't the bicycle stand up by itself? : It was two tired."
         },
         "dspy": {
             "llm_requests": [
@@ -228,7 +228,7 @@
                     }
                 }
             ],
-            "output": "A data scientist specializing in natural language processing and artificial intelligence. says: 'Large Language Models are advanced AI systems that are capable of understanding and generating human-like text. They are trained on massive amounts of data and utilize techniques like deep learning to improve their language abilities."
+            "output": ")\nA data scientist specializing in natural language processing and artificial intelligence. says: 'Large Language Models are advanced AI systems that are capable of understanding and generating human-like text. They are trained on massive amounts of data and utilize techniques like deep learning to improve their language abilities."
         },
         "dspy": {
             "llm_requests": [
@@ -267,7 +267,7 @@
                     }
                 }
             ],
-            "output": "('Bentley', 'Casio')"
+            "output": ")\n('Bentley', 'Casio')"
         },
         "dspy": {
             "llm_requests": [

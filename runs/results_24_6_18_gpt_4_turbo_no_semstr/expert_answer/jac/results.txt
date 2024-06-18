@@ -1,0 +1,62 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "What are Large Language Models?"
+
+[Output Information]
+(str)
+
+[Type Explanations]
+
+
+[Action]
+get_suitable_expert
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] The suitable expert for answering the question about "Large Language Models" would be someone knowledgeable in artificial intelligence, specifically in the field of natural language processing.
+
+[Output] AI researcher specializing in natural language processing
+CompletionUsage(completion_tokens=44, prompt_tokens=134, total_tokens=178)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(question) (str) = "What are Large Language Models?"
+(expert) (str) = "AI researcher specializing in natural language processing"
+
+[Output Information]
+(str)
+
+[Type Explanations]
+
+
+[Action]
+get_answer_of_expert
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] Large Language Models are advanced AI systems designed to understand and generate human-like text based on the input they receive. They are trained on vast amounts of textual data, allowing them to generate coherent, contextually relevant responses across a variety of topics. These models use techniques from natural language processing and machine learning to simulate a deep understanding of language, making them useful for tasks like translation, summarization, and conversation.
+CompletionUsage(completion_tokens=84, prompt_tokens=143, total_tokens=227)
+AI researcher specializing in natural language processing says: 'Large Language Models are advanced AI systems designed to understand and generate human-like text based on the input they receive. They are trained on vast amounts of textual data, allowing them to generate coherent, contextually relevant responses across a variety of topics. These models use techniques from natural language processing and machine learning to simulate a deep understanding of language, making them useful for tasks like translation, summarization, and conversation.

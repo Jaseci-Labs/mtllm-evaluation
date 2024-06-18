@@ -1,0 +1,51 @@
+Input Prompt:
+ Find the Expert Profession to answer the given question.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+Expert: Expert Profession
+
+---
+
+Question: What are Large Language Models?
+Expert:
+Output:
+ Question: What are Large Language Models?
+Expert: Artificial Intelligence Researcher
+{'completion_tokens': 14, 'prompt_tokens': 44, 'total_tokens': 58}
+Input Prompt:
+ Get the Expert's answer to the given question.
+
+---
+
+Follow the following format.
+
+Question: ${question}
+Expert: ${expert}
+Answer: Expert's answer
+
+---
+
+Question: What are Large Language Models?
+Expert: Question: What are Large Language Models? Expert: Artificial Intelligence Researcher
+Answer:
+Output:
+ ---
+
+Question: What are Large Language Models?
+Expert: Artificial Intelligence Researcher
+Answer: Large Language Models (LLMs) are advanced artificial intelligence systems designed to understand and generate human-like text based on the input they receive. These models are trained on vast amounts of text data, allowing them to learn the nuances of language, including grammar, syntax, and context. LLMs such as OpenAI's GPT (Generative Pre-trained Transformer) series are used in various applications, from automated chatbots and translation services to content creation and more sophisticated tasks like coding assistance and data analysis.
+
+---
+{'completion_tokens': 119, 'prompt_tokens': 67, 'total_tokens': 186}
+Question: What are Large Language Models?
+Expert: Artificial Intelligence Researcher says: ---
+
+Question: What are Large Language Models?
+Expert: Artificial Intelligence Researcher
+Answer: Large Language Models (LLMs) are advanced artificial intelligence systems designed to understand and generate human-like text based on the input they receive. These models are trained on vast amounts of text data, allowing them to learn the nuances of language, including grammar, syntax, and context. LLMs such as OpenAI's GPT (Generative Pre-trained Transformer) series are used in various applications, from automated chatbots and translation services to content creation and more sophisticated tasks like coding assistance and data analysis.
+
+---

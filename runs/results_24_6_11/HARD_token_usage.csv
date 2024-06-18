@@ -1,3 +1,0 @@
-problem,jac_completion_tokens,jac_prompt_tokens,jac_total_tokens,dspy_completion_tokens,dspy_prompt_tokens,dspy_total_tokens,jac_cost,dspy_cost
-rpg_level_gen,327,1719,2046,1226,2220,3446,0.013500000000000002,0.029490000000000002
-wikipedia,164,2214,2378,0,0,0,0.01353,0.0

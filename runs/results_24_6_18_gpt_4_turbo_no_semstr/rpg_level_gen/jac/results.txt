@@ -1,0 +1,63 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(last_levels) (list) = []
+(difficulty) (int) = 1
+(level_width) (int) = 20
+(level_height) (int) = 20
+
+[Output Information]
+(Level)
+
+[Type Explanations]
+(Level) (obj) eg:- Level(name=str, difficulty=int, width=int, height=int, num_wall=int, num_enemies=int, time_countdown=int, n_retries_allowed=int) -> (name) (str), (difficulty) (int), (width) (int), (height) (int), (num_wall) (int), (num_enemies) (int), (time_countdown) (int), (n_retries_allowed) (int)
+
+[Action]
+create_next_level
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] Level(name="Level 1", difficulty=1, width=20, height=20, num_wall=5, num_enemies=2, time_countdown=120, n_retries_allowed=3)
+CompletionUsage(completion_tokens=46, prompt_tokens=247, total_tokens=293)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+(level) (Level) = Level(name="Level 1", difficulty=1, width=20, height=20, num_wall=5, num_enemies=2, time_countdown=120, n_retries_allowed=3)
+
+[Output Information]
+(Map)
+
+[Type Explanations]
+(Level) (obj) eg:- Level(name=str, difficulty=int, width=int, height=int, num_wall=int, num_enemies=int, time_countdown=int, n_retries_allowed=int) -> (name) (str), (difficulty) (int), (width) (int), (height) (int), (num_wall) (int), (num_enemies) (int), (time_countdown) (int), (n_retries_allowed) (int)
+(Map) (obj) eg:- Map(level=Level, walls=list[Wall], small_obstacles=list[Position], enemies=list[Position], player_pos=Position) -> (level) (Level), (walls) (list[Wall]), (small_obstacles) (list[Position]), (enemies) (list[Position]), (player_pos) (Position)
+(Wall) (obj) eg:- Wall(start_pos=Position, end_pos=Position) -> (start_pos) (Position), (end_pos) (Position)
+(Position) (obj) eg:- Position(x=int, y=int) -> (x) (int), (y) (int)
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output]
+Map(level=Level(name="Level 1", difficulty=1, width=20, height=20, num_wall=5, num_enemies=2, time_countdown=120, n_retries_allowed=3), walls=[Wall(start_pos=Position(x=2, y=3), end_pos=Position(x=2, y=8)), Wall(start_pos=Position(x=5, y=1), end_pos=Position(x=5, y=6)), Wall(start_pos=Position(x=8, y=3), end_pos=Position(x=8, y=8)), Wall(start_pos=Position(x=11, y=1), end_pos=Position(x=11, y=6)), Wall(start_pos=Position(x=14, y=3), end_pos=Position(x=14, y=8))], small_obstacles=[Position(x=3, y=4), Position(x=6, y=2), Position(x=9, y=5), Position(x=12, y=3), Position(x=15, y=7)], enemies=[Position(x=4, y=10), Position(x=10, y=15)], player_pos=Position(x=1, y=1))
+CompletionUsage(completion_tokens=258, prompt_tokens=423, total_tokens=681)

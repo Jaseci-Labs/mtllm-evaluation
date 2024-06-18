@@ -1,6 +1,0 @@
-problem,jac_completion_tokens,jac_prompt_tokens,jac_total_tokens,dspy_completion_tokens,dspy_prompt_tokens,dspy_total_tokens,jac_cost,dspy_cost
-translation,4,178,182,54,320,374,0.0009500000000000001,0.00241
-essay_reviewer,306,1551,1857,749,1407,2156,0.012345,0.01827
-joke_gen,19,176,195,61,193,254,0.001165,0.0018800000000000002
-expert_answer,108,296,404,137,101,238,0.0031000000000000003,0.00256
-odd_word_out,28,257,285,264,541,805,0.0017050000000000001,0.006665000000000001

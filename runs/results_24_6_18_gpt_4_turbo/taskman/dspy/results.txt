@@ -1,0 +1,106 @@
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Have some sleep
+Task:
+Output:
+ {
+  "description": "Ensure to get a full night's sleep to maintain optimal health and cognitive function.",
+  "time": 480,
+  "priority": 10
+}
+{'completion_tokens': 37, 'prompt_tokens': 159, 'total_tokens': 196}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Enjoy a better weekend with my girlfriend
+Task:
+Output:
+ {
+  "description": "Plan a weekend getaway with activities that both enjoy, including booking accommodations and creating an itinerary of relaxing and fun activities.",
+  "time": 240,
+  "priority": 8
+}
+{'completion_tokens': 44, 'prompt_tokens': 163, 'total_tokens': 207}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Work on Jaseci Project
+Task:
+Output:
+ {
+  "description": "Work on the Jaseci project involves developing and optimizing the core engine, implementing new features, and ensuring robustness through testing.",
+  "time": 120,
+  "priority": 8
+}
+{'completion_tokens': 47, 'prompt_tokens': 162, 'total_tokens': 209}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Teach EECS 281 Students
+Task:
+Output:
+ {
+  "description": "Teach EECS 281 students the fundamentals of data structures and algorithms, including complexity analysis, sorting algorithms, and advanced data structures like graphs and trees.",
+  "time": 120,
+  "priority": 8
+}
+{'completion_tokens': 52, 'prompt_tokens': 162, 'total_tokens': 214}
+Input Prompt:
+ Get Task.
+
+---
+
+Follow the following format.
+
+Info: Task Information
+Task: ${task}. Respond with a single JSON object. JSON Schema: {"properties": {"description": {"description": "Content of the Job to be done", "title": "Description", "type": "string"}, "time": {"description": "Estimated time in minutes for one to finish the job", "title": "Time", "type": "integer"}, "priority": {"description": "Estimated Priority for the Task (0-10)", "title": "Priority", "type": "integer"}}, "required": ["description", "time", "priority"], "title": "Task", "type": "object"}
+
+---
+
+Info: Enjoy family time with my parents
+Task:
+Output:
+ {
+  "description": "Spend quality time with parents, engaging in activities such as dining out, watching a movie, or simply having a heartfelt conversation at home.",
+  "time": 180,
+  "priority": 8
+}
+{'completion_tokens': 49, 'prompt_tokens': 162, 'total_tokens': 211}
+[Task(description="Ensure to get a full night's sleep to maintain optimal health and cognitive function.", time=480, priority=10), Task(description='Plan a weekend getaway with activities that both enjoy, including booking accommodations and creating an itinerary of relaxing and fun activities.', time=240, priority=8), Task(description='Work on the Jaseci project involves developing and optimizing the core engine, implementing new features, and ensuring robustness through testing.', time=120, priority=8), Task(description='Teach EECS 281 students the fundamentals of data structures and algorithms, including complexity analysis, sorting algorithms, and advanced data structures like graphs and trees.', time=120, priority=8), Task(description='Spend quality time with parents, engaging in activities such as dining out, watching a movie, or simply having a heartfelt conversation at home.', time=180, priority=8)]

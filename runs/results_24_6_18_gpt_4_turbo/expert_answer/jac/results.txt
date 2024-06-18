@@ -1,0 +1,62 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "What are Large Language Models?"
+
+[Output Information]
+Expert Profession (str)
+
+[Type Explanations]
+
+
+[Action]
+Find the Expert Profession to answer the given question.
+
+Reason and return the output result(s) only, adhering to the provided Type in the following format
+
+[Reasoning] <Reason>
+[Output] <Result>
+Output:
+ [Reasoning] The question pertains to a topic in the field of artificial intelligence, specifically focusing on models used in natural language processing.
+
+[Output] AI Researcher
+CompletionUsage(completion_tokens=34, prompt_tokens=143, total_tokens=177)
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Question (question) (str) = "What are Large Language Models?"
+Expert (expert) (str) = "AI Researcher"
+
+[Output Information]
+Expert's Answer (str)
+
+[Type Explanations]
+
+
+[Action]
+Get the answer for the question from expert's perspective
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] Large Language Models (LLMs) are advanced artificial intelligence systems designed to understand, generate, and manipulate human language. They are trained on vast amounts of text data and use deep learning techniques to predict and generate text based on the input they receive. LLMs are capable of performing a variety of language-based tasks such as translation, summarization, and question answering, making them powerful tools in AI research and application.
+CompletionUsage(completion_tokens=86, prompt_tokens=151, total_tokens=237)
+AI Researcher says: 'Large Language Models (LLMs) are advanced artificial intelligence systems designed to understand, generate, and manipulate human language. They are trained on vast amounts of text data and use deep learning techniques to predict and generate text based on the input they receive. LLMs are capable of performing a variety of language-based tasks such as translation, summarization, and question answering, making them powerful tools in AI research and application.

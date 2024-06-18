@@ -21,7 +21,7 @@
                     }
                 }
             ],
-            "output": ""
+            "output": ")"
         },
         "dspy": {
             "llm_requests": [
@@ -105,7 +105,7 @@
                     }
                 }
             ],
-            "output": "Question:  Who is Jason Mars?\nAnswer:  Information about Jason Mars"
+            "output": ")\nThoughtAction(thought='Jason Mars is an American computer scientist, author, and entrepreneur known for his research in computer architecture and artificial intelligence.', action_type=<ActionType.Finish: 2>, action_info='Information about Jason Mars')\nQuestion:  Who is Jason Mars?\nAnswer:  Information about Jason Mars"
         },
         "dspy": {
             "llm_requests": [

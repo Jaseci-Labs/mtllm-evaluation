@@ -1,0 +1,29 @@
+Input Prompt:
+ [System Prompt]
+This is an operation you must perform and return the output values. Neither, the methodology, extra sentences nor the code are not needed.
+Input/Type formatting: Explanation of the Input (variable_name) (type) = value
+
+[Information]
+
+
+[Context]
+
+
+[Inputs Information]
+Name of the Singer (name) (str) = "Bruno Mars"
+
+[Output Information]
+Singer (Singer)
+
+[Type Explanations]
+Singer (Singer) (obj) eg:- Singer(name=str, age=int, top_songs=list[str]) -> Name of the Singer (name) (str), Age (age) (int), His/Her's Top 2 Songs (top_songs) (list[str])
+
+[Action]
+Create an object of the specified type, using the specifically  provided input value(s) and look up any missing attributes from reliable online sources to fill them in accurately.
+Generate and return the output result(s) only, adhering to the provided Type in the following format
+
+[Output] <result>
+Output:
+ [Output] Singer(name="Bruno Mars", age=37, top_songs=["Uptown Funk", "Just the Way You Are"])
+CompletionUsage(completion_tokens=30, prompt_tokens=220, total_tokens=250)
+Bruno Mars is 37 years old. His top 2 songs are ['Uptown Funk', 'Just the Way You Are'].

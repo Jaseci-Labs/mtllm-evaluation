@@ -12,7 +12,7 @@
                     }
                 }
             ],
-            "output": "fromage"
+            "output": ")\nfromage"
         },
         "dspy": {
             "llm_requests": [
@@ -105,7 +105,7 @@
                     }
                 }
             ],
-            "output": "Reviewer Notes:  The essay meets the criteria of Clarity. The essay demonstrates originality through its discussion of Spain's cultural richness, language diversity, economic status, and struggles faced by Spaniards in preserving their identity. The unique perspective and insights presented make it a thought-provoking and engaging read. Insufficient evidence provided in the essay to make a comprehensive judgement. More specific details, examples, or references are needed to evaluate effectively.\nGrade:  B"
+            "output": ")\nReviewer Notes:  The essay meets the criteria of Clarity. The essay demonstrates originality through its discussion of Spain's cultural richness, language diversity, economic status, and struggles faced by Spaniards in preserving their identity. The unique perspective and insights presented make it a thought-provoking and engaging read. Insufficient evidence provided in the essay to make a comprehensive judgement. More specific details, examples, or references are needed to evaluate effectively.\nGrade:  B"
         },
         "dspy": {
             "llm_requests": [
@@ -171,7 +171,7 @@
                     }
                 }
             ],
-            "output": "Why did the scarecrow win an award? : Because he was outstanding in his field."
+            "output": ")\nWhy did the scarecrow win an award? : Because he was outstanding in his field."
         },
         "dspy": {
             "llm_requests": [
@@ -228,7 +228,7 @@
                     }
                 }
             ],
-            "output": "Data Scientist or Machine Learning Engineer says: 'Large Language Models are advanced AI models that have been trained on massive amounts of text data to understand and generate human-like language."
+            "output": ")\nData Scientist or Machine Learning Engineer says: 'Large Language Models are advanced AI models that have been trained on massive amounts of text data to understand and generate human-like language."
         },
         "dspy": {
             "llm_requests": [
@@ -267,7 +267,7 @@
                     }
                 }
             ],
-            "output": "('Casio is a brand of watches, Bentley, Ferrari, Lamborghini are car brands.', 'Casio')"
+            "output": ")\n('Casio is a brand of watches, Bentley, Ferrari, Lamborghini are car brands.', 'Casio')"
         },
         "dspy": {
             "llm_requests": [

@@ -99,6 +99,13 @@ if __name__ == "__main__":
         default="output",
         type=str,
     )
+    parser.add_argument(
+        "--impl",
+        help="Implementation to use",
+        default="both",
+        type=str,
+        choices=["both", "dspy", "jac"],
+    )
     args = parser.parse_args()
     logger.info(f"Using {args.profiler} as the profiler.")
     with open(args.config) as f:
@@ -119,12 +126,14 @@ if __name__ == "__main__":
 
             logger.info(f"Running {problem_name} problem from {difficulty} difficulty.")
 
-            logger.info(f"Running JAC program: {paths['jac']}")
-            run_jac_program(problem_name, paths["jac"], args.profiler, args.output_dir)
-            time.sleep(60)
-
-            logger.info(f"Running Dspy program: {paths['dspy']}")
-            run_dspy_program(
-                problem_name, paths["dspy"], args.profiler, args.output_dir
-            )
-            time.sleep(60)
+            if args.impl == "jac" or args.impl == "both":
+                logger.info(f"Running JAC program: {paths['jac']}")
+                run_jac_program(problem_name, paths["jac"], args.profiler, args.output_dir)
+                time.sleep(60)
+            
+            if args.impl == "dspy" or args.impl == "both":
+                logger.info(f"Running Dspy program: {paths['dspy']}")
+                run_dspy_program(
+                    problem_name, paths["dspy"], args.profiler, args.output_dir
+                )
+                time.sleep(60)

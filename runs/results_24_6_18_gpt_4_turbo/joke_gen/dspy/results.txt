@@ -1,0 +1,73 @@
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: Which knight invented King Arthur's Round Table?
+Punchline: Sir Cumference.
+
+---
+
+Joke:
+Output:
+ Joke: Why don't skeletons fight each other?
+Punchline: They don't have the guts.
+{'completion_tokens': 22, 'prompt_tokens': 59, 'total_tokens': 81}
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: How does a penguin build its house?
+Punchline: Igloos it together.
+
+---
+
+Joke:
+Output:
+ Joke: Why don't skeletons fight each other?
+Punchline: They don't have the guts.
+{'completion_tokens': 22, 'prompt_tokens': 61, 'total_tokens': 83}
+Bootstrapped 2 full traces after 2 examples in round 0.
+Input Prompt:
+ Tell a joke with a punchline.
+
+---
+
+Follow the following format.
+
+Joke: Joke
+Punchline: Punchline
+
+---
+
+Joke: Joke: Why don't skeletons fight each other?
+Punchline: They don't have the guts.
+
+---
+
+Joke: Joke: Why don't skeletons fight each other?
+Punchline: They don't have the guts.
+
+---
+
+Joke:
+Output:
+ Joke: Why can't you give Elsa a balloon?
+Punchline: Because she will let it go.
+{'completion_tokens': 23, 'prompt_tokens': 90, 'total_tokens': 113}
+Joke: Why can't you give Elsa a balloon?: Because she will let it go.

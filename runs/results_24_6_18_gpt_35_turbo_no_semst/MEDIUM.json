@@ -12,7 +12,7 @@
                     }
                 }
             ],
-            "output": "08/22/2021"
+            "output": ")\n08/22/2021"
         },
         "dspy": {
             "llm_requests": [
@@ -42,7 +42,7 @@
                     }
                 }
             ],
-            "output": ""
+            "output": ")"
         },
         "dspy": {
             "llm_requests": [
@@ -72,7 +72,7 @@
                     }
                 }
             ],
-            "output": ""
+            "output": ")"
         },
         "dspy": {
             "llm_requests": [
@@ -102,7 +102,7 @@
                     }
                 }
             ],
-            "output": "Their name is Alice and she works in Zurich, Switzerland."
+            "output": ")\nTheir name is Alice and she works in Zurich, Switzerland."
         },
         "dspy": {
             "llm_requests": [
@@ -141,7 +141,7 @@
                     }
                 }
             ],
-            "output": ""
+            "output": ")"
         },
         "dspy": {
             "llm_requests": [

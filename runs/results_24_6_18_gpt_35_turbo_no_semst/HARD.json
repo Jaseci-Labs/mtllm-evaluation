@@ -39,7 +39,7 @@
                     }
                 }
             ],
-            "output": "Level(name='Level2', difficulty=2, width=20, height=20, num_wall=15, num_enemies=7, time_countdown=60, n_retries_allowed=3)\nBBBBBBBBBBBBBBBBBBBBBB\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB...................PB\nBBBBBBBBBBBBBBBBBBBBBB"
+            "output": ")\nLevel(name='Level2', difficulty=2, width=20, height=20, num_wall=15, num_enemies=7, time_countdown=60, n_retries_allowed=3)\nBBBBBBBBBBBBBBBBBBBBBB\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB....................B\nB...................PB\nBBBBBBBBBBBBBBBBBBBBBB"
         },
         "dspy": {
             "llm_requests": [
@@ -123,7 +123,7 @@
                     }
                 }
             ],
-            "output": "Question:  Who is Jason Mars?\nAnswer:  Information about Jason Mars"
+            "output": ")\nThoughtAction(thought='Jason Mars is an American computer scientist, author, and entrepreneur known for his research in computer architecture and artificial intelligence. He holds a PhD in Computer Science from the University of Virginia and is currently an Associate Professor at the University of Michigan.', action_type=<ActionType.Finish: 2>, action_info='Information about Jason Mars')\nQuestion:  Who is Jason Mars?\nAnswer:  Information about Jason Mars"
         },
         "dspy": {
             "llm_requests": [
