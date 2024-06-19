@@ -3,7 +3,8 @@ import:py from dspy.teleprompt, BootstrapFewShot ;
 
 with entry {
     llm = dspy.OpenAI(model="gpt-4o");    
-    dspy.settings.configure(lm=llm) ;    
+    dspy.settings.configure(lm=llm);    
+
     examples: list[tuple[(str, str)]] = [
         ("How does a penguin build its house?", "Igloos it together."),
         ("Which knight invented King Arthur's Round Table?", "Sir Cumference.")
@@ -12,14 +13,12 @@ with entry {
 }
 
 """Tell a joke with a punchline."""
-class JokeWithPunchline : dspy.Signature : {
-    with entry {
-        joke: str = dspy.OutputField(desc="Joke");    
-        punchline: str = dspy.OutputField(desc="Punchline");
-    }
+class JokeWithPunchline:dspy.Signature: {
+    has joke: str = dspy.InputField(desc="Joke"),
+        punchline: str = dspy.InputField(desc="Punchline");
 }
 
-class JokeWithPunchlineModule : dspy.Module : {
+class JokeWithPunchlineModule:dspy.Module: {
     can init() {
         super.init() ;    
         self.generate_answer = dspy.Predict(JokeWithPunchline);
@@ -32,10 +31,7 @@ class JokeWithPunchlineModule : dspy.Module : {
 }
 
 with entry {
-    tell_a_joke = BootstrapFewShot().compile(
-        JokeWithPunchlineModule(),
-        trainset=dataset
-    );    
+    tell_a_joke = BootstrapFewShot().compile(JokeWithPunchlineModule(), trainset=dataset);    
     pred = tell_a_joke();    
     print(f"{pred.joke}{": "}{pred.punchline}") ;
 }

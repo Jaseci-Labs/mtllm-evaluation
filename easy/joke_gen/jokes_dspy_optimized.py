@@ -5,10 +5,8 @@ dspy.settings.configure(lm=llm)
 
 
 class JokeWithPunchline(dspy.Signature):
-    """Tell a joke with a punchline."""
-
-    joke: str = dspy.OutputField(desc="Joke")
-    punchline: str = dspy.OutputField(desc="Punchline")
+    joke: str = dspy.OutputField()
+    punchline: str = dspy.OutputField()
 
 
 tell_a_joke = dspy.Predict(JokeWithPunchline)

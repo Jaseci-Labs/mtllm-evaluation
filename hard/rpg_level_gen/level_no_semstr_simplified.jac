@@ -31,7 +31,6 @@ obj LevelManager {
     
     can get_next_level -> tuple(Level, Map) {
         self.current_level += 1;
-        
         # Keeping Only the Last 3 Levels
         if len(self.prev_levels) > 3 {
             self.prev_levels.pop(0);
@@ -44,11 +43,9 @@ obj LevelManager {
             20, 20
         );
         self.prev_levels.append(new_level);
-        
         # Generating the Map of the New Level
         new_level_map = Map(level=new_level by llm());
         self.prev_level_maps.append(new_level_map);
-        
         # Increasing the Difficulty for end of every 2 Levels
         if self.current_level % 2 == 0 {
             self.current_difficulty += 1;

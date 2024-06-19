@@ -14,21 +14,16 @@ obj Wall {
 
 obj Map {
     has level: Level;
-    has walls: list[Wall],
-        small_obstacles: list[Position];
+    has walls: list[Wall], small_obstacles: list[Position];
     has enemies: list[Position];
     has player_pos: Position;
 }
 
 obj Level {
-    has name: str,
-        difficulty: int;
-    has width: int,
-        height: int,
-        num_wall: int,
-        num_enemies: int;
-    has time_countdown: int,
-        n_retries_allowed: int;
+    has name: str, difficulty: int;
+    has width: int, height: int,
+        num_wall: int, num_enemies: int;
+    has time_countdown: int, n_retries_allowed: int;
 }
 
 obj LevelManager {
@@ -43,7 +38,6 @@ obj LevelManager {
     '''Get the Next Level'''
     can get_next_level -> tuple(Level, Map) {
         self.current_level += 1;
-        
         # Keeping Only the Last 3 Levels
         if len(self.prev_levels) > 3 {
             self.prev_levels.pop(0);
@@ -56,11 +50,9 @@ obj LevelManager {
             20, 20
         );
         self.prev_levels.append(new_level);
-        
         # Generating the Map of the New Level
         new_level_map = Map(level=new_level by llm());
         self.prev_level_maps.append(new_level_map);
-        
         # Increasing the Difficulty for end of every 2 Levels
         if self.current_level % 2 == 0 {
             self.current_difficulty += 1;
@@ -72,7 +64,6 @@ obj LevelManager {
 '''Get the map of the level'''
 can get_map(map: Map) -> str {
     map_tiles = [['.' for _ in range(map.level.width)] for _ in range(map.level.height)];
-    
     for wall in map.walls {
         for x in range(wall.start_pos.x, wall.end_pos.x + 1) {
             for y in range(wall.start_pos.y, wall.end_pos.y + 1) {
@@ -80,7 +71,6 @@ can get_map(map: Map) -> str {
             }
         }
     }
-    
     for obs in map.small_obstacles {
         map_tiles[obs.y-1][obs.x-1] = 'B';
     }

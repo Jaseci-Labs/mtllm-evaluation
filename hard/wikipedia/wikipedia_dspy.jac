@@ -8,7 +8,9 @@ with entry {
     dspy.settings.configure(lm=llm) ;
 }
 
-class ThoughtActionObservation : BaseModel : {
+class ThoughtActionObservation:BaseModel: {
+    has thoughts: str = Field(description="Thoughts"),
+        action_type: str = Field(description="Action Type (Search or Finish)"),
     with entry {
         thought: str = Field(description="Thought");    
         action_type: str = Field(description="Action Type (Search or Finish)");    

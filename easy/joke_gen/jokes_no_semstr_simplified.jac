@@ -6,5 +6,5 @@ can joke_punchline() -> tuple[str, str] by llm();
 
 with entry {
     (joke, punchline) = joke_punchline();
-    print(f"{joke} : {punchline}");
+    print(f"{joke}: {punchline}");
 }

@@ -7,18 +7,16 @@ with entry {
     dspy.settings.configure(lm=llm) ;
 }
 
-class Wikipedia : Parameter : {
-    with entry {
-        name = "Search";    
-        input_variable = "query";    
-        desc = "takes a search query and returns summary from wikipedia";
-    }
+class Wikipedia:Parameter: {
+    has name: str = "Search",
+        input_variable: str = "query",
+        desc: str = "takes a search query and returns summary from wikipedia";
     
-    can init(k: Any=3) -> None {;
+    can init(k: Any=3){
+        pass;
     }
-    
     can __call__(query: Any) {
-        return wikipedia.summary(query) ;
+        return wikipedia.summary(query);
     }
 }
 
@@ -33,4 +31,3 @@ with entry {
     print("Question: ", question) ;    
     print("Answer: ", result.answer) ;
 }
-

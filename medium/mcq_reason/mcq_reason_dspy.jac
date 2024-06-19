@@ -6,12 +6,10 @@ with entry {
 }
 
 """Provide the Answer for the Given Question (A-F)"""
-class get_answer : dspy.Signature : {
-    with entry {
-        question: str = dspy.InputField(description="Question");    
-        choices: str = dspy.InputField(description="Answer Choices");    
+class get_answer:dspy.Signature: {
+    has question: str = dspy.InputField(description="Question"),
+        choices: str = dspy.InputField(description="Answer Choices"),
         answer: str = dspy.OutputField(description="Answer (A-F)");
-    }
 }
 
 with entry {

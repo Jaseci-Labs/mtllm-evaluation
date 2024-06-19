@@ -53,7 +53,7 @@ class CreateMap(dspy.Signature):
     map: Map = dspy.OutputField(desc="Map")
 
 
-class LevelManager(BaseModel):
+class LevelManager:
     current_level: int = 0
     current_difficulty: int = 1
     prev_levels: List[Level] = []
