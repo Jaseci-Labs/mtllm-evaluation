@@ -1,0 +1,47 @@
+essay = """
+The global power crisis is caused by high energy demand, old infrastructure, and reliance on fossil fuels. This crisis results in blackouts, higher costs for businesses, and problems for healthcare and education. To fix this, we need to use more renewable energy like solar and wind, update infrastructure, and use energy more efficiently. Better governance and regulations can help manage the crisis and attract investments for a stable energy future.
+"""
+
+criteria = ["clarity", "coherency", "relevance"]
+
+"Review the following essay based on the criteria of clarity, coherency, and relevance:\n[ESSAY]\nCriteria: [CRITERIA]\n" where stops_at(ESSAY, ".") and stops_at(CRITERIA, ".")
+
+"Generate the evaluator's remarks:\n[REMARKS]\n" where stops_at(REMARKS, ".") and not "\n" in REMARKS
+
+"Assign a grade:\n[GRADE]\n" where stops_at(GRADE, ".") and not "\n" in GRADE
+
+if "Very Good" in REMARKS:
+    "The essay is well-written and main points are addressed effectively. It provides a clear solution and highlights the importance of renewable energy and better governance.\n"
+    "Grade: A\n"
+elif "Good" in REMARKS:
+    "The essay is coherent and relevant, but it could use more details and examples to strengthen the argument.\n"
+    "Grade: B\n"
+elif "Needs improvement" in REMARKS:
+    "The essay has some good points, but it lacks clarity and coherence in some areas. More focus on the main points is needed.\n"
+    "Grade: C\n"
+elif "Poor" in REMARKS:
+    "The essay lacks clarity, coherence, and relevance. It needs significant improvement to address the main points effectively.\n"
+    "Grade: S\n"
+else:
+    "The essay does not meet the basic requirements. It is unclear and lacks relevance.\n"
+    "Grade: F\n"
+
+f"""
+Review the following essay based on the criteria of clarity, coherency, and relevance:
+
+{essay}
+
+Criteria: {', '.join(criteria)}
+
+Generate the evaluator's remarks:
+[REMARKS]
+
+Assign a grade:
+[GRADE]
+"""
+
+remarks = result['choices'][0]['text'].split('[REMARKS]')[1].split('[GRADE]')[0].strip()
+grade = result['choices'][0]['text'].split('[GRADE]')[1].strip()
+
+print(f"Evaluator's Remarks: {remarks}")
+print(f"Grade: {grade}")
