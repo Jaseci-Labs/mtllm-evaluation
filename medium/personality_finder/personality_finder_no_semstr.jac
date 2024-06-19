@@ -4,14 +4,11 @@ glob llm = OpenAI(model_name="gpt-4o");
 
 
 enum Personality {
-   INTROVERT = "Introvert",
-   EXTROVERT = "Extrovert"
+   INTROVERT = "Introvert", EXTROVERT = "Extrovert"
 }
 
 obj Person {
-    has full_name: str,
-        yod: int,
-        personality: Personality;
+    has full_name: str, yod: int, personality: Personality;
 }
 
 can get_person_info(name: str) -> Person by llm();

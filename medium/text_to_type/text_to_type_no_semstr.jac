@@ -3,15 +3,11 @@ import:py from jaclang.core.llms, OpenAI;
 glob llm = OpenAI(model_name="gpt-4o");
 
 obj Employer {
-    has employer_name: str,
-        location: str;
+    has employer_name: str, location: str;
 }
 
 obj Person {
-    has name: str,
-        age: int,
-        employer: Employer,
-        job: str;
+    has name: str, age: int, employer: Employer, job: str;
 }
 
 with entry {
