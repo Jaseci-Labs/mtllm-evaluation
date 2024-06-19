@@ -1,0 +1,11 @@
+task_contents = [
+        "Read a new book",
+        "Go hiking with friends",
+        "Complete the marketing report",
+        "Prepare for the presentation",
+        "Cook dinner for my family"
+]
+
+"tasks: {task_contents}"
+"Q: set the priority to each task in tasks from 1 to 10 and provide the estimated time for completion"
+"A:[list[str,int,str]]" 

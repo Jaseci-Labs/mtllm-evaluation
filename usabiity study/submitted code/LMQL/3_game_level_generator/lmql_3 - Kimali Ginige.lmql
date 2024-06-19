@@ -1,0 +1,25 @@
+LEVELMAP = [
+        'BBBBBBBBBBBBBBBBBBBB',
+        'B...E..............B',
+        'B.......B..........B',
+        'B....BBBB..........B',
+        'B..................B',
+        'B..................B',
+        'B.........P........B',
+        'B..................B',
+        'B.............E....B',
+        'B..................B',
+        'B..................B',
+        'B.........B........B',
+        'B.........B........B',
+        'B.........B........B',
+        'BBBBBBBBBBBBBBBBBBBB'
+    ];
+QUESTION = "Based upon The previous {LEVELMAP}, Time taken to win level, Hardness level 1-100, Win/death ratio etc predict a new map which should have the same structure as above but harder"
+
+"Q: {QUESTION}\n"
+"A:[RESULT]"
+
+
+
+
