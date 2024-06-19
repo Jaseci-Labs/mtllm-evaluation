@@ -2,7 +2,7 @@
 
 import lmql
 
-llm = lmql.model("llama.cpp:/home/gayanukaa/llm-test/lmql-test/llama-2-7b.Q4_K_M.gguf", tokenizer="jodiambra/llama-2-7b-finetuned-python-qa_tokenizer", n_ctx=4096)
+llm = lmql.model('openai/gpt-3.5-turbo-instruct')
 
 class Map:
     def __init__(self, content):

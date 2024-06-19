@@ -36,8 +36,9 @@ argmax
     remark_essay(evaluation: evaluation, grade: grade) -> remark
 
 from
-    llm('claude-3-sonnet-20240229')
+    llm('openai/gpt-3.5-turbo-instruct')
 """
+
 
 # Execute the query
 response = lmql.run(query)

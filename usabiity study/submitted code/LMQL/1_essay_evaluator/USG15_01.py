@@ -1,6 +1,6 @@
 import lmql
 
-llm = lmql.model("llama.cpp:/home/gayanukaa/llm-test/lmql-test/llama-2-7b.Q4_K_M.gguf", tokenizer='HuggingFaceH4/zephyr-7b-beta', n_ctx=2048)
+llm = lmql.model('openai/gpt-3.5-turbo-instruct')
 
 @lmql.query(model=llm)
 def sentiment_analysis(criteria):
@@ -10,7 +10,7 @@ def sentiment_analysis(criteria):
         and (SENTIMENT in ["A","B","C","D","S","F"])
     '''
 
-input_path = '/home/gayanukaa/llm-test/lmql-test/essay/essay.txt'
+input_path = '/home/jayanaka-98/mtllm-evaluation/usabiity study/submitted code/LMQL/1_essay_evaluator/essay.txt'
 with open(input_path, 'r') as file:
     essay = file.read()
 
@@ -39,7 +39,7 @@ grade = give_grade(summary).variables['GRADE']
 
 output = summary + "\nGrade: " + grade
 
-output_path = '/home/gayanukaa/llm-test/lmql-test/essay/evaluation.txt'
+output_path = '/home/jayanaka-98/mtllm-evaluation/usabiity study/submitted code/LMQL/1_essay_evaluator/evaluation.txt'
 with open(output_path, 'w') as file:
     file.write(output)
 
