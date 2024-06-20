@@ -1,0 +1,26 @@
+task_contents = [
+    "Read a new book",
+    "Go hiking with friends",
+    "Complete the marketing report",
+    "Prepare for the presentation",
+    "Cook dinner for my family"
+]
+
+for task in task_contents:
+    "Task: [TASK_DESCRIPTION]\n" where TASK_DESCRIPTION == task
+
+    "Estimated time to complete the task: [ESTIMATED_TIME]\n" where stops_at(ESTIMATED_TIME, ".") and is_int(ESTIMATED_TIME)
+
+    "Estimated priority for the task (from 0 (lowest) to 10 (highest)): [PRIORITY]\n" where stops_at(PRIORITY, ".") and is_int(PRIORITY) and int(PRIORITY) >= 0 and int(PRIORITY) <= 10
+
+    f"Description: {TASK_DESCRIPTION}"
+    f"Estimated Time: {ESTIMATED_TIME} minutes"
+    f"Priority: {PRIORITY}"
+    "\n"
+
+"Compile the list of tasks with descriptions, estimated times, and priorities."
+
+for task in task_contents:
+    "[TASK_DESCRIPTION]\n" where TASK_DESCRIPTION == task
+    "Estimated Time: [ESTIMATED_TIME] minutes\n" where stops_at(ESTIMATED_TIME, ".") and is_int(ESTIMATED_TIME)
+    "- Priority: [PRIORITY]\n" where stops_at(PRIORITY, ".") and is_int(PRIORITY) and int(PRIORITY) >= 0 and int(PRIORITY) <= 10
