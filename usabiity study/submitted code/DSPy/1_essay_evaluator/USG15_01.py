@@ -68,7 +68,7 @@ def main_pipeline(input_path, output_path, criteria):
     grade = grade_essay(sentiment)
     save_evaluation(output_path, remarks, sentiment, grade)
 
-input_path = "/home/savini98/mtllm-evaluation/usabiity study/submitted code/DSPy/2_task_manager/essay.txt"
-output_path = "/home/savini98/mtllm-evaluation/usabiity study/submitted code/DSPy/2_task_manager/evaluation.txt"
+input_path = "/home/jay_desk/REPOs/mtllm-evaluation/usabiity study/submitted code/DSPy/1_essay_evaluator/essay.txt"
+output_path = "/home/jay_desk/REPOs/mtllm-evaluation/usabiity study/submitted code/DSPy/1_essay_evaluator/evaluation.txt"
 criteria = ["clarity", "coherency", "grammar"]
 main_pipeline(input_path, output_path, criteria)
