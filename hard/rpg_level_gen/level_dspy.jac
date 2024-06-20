@@ -1,6 +1,5 @@
-import:py dspy ;
-import:py from pydantic, BaseModel, Field ;
-import:py from typing, List ;
+import:py dspy;
+import:py from pydantic, BaseModel, Field;
 
 with entry {
     llm = dspy.OpenAI(model="gpt-4o", max_tokens=1024);    
@@ -29,13 +28,11 @@ class Level:BaseModel: {
 }
 
 class Map:BaseModel: {
-    with entry {
-        level: Level = Field(description="Level of the Map");    
-        walls: list[Wall] = Field(description="Walls in the Map Other than Edges");    
-        small_obstacles: list[Position] = Field(description="Obstacles in the Map");    
-        enemies: list[Position] = Field(description="Enemies in the Map");    
-        player_pos: Position = Field(description="Player Position in the Map");
-    }
+    has level:Level = Field(description="Level of the Map"),
+        walls:list[Wall] = Field(description="Walls in the Map Other than Edges"),
+        small_obstacles:list[Position] = Field(description="Obstacles in the Map"),
+        enemies:list[Position] = Field(description="Enemies in the Map"),
+        player_pos:Position = Field(description="Player Position in the Map");
 }
 
 """Create Next Level"""
