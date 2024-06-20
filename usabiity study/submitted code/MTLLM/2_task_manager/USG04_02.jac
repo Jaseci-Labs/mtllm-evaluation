@@ -1,6 +1,6 @@
 import:py from jaclang.core.llms, OpenAI;
 
-glob llm = OpenAI(model_name="gpt-3.5-turbo");
+glob llm = OpenAI(model_name="gpt-4o");
 
 obj Task {
     has description: 'description about the task to be done': str;

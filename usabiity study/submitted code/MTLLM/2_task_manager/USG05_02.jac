@@ -1,7 +1,10 @@
-import:py from jaclang.core.llms, Anthropic;
 import:py time;
 
-glob llm = Anthropic(model_name="claude-3-sonnet-20240229");
+import:py from jaclang.core.llms, OpenAI;
+
+glob llm = OpenAI(
+    model_name = "gpt-4o"
+);
 
 
 glob task_contents : 'List of Tasks to be done' : list = [

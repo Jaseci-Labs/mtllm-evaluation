@@ -1,6 +1,8 @@
-import:py from jaclang.core.llms, Ollama;
+import:py from jaclang.core.llms, OpenAI;
 
-glob llm = Ollama(model_name="phi3");
+glob llm = OpenAI(
+    model_name = "gpt-4o"
+);
 
 obj Task {
     has description: 'Description': str;

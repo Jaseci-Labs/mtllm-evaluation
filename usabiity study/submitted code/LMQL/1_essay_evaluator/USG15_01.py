@@ -10,7 +10,7 @@ def sentiment_analysis(criteria):
         and (SENTIMENT in ["A","B","C","D","S","F"])
     '''
 
-input_path = '/home/jayanaka-98/mtllm-evaluation/usabiity study/submitted code/LMQL/1_essay_evaluator/essay.txt'
+input_path = '/home/jay_desk/REPOs/mtllm-evaluation/usabiity study/submitted code/LMQL/1_essay_evaluator/essay.txt'
 with open(input_path, 'r') as file:
     essay = file.read()
 
@@ -39,7 +39,7 @@ grade = give_grade(summary).variables['GRADE']
 
 output = summary + "\nGrade: " + grade
 
-output_path = '/home/jayanaka-98/mtllm-evaluation/usabiity study/submitted code/LMQL/1_essay_evaluator/evaluation.txt'
+output_path = '/home/jay_desk/REPOs/mtllm-evaluation/usabiity study/submitted code/LMQL/1_essay_evaluator/evaluation.txt'
 with open(output_path, 'w') as file:
     file.write(output)
 

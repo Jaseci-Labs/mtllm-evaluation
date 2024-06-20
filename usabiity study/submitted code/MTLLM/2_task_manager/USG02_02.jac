@@ -1,4 +1,5 @@
-global llm = OpenAI();
+import:py from jaclang.core.llms, OpenAI;
+glob llm = OpenAI('gpt-4o');
 
 obj task_manager {
     has tasks;
