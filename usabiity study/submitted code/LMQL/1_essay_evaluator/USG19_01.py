@@ -1,53 +1,24 @@
 import lmql
 
-def evaluate_essay(essay, criteria):  #evaluation
-    return lmql.query(f"""
-    Evaluate the given essay based on the following criteria: {criteria}
-    Provide Detailed Judgement.
-    Essay: {essay}
+@lmql.query(model="openai/gpt-3.5-turbo-instruct", decoder="argmax")
+def review_essay(essay, criteria):
+    '''lmql
+    Review the following essay based on the criteria provided and give an overall evaluation and grade (A, B, C, D, S, F).
+
+    Essay: [ESSAY]
+
+    Criteria: [CRITERIA]
+
+    Evaluator's Remarks:
     [REMARKS]
-    """, temperature=0.7).text
+    Grade: [GRADE]""" where STOPS_AT(REMARKS, "\n") and GRADE in set(["A", "B", "C", "D", "S", "F"])
+    '''
 
-def generate_summary(essay, judgements): #summary of evaluations based on different criterion
-    return lmql.query(f"""
-    Generate a summary of the following judgements:
-    {judgements}
-    Essay: {essay}
-    [SUMMARY]
-    """, temperature=0.7).text
+# Example usage:
+essay = "The global power crisis is caused by high energy demand, old infrastructure, and reliance on fossil fuels. This crisis results in blackouts, higher costs for businesses, and problems for healthcare and education. To fix this, we need to use more renewable energy like solar and wind, update infrastructure, and use energy more efficiently. Better governance and regulations can help manage the crisis and attract investments for a stable energy future."
 
-def give_grade(summary):
-    return lmql.query(f"""
-    Based on the following summary, give a letter grade (A-D):
-    {summary}
-    [GRADE]
-    """, temperature=0.7).text
+criteria = "Clarity, coherence, argument strength, evidence support, and overall impact."
 
-def main():
-    essay = """
-    With a population of approximately 45 million Spaniards and 3.5 million immigrants,
-    Spain is a country of contrasts where the richness of its culture blends it up with
-    the variety of languages and dialects used. Being one of the largest economies worldwide,
-    and the second largest country in Europe, Spain is a very appealing destination for tourists
-    as well as for immigrants from around the globe. Almost all Spaniards are used to speaking at
-    least two different languages, but protecting and preserving that right has not been
-    easy for them. Spaniards have had to struggle with war, ignorance, criticism and the governments,
-    in order to preserve and defend what identifies them, and deal with the consequences.
-    """
-
-    criterias = ["Clarity", "Originality", "Evidence", "Coherence and Organization", "Grammar and Syntax", "Overall Impression"] #can be extended
-    judgements = {}
-
-    #Judgements
-    for criteria in criterias:
-        judgement = evaluate_essay(essay, criteria)
-        judgements[criteria] = judgement
-
-    summary = generate_summary(essay, judgements)
-
-    grade = give_grade(summary)
-
-    print("Reviewer Notes:", summary)
-    print("Grade:", grade)
-
-main()
+result = review_essay(essay, criteria)
+print("Evaluator's Remarks: ", result.REMARKS)
+print("Grade: ", result.GRADE)

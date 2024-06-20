@@ -1,0 +1,39 @@
+# Define the task list as in example
+var task_contents = [
+    "Read a new book",
+    "Go hiking with friends",
+    "Complete the marketing report",
+    "Prepare for the presentation",
+    "Cook dinner for my family"
+]
+
+# Define the function to generate task objects
+function generate_tasks(tasks) {
+    # Initialize an empty list to store task objects
+    var task_list = []
+    
+    # Loop through each task content
+    for task in tasks {
+        # Generate task description
+        description = task
+        
+        # Generate estimated time (random between 30 to 180 minutes)
+        time = rand(30, 180)
+        
+        # Generate priority (random between 0 to 10)
+        priority = rand(0, 10)
+        
+        # Append task object to the task list
+        task_list.append({"description": description, "time": time, "priority": priority})
+    }
+    
+    return task_list
+}
+
+# Generate task objects
+var tasks = generate_tasks(task_contents)
+
+# Output the list of tasks
+query {
+    f"List of Tasks:\n{tasks}"
+}
