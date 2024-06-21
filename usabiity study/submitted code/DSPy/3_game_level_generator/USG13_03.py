@@ -8,6 +8,7 @@ dspy.configure(lm=claude_model)
 llm = dspy.OpenAI(model="gpt-4o")
 dspy.settings.configure(lm=llm)
 
+
 class MapGenerate(dspy.Signature):
     """Generate the next map based on the parameters.
     Next map should have the same structure as current map but harder.
@@ -19,6 +20,7 @@ class MapGenerate(dspy.Signature):
 
     next_map = dspy.OutputField(desc="Next Map Structure")
 
+
 class CoT(dspy.Module):
     def __init__(self):
         super().__init__()
@@ -26,6 +28,7 @@ class CoT(dspy.Module):
 
     def forward(self, current_map, other_parameters):
         return self.prog(current_map=current_map, other_parameters=other_parameters)
+
 
 c = CoT()
 
@@ -56,4 +59,4 @@ parameters = """
 
 next_map = c.forward(map, parameters)
 
-print(next_map['next_map'])
+print(next_map["next_map"])

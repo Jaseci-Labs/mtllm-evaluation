@@ -28,4 +28,3 @@ for criterion, grade in grades.items():
 # Calculate the overall grade
 overall_grade = sum(grade * criteria["weight"] for criterion, grade in grades.items())
 print(f"\nOverall Grade: {overall_grade:.2f}")
-

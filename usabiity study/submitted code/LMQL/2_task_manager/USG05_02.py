@@ -6,8 +6,9 @@ task_contents = [
     "Go hiking with friends",
     "Complete the marketing report",
     "Prepare for the presentation",
-    "Cook dinner for my family"
+    "Cook dinner for my family",
 ]
+
 
 # Define Task class
 class Task:
@@ -19,21 +20,24 @@ class Task:
     def __repr__(self):
         return f"Task(description={self.description}, time={self.time}, priority={self.priority})"
 
+
 # Query template
-query_template = '''
+query_template = """
 Given the following task: "{task}"
 Estimate the completion time in minutes and the priority from 0 to 10.
 
 Completion time: 
 Priority: 
-'''
+"""
+
 
 # Function to get task details
 def get_task_details(task_str):
     query = query_template.format(task=task_str)
     result = lmql.run(query)
-    completion_time, priority = result['completion_time'], result['priority']
+    completion_time, priority = result["completion_time"], result["priority"]
     return int(completion_time), int(priority)
+
 
 # List to store task objects
 tasks = []

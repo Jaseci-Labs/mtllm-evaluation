@@ -1,4 +1,4 @@
-import:py from jaclang.core.llms, OpenAI;
+import:py from mtllm.llms, OpenAI;
 import:py wikipedia;
 
 glob llm = OpenAI(model_name="gpt-4o");

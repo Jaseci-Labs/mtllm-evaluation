@@ -44,10 +44,16 @@ def grading(summary):
 
 
 def main():
-   
+
     essay = input("Enter the eassay here : ")
 
-    criterias = ["Clarity","Coherence" , "Originality", "Evidence","Correct Spelling and grammar" ]  # can be extended
+    criterias = [
+        "Clarity",
+        "Coherence",
+        "Originality",
+        "Evidence",
+        "Correct Spelling and grammar",
+    ]  # can be extended
     judgements = {}
 
     # Judgements

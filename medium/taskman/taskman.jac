@@ -1,4 +1,4 @@
-import:py from jaclang.core.llms, OpenAI, Ollama;
+import:py from mtllm.llms, OpenAI, Ollama;
 
 glob llm = OpenAI(model_name="gpt-3.5-turbo");
 

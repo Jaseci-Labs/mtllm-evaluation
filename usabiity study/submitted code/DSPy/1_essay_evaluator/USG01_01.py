@@ -1,10 +1,12 @@
 import dspy
 
+
 class Grade(dspy.Signature):
-    """test """
-    
+    """test"""
+
     sentence = dspy.InputField()
     grade = dspy.OutputField()
+
 
 sentence = """
     The global power crisis is caused by high energy demand, old infrastructure, 
@@ -22,11 +24,14 @@ dspy.settings.configure(lm=llm)
 
 
 cri = "Evaluate based on clarity,Grammar, Sentence structure, Organization and content. Grade the sentence using A for the best, B for the good, C for the Satisfactory, D for the Low Pass, but certifying, S for the Low Failure and F for the Failure.  Give reasoning for your choice in grade "
+
+
 def performTask(criteria, para):
     Grade.__doc__ = criteria
     classify = dspy.Predict(Grade)
-    x=classify(sentence=para)
+    x = classify(sentence=para)
     return x.grade
+
 
 y = performTask(cri, sentence)
 print(y)

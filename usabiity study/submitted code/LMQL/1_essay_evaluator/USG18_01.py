@@ -1,27 +1,42 @@
 import lmql
 
-def evaluate_essay(essay, criteria):  #evaluation
-    return lmql.query(f"""
+
+def evaluate_essay(essay, criteria):  # evaluation
+    return lmql.query(
+        f"""
     Evaluate the given essay based on the following criteria: {criteria}
     Provide Detailed Judgement.
     Essay: {essay}
     [REMARKS]
-    """, temperature=0.7).text
+    """,
+        temperature=0.7,
+    ).text
 
-def generate_summary(essay, judgements): #summary of evaluations based on different criterion
-    return lmql.query(f"""
+
+def generate_summary(
+    essay, judgements
+):  # summary of evaluations based on different criterion
+    return lmql.query(
+        f"""
     Generate a summary of the following judgements:
     {judgements}
     Essay: {essay}
     [SUMMARY]
-    """, temperature=0.7).text
+    """,
+        temperature=0.7,
+    ).text
+
 
 def give_grade(summary):
-    return lmql.query(f"""
+    return lmql.query(
+        f"""
     Based on the following summary, give a letter grade (A-D):
     {summary}
     [GRADE]
-    """, temperature=0.7).text
+    """,
+        temperature=0.7,
+    ).text
+
 
 def main():
     essay = """
@@ -35,10 +50,17 @@ def main():
     in order to preserve and defend what identifies them, and deal with the consequences.
     """
 
-    criterias = ["Clarity", "Originality", "Evidence", "Coherence and Organization", "Grammar and Syntax", "Overall Impression"] #can be extended
+    criterias = [
+        "Clarity",
+        "Originality",
+        "Evidence",
+        "Coherence and Organization",
+        "Grammar and Syntax",
+        "Overall Impression",
+    ]  # can be extended
     judgements = {}
 
-    #Judgements
+    # Judgements
     for criteria in criterias:
         judgement = evaluate_essay(essay, criteria)
         judgements[criteria] = judgement
@@ -49,5 +71,6 @@ def main():
 
     print("Reviewer Notes:", summary)
     print("Grade:", grade)
+
 
 main()

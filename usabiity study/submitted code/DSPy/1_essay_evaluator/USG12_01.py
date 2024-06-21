@@ -1,10 +1,12 @@
 import dspy
 
+
 class Evaluation(dspy.Signature):
     """Evaluation of paragraph based on provided criteria"""
-    
-    text:str = dspy.InputField()
-    assessment:str = dspy.OutputField()
+
+    text: str = dspy.InputField()
+    assessment: str = dspy.OutputField()
+
 
 # Paragraph to be evaluated
 paragraph_text = """The global power crisis is caused by high energy demand, old infrastructure, 
@@ -24,11 +26,13 @@ dspy.settings.configure(lm=llm)
 # Evaluation criteria
 criteria_text = "Evaluate based on clarity, grammar, organization, and content. Grade the paragraph using A for the best, B for good, C for satisfactory, D for low pass, S for marginal failure, and F for failure. Give reasoning for your choice in grade."
 
+
 def perform_evaluation(criteria, paragraph):
     Evaluation._doc_ = criteria
     evaluator = dspy.Predict(Evaluation)
     result = evaluator(text=paragraph)
     return result.assessment
+
 
 # Perform the evaluation and print the result
 evaluation_result = perform_evaluation(criteria_text, paragraph_text)

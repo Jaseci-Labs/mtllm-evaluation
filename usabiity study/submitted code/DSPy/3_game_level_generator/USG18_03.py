@@ -17,19 +17,25 @@ previous_level_map = [
 ]
 n = len(previous_level_map)
 
+
 class LevelUp(dspy.Signature):
-    previous_level_map: list[str] = dspy.InputField(desc="A map of the previous level of the game")
+    previous_level_map: list[str] = dspy.InputField(
+        desc="A map of the previous level of the game"
+    )
     time_taken: str = dspy.InputField(desc="Time taken to play the game")
     win_death_ratio: str = dspy.InputField(desc="Winning or dying ratio")
     hardness_level: str = dspy.InputField(desc="Hardness level")
-    next_level_map: list[str] = dspy.OutputField(desc="Make the game harder and the map should have only B (for blocks), E (for enimies), P (for player and only one P should be there) and . (for walkable) It should have 84 elements")
+    next_level_map: list[str] = dspy.OutputField(
+        desc="Make the game harder and the map should have only B (for blocks), E (for enimies), P (for player and only one P should be there) and . (for walkable) It should have 84 elements"
+    )
+
 
 with dspy.context(lm=llm):
     level_up = dspy.Predict(LevelUp)(
         previous_level_map="".join(previous_level_map),
         time_taken=str(120),
         win_death_ratio=str(3),
-        hardness_level=str(70)
+        hardness_level=str(70),
     )
     new_level_map = level_up.next_level_map.split("\n")[0].split(":")[1].lstrip()
 

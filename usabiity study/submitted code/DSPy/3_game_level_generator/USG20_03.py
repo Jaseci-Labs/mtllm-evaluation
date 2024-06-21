@@ -4,6 +4,7 @@ class DSPy:
         # Placeholder for data preprocessing using DSPy
         return "Preprocessed map using DSPy"
 
+
 # Get input map from the user
 def get_input_map():
     print("Enter the previous map (each row separated by a newline):")
@@ -12,6 +13,7 @@ def get_input_map():
         row = input().strip()
         previous_map.append(row)
     return previous_map
+
 
 # Example usage
 if __name__ == "__main__":

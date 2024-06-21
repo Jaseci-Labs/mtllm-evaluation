@@ -1,10 +1,12 @@
 import dspy
 from dspy import ChainOfThought
 
+
 class TaskSignature(dspy.Signature):
     description = dspy.InputField(desc="Task description")
     time = dspy.OutputField(desc="Estimated time in minutes")
     priority = dspy.OutputField(desc="Priority rank (0-10)")
+
 
 class TaskManager(dspy.Program):
     def __init__(self):
@@ -19,15 +21,18 @@ class TaskManager(dspy.Program):
             tasks.append(task_obj)
         return tasks
 
+
 task_contents = [
     "Read a new book",
     "Go hiking with friends",
     "Complete the marketing report",
     "Prepare for the presentation",
-    "Cook dinner for my family"
+    "Cook dinner for my family",
 ]
 
 task_manager = TaskManager()
 
 for task in tasks:
-    print(f"Description: {task.description}, Time: {task.time}, Priority: {task.priority}")
+    print(
+        f"Description: {task.description}, Time: {task.time}, Priority: {task.priority}"
+    )

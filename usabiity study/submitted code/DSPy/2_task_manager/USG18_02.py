@@ -8,43 +8,48 @@ dspy.settings.configure(lm=llm)
 
 
 def determine_priority(description):
-    high_priority_keywords = ['urgent', 'important', 'deadline']
-    medium_priority_keywords = ['review', 'follow up']
-    low_priority_keywords = ['research', 'compile']
+    high_priority_keywords = ["urgent", "important", "deadline"]
+    medium_priority_keywords = ["review", "follow up"]
+    low_priority_keywords = ["research", "compile"]
 
     for keyword in high_priority_keywords:
         if keyword in description.lower():
-            return 'High'
+            return "High"
 
     for keyword in medium_priority_keywords:
         if keyword in description.lower():
-            return 'Medium'
+            return "Medium"
 
-    return 'Low'
+    return "Low"
+
 
 class TaskManager(dspy.Signature):
     task: str = dspy.InputField()
     time: int = dspy.OutputField()
-    
-
 
 
 def add_task(description):
     priority = determine_priority(description)
     response = dspy.Predict(TaskManager)(task=description)
     time = response.time
-    priority_value = 10 if priority == 'High' else (5 if priority == 'Medium' else 0)
-    task_list[description] = {"description": description, "time": time, "priority": priority_value}
+    priority_value = 10 if priority == "High" else (5 if priority == "Medium" else 0)
+    task_list[description] = {
+        "description": description,
+        "time": time,
+        "priority": priority_value,
+    }
+
 
 task_list = {}
 
+
 def main():
-    #samples
+    # samples
     tasks = [
         "Create presentation slides for the urgent meeting",
         "Review and finalize project proposal",
         "Follow up with client regarding project updates",
-        "Research and compile data for quarterly report"
+        "Research and compile data for quarterly report",
     ]
 
     with dspy.context(lm=llm):
@@ -57,6 +62,7 @@ def main():
         print("Time:", task_info["time"])
         print("Priority:", task_info["priority"])
         print()
+
 
 if __name__ == "__main__":
     main()

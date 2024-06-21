@@ -2,7 +2,10 @@ import lmql
 
 lmql_engine = lmql.Engine()
 
-def analyze_previous_levels(previous_levels, time_taken, win_death_ratio, hardness_level):
+
+def analyze_previous_levels(
+    previous_levels, time_taken, win_death_ratio, hardness_level
+):
     insights = {}
 
     map_analysis_query = f"""
@@ -25,6 +28,7 @@ def analyze_previous_levels(previous_levels, time_taken, win_death_ratio, hardne
 
     return insights
 
+
 def generate_new_map(insights):
     new_map_query = f"""
     Generate a new level map based on insights from previous levels:
@@ -36,6 +40,7 @@ def generate_new_map(insights):
     new_map = response["NEW_MAP"]
 
     return new_map
+
 
 def main():
     previous_levels = [
@@ -62,6 +67,7 @@ def main():
     # Display the new level map
     print("New Level Map:")
     print(new_map)
+
 
 if __name__ == "__main__":
     main()

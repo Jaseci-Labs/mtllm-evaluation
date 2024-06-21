@@ -1,11 +1,13 @@
 import dspy
 
+
 class TaskManagerSignature(dspy.Signature):
     """Task management signature."""
 
     task = dspy.InputField(desc="Task content")
     priority = dspy.OutputField(desc="Priority rank")
     time_estimate = dspy.OutputField(desc="Estimated time for completion")
+
 
 class TaskManager(dspy.Module):
     def __init__(self):
@@ -24,12 +26,13 @@ class TaskManager(dspy.Module):
         time_estimate = self.estimate_time(task)
         return dspy.Prediction(priority=priority, time_estimate=time_estimate)
 
+
 task_contents = [
     "Read a new book",
     "Go hiking with friends",
     "Complete the marketing report",
     "Prepare for the presentation",
-    "Cook dinner for my family"
+    "Cook dinner for my family",
 ]
 
 task_manager = TaskManager()
@@ -39,4 +42,3 @@ for task_content in task_contents:
     print(f"Task: {task_content}")
     print(f"Priority: {prediction.priority}")
     print(f"Time Estimate: {prediction.time_estimate}\n")
-

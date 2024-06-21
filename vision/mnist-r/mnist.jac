@@ -1,5 +1,5 @@
-import:py from jaclang.core.llms, OpenAI;
-import:py from PIL, Image;
+import:py from mtllm.llms, OpenAI;
+import:py from mtllm, Image;
 
 glob llm = OpenAI(model_name="gpt-4o");
 
@@ -12,3 +12,23 @@ can count_3(digit_1: Image, digit_2: Image, digit_3: Image, digit_4: Image, digi
             digit_6: Image, digit_7: Image, digit_8: Image) -> int by llm();
 can count_3_or_4(digit_1: Image, digit_2: Image, digit_3: Image, digit_4: Image, digit_5: Image,
                  digit_6: Image, digit_7: Image, digit_8: Image) -> int by llm();
+
+
+with entry {
+    digit_1 = Image("images/digit_1.png");
+    digit_2 = Image("images/digit_2.png");
+    digit_3 = Image("images/digit_3.png");
+    digit_4 = Image("images/digit_4.png");
+    digit_5 = Image("images/digit_5.png");
+    digit_6 = Image("images/digit_6.png");
+    digit_7 = Image("images/digit_7.png");
+    digit_8 = Image("images/digit_8.png");
+
+    print("Sum of 2 numbers: ", get_sum_2(digit_2, digit_3));
+    print("Sum of 3 numbers: ", get_sum_3(digit_2, digit_3, digit_4));
+    print("Sum of 4 numbers: ", get_sum_4(digit_2, digit_3, digit_4, digit_5));
+    print("Is 2 less than 3: ", less_than(digit_4, digit_5));
+    print("Is 3 not 3 or 4: ", not_3_or_4(digit_6));
+    print("Count of 3: ", count_3(digit_1, digit_2, digit_3, digit_4, digit_5, digit_6, digit_7, digit_8));
+    print("Count of 3 or 4: ", count_3_or_4(digit_1, digit_2, digit_3, digit_4, digit_5, digit_6, digit_7, digit_8));
+}

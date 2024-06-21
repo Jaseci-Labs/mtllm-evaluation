@@ -1,7 +1,7 @@
 import lmql
 
 # Define the prompt template
-prompt_template = '''
+prompt_template = """
 Generate the next map based on the parameters. 
 Next map should have the same structure as the current map but harder. 
 "B"-Block or Obstacles, Enemies and the Player cannot pass through, 
@@ -18,7 +18,7 @@ Hardness level (1-100): {hardness_level},
 Win/death ratio: {win_death_ratio}
 
 Next Map:
-'''
+"""
 
 # Define the LMQL query
 query = '''
@@ -36,7 +36,7 @@ variables={
 '''
 
 # Current Map
-current_map = '''
+current_map = """
 "BBBBBBBBBBBBBBBBBBBBB",
 "B.............E....B",
 "B...........B......B",
@@ -53,19 +53,15 @@ current_map = '''
 "B.....B............B",
 "B.....B............B",
 "BBBBBBBBBBBBBBBBBBBBB"
-'''
+"""
 
 # Parameters
-parameters = {
-    "time_taken": "2 minutes",
-    "hardness_level": 40,
-    "win_death_ratio": "5/3"
-}
+parameters = {"time_taken": "2 minutes", "hardness_level": 40, "win_death_ratio": "5/3"}
 
 # Generate the next map
 result = lmql.run(query)
 
 # Extract and print the next map
-next_map = result['next_map']
+next_map = result["next_map"]
 for line in next_map:
     print(line)

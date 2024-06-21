@@ -4,7 +4,7 @@ evaluation_criteria = {
     "clarity": "Does the essay convey its message clearly?",
     "coherency": "Does the essay have a logical flow and coherence?",
     "depth": "Does the essay provide sufficient depth and insight into the topic?",
-    "grammar": "Is the essay grammatically correct and well-structured?"
+    "grammar": "Is the essay grammatically correct and well-structured?",
 }
 
 essay = """
@@ -15,7 +15,8 @@ Better governance and regulations can help manage the crisis and attract investm
 """
 
 model_name = "text-davinci-003"  # Example model from OpenAI
-llm_pipeline = pipeline('text-generation', model=model_name)
+llm_pipeline = pipeline("text-generation", model=model_name)
+
 
 def generate_evaluation(essay, criteria):
     prompt = f"""
@@ -31,12 +32,13 @@ def generate_evaluation(essay, criteria):
 
     Provide detailed remarks and a grade (A, B, C, D, S, F).
     """
-    
+
     response = llm_pipeline(prompt, max_length=500, num_return_sequences=1)
-    output = response[0]['generated_text']
-    
+    output = response[0]["generated_text"]
+
     remarks, grade = output.split("Grade:")
     return remarks.strip(), grade.strip()
+
 
 remarks, grade = generate_evaluation(essay, evaluation_criteria)
 

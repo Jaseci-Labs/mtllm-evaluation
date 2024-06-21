@@ -1,11 +1,15 @@
 import dspy
+
 # from google.colab import userdata
+
 
 class EssayEvaluation(dspy.Signature):
     """Evaluate a given essay according to the given criteria and give a grade and reasons to give that grade."""
+
     input_essay = dspy.InputField()
     main_criteria = dspy.InputField()
     evaluation_result = dspy.OutputField()
+
 
 # OPENAI_API_KEY = userdata.get('OPENAI_API_KEY')
 
@@ -17,13 +21,15 @@ dspy.settings.configure(lm=llm)
 
 essay_evaluation_as_template = dspy.signatures.signature_to_template(EssayEvaluation)
 
+
 class EssayEvaluator(dspy.Module):
     def __init__(self):
         super().__init__()
         self.prog = dspy.ChainOfThought(EssayEvaluation)
-    
+
     def forward(self, input_essay, main_criteria):
         return self.prog(input_essay=input_essay, main_criteria=main_criteria)
+
 
 evaluator = EssayEvaluator()
 

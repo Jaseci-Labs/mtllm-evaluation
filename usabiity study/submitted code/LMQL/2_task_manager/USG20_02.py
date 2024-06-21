@@ -11,8 +11,8 @@ query = f"Provide estimated time and priority for the task: {task_description}"
 response = lmql_model.query(query)
 
 # Extract time and priority from LMQL response
-time_estimate = response.get('estimated_time', None)
-priority_estimate = response.get('priority', None)
+time_estimate = response.get("estimated_time", None)
+priority_estimate = response.get("priority", None)
 
 # Print the estimated time and priority
 print("Estimated Time:", time_estimate)

@@ -1,5 +1,7 @@
 import dspy
+
 # from google.colab import userdata
+
 
 class Activity:
     def __init__(self, description, time, priority):
@@ -10,13 +12,16 @@ class Activity:
     def __repr__(self):
         return f"Activity(description='{self.description}', time={self.time}, priority={self.priority})"
 
+
 class MakePriority(dspy.Signature):
     activity = dspy.InputField()
     priority_rank = dspy.OutputField()
 
+
 class SetTime(dspy.Signature):
     activity = dspy.InputField()
     estimated_time = dspy.OutputField()
+
 
 # OPENAI_API_KEY = userdata.get('OPENAI_API_KEY')
 
@@ -29,6 +34,7 @@ dspy.settings.configure(lm=llm)
 make_priority_template = dspy.signatures.signature_to_template(MakePriority)
 set_time_template = dspy.signatures.signature_to_template(SetTime)
 
+
 class TaskProcessor(dspy.Module):
     def __init__(self):
         super().__init__()
@@ -40,6 +46,7 @@ class TaskProcessor(dspy.Module):
         time = self.time_prog(activity=task)
         return priority, time
 
+
 task_processor = TaskProcessor()
 
 if __name__ == "__main__":
@@ -48,7 +55,7 @@ if __name__ == "__main__":
         "Go hiking with friends",
         "Complete the marketing report",
         "Prepare for the presentation",
-        "Cook dinner for my family"
+        "Cook dinner for my family",
     ]
 
     output_list = []
@@ -57,7 +64,9 @@ if __name__ == "__main__":
         priority_number, estimated_time = task_processor.evaluate_task(task)
         task_description = task
 
-        task_todo = Activity(description=task_description, time=estimated_time, priority=priority_number)
+        task_todo = Activity(
+            description=task_description, time=estimated_time, priority=priority_number
+        )
         output_list.append(task_todo)
 
     print(output_list)

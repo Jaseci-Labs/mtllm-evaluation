@@ -19,19 +19,22 @@ criteria_list = [
     "Evidence",
     "Coherence and Organization",
     "Grammar and Syntax",
-    "Overall Impression"
+    "Overall Impression",
 ]
 criteria = ", ".join(criteria_list)  # Convert list to a comma-separated string
+
 
 class EvaluateEssay(dspy.Signature):
     essay: str = dspy.InputField()
     criteria: str = dspy.InputField()
     remark: str = dspy.OutputField()
 
+
 class GiveGrade(dspy.Signature):
     reviewer_remark: str = dspy.InputField()
     possible_grades: str = dspy.InputField()
     grade: str = dspy.OutputField()
+
 
 with dspy.context(lm=llm):
     # Evaluate the essay
@@ -41,6 +44,8 @@ with dspy.context(lm=llm):
 
     # Grade the essay
     possible_grades = "A, B, C, S, F"
-    grading = dspy.Predict(GiveGrade)(reviewer_remark=reviewer_remark, possible_grades=possible_grades)
+    grading = dspy.Predict(GiveGrade)(
+        reviewer_remark=reviewer_remark, possible_grades=possible_grades
+    )
     grade = grading.grade.split("Grade: ")[-1].strip()
     print("Grade:", grade)

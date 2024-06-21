@@ -4,6 +4,7 @@ class MTLLM:
         # Placeholder for multi-task learning using MTLLM
         return "Generated map based on multi-task learning"
 
+
 # Get input map from the user
 def get_input_map():
     print("Enter the previous map (each row separated by a newline):")
@@ -12,6 +13,7 @@ def get_input_map():
         row = input().strip()
         previous_map.append(row)
     return previous_map
+
 
 # Example usage
 if __name__ == "__main__":
@@ -30,10 +32,12 @@ if __name__ == "__main__":
     print("Generated map:")
     print(new_map)
 
+
 def generate_level(previous_levels):
     response = jac.llm_generate_level(previous_levels)
-    new_level = response['new_level']
+    new_level = response["new_level"]
     return new_level
+
 
 previous_levels_data = "Your previous levels data here"
 new_level = generate_level(previous_levels_data)

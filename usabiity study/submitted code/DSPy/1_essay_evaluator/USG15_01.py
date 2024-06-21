@@ -15,14 +15,17 @@ import dspy
 llm = dspy.OpenAI(model="gpt-4o")
 dspy.settings.configure(lm=llm)
 
-sentiment_model = dspy.Predict('sentence -> sentiment')
-sentiment = dspy.OutputField(desc="Possible choices: excellent, good, neutral, bad, very poor, fail.")
+sentiment_model = dspy.Predict("sentence -> sentiment")
+sentiment = dspy.OutputField(
+    desc="Possible choices: excellent, good, neutral, bad, very poor, fail."
+)
+
 
 def generate_remarks(essay_text, criteria):
     criteria_str = ", ".join(criteria)
     prompt = f"Evaluate this essay based on the following criteria: {criteria_str}. Provide remarks: {essay_text} all in one paragraph"
     response = llm(prompt)
-    #print("Ollama Model Response:", response) #Testing
+    # print("Ollama Model Response:", response) #Testing
     if isinstance(response, list) and response:
         remarks = "\n".join(response)
         return remarks.strip()
@@ -30,11 +33,13 @@ def generate_remarks(essay_text, criteria):
         return response.strip()
     raise ValueError("Unexpected response format from Ollama model")
 
+
 def analyze_sentiment(remarks):
     sentiment_response = sentiment_model(sentence=remarks)
-    #print("Sentiment Model Response:", sentiment_response) #Testing
-    sentiment = sentiment_response['sentiment'].strip().lower()
+    # print("Sentiment Model Response:", sentiment_response) #Testing
+    sentiment = sentiment_response["sentiment"].strip().lower()
     return sentiment
+
 
 def grade_essay(sentiment):
     if "excellent" in sentiment:
@@ -50,16 +55,19 @@ def grade_essay(sentiment):
     else:
         return "F"
 
+
 def load_essay(input_path):
     with open(input_path, "r") as file:
         essay_text = file.read()
     return essay_text
 
+
 def save_evaluation(output_path, remarks, sentiment, grade):
     with open(output_path, "w") as file:
         file.write("Evaluative Remarks:\n" + remarks + "\n\n")
-        #file.write("Sentiment: " + sentiment.capitalize() + "\n")
+        # file.write("Sentiment: " + sentiment.capitalize() + "\n")
         file.write("Grade: " + grade)
+
 
 def main_pipeline(input_path, output_path, criteria):
     essay_text = load_essay(input_path)
@@ -67,6 +75,7 @@ def main_pipeline(input_path, output_path, criteria):
     sentiment = analyze_sentiment(remarks)
     grade = grade_essay(sentiment)
     save_evaluation(output_path, remarks, sentiment, grade)
+
 
 input_path = "/home/jay_desk/REPOs/mtllm-evaluation/usabiity study/submitted code/DSPy/1_essay_evaluator/essay.txt"
 output_path = "/home/jay_desk/REPOs/mtllm-evaluation/usabiity study/submitted code/DSPy/1_essay_evaluator/evaluation.txt"

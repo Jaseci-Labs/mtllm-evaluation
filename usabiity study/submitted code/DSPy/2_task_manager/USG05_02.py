@@ -13,20 +13,27 @@ dspy.settings.configure(lm=llm)
 
 
 # Define the Task object
-class Task():
+class Task:
     def __init__(self, description, time=0, priority=0):
         self.description = description
         self.time = time
         self.priority = priority
 
+
 # Task Manager Template
 class TaskManager(dspy.Signature):
     """Assign a given task a priority rank, and an estimated time for completion. Answer questions with short factoid answers."""
+
     current_task = dspy.InputField()
     all_tasks = dspy.InputField(format=list)
 
-    completion_time = dspy.OutputField(desc="Estimated time in minutes for one to do the task. Answer only the time value.")
-    priority = dspy.OutputField(desc="Estimated Priority for the Task number between 0 and 10. Answer only the number value.")
+    completion_time = dspy.OutputField(
+        desc="Estimated time in minutes for one to do the task. Answer only the time value."
+    )
+    priority = dspy.OutputField(
+        desc="Estimated Priority for the Task number between 0 and 10. Answer only the number value."
+    )
+
 
 class COT(dspy.Module):
     def __init__(self):
@@ -38,7 +45,8 @@ class COT(dspy.Module):
             return self.prog(current_task=task_str, all_tasks=all_tasks)
         except Exception as e:
             print(f"Error occurred: {e}")
-            return {'completion_time': 'Unknown', 'priority': 'Unknown'}
+            return {"completion_time": "Unknown", "priority": "Unknown"}
+
 
 c = COT()
 
@@ -53,10 +61,10 @@ task_contents = [
 
 for current_task in task_contents:
     task = Task(description=current_task)
-    response = c.forward(current_task, ','.join(task_contents))
-    
-    task.priority = response['priority']
-    task.time = response['completion_time']
+    response = c.forward(current_task, ",".join(task_contents))
+
+    task.priority = response["priority"]
+    task.time = response["completion_time"]
 
     # Print each response
     print(task.__dict__)

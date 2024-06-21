@@ -1,7 +1,7 @@
 lmql
 dspy
-jaclang @git+https://github.com/Jaseci-Labs/jaclang@mtllm-no-semstr-none
-anthropic
+jaclang @git+https://github.com/Jaseci-Labs/jaclang@video-support-mtllm
+mtllm @git+https://github.com/Jaseci-Labs/mtllm@main
 black
 wikipedia
 openai

@@ -2,13 +2,14 @@ from jaseci.jsorc.jsorc import JsOrc
 from jaseci.jsorc.live_actions import jaseci_action, load_local_actions
 from jaseci.utils.utils import JsObj
 
+
 # Custom Action to estimate time and priority
 @jaseci_action()
 def estimate_time_and_priority(description: str) -> dict:
     """
     Estimate time and priority for a given task description.
     This is a placeholder function; replace with actual MTLLM model calls.
-    
+
     Args:
     - description (str): The task description.
 
@@ -17,11 +18,11 @@ def estimate_time_and_priority(description: str) -> dict:
     """
     # Example logic for time estimation
     time = len(description) * 10  # Example: Time based on description length
-    priority = (len(description) % 10) + 1  # Example: Priority based on description length modulo 10
-    return {
-        "time": time,
-        "priority": priority
-    }
+    priority = (
+        len(description) % 10
+    ) + 1  # Example: Priority based on description length modulo 10
+    return {"time": time, "priority": priority}
+
 
 # Load custom actions
 load_local_actions(__file__)  # Ensures the current script's directory is used
@@ -59,7 +60,7 @@ task_contents = [
     "Go hiking with friends",
     "Complete the marketing report",
     "Prepare for the presentation",
-    "Cook dinner for my family"
+    "Cook dinner for my family",
 ]
 
 # List to store task objects
@@ -68,16 +69,18 @@ tasks = []
 # Process each task
 for task_description in task_contents:
     # Initialize the TaskManager walker
-    task_manager = js.create_walker(name='TaskManager', params={'desc': task_description})
-    
+    task_manager = js.create_walker(
+        name="TaskManager", params={"desc": task_description}
+    )
+
     # Execute the method to estimate time and priority
-    task_manager.run(method='estimate_time_and_priority')
-    
+    task_manager.run(method="estimate_time_and_priority")
+
     # Collect task data
     task = {
         "description": task_manager.vars.description,
         "time": task_manager.vars.time,
-        "priority": task_manager.vars.priority
+        "priority": task_manager.vars.priority,
     }
     tasks.append(task)
 

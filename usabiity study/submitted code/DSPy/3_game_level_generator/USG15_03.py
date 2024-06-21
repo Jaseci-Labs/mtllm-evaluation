@@ -17,26 +17,27 @@ dspy.settings.configure(lm=llm)
 
 
 map = [
-    'BBBBBBBBBBBBBBBBBBBB',
-    'B...E..............B',
-    'B.......B..........B',
-    'B....BBBB..........B',
-    'B..................B',
-    'B..................B',
-    'B.........P........B',
-    'B..................B',
-    'B.............E....B',
-    'B..................B',
-    'B..................B',
-    'B.........B........B',
-    'B.........B........B',
-    'B.........B........B',
-    'BBBBBBBBBBBBBBBBBBBB'
+    "BBBBBBBBBBBBBBBBBBBB",
+    "B...E..............B",
+    "B.......B..........B",
+    "B....BBBB..........B",
+    "B..................B",
+    "B..................B",
+    "B.........P........B",
+    "B..................B",
+    "B.............E....B",
+    "B..................B",
+    "B..................B",
+    "B.........B........B",
+    "B.........B........B",
+    "B.........B........B",
+    "BBBBBBBBBBBBBBBBBBBB",
 ]
 
 previous_time_to_win = 5  # Dummy value in minutes
 hardness_level = 40  # Dummy value from 1 to 100
 win_death_ratio = 2.0  # Dummy value
+
 
 def generate_harder_map(map, previous_time_to_win, hardness_level, win_death_ratio):
     prompt = f"""
@@ -62,6 +63,9 @@ def generate_harder_map(map, previous_time_to_win, hardness_level, win_death_rat
     new_map = response[0]
     return new_map
 
-new_map = generate_harder_map(map, previous_time_to_win, hardness_level, win_death_ratio)
+
+new_map = generate_harder_map(
+    map, previous_time_to_win, hardness_level, win_death_ratio
+)
 
 print(new_map)

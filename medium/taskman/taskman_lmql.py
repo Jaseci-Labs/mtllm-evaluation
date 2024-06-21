@@ -12,11 +12,12 @@ class Task:
 
 @lmql.query
 def GetTask(info: str) -> Task:
-    '''lmql
+    """lmql
     "Enjoy a better weekend with my girlfriend.\n"
     "Structured: [TASK_DATA]\n" where type(TASK_DATA) is Task
     return TASK_DATA
-    '''
+    """
+
 
 task_contents = [
     "Have some sleep",
@@ -32,10 +33,10 @@ for task_content in task_contents:
 
 print(tasks)
 
-'''
+"""
 [Task(description='Enjoy a better weekend with my girlfriend.', time=2, priority=1), 
 Task(description='Enjoy a better weekend with my girlfriend.', time=2, priority=1), 
 Task(description='Enjoy a better weekend with my girlfriend.', time=21, priority=21), 
 Task(description='Enjoy a better weekend with my girlfriend.', time=2, priority=1),
  Task(description='Enjoy a better weekend with my girlfriend.', time=2, priority=1)]
- '''
+ """

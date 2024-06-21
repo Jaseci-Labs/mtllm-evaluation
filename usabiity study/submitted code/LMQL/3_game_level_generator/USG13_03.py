@@ -14,9 +14,12 @@ and the parameters:
 Generate the next map. The next map should have the same structure as the current map but be harder. "B" represents blocks or obstacles, which enemies and the player cannot pass through. "." represents walkable areas for all characters. "E" represents enemy characters (there can be many), and "P" represents the player character (there should be only one player). Provide the map only.
 """
 
+
 def generate_next_map(current_map, parameters):
-    prompt = prompt_template.format(current_map=current_map, other_parameters=parameters)
-    
+    prompt = prompt_template.format(
+        current_map=current_map, other_parameters=parameters
+    )
+
     query = f"""
     argmax
     "api:anthropic",
@@ -33,6 +36,7 @@ def generate_next_map(current_map, parameters):
     result = lmql.query(query)
 
     return result[0]["next_map"]
+
 
 map_data = """
     "BBBBBBBBBBBBBBBBBBBBB",

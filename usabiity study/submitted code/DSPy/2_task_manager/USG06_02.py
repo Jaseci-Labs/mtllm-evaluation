@@ -1,10 +1,11 @@
-task_contents=[
+task_contents = [
     "Read a new book",
     "Go hiking with friends",
     "Complete the marketing report",
     "Prepare for the presentation",
-    "Cook dinner for my family"
+    "Cook dinner for my family",
 ]
+
 
 class TaskObject(Task):
     description: str
@@ -12,8 +13,9 @@ class TaskObject(Task):
     priority: int
 
     def _init_(self, description):
-        self.description=description
+        self.description = description
         super()._init_()
+
     def generate(self):
         f"""
 For task: "{self.description}":
@@ -21,4 +23,4 @@ For task: "{self.description}":
 - Estimated priority (0-10)
 
 Format: "time: [time], priority: [priority]"
-""" 
+"""

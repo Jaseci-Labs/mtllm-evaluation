@@ -15,6 +15,7 @@ import dspy
 llm = dspy.OpenAI(model="gpt-4o")
 dspy.settings.configure(lm=llm)
 
+
 class Task:
     def __init__(self, description, time, priority):
         self.description = description
@@ -23,6 +24,7 @@ class Task:
 
     def __str__(self):
         return f"Task(description='{self.description}', time='{self.time}', priority='{self.priority}')"
+
 
 def generate_task_attributes(task_description):
     constraint = "In 3 words"
@@ -36,6 +38,7 @@ def generate_task_attributes(task_description):
 
     return time_str, priority_str
 
+
 def create_task_list(task_contents):
     task_list = []
     for task_description in task_contents:
@@ -46,6 +49,7 @@ def create_task_list(task_contents):
         except ValueError as e:
             print(f"Error processing task '{task_description}': {e}")
     return task_list
+
 
 def print_task_list(task_list):
     for task in task_list:
@@ -64,10 +68,10 @@ def print_task_list(task_list):
 ]"""
 
 task_contents = [
-    'Drink water',
-    'Have lunch',
-    'Do school homework',
-    'Go on a trip to the zoo',
+    "Drink water",
+    "Have lunch",
+    "Do school homework",
+    "Go on a trip to the zoo",
 ]
 
 task_list = create_task_list(task_contents)

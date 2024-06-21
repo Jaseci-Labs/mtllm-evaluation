@@ -12,11 +12,11 @@ dspy.settings.configure(lm=llm)
 
 
 class MapGenerate(dspy.Signature):
-    """Generate the next map based on the parameters. 
-    Next map should have the same structure as current map but harder. 
+    """Generate the next map based on the parameters.
+    Next map should have the same structure as current map but harder.
     "B"-Block or Obstacles, Enemies and the Player cannot pass through, "."-Walkable area for all characters, "E"-Enemy Character(can have many), "P"-Player Character.There should be only one player
     Give the map only"""
-    
+
     current_map = dspy.InputField()
     other_parameters = dspy.InputField()
 
@@ -30,7 +30,7 @@ class COT(dspy.Module):
 
     def forward(self, current_map, other_parameters):
         return self.prog(current_map=current_map, other_parameters=other_parameters)
-    
+
 
 c = COT()
 
@@ -65,4 +65,4 @@ parameters = """
 
 next_map = c.forward(map, parameters)
 
-print(next_map['next_map'])
+print(next_map["next_map"])

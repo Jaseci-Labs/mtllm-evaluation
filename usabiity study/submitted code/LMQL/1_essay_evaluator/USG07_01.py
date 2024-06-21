@@ -4,7 +4,7 @@ evaluation_criteria = {
     "clarity": "Does the essay convey its message clearly?",
     "coherency": "Does the essay have a logical flow and coherence?",
     "depth": "Does the essay provide sufficient depth and insight into the topic?",
-    "grammar": "Is the essay grammatically correct and well-structured?"
+    "grammar": "Is the essay grammatically correct and well-structured?",
 }
 
 essay = f"""
@@ -23,5 +23,5 @@ criteria: "{evaluation_criteria}"
 """
 
 response = lmql.run(query)
-remarks = response['REMARKS']
-grade = response['GRADE']
+remarks = response["REMARKS"]
+grade = response["GRADE"]

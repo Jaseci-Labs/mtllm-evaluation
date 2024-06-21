@@ -4,6 +4,7 @@ class LMQL:
         # Placeholder for querying a language model
         return "Generated map based on LMQL query"
 
+
 # Get input map from the user
 def get_input_map():
     print("Enter the previous map (each row separated by a newline):")
@@ -12,6 +13,7 @@ def get_input_map():
         row = input().strip()
         previous_map.append(row)
     return previous_map
+
 
 # Example usage
 if __name__ == "__main__":
@@ -25,7 +27,7 @@ if __name__ == "__main__":
 
     # Construct query using input parameters
     query = f"Generate a harder map based on previous map: {previous_map}, time taken: {time_taken}, hardness level: {hardness_level}, win/death ratio: {win_death_ratio}"
-    
+
     # Query LMQL to generate a new map
     new_map = LMQL.query(query)
 

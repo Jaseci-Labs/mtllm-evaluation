@@ -1,8 +1,9 @@
 import lmql
 
+
 @lmql.query
 def manage_tasks(task_list: list):
-    '''lmql
+    """lmql
     argmax
         task_objs = []
         for task in task_list:
@@ -12,15 +13,16 @@ def manage_tasks(task_list: list):
             task_objs.append({"description": description, "priority": priority, "time": time})
         task_objs
     clause
-    '''
+    """
     pass
+
 
 task_contents = [
     "Read a new book",
     "Go hiking with friends",
     "Complete the marketing report",
     "Prepare for the presentation",
-    "Cook dinner for my family"
+    "Cook dinner for my family",
 ]
 
 task_list = manage_tasks(task_contents)
