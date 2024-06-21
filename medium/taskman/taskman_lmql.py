@@ -1,16 +1,19 @@
 import lmql
 
+from dataclasses import dataclass
+
+
+@dataclass
 class Task:
-    def __init__(self, description: str, time: int, priority: int):
-        self.description = description
-        self.time = time
-        self.priority = priority
+    description: str
+    time: int
+    priority: int
 
 
 @lmql.query
-def GetTask(task_info: str) -> Task:
+def GetTask(info: str) -> Task:
     '''lmql
-    "{task_info}.\n"
+    "Enjoy a better weekend with my girlfriend.\n"
     "Structured: [TASK_DATA]\n" where type(TASK_DATA) is Task
     return TASK_DATA
     '''
@@ -29,14 +32,10 @@ for task_content in task_contents:
 
 print(tasks)
 
-
 '''
-    same error as Personality Finder
-    
-  File "/home/acer/miniconda3/lib/python3.12/site-packages/lmql/lib/types.py", line 24, in type_schema_description
-    s = type_schema(t)
-        ^^^^^^^^^^^^^^
-  File "/home/acer/miniconda3/lib/python3.12/site-packages/lmql/lib/types.py", line 21, in type_schema
-    assert False, "not a supported type " + str(t)
-AssertionError: not a supported type <class '__main__.Task'>
-'''
+[Task(description='Enjoy a better weekend with my girlfriend.', time=2, priority=1), 
+Task(description='Enjoy a better weekend with my girlfriend.', time=2, priority=1), 
+Task(description='Enjoy a better weekend with my girlfriend.', time=21, priority=21), 
+Task(description='Enjoy a better weekend with my girlfriend.', time=2, priority=1),
+ Task(description='Enjoy a better weekend with my girlfriend.', time=2, priority=1)]
+ '''
