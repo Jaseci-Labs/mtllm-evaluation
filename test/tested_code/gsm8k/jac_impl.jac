@@ -1,11 +1,13 @@
 import:py from os, environ;
-import:py from jaclang.core.llms, Ollama, OpenAI;
+import:py from mtllm.llms, OpenAI;
+
 glob model_name=environ["MODEL_NAME"];
-glob llm = OpenAI(model_name=model_name);
-can answerquestion(question: str) -> 'answer': int by llm(method="Chain-of-Thoughts");
+glob llm = OpenAI(verbose=True, model_name=model_name);
+
+can get_answer(question: str) -> int by llm(method="Chain-of-Thoughts");
 
 with entry{
-    question = input();
-    answer = answerquestion(question);
+    question = "Weng earns $12 an hour for babysitting. Yesterday, she just did 50 minutes of babysitting. How much did she earn?";
+    answer = get_answer(question);
     print(answer);
 }
