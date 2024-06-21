@@ -7,6 +7,6 @@ can get_answer(img: Image, question: str) -> str by llm();
 
 with entry {
     img = Image("image.png");
-    question = "How many objects in this picture?";
-    get_answer(img, question);
+    question = "How many green objects?";
+    print(get_answer(img, question));
 }
