@@ -32,7 +32,7 @@ print(
 
 """
 # Expected Output: Martin Luther King Jr. was an Introvert person who died in 39.
-# Output: Martin Luther King Jr. was an inspirational person who died in 39.
+# Current Output: Martin Luther King Jr. was an inspirational person who died in 39.
 
 The output is not as expected. The model fails to predict the personality type correctly.
 Additionally, when the personality attribute type is specified as Personality, 
