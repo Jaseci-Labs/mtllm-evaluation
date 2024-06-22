@@ -1,9 +1,13 @@
-import:py from jaclang.core.llms, Ollama, OpenAI;
-glob llm = OpenAI();
-can answerquestion(question: str) -> 'answer': str by llm();
+import:py from os, environ;
+import:py from mtllm.llms, OpenAI;
+
+glob model_name=environ["MODEL_NAME"];
+glob llm = OpenAI(verbose=True, model_name=model_name);
+
+can get_answer(question: str) -> int by llm(method="Chain-of-Thoughts");
 
 with entry{
     question = input();
-    answer = answerquestion(question);
+    answer = get_answer(question);
     print(answer);
 }
