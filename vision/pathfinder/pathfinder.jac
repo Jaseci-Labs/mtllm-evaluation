@@ -1,13 +1,12 @@
 import:py from mtllm.llms, OpenAI;
-import:py from PIL, Image;
+import:py from mtllm, Image;
 
-glob llm = OpenAI(verbose= True, model_name="gpt-4o");
+glob llm = OpenAI(model_name="gpt-4o");
 
-can 
-is_path_between_two_dots(image: 'Image to check for path': Image) ->bool 
-by llm(method="Chain-of-Thoughts");
+can 'Check whether the  2 dots are connected by a path'
+is_connected(image: Image) -> bool by llm(method="Chain-of-Thoughts");
 
 with entry {
-    print(is_path_between_two_dots(Image.open('true.png')));
-    print(is_path_between_two_dots(Image.open('false.png')));
+    print(is_connected(Image('true.png')));
+    print(is_connected(Image('false.png')));
 }
