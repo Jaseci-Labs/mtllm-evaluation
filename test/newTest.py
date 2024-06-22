@@ -5,8 +5,8 @@ import subprocess
 import pandas as pd
 import json
 
-# models = ["gpt-3.5-turbo", "gpt-4", "gpt-4-turbo", "gpt-4o"]
-models = ["gpt-4o"]
+models = ["gpt-3.5-turbo", "gpt-4", "gpt-4-turbo", "gpt-4o"]
+# models = ["gpt-4o"]
 
 
 def codeRun(cmd: list[str], input: str, modelName: str):
