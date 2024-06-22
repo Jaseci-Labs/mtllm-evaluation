@@ -7,7 +7,7 @@ glob llm = OpenAI(verbose=True, model_name=model_name);
 can get_answer(question: str) -> int by llm(method="Chain-of-Thoughts");
 
 with entry{
-    question = "Weng earns $12 an hour for babysitting. Yesterday, she just did 50 minutes of babysitting. How much did she earn?";
+    question = input();
     answer = get_answer(question);
     print(answer);
 }
