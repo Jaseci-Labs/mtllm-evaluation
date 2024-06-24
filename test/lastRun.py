@@ -41,7 +41,7 @@ def save(res):
             "RawResponse",
         ],
     )
-    df.to_csv("ModelSweep-21-06-2024-0103.csv")
+    df.to_csv("ModelSweep-23-06-2024-1352.csv")
 
 
 ds = load_dataset("openai/gsm8k", "main", split="train")
@@ -63,7 +63,7 @@ for i in train:
         jacRawPrompt = ""
         try:
             dspyResponse, dspyTimer = codeRun(
-                ["python", "tested_code/gsm8k/dspy_vanilla_impl.py"], input=question, modelName=model
+                ["python", "tested_code/gsm8k/dspy_single_trial.py"], input=question, modelName=model
             )
             dspyResponse = dspyResponse.strip()
         except KeyboardInterrupt:
@@ -80,7 +80,7 @@ for i in train:
         os.remove("RawResponse.json")
         dspyPromptTokens = sum([i["usage"]["prompt_tokens"] for i in dspyRawResponse])
         dspyCompletionTokens = sum([i["usage"]["completion_tokens"] for i in dspyRawResponse])
-        dspyResult = [count, question, answer, model, "DSPy", dspyResponse, (dspyResponse == answer), dspyFailed, dspyTimer, dspyPromptTokens, dspyCompletionTokens, dspyRawPrompt, json.dumps(dspyRawResponse)]
+        dspyResult = [count, question, answer, model, "DSPy_Single_Trial", dspyResponse, (dspyResponse == answer), dspyFailed, dspyTimer, dspyPromptTokens, dspyCompletionTokens, dspyRawPrompt, json.dumps(dspyRawResponse)]
         print("DSPy Result", dspyResult)
         res.append(dspyResult.copy())
 
@@ -113,27 +113,6 @@ for i in train:
         print("DSPy Result", dspyResult)
         res.append(dspyResult.copy())
 
-        try:
-            jacResponse, jacTimer = codeRun(
-                ["jac", "run", "tested_code/gsm8k/jac_impl.jac"], input=question, modelName=model
-            )
-            jacResponse = jacResponse.strip()
-        except KeyboardInterrupt:
-            exit(1)
-        except:
-            jacFailed = True
-            jacResponse = ""
-            jacTimer = 0
-        with open("RawPrompt.json", "r") as rawPromptFile, open("RawResponse.json", "r") as rawResponseFile:
-            jacRawPrompt = rawPromptFile.read()
-            jacRawResponse = json.load(rawResponseFile)
-        os.remove("RawPrompt.json")
-        os.remove("RawResponse.json")
-        jacPromptTokens = sum([i["usage"]["prompt_tokens"] for i in jacRawResponse])
-        jacCompletionTokens = sum([i["usage"]["completion_tokens"] for i in jacRawResponse])
-        jacResult = [count, question, answer, model, "Jac", jacResponse, (jacResponse == answer), jacFailed, jacTimer, jacPromptTokens, jacCompletionTokens, jacRawPrompt, json.dumps(jacRawResponse)]
-        print("Jac Result", jacResult)
-        res.append(jacResult)
 
     save(res)
     count += 1

@@ -7,5 +7,6 @@ llm = dspy.OpenAI(model=model_name, max_tokens=1000)
 dspy.configure(lm=llm)
 program = CoT
 CoT.load("optimized.json")
-answer = CoT(question="What is 1+1").answer
+question = input()
+answer = CoT(question=question).answer
 print(answer)
