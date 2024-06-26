@@ -41,7 +41,7 @@ def save(res):
             "RawResponse",
         ],
     )
-    df.to_csv("ModelSweep-23-06-2024-1352.csv")
+    df.to_csv("ModelSweep-25-06-2024-2249.csv")
 
 
 ds = load_dataset("openai/gsm8k", "main", split="train")
@@ -57,32 +57,32 @@ for i in train:
     for model in models:
         print(f"Running Question {count} with model {model}")
 
-        dspyFailed = False
-        jacFailed = False
-        dspyRawPrompt = ""
-        jacRawPrompt = ""
-        try:
-            dspyResponse, dspyTimer = codeRun(
-                ["python", "tested_code/gsm8k/dspy_single_trial.py"], input=question, modelName=model
-            )
-            dspyResponse = dspyResponse.strip()
-        except KeyboardInterrupt:
-            exit(1)
-        except:
-            dspyFailed = True
-            dspyResponse = ""
-            dspyTimer = 0
-            print(dspyRawPrompt)
-        with open("RawPrompt.json", "r") as rawPromptFile, open("RawResponse.json", "r") as rawResponseFile:
-            dspyRawPrompt = rawPromptFile.read()
-            dspyRawResponse = json.load(rawResponseFile)
-        os.remove("RawPrompt.json")
-        os.remove("RawResponse.json")
-        dspyPromptTokens = sum([i["usage"]["prompt_tokens"] for i in dspyRawResponse])
-        dspyCompletionTokens = sum([i["usage"]["completion_tokens"] for i in dspyRawResponse])
-        dspyResult = [count, question, answer, model, "DSPy_Single_Trial", dspyResponse, (dspyResponse == answer), dspyFailed, dspyTimer, dspyPromptTokens, dspyCompletionTokens, dspyRawPrompt, json.dumps(dspyRawResponse)]
-        print("DSPy Result", dspyResult)
-        res.append(dspyResult.copy())
+        # dspyFailed = False
+        # jacFailed = False
+        # dspyRawPrompt = ""
+        # jacRawPrompt = ""
+        # try:
+        #     dspyResponse, dspyTimer = codeRun(
+        #         ["python", "tested_code/gsm8k/dspy_single_trial.py"], input=question, modelName=model
+        #     )
+        #     dspyResponse = dspyResponse.strip()
+        # except KeyboardInterrupt:
+        #     exit(1)
+        # except:
+        #     dspyFailed = True
+        #     dspyResponse = ""
+        #     dspyTimer = 0
+        #     print(dspyRawPrompt)
+        # with open("RawPrompt.json", "r") as rawPromptFile, open("RawResponse.json", "r") as rawResponseFile:
+        #     dspyRawPrompt = rawPromptFile.read()
+        #     dspyRawResponse = json.load(rawResponseFile)
+        # os.remove("RawPrompt.json")
+        # os.remove("RawResponse.json")
+        # dspyPromptTokens = sum([i["usage"]["prompt_tokens"] for i in dspyRawResponse])
+        # dspyCompletionTokens = sum([i["usage"]["completion_tokens"] for i in dspyRawResponse])
+        # dspyResult = [count, question, answer, model, "DSPy_Single_Trial", dspyResponse, (dspyResponse == answer), dspyFailed, dspyTimer, dspyPromptTokens, dspyCompletionTokens, dspyRawPrompt, json.dumps(dspyRawResponse)]
+        # print("DSPy Result", dspyResult)
+        # res.append(dspyResult.copy())
 
 
 
