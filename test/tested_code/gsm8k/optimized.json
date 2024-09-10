@@ -1,0 +1,26 @@
+{
+  "predictor": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "question": "Tim decides to cancel his cable subscription and get streaming services.  He gets Netflix for $10 a month.  Hulu and Disney Plus normally cost $10 a month each but he saves 20% for bundling.  How much money does he save by cancelling his $60 cable package?",
+        "gold_reasoning": "Hulu and Disney Plus normally cost 10+10=$<<10+10=20>>20 By bundling he saves 20*.2=$<<20*.2=4>>4 So in total it cost 20-4=$<<20-4=16>>16 So he pays 16+10=$<<16+10=26>>26 for streaming That means he saves 60-26=$<<60-26=34>>34 a month",
+        "answer": "34"
+      },
+      {
+        "question": "There are 6 trees in Chris's yard.  Ferdinand has half the number of trees that Chris has.  Harry has 5 more than twice the number of trees that Ferdinand has.  How many more trees are in Harry's yard than Ferdinand's yard?",
+        "gold_reasoning": "Ferdinand:6\/2=<<6\/2=3>>3 trees Harry:5+2(3)=5+6=11 trees 11-3=<<11-3=8>>8 trees",
+        "answer": "8"
+      },
+      {
+        "question": "Isabelle bought party supplies for her little sister\u2019s birthday party. She spent $12 on ingredients for the cake, $43 on birthday presents, $15 on decorations, $4 on invitations, and $22 on goodie bags for the party guests. She split the cost evenly three ways with her two parents. How many dollars did each person pay?",
+        "gold_reasoning": "Isabelle spent 12 + 43 + 15 + 4 + 22 = $<<12+43+15+4+22=96>>96 on party supplies. The cost was evenly split 3 ways, so each person paid 96 \/ 3 = $<<96\/3=32>>32.",
+        "answer": "32"
+      }
+    ],
+    "signature_instructions": "Given the fields `question`, produce the fields `answer`.",
+    "signature_prefix": "Answer:"
+  }
+}

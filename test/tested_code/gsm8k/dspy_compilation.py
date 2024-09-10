@@ -1,6 +1,5 @@
 import dspy
-import dspy.datasets
-from dspy.datasets import GSM8K
+from dspy.datasets.gsm8k import GSM8K
 import dspy.teleprompt
 from datasets import load_dataset
 

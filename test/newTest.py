@@ -21,7 +21,6 @@ def codeRun(cmd: list[str], input: str, modelName: str):
         return res, duration.total_seconds()
 
 
-
 def save(res):
     df = pd.DataFrame(
         res,
@@ -49,7 +48,7 @@ train = ds.iter(batch_size=1)
 res = []
 count = 0
 for i in train:
-    if (count == 300):
+    if count == 300:
         exit(0)
     question = i["question"][0]
     answer_str: str = i["answer"][0]
@@ -62,7 +61,9 @@ for i in train:
         jacRawPrompt = ""
         try:
             dspyResponse, dspyTimer = codeRun(
-                ["python", "tested_code/gsm8k/dspy_vanilla_impl.py"], input=question, modelName=model
+                ["python", "tested_code/gsm8k/dspy_compiled_impl.py"],
+                input=question,
+                modelName=model,
             )
             dspyResponse = dspyResponse.strip()
         except KeyboardInterrupt:
@@ -72,34 +73,68 @@ for i in train:
             dspyResponse = ""
             dspyTimer = 0
             print(dspyRawPrompt)
-        with open("RawPrompt.txt", "r") as rawPromptFile, open("RawResponse.json", "r") as rawResponseFile:
+        with open("RawPrompt.txt", "r") as rawPromptFile, open(
+            "RawResponse.json", "r"
+        ) as rawResponseFile:
             dspyRawPrompt = rawPromptFile.read()
             dspyRawResponse = json.load(rawResponseFile)
         os.remove("RawPrompt.txt")
         os.remove("RawResponse.json")
-        dspyResult = [count, question, answer, model, "DSPy", dspyResponse, (dspyResponse == answer), dspyFailed, dspyTimer, dspyRawResponse["usage"]["prompt_tokens"], dspyRawResponse["usage"]["completion_tokens"], dspyRawPrompt, json.dumps(dspyRawResponse)]
+        dspyResult = [
+            count,
+            question,
+            answer,
+            model,
+            "DSPy",
+            dspyResponse,
+            (dspyResponse == answer),
+            dspyFailed,
+            dspyTimer,
+            dspyRawResponse["usage"]["prompt_tokens"],
+            dspyRawResponse["usage"]["completion_tokens"],
+            dspyRawPrompt,
+            json.dumps(dspyRawResponse),
+        ]
         print("DSPy Result", dspyResult)
         res.append(dspyResult)
 
-        # try:
-        #     jacResponse, jacTimer = codeRun(
-        #         ["jac", "run", "tested_code/gsm8k/jac_impl.jac"], input=question, modelName=model
-        #     )
-        #     jacResponse = jacResponse.strip()
-        # except KeyboardInterrupt:
-        #     exit(1)
-        # except:
-        #     jacFailed = True
-        #     jacResponse = ""
-        #     jacTimer = 0
-        # with open("RawPrompt.txt", "r") as rawPromptFile, open("RawResponse.json", "r") as rawResponseFile:
-        #     jacRawPrompt = rawPromptFile.read()
-        #     jacRawResponse = json.load(rawResponseFile)
-        # os.remove("RawPrompt.txt")
-        # os.remove("RawResponse.json")
-        # jacResult = [count, question, answer, model, "Jac", jacResponse, (jacResponse == answer), jacFailed, jacTimer, jacRawResponse["usage"]["prompt_tokens"], jacRawResponse["usage"]["completion_tokens"], jacRawPrompt, json.dumps(jacRawResponse)]
-        # print("Jac Result", jacResult)
-        # res.append(jacResult)
+        try:
+            jacResponse, jacTimer = codeRun(
+                ["jac", "run", "tested_code/gsm8k/jac_impl.jac"],
+                input=question,
+                modelName=model,
+            )
+            jacResponse = jacResponse.strip()
+        except KeyboardInterrupt:
+            exit(1)
+        except:
+            jacFailed = True
+            jacResponse = ""
+            jacTimer = 0
+        with open("RawPrompt.txt", "r") as rawPromptFile, open(
+            "RawResponse.json", "r"
+        ) as rawResponseFile:
+            jacRawPrompt = rawPromptFile.read()
+            jacRawResponse = json.load(rawResponseFile)
+        os.remove("RawPrompt.txt")
+        os.remove("RawResponse.json")
+        jacResult = [
+            count,
+            question,
+            answer,
+            model,
+            "Jac",
+            jacResponse,
+            (jacResponse == answer),
+            jacFailed,
+            jacTimer,
+            jacRawResponse["usage"]["prompt_tokens"],
+            jacRawResponse["usage"]["completion_tokens"],
+            jacRawPrompt,
+            json.dumps(jacRawResponse),
+        ]
+        print("Jac Result", jacResult)
+        res.append(jacResult)
 
     save(res)
     count += 1
