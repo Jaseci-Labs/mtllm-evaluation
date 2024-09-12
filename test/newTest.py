@@ -5,13 +5,14 @@ import subprocess
 import pandas as pd
 import json
 
-models = ["gpt-3.5-turbo", "gpt-4", "gpt-4-turbo", "gpt-4o"]
+models = ["llama2", "llama3", "llama3.1"]
 # models = ["gpt-4o"]
 
 
 def codeRun(cmd: list[str], input: str, modelName: str):
     subEnv = os.environ.copy()
     subEnv["MODEL_NAME"] = modelName
+    print(modelName)
     with open("/tmp/STDIN.txt", "w") as inputFile:
         inputFile.write(input)
     with open("/tmp/STDIN.txt", "r") as inputFile:
@@ -40,8 +41,14 @@ def save(res):
             "RawResponse",
         ],
     )
-    df.to_csv("ModelSweep-19-06-2024-1820.csv")
+    df.to_csv("ModelSweep-11-09-2024-2352.csv")
 
+
+def sumToken(key: str, response):
+    sum = 0
+    for res in response:
+        sum += res["usage"][key]
+    return sum
 
 ds = load_dataset("openai/gsm8k", "main", split="train")
 train = ds.iter(batch_size=1)
@@ -61,7 +68,7 @@ for i in train:
         jacRawPrompt = ""
         try:
             dspyResponse, dspyTimer = codeRun(
-                ["python", "tested_code/gsm8k/dspy_compiled_impl.py"],
+                ["python", "tested_code/gsm8k/dspy_llama_single_trial.py"],
                 input=question,
                 modelName=model,
             )
@@ -73,13 +80,13 @@ for i in train:
             dspyResponse = ""
             dspyTimer = 0
             print(dspyRawPrompt)
-        with open("RawPrompt.txt", "r") as rawPromptFile, open(
-            "RawResponse.json", "r"
+        with open("/tmp/RawPrompt.txt", "r") as rawPromptFile, open(
+            "/tmp/RawResponse.json", "r"
         ) as rawResponseFile:
             dspyRawPrompt = rawPromptFile.read()
             dspyRawResponse = json.load(rawResponseFile)
-        os.remove("RawPrompt.txt")
-        os.remove("RawResponse.json")
+        os.remove("/tmp/RawPrompt.txt")
+        os.remove("/tmp/RawResponse.json")
         dspyResult = [
             count,
             question,
@@ -90,8 +97,10 @@ for i in train:
             (dspyResponse == answer),
             dspyFailed,
             dspyTimer,
-            dspyRawResponse["usage"]["prompt_tokens"],
-            dspyRawResponse["usage"]["completion_tokens"],
+            sumToken("prompt_tokens", dspyRawResponse),
+            sumToken("completion_tokens", dspyRawResponse),
+            # dspyRawResponse["usage"]["prompt_tokens"],
+            # dspyRawResponse["usage"]["completion_tokens"],
             dspyRawPrompt,
             json.dumps(dspyRawResponse),
         ]
@@ -100,7 +109,7 @@ for i in train:
 
         try:
             jacResponse, jacTimer = codeRun(
-                ["jac", "run", "tested_code/gsm8k/jac_impl.jac"],
+                ["jac", "run", "tested_code/gsm8k/jac_llama_impl.jac"],
                 input=question,
                 modelName=model,
             )
@@ -111,13 +120,13 @@ for i in train:
             jacFailed = True
             jacResponse = ""
             jacTimer = 0
-        with open("RawPrompt.txt", "r") as rawPromptFile, open(
-            "RawResponse.json", "r"
+        with open("/tmp/RawPrompt.txt", "r") as rawPromptFile, open(
+            "/tmp/RawResponse.json", "r"
         ) as rawResponseFile:
             jacRawPrompt = rawPromptFile.read()
             jacRawResponse = json.load(rawResponseFile)
-        os.remove("RawPrompt.txt")
-        os.remove("RawResponse.json")
+        os.remove("/tmp/RawPrompt.txt")
+        os.remove("/tmp/RawResponse.json")
         jacResult = [
             count,
             question,
@@ -128,8 +137,10 @@ for i in train:
             (jacResponse == answer),
             jacFailed,
             jacTimer,
-            jacRawResponse["usage"]["prompt_tokens"],
-            jacRawResponse["usage"]["completion_tokens"],
+            sumToken("prompt_tokens", jacRawResponse),
+            sumToken("completion_tokens", jacRawResponse),
+            # jacRawResponse["usage"]["prompt_tokens"],
+            # jacRawResponse["usage"]["completion_tokens"],
             jacRawPrompt,
             json.dumps(jacRawResponse),
         ]

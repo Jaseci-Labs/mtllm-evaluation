@@ -1,0 +1,14 @@
+lmql
+dspy-ai @git+https://github.com/Gorgeous-Patrick/dspy.git@PatrickLi/mtllm-eval
+jaclang @git+https://github.com/Jaseci-Labs/jaclang
+mtllm @git+https://github.com/Gorgeous-Patrick/mtllm.git@PatrickLi/mtllm-eval
+black
+wikipedia
+openai
+loguru
+pyinstrument
+gprof2dot
+pandas
+matplotlib
+ollama
+
