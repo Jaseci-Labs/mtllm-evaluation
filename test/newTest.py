@@ -66,6 +66,8 @@ for i in train:
         jacFailed = False
         dspyRawPrompt = ""
         jacRawPrompt = ""
+        dspyRawResponse = []
+        jacRawResponse = []
         try:
             dspyResponse, dspyTimer = codeRun(
                 ["python", "tested_code/gsm8k/dspy_llama_single_trial.py"],
