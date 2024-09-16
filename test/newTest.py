@@ -73,20 +73,19 @@ for i in train:
                 modelName=model,
             )
             dspyResponse = dspyResponse.strip()
+            with open("/tmp/RawPrompt.txt", "r") as rawPromptFile, open(
+                "/tmp/RawResponse.json", "r"
+            ) as rawResponseFile:
+                dspyRawPrompt = rawPromptFile.read()
+                dspyRawResponse = json.load(rawResponseFile)
+            os.remove("/tmp/RawPrompt.txt")
+            os.remove("/tmp/RawResponse.json")
         except KeyboardInterrupt:
             exit(1)
         except:
             dspyFailed = True
             dspyResponse = ""
             dspyTimer = 0
-            print(dspyRawPrompt)
-        with open("/tmp/RawPrompt.txt", "r") as rawPromptFile, open(
-            "/tmp/RawResponse.json", "r"
-        ) as rawResponseFile:
-            dspyRawPrompt = rawPromptFile.read()
-            dspyRawResponse = json.load(rawResponseFile)
-        os.remove("/tmp/RawPrompt.txt")
-        os.remove("/tmp/RawResponse.json")
         dspyResult = [
             count,
             question,
@@ -114,19 +113,19 @@ for i in train:
                 modelName=model,
             )
             jacResponse = jacResponse.strip()
+            with open("/tmp/RawPrompt.txt", "r") as rawPromptFile, open(
+                "/tmp/RawResponse.json", "r"
+            ) as rawResponseFile:
+                jacRawPrompt = rawPromptFile.read()
+                jacRawResponse = json.load(rawResponseFile)
+            os.remove("/tmp/RawPrompt.txt")
+            os.remove("/tmp/RawResponse.json")
         except KeyboardInterrupt:
             exit(1)
         except:
             jacFailed = True
             jacResponse = ""
             jacTimer = 0
-        with open("/tmp/RawPrompt.txt", "r") as rawPromptFile, open(
-            "/tmp/RawResponse.json", "r"
-        ) as rawResponseFile:
-            jacRawPrompt = rawPromptFile.read()
-            jacRawResponse = json.load(rawResponseFile)
-        os.remove("/tmp/RawPrompt.txt")
-        os.remove("/tmp/RawResponse.json")
         jacResult = [
             count,
             question,
