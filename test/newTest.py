@@ -5,7 +5,7 @@ import subprocess
 import pandas as pd
 import json
 
-models = ["llama2", "llama3", "llama3.1"]
+models = ["llama2:70b", "llama3:70b", "llama3.1:70b"]
 # models = ["gpt-4o"]
 
 
