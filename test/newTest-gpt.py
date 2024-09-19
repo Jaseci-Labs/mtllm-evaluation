@@ -56,7 +56,7 @@ train = ds.iter(batch_size=1)
 res = []
 count = 0
 for i in train:
-    if count == 300:
+    if count == 30:
         exit(0)
     question = i["question"][0]
     answer_str: str = i["answer"][0]
