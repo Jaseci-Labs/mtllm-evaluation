@@ -6,6 +6,7 @@ import pandas as pd
 import json
 
 models = ["llama2:70b", "llama3:70b", "llama3.1:70b"]
+# models = ["llama2", "llama3", "llama3.1"]
 # models = ["gpt-4o"]
 
 
@@ -17,7 +18,7 @@ def codeRun(cmd: list[str], input: str, modelName: str):
         inputFile.write(input)
     with open("/tmp/STDIN.txt", "r") as inputFile:
         start = datetime.now()
-        res = subprocess.check_output(cmd, stdin=inputFile, env=subEnv).decode()
+        res = subprocess.check_output(cmd, stdin=inputFile, env=subEnv, stderr=subprocess.STDOUT).decode()
         duration = datetime.now() - start
         return res, duration.total_seconds()
 
@@ -39,9 +40,10 @@ def save(res):
             "CompletionTokens",
             "RawPrompt",
             "RawResponse",
+            "Exception",
         ],
     )
-    df.to_csv("ModelSweep-16-09-2024-1329.csv")
+    df.to_csv("ModelSweep-08-10-2024-1052-70B.csv")
 
 
 def sumToken(key: str, response):
@@ -56,7 +58,7 @@ train = ds.iter(batch_size=1)
 res = []
 count = 0
 for i in train:
-    if count == 300:
+    if count == 20:
         exit(0)
     question = i["question"][0]
     answer_str: str = i["answer"][0]
@@ -76,12 +78,16 @@ for i in train:
                 modelName=model,
             )
             dspyResponse = dspyResponse.strip()
+            exception = ""
         except KeyboardInterrupt:
             exit(1)
-        except:
+        # except Exception as e:
+        except subprocess.CalledProcessError as e:
+            error_output = e.output.decode().splitlines()
             dspyFailed = True
             dspyResponse = ""
             dspyTimer = 0
+            exception = error_output[-1]
         if os.path.exists("/tmp/RawPrompt.txt") and os.path.exists(
             "/tmp/RawResponse.json"
         ):
@@ -111,6 +117,7 @@ for i in train:
             # dspyRawResponse["usage"]["completion_tokens"],
             dspyRawPrompt,
             json.dumps(dspyRawResponse),
+            exception,
         ]
         print("DSPy Result", dspyResult)
         res.append(dspyResult)
@@ -122,12 +129,15 @@ for i in train:
                 modelName=model,
             )
             jacResponse = jacResponse.strip()
+            exception = ""
         except KeyboardInterrupt:
             exit(1)
-        except:
+        except subprocess.CalledProcessError as e:
+            error_output = e.output.decode().splitlines()
             jacFailed = True
             jacResponse = ""
             jacTimer = 0
+            exception = error_output[-1]
         if os.path.exists("/tmp/RawPrompt.txt") and os.path.exists(
             "/tmp/RawResponse.json"
         ):
@@ -157,9 +167,12 @@ for i in train:
             # jacRawResponse["usage"]["completion_tokens"],
             jacRawPrompt,
             json.dumps(jacRawResponse),
+            exception,
         ]
         print("Jac Result", jacResult)
         res.append(jacResult)
 
     save(res)
     count += 1
+    print(f"Question {count} out of 300\n")
+    
