@@ -1,7 +1,7 @@
 lmql
 dspy
-jaclang @git+https://github.com/Jaseci-Labs/jaclang@video-support-mtllm
-mtllm @git+https://github.com/Jaseci-Labs/mtllm@main
+jaclang
+mtllm
 black
 wikipedia
 openai
@@ -10,3 +10,4 @@ pyinstrument
 gprof2dot
 pandas
 matplotlib
+seaborn

@@ -27,6 +27,7 @@ def save(res):
             "JacExactMatch",
             "DSPyCOTFailed",
             "JacFailed",
+            "Exception",
         ],
     )
     df.to_csv("DSPyVanillaJacGSM8k.csv")
